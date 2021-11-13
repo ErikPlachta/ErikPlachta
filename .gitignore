@@ -1,0 +1,18 @@
+##-----------------------------------------##
+##-- Local Storage
+
+##-- Local archives I keep not needed on GitHub
+_ARCHIVE
+
+##-----------------------------------------##
+##-- OS Specific Metadata Files
+desktop.ini
+.DS_Store 
+
+##-----------------------------------------##
+##-- IDEs
+
+.code-workspace
+.sublime-workspace
+-sublime-project
+
