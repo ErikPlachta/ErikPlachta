@@ -34,7 +34,7 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none; /* makes sure hyperlinks don't have styling */
 }
 
 h1,
@@ -72,6 +72,7 @@ h2 {
 header {
     background-color: var(--color_Primary);
     text-align: center;
+    vertical-align: middle;
     position: -webkit-sticky; /* required for cross compatibility */
     position: sticky;  
     top: 0; /* Top of the website */
@@ -81,24 +82,24 @@ header {
     justify-content: space-around; /* space-between | space-around */
 }
 
-header img {
-    float: left;
-    vertical-align: middle;
-
-}
-
 header h1 {
     color: var(--color_Secondary);
     display: inline;
+    padding: .5rem 0rem .5rem 1rem;
 }
 
+header img {
+    vertical-align: middle; /* makes sure stays center with h1 text.*/
+    height: inherit;
+}
 
 /* HEADER END */
 /*----------------------------------------------------------------------------*/
 /*HEADER NAV START */
 
 
-header nav ul {
+header, 
+nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -108,7 +109,7 @@ header nav ul {
 header nav ul li {
     padding: 0;
     margin: .5rem 2rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400;
 }
 
@@ -125,6 +126,10 @@ section {
     border-top: var(--shadow_1px_25a);
   }
   /* SECTION END */
+/*----------------------------------------------------------------------------*/
+/* ABOUT ME START */
+
+/* ABOUT ME END */
 /*----------------------------------------------------------------------------*/
 /*HERO START */
 
@@ -149,37 +154,38 @@ footer {
 /*----------------------------------------------------------------------------*/
 /* MEDIA START */
 
-@media screen and (max-width: 952px){
-    body {
-        
-    }
+@media screen and (max-width: 1040){
+    
+}
 
+@media screen and (max-width: 768px){
+    /*------------------------------------------------------------------------*/
+    /* HEADER START */
     header {
         position: relative; /* Make header no longer sticky */
     }
 
-    header img {
-        float: none; /* Keeps next to text */
-        
-    }
-
-
-    header div {
+    header h1 {
         font-size: 4rem;
-        padding-top: 1rem;
+        padding: 1rem 0;
         position: sticky;
         top: 0;
-        background-color: var(--color_Primary);
-        z-index: 0;
+        background-color: var(--color_Primary); /* makes it over-top of everything else */
+        z-index: 99;
         border-bottom: var(--shadow_1px_25a);
     }
-
+    header h1 a span {
+        height: 100%;
+    }
+    /* HEADER END */
+    /* NAV START */
     header,
     header nav ul {
     /* shifts to column view */
         flex-direction: column;
         width: 100%; /* its 100% of parent container */
         padding: 0;
+        margin: 0;
     }
     header nav ul li {
         border-top: var(--shadow_1px_25a);
@@ -188,14 +194,17 @@ footer {
         font-size: 3rem;
         font-weight: 200;
     }
-    section {
-        
+    /* HEADER & NAV END */
+    
+    nav {
+        overflow: hidden;
     }
-}
 
-@media screen and (max-width: 768px){
+    /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+    .sticky + .content {
+        padding-top: 60px;
+    }
 
-}
 @media screen and (max-width: 360px){
 
 }
