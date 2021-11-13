@@ -17,7 +17,5 @@ desktop.ini
 ##-----------------------------------------##
 ##-- IDEs
 
-*.code-workspace
-*.sublime-workspace
-*.-sublime-project
+C02.code-workspace
 
