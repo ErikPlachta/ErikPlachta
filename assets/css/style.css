@@ -1,0 +1,191 @@
+/*----------------------------------------------------------------------------*/
+/* ROOT START*/
+:root {
+    /* Color Theming */
+    --color_Primary: rgb(52, 90, 166); /* A mix of cyan + blue */
+    --color_Secondary: #F9F9F9; /* A very light shade of gray */
+    --color_Tertiary: #69E5CC; /*A Turquoise Blue*/
+    
+    --bg_Primary: rgb(40, 41, 35);  /* dark black grey 1 */
+    --bg_Secondary: rgb(36, 41, 35); /* dark black grey 2 */
+    --bg_Teriary: rgb(55, 61, 67); /* lighter grey */
+
+    --btn_txt_inactive: rgb(241, 230, 213);
+    --btn_txt_active: rgb(242, 250, 245);
+
+    --margin_Primary: 10px;
+
+    /* Universal shadowing */
+    --shadow_1px_25a: 2px solid rgba(0,0,0,.25)
+}
+/* ROOT END */
+/*----------------------------------------------------------------------------*/
+/* UNIVERVSAL STYLING START */
+* {
+    box-sizing: border-box; /* Account for parent element pading. ( Keeps elements from overflowing containers) */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color_Secondary);
+    font-family: Roboto, Arial, sans-serif;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    /* removing all default padding around headers */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 3rem;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.text-left {
+    text-align: left;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+
+/* UNIVERVSAL STYLING END */
+/*----------------------------------------------------------------------------*/
+/* HEADER START */
+
+header {
+    background-color: var(--color_Primary);
+    
+    text-align: center;
+    position: -webkit-sticky; /* required for cross compatibility */
+    position: sticky;  
+    top: 0; /* Top of the website */
+    display: flex;
+    flex-direction: row; /* flex-direction: row | row-reverse | column | column-reverse */
+    flex-wrap: wrap;
+    justify-content: space-around; /* space-between | space-around */
+    
+}
+
+header h1 {
+    color: var(--color_Secondary);
+}
+
+
+/* HEADER END */
+/*----------------------------------------------------------------------------*/
+/*HEADER NAV START */
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+header nav ul li {
+    padding: 0;
+    margin: .5rem 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+header h1 a,
+header nav ul li a {
+    color: white;
+}
+
+/*HEADER NAV END */
+/*----------------------------------------------------------------------------*/
+/* SECTION START */
+section {
+    padding: 2rem 2rem; 
+    border-top: var(--shadow_1px_25a);
+  }
+  /* SECTION END */
+/*----------------------------------------------------------------------------*/
+/*HERO START */
+
+.hero {
+
+}
+
+
+/*HERO END */
+/*----------------------------------------------------------------------------*/
+/* FOOTER START */
+
+footer {
+    border-top: var(--shadow_1px_25a);
+    margin-top: var(--margin_Primary);
+    display: flex;
+}
+
+/* FOOTER END */
+
+
+/*----------------------------------------------------------------------------*/
+/* MEDIA START */
+
+@media screen and (max-width: 952px){
+    body {
+        
+    }
+
+    header {
+        position: relative; /* Make header no longer sticky */
+    }
+
+    header h1 {
+        font-size: 4rem;
+        padding-top: 1rem;
+        position: sticky;
+        top: 0;
+        background-color: var(--color_Primary);
+        z-index: 0;
+    }
+
+    header, 
+    nav,
+    header nav ul {
+    /* shifts to column view */
+        flex-direction: column;
+        width: 100%; /* its 100% of parent container */
+        padding: 0;
+    }
+    header nav ul li {
+        border-top: var(--shadow_1px_25a);
+        padding: 1.5rem 0; /* space around buttons */
+        margin: 0; /* fits full width */
+        font-size: 3rem;
+        font-weight: 200;
+    }
+    section {
+        
+    }
+}
+
+@media screen and (max-width: 768px){
+
+}
+@media screen and (max-width: 360px){
+
+}
+/* MEDIA END */
