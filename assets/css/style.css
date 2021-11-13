@@ -71,7 +71,6 @@ h2 {
 
 header {
     background-color: var(--color_Primary);
-    
     text-align: center;
     position: -webkit-sticky; /* required for cross compatibility */
     position: sticky;  
@@ -80,11 +79,17 @@ header {
     flex-direction: row; /* flex-direction: row | row-reverse | column | column-reverse */
     flex-wrap: wrap;
     justify-content: space-around; /* space-between | space-around */
-    
+}
+
+header img {
+    float: left;
+    vertical-align: middle;
+
 }
 
 header h1 {
     color: var(--color_Secondary);
+    display: inline;
 }
 
 
@@ -153,17 +158,23 @@ footer {
         position: relative; /* Make header no longer sticky */
     }
 
-    header h1 {
+    header img {
+        float: none; /* Keeps next to text */
+        
+    }
+
+
+    header div {
         font-size: 4rem;
         padding-top: 1rem;
         position: sticky;
         top: 0;
         background-color: var(--color_Primary);
         z-index: 0;
+        border-bottom: var(--shadow_1px_25a);
     }
 
-    header, 
-    nav,
+    header,
     header nav ul {
     /* shifts to column view */
         flex-direction: column;
