@@ -1,21 +1,6 @@
-##-----------------------------------------##
-##-- Repo Specific Files
 
 assignment_README.md
-
-##-----------------------------------------##
-##-- Local Storage
-
-##-- Local archives I keep not needed on GitHub
 _ARCHIVE
-
-##-----------------------------------------##
-##-- OS Specific Metadata Files
 desktop.ini
 .DS_Store 
-
-##-----------------------------------------##
-##-- IDEs
-
 C02.code-workspace
-
