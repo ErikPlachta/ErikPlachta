@@ -1,4 +1,9 @@
 ##-----------------------------------------##
+##-- Repo Specific Files
+
+assignment_README.md
+
+##-----------------------------------------##
 ##-- Local Storage
 
 ##-- Local archives I keep not needed on GitHub
@@ -12,7 +17,7 @@ desktop.ini
 ##-----------------------------------------##
 ##-- IDEs
 
-.code-workspace
-.sublime-workspace
--sublime-project
+*.code-workspace
+*.sublime-workspace
+*.-sublime-project
 
