@@ -17,7 +17,8 @@
     --margin_Primary: 10px;
 
     /* Universal shadowing */
-    --shadow_1px_25a: 2px solid rgba(0,0,0,.25)
+    --shadow_color:  rgba(0,0,0,.25);
+    --shadow_1px_25a: 2px solid var(--shadow_color);
 }
 /* ROOT END */
 /*----------------------------------------------------------------------------*/
@@ -128,24 +129,21 @@ section.parent {
     flex-direction: row; /* flex-direction: row | row-reverse | column | column-reverse */
     flex-wrap: wrap;
     justify-content: space-between; /* space-between | space-around */
-    margin: 1rem;
+    margin: 4rem;
 }
-
 section > :first-child{
     /* The Section Title H2 */
     flex: 100%;
     margin: 1rem;
-}
-  
+} 
 article.content { 
     background-color: var(--color_Primary);
     height: 100%;
     min-width: 254px;
-    flex: 2 1 100%;
-    border-radius: 1rem 1rem 0 0;
-    box-shadow:0 -.5rem 1rem rgba(0,0,0,.25); /* offset-x | offset-y | blur-radius | color */
+    flex: 100%; /* fit 100% of page for now */
+    box-shadow:0 -.5rem .5rem rgba(0,0,0,.25); /* offset-x | offset-y | blur-radius | color */
+    border-radius: 1rem; /* top-left | top-right | bottom-right | bottom-left */
 }
-
 button.content {
     /* Each About Me Section */
     background-color:transparent;
@@ -160,12 +158,10 @@ button.content {
     height: 4rem;
     min-height: 3rem;
 }
-button h3 {
-    vertical-align:inherit;
+button.content {
     height:100%;
 }
-
-p.content.hidden{
+p.content.hidden {
     /* article content */
     min-height: 1rem;
     padding: 1rem;
@@ -173,14 +169,15 @@ p.content.hidden{
     background-color: white;
     overflow: hidden;
     border-top: var(--shadow_1px_25a);
-    display: none;
+    text-align: center;    
 }
-
-article:hover  {
-    background-color: var(--color_Hover);    
+article:hover {
+    background-color: var(--color_Hover);
+    box-shadow: 0 -1rem 1rem rgba(0,0,0,.5); /* offset-x | offset-y | blur-radius | color */
 }
-
-/* CSS EVENT EFFECTS END*/
+section.divider{
+    
+}
 
   /* SECTION END */
 /*----------------------------------------------------------------------------*/
