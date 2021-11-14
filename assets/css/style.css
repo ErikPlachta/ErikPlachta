@@ -63,7 +63,9 @@ h2 {
   
   .text-right {
     text-align: right;
+    float: right;
   }
+
 
 /* UNIVERVSAL STYLING END */
 /*----------------------------------------------------------------------------*/
@@ -76,10 +78,6 @@ header {
     position: -webkit-sticky; /* required for cross compatibility */
     position: sticky;  
     top: 0; /* Top of the website */
-    display: flex;
-    flex-direction: row; /* flex-direction: row | row-reverse | column | column-reverse */
-    flex-wrap: wrap;
-    justify-content: space-around; /* space-between | space-around */
 }
 
 header h1 {
@@ -108,8 +106,8 @@ nav ul {
 }
 header nav ul li {
     padding: 0;
-    margin: .5rem 2rem;
-    font-size: 1.2rem;
+    margin: 1rem 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
@@ -118,25 +116,80 @@ header nav ul li a {
     color: white;
 }
 
+img.about-me {
+    height: 3rem;
+    filter: invert(100%);
+}
+
 /*HEADER NAV END */
 /*----------------------------------------------------------------------------*/
 /* SECTION START */
-section {
+div.content {
     padding: 2rem 2rem; 
     border-top: var(--shadow_1px_25a);
+    
+    display: flex;
+    flex-direction: row; /* flex-direction: row | row-reverse | column | column-reverse */
+    flex-wrap: wrap;
+    justify-content: space-between; /* space-between | space-around */
   }
+
+  div.content article {   
+      width: 100%;
+  }
+  article.content {
+    display: flex;
+    flex-direction: row; /* flex-direction: row | row-reverse | column | column-reverse */
+    flex-wrap: wrap;
+  }
+  
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 1rem;
+    
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    flex: 32%;
+    display: flex;
+    min-width: 200px;
+  }
+  h3.content {
+      width: 100%;
+      text-align: center;
+  }
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    flex: 68%;
+  }
+
+
   /* SECTION END */
 /*----------------------------------------------------------------------------*/
 /* ABOUT ME START */
 
+.point {
+    font-weight: 900;
+}
+
 /* ABOUT ME END */
 /*----------------------------------------------------------------------------*/
 /*HERO START */
-
-.hero {
-
-}
-
 
 /*HERO END */
 /*----------------------------------------------------------------------------*/
@@ -154,11 +207,7 @@ footer {
 /*----------------------------------------------------------------------------*/
 /* MEDIA START */
 
-@media screen and (max-width: 1040){
-    
-}
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 990px){
     /*------------------------------------------------------------------------*/
     /* HEADER START */
     header {
@@ -187,6 +236,7 @@ footer {
         padding: 0;
         margin: 0;
     }
+    
     header nav ul li {
         border-top: var(--shadow_1px_25a);
         padding: 1.5rem 0; /* space around buttons */
@@ -194,15 +244,11 @@ footer {
         font-size: 3rem;
         font-weight: 200;
     }
+   
     /* HEADER & NAV END */
     
     nav {
         overflow: hidden;
-    }
-
-    /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-    .sticky + .content {
-        padding-top: 60px;
     }
 
 @media screen and (max-width: 360px){

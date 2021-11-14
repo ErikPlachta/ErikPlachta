@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- And if you want to support IE7, add this aswell -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css" rel="stylesheet">
+
     <title>Erik Plachta - About Me</title>
 </head>
 <body id='top'>
     <!------------------------------------------------------------------------->
-    <!-- HEADER START -->
+    <!-- HEADER & NAV START -->
     <header>
         <h1>
             <span id='logo'>
@@ -19,14 +25,29 @@
         </h1>
         <nav id='nav'>
             <ul>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li class='about-me'>
+                    <a href="#about-me">
+                        About Me
+                        <span class="icon-user" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects">
+                        Projects
+                        <span class="icon-wrench" />
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        Contact Me
+                        <span class="icon-envelope-alt" />
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
-    <!-- HEADER END -->
+    <!-- HEADER & NAV END -->
      <!------------------------------------------------------------------------->
     <!-- HERO START -->
     <section class='hero'>
@@ -36,31 +57,68 @@
     <!------------------------------------------------------------------------->
     <!-- ABOUT ME START -->
     <section class='content' id='about-me'>
-        <div>
-            <h2>About Me</h2>
-            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-                obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-                nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-                tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-                quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos 
-                sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
-                recusandae alias error harum maxime adipisci amet laborum. Perspiciatis 
-                minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit 
-                quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur 
-                fugiat, temporibus enim commodi iusto libero magni deleniti quod quam 
-                consequuntur! Commodi minima excepturi repudiandae velit hic maxime
-                doloremque. Quaerat provident commodi consectetur veniam similique ad 
-                earum omnis ipsum saepe, voluptas, hic voluptates pariatur est explicabo 
-                fugiat, dolorum eligendi quam cupiditate excepturi mollitia maiores labore 
-                suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto ab laudantium
-                modi minima sunt esse temporibus sint culpa, recusandae aliquam numquam 
-                totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam 
-                quasi aliquam eligendi, placeat qui corporis!
+        <h2>
+            About Me <span class='icon-user' />
+        </h2>
+        <div class='content'>
+            <article class='content' id='husband'>
+                <button class="accordion">
+                    <h3 class='content'>
+                        I'm a <span class='point'>Husband</span>
+                        <span  class='icon-male' />
+                    </h3>
+                </button>
+                <div class="panel">
+                    <p>
+                        Proud husband to the beautiful Emily Plachta.
+                    </p>
+                </div>
             </article>
-            
+            <article  class='content' id='it'>
+                <button class="accordion">
+                    <h3 class='content'>
+                        An <span class='point'>IT</span> Professional
+                        <span class='icon-table' />
+                    </h3>
+                </button>
+                <div class="panel">
+                    <p>
+                        Professionally, I've been in IT since 2009. Here is a short-list of my skillset.
+                        abc
+                    </p>
+                </div>
+            </article>
+            <article class='content' id='python-fullstack'>
+                <button class="accordion">
+                    <h3 class='content'>
+                        A Full-Stack <span class='point'>Python</span> Developer     
+                        <span class='icon-list-alt' />
+                    </h3>
+                    
+                </button>
+                <div class='panel'>
+                    <p>
+                        > I've been developing Python applications profesionally since 2018. 
+                        > Started learning 'on the job'.
+                        > Spent A LOT of time learning OOP, Python, Modular coding, etc
+                    </p>
+                </div>
+            </article>
+            <article class='content' id='web-fullstack'>
+            <button class="accordion">
+                    <h3 class='content'>
+                        A Full-Stack <span class='point'>Web</span> Developer
+                        <span  class='icon-sitemap' />
+                    </h3>
+                </button>
+                <div class='panel'>
+                    <p>
+                        > Started taking classes oct 2021.
+                        Seriously started indpenedent projects 2019.
+                        Always been a thing I've enjoyed.
+                    </p>
+                </div>
+            </article>            
         </div>
     </section>
     <!-- ABOUT ME END -->
@@ -70,7 +128,17 @@
         <div>
             <h2>Projects</h2>
             <article>
-                Projects paraded on public page for people perusing my portfolio. Projects paraded on public page for people perusing my portfolio. Projects paraded on public page for people perusing my portfolio. Projects paraded on public page for people perusing my portfolio.
+                Projects paraded on public page for people perusing my portfolio.
+                Projects paraded on public page for people perusing my portfolio.
+                Projects paraded on public page for people perusing my portfolio.
+                Projects paraded on public page for people perusing my portfolio.
+                Projects paraded on public page for people perusing my portfolio.
+                Projects paraded on public page for people perusing my portfolio.
+                Projects paraded on public page for people perusing my portfolio.
+                Projects paraded on public page for people perusing my portfolio.
+                Projects paraded on public page for people perusing my portfolio.
+                Projects paraded on public page for people perusing my portfolio.
+                Projects paraded on public page for people perusing my portfolio.
             </article>
             
             <section class='project' id='medium.com'>
@@ -132,5 +200,26 @@
         </p>
     </footer>
     <!-- FOOTER END -->
+    <!-- TODO:: 11/13/2021 #EP || review, simplify, make sure I get it-->
+    <script> 
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "flex") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "flex";
+            }
+        });
+        }
+    </script>
 </body>
 </html>
