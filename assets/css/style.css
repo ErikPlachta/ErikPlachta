@@ -2,17 +2,92 @@
 /* ROOT START*/
 :root {
     /* Color Theming */
-    --color_Hover: royalblue; /* A mix of cyan + blue */
-    --color_Primary: rgb(52, 90, 166); /* A mix of cyan + blue */
-    --color_Secondary: #F9F9F9; /* A very light shade of gray */
-    --color_Tertiary: #69E5CC; /*A Turquoise Blue*/
-    
-    --bg_Primary: rgb(40, 41, 35);  /* dark black grey 1 */
-    --bg_Secondary: rgb(36, 41, 35); /* dark black grey 2 */
-    --bg_Teriary: rgb(55, 61, 67); /* lighter grey */
 
-    --btn_txt_inactive: rgb(241, 230, 213);
-    --btn_txt_active: rgb(242, 250, 245);
+    --color_Primary: #172a35;
+    --color_Secondary: #172a35;
+    --color_Tertiary: #fff;
+    --color_Hover: #172a35;
+
+    --color_title: #fefdff;
+    --font_title: #0b132b;
+
+    --bg_Primary: #F9F9F9; /* A very light shade of gray */
+    --bg_Secondary: #fefdff;
+
+    --btn_txt_inactive: #F9F9F9;
+    --btn_txt_active: #6fffe9;
+
+    --accent_Primary: #4ed1c4;
+    --accent_Secondary: #fff;
+
+    --boxShadow: 0 -.5rem .5rem rgba(0,0,0,.25); /* offset-x | offset-y | blur-radius | color */
+    --boxShadow_Hover: 0 -1rem 1rem rgba(0,0,0,.5); /* offset-x | offset-y | blur-radius | color */
+
+    /* COLORS 
+        /* ORDER ON PALLET
+            --color_1: #0b132b
+            --color_2: #1c2541
+            --color_3: #3a506b
+            --color_4: #5bc0be
+            --color_5: #6fffe9
+        */
+        
+        /* ORDER ON PALLET
+            --color_1: #233d4d
+            --color_2: #fe7f2d
+            --color_3: #fcca46
+            --color_4: #a1c181
+            --color_5: #619b8a
+        */
+        /* ORDER ON PALLET
+                --color_1: #00296b
+                --color_2: #003f88
+                --color_3: #00509d
+                --color_4: #fdc500
+                --color_5: #ffd500
+        */
+        /* ORDER ON PALLET
+                --color_1: #3d5a80
+                --color_2: #98c1d9
+                --color_3: #e0fbfc
+                --color_4: #ee6c4d
+                --color_5: #293241
+        */
+        /* ORDER ON PALLET
+                --color_1: #e63946
+                --color_2: #f1faee
+                --color_3: #a8dadc
+                --color_4: #457b9d
+                --color_5: #1d3557
+        */
+        /*
+            ORDER ON PALLET
+                --color_1: #264653
+                --color_2: #2a9d8f
+                --color_3: #e9c46a
+                --color_4: #f4a261
+                --color_5: #e76f51
+        */
+        /*
+            ORDER ON PALLET
+                --color_1: #000000
+                --color_2: #14213d
+                --color_3: #fca311
+                --color_4: #e5e5e5
+                --color_5: #ffffff
+        */
+        /*
+            ORDER ON PALLET
+                --color_1: #ef476f
+                --color_2: #ffd166
+                --color_3: #06d6a0
+                --color_4: #118ab2
+                --color_5: #073b4c
+    */    
+    /**/
+
+
+    
 
     --margin_Primary: 10px;
 
@@ -30,7 +105,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--color_Secondary);
+    background-color: var(--bg_Primary);
     font-family: Roboto, Arial, sans-serif;
     
 }
@@ -49,7 +124,7 @@ h5 {
     padding: 0;
 }
 h1 {
-    font-weight: 100;
+    font-weight: 300;
     font-size: 3rem;
 }
 h2 {
@@ -71,26 +146,34 @@ h3 {
     float: right;
   }
 
+.icon {
+    color: var(--accent_Primary);
+}
+
+.icon_Secondary{
+    color: var(--accent_Secondary);
+}
 
 /* UNIVERVSAL STYLING END */
 /*----------------------------------------------------------------------------*/
 /* HEADER START */
 
 header {
-    background-color: var(--color_Primary);
+    background-color: var(--color_Secondary);
     text-align: center;
     vertical-align: middle;
     position: -webkit-sticky; /* required for cross compatibility */
     position: sticky;  
     top: 0; /* Top of the website */
     z-index: 100;
-    
+    overflow: none;
 }
 
+header h1 a,
 header h1 {
-    color: var(--color_Secondary);
     display: inline; /* photo inline w text */
-    padding: .5rem 0rem .5rem 1rem;
+    background-color: var(--color_title);
+    color:var(--font_title);
 }
 
 header img {
@@ -113,11 +196,11 @@ header nav ul li {
     padding: 0;
     margin: 1rem 2rem;
     font-size: 1.25rem;
-    font-weight: 100;
+    font-weight: 100; 
 }
-header h1 a,
+
 header nav ul li a {
-    color: white;
+    color: var(--color_Tertiary);
 }
 
 /*HEADER NAV END */
@@ -141,7 +224,7 @@ article.content {
     height: 100%;
     min-width: 254px;
     flex: 100%; /* fit 100% of page for now */
-    box-shadow:0 -.5rem .5rem rgba(0,0,0,.25); /* offset-x | offset-y | blur-radius | color */
+    box-shadow: var(--boxShadow);
     border-radius: 1rem; /* top-left | top-right | bottom-right | bottom-left */
 }
 button.content {
@@ -166,21 +249,24 @@ p.content.hidden {
     min-height: 1rem;
     padding: 1rem;
     margin: 0;
-    background-color: white;
+    background-color: var(--bg_Secondary);
     overflow: hidden;
     border-top: var(--shadow_1px_25a);
     text-align: center;    
 }
+button:hover {
+    color: var(--btn_txt_active);
+}
 article:hover {
     background-color: var(--color_Hover);
-    box-shadow: 0 -1rem 1rem rgba(0,0,0,.5); /* offset-x | offset-y | blur-radius | color */
+   box-shadow: var(--boxShadow_Hover);
 }
   /* SECTION END */
 /*----------------------------------------------------------------------------*/
 /* ABOUT ME START */
 
 .point {
-    font-weight: 900;
+    
 }
 
 /* ABOUT ME END */
@@ -209,15 +295,13 @@ footer {
     header {
         position: relative; /* Make header no longer sticky */
     }
-
     header h1 {
         font-size: 2.5rem;
         padding: .5rem 0 .5rem 0;
+        /* make it over-top of everything else */
         position: sticky;
-        top: 0;
-        background-color: var(--color_Primary); /* makes it over-top of everything else */
         z-index: 99;
-        border-bottom: var(--shadow_1px_25a);
+        top: 0;
     }
     header h1 a span {
         height: 100%;
@@ -231,11 +315,12 @@ footer {
         width: 100%; /* its 100% of parent container */
         padding: 0;
         margin: 0;
+        border-bottom: var(--shadow_1px_25a);
     }
     
     header nav ul li {
         border-top: var(--shadow_1px_25a);
-        padding: 1.5rem 0; /* space around buttons */
+        padding: .25rem 0; /* space around buttons */
         margin: 0; /* fits full width */
         font-size: 1.5rem;
         font-weight: 200;
@@ -246,6 +331,12 @@ footer {
     nav {
         overflow: hidden;
     }
+    /* */
+    /* SECTION START */
+    section.parent {
+        margin: 1rem;
+    }
+    /* SECTION END */
 }
 
 @media screen and (max-width: 360px){
