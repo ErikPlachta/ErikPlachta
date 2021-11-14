@@ -28,7 +28,7 @@
                 <li class='about-me'>
                     <a href="#about-me">
                         About Me
-                        <span class="icon-user" />
+                        <span  class='icon-male' />
                     </a>
                 </li>
                 <li>
@@ -50,76 +50,79 @@
     <!-- HEADER & NAV END -->
      <!------------------------------------------------------------------------->
     <!-- HERO START -->
-    <section class='hero'>
-        <h3 class='text-right'><code>Tagline to go here</code></h3>
+    <section class='parent hero'>
+        <h2 class='text-right'><code>Tagline to go here</code></h2>
     </section>
+    
     <!-- HERO END -->
     <!------------------------------------------------------------------------->
     <!-- ABOUT ME START -->
-    <section class='content' id='about-me'>
-        <h2>
-            About Me <span class='icon-user' />
-        </h2>
-        <div class='content'>
-            <article class='content' id='husband'>
-                <button class="accordion">
-                    <h3 class='content'>
-                        I'm a <span class='point'>Husband</span>
-                        <span  class='icon-male' />
-                    </h3>
-                </button>
-                <div class="panel">
-                    <p>
-                        Proud husband to the beautiful Emily Plachta.
-                    </p>
-                </div>
-            </article>
-            <article  class='content' id='it'>
-                <button class="accordion">
-                    <h3 class='content'>
-                        An <span class='point'>IT</span> Professional
-                        <span class='icon-table' />
-                    </h3>
-                </button>
-                <div class="panel">
-                    <p>
-                        Professionally, I've been in IT since 2009. Here is a short-list of my skillset.
-                        abc
-                    </p>
-                </div>
-            </article>
-            <article class='content' id='python-fullstack'>
-                <button class="accordion">
-                    <h3 class='content'>
-                        A Full-Stack <span class='point'>Python</span> Developer     
-                        <span class='icon-list-alt' />
-                    </h3>
-                    
-                </button>
-                <div class='panel'>
-                    <p>
-                        > I've been developing Python applications profesionally since 2018. 
-                        > Started learning 'on the job'.
-                        > Spent A LOT of time learning OOP, Python, Modular coding, etc
-                    </p>
-                </div>
-            </article>
-            <article class='content' id='web-fullstack'>
-            <button class="accordion">
-                    <h3 class='content'>
-                        A Full-Stack <span class='point'>Web</span> Developer
-                        <span  class='icon-sitemap' />
-                    </h3>
-                </button>
-                <div class='panel'>
-                    <p>
-                        > Started taking classes oct 2021.
-                        Seriously started indpenedent projects 2019.
-                        Always been a thing I've enjoyed.
-                    </p>
-                </div>
-            </article>            
-        </div>
+    
+    <section class='parent about-me'>
+        <h2>About Me <span  class='icon-male' /></h2>
+        <article class='content husband' id=''>
+            <button class="content">
+                <h3 class='content'>
+                    I'm a <span class='point'>Husband</span>
+                    <span  class='icon-male' />
+                </h3>
+                <!-- <span class='icon-plus text-right about-me active' /> -->
+                <!--<span class='icon-minus text-right about-me' />-->
+            </button>
+            <p class="hidden content husband">
+                Proud husband to the whitty, intelligent, compassionate and beautiful Emily Plachta.
+            </p>
+        </article>
+        <article  class='content it'>
+            <button class="content it">
+                <h3 class='content it'>
+                    An <span class='point'>IT Engineer</span>
+                    <span class='icon-desktop' />
+                </h3>
+            </button>
+            <p class="hidden content it">
+                Professionally, I've been in IT since 2009. Here is a short-list of my skillset.
+                    abc
+            </p>
+        </article>
+        <article  class='content manager' id=''>
+            <button class="content">
+                <h3 class='content'>
+                    A <span class='point'>Project Manager</span>
+                    <span class="icon-group" />
+                </h3>
+            </button>
+            <p class="hidden manager content">
+                Professionally, I've been in IT since 2009. Here is a short-list of my skillset.
+                abc
+            </p>
+        </article>
+        <article class='content python-fullstack' id=''>
+            <button class="content">
+                <h3 class='content'>
+                    A Full-Stack <span class='point'>Python</span> Developer     
+                    <span class='icon-list-alt' />
+                </h3>
+            </button>
+            <p class='hidden content python-fullstack'>
+                I've been developing Python applications profesionally since 2018. Started learning 'on the job'.
+                Spent A LOT of time learning OOP, Python, Modular coding, etc
+            </p>
+        </article>
+        <article class='content web-fullstack' id=''>
+            <button class="content">
+                <h3 class='content'>
+                    A Full-Stack <span class='point'>Web</span> Developer
+                    <span  class='icon-sitemap' />
+                </h3>
+            </button>
+            <p class='hidden content web-fullstack'>
+                Started taking classes oct 2021.
+                Seriously started indpenedent projects 2019.
+                Always been a thing I've enjoyed.
+            </p>
+        </article>            
+    
     </section>
     <!-- ABOUT ME END -->
     <!------------------------------------------------------------------------->
@@ -200,26 +203,5 @@
         </p>
     </footer>
     <!-- FOOTER END -->
-    <!-- TODO:: 11/13/2021 #EP || review, simplify, make sure I get it-->
-    <script> 
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            /* Toggle between adding and removing the "active" class,
-            to highlight the button that controls the panel */
-            this.classList.toggle("active");
-
-            /* Toggle between hiding and showing the active panel */
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "flex") {
-            panel.style.display = "none";
-            } else {
-            panel.style.display = "flex";
-            }
-        });
-        }
-    </script>
 </body>
 </html>

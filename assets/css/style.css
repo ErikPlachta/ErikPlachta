@@ -2,6 +2,7 @@
 /* ROOT START*/
 :root {
     /* Color Theming */
+    --color_Hover: royalblue; /* A mix of cyan + blue */
     --color_Primary: rgb(52, 90, 166); /* A mix of cyan + blue */
     --color_Secondary: #F9F9F9; /* A very light shade of gray */
     --color_Tertiary: #69E5CC; /*A Turquoise Blue*/
@@ -46,19 +47,22 @@ h5 {
     margin: 0;
     padding: 0;
 }
-
 h1 {
     font-weight: 100;
     font-size: 3rem;
 }
-
 h2 {
     font-weight: 400;
     font-size: 2rem;
 }
+h3 {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
 
 .text-left {
     text-align: left;
+    float: left;
   }
   
   .text-right {
@@ -78,17 +82,19 @@ header {
     position: -webkit-sticky; /* required for cross compatibility */
     position: sticky;  
     top: 0; /* Top of the website */
+    z-index: 100;
+    
 }
 
 header h1 {
     color: var(--color_Secondary);
-    display: inline;
+    display: inline; /* photo inline w text */
     padding: .5rem 0rem .5rem 1rem;
 }
 
 header img {
     vertical-align: middle; /* makes sure stays center with h1 text.*/
-    height: inherit;
+    height: 3rem;
 }
 
 /* HEADER END */
@@ -100,84 +106,81 @@ header,
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-between;
-    
-
+    justify-content:space-evenly;
 }
 header nav ul li {
     padding: 0;
     margin: 1rem 2rem;
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 1.25rem;
+    font-weight: 100;
 }
-
 header h1 a,
 header nav ul li a {
     color: white;
 }
 
-img.about-me {
-    height: 3rem;
-    filter: invert(100%);
-}
-
 /*HEADER NAV END */
 /*----------------------------------------------------------------------------*/
 /* SECTION START */
-div.content {
-    padding: 2rem 2rem; 
+section.parent {
     border-top: var(--shadow_1px_25a);
-    
     display: flex;
     flex-direction: row; /* flex-direction: row | row-reverse | column | column-reverse */
     flex-wrap: wrap;
     justify-content: space-between; /* space-between | space-around */
-  }
+    margin: 1rem;
+}
 
-  div.content article {   
-      width: 100%;
-  }
-  article.content {
-    display: flex;
-    flex-direction: row; /* flex-direction: row | row-reverse | column | column-reverse */
-    flex-wrap: wrap;
-  }
+section > :first-child{
+    /* The Section Title H2 */
+    flex: 100%;
+    margin: 1rem;
+}
   
-/* Style the buttons that are used to open and close the accordion panel */
-button.accordion {
-    background-color: #eee;
-    color: #444;
+article.content { 
+    background-color: var(--color_Primary);
+    height: 100%;
+    min-width: 254px;
+    flex: 2 1 100%;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow:0 -.5rem 1rem rgba(0,0,0,.25); /* offset-x | offset-y | blur-radius | color */
+}
+
+button.content {
+    /* Each About Me Section */
+    background-color:transparent;
+    color: var(--btn_txt_inactive);
     cursor: pointer;
-    padding: 1rem;
-    
-    text-align: left;
     border: none;
     outline: none;
     transition: 0.4s;
-    flex: 32%;
-    display: flex;
-    min-width: 200px;
-  }
-  h3.content {
-      width: 100%;
-      text-align: center;
-  }
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    height: 4rem;
+    min-height: 3rem;
+}
+button h3 {
+    vertical-align:inherit;
+    height:100%;
+}
 
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
-    background-color: #ccc;
-  }
-  
-  
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
-    padding: 0 18px;
+p.content.hidden{
+    /* article content */
+    min-height: 1rem;
+    padding: 1rem;
+    margin: 0;
     background-color: white;
-    display: none;
     overflow: hidden;
-    flex: 68%;
-  }
+    border-top: var(--shadow_1px_25a);
+    display: none;
+}
 
+article:hover  {
+    background-color: var(--color_Hover);    
+}
+
+/* CSS EVENT EFFECTS END*/
 
   /* SECTION END */
 /*----------------------------------------------------------------------------*/
@@ -215,8 +218,8 @@ footer {
     }
 
     header h1 {
-        font-size: 4rem;
-        padding: 1rem 0;
+        font-size: 2.5rem;
+        padding: .5rem 0 .5rem 0;
         position: sticky;
         top: 0;
         background-color: var(--color_Primary); /* makes it over-top of everything else */
@@ -241,7 +244,7 @@ footer {
         border-top: var(--shadow_1px_25a);
         padding: 1.5rem 0; /* space around buttons */
         margin: 0; /* fits full width */
-        font-size: 3rem;
+        font-size: 1.5rem;
         font-weight: 200;
     }
    
@@ -250,8 +253,11 @@ footer {
     nav {
         overflow: hidden;
     }
+}
 
 @media screen and (max-width: 360px){
 
+
 }
 /* MEDIA END */
+/* CSS EVENT EFFECTS START */
