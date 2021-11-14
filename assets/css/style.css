@@ -167,6 +167,7 @@ header {
     top: 0; /* Top of the website */
     z-index: 100;
     overflow: none;
+    border-bottom: solid .5px var(--accent_Primary);
 }
 header h1 {
     height: 100%;
@@ -216,13 +217,26 @@ section.parent {
     justify-content: space-between; /* space-between | space-around */
     margin: 4rem;
 }
-section > :first-child{
+
+.hidden {
+    /* hide content for on-hover events */
+    display: none;
+}
+
+.point {
+    font-weight: 500;
+}
+
+  /* SECTION END */
+/*----------------------------------------------------------------------------*/
+/* ABOUT ME START */
+section.about-me > :first-child{
     /* The Section Title H2 */
     flex: 100%;
     margin: 1rem;
     padding-bottom: 2rem;
 } 
-article.content { 
+article.about-me { 
     background-color: var(--color_Primary);
     height: 100%;
     min-width: 254px;
@@ -230,7 +244,7 @@ article.content {
     box-shadow: var(--boxShadow);
     border-radius: 1rem; /* top-left | top-right | bottom-right | bottom-left */
 }
-button.content {
+button.about-me {
     /* Each About Me Section */
     background-color:transparent;
     color: var(--btn_txt_inactive);
@@ -244,10 +258,58 @@ button.content {
     height: 4rem;
     min-height: 3rem;
 }
-button.content {
+article.about-me:hover  {
+    background-color: var(--color_Hover);
+    box-shadow: var(--boxShadow_Hover);
+}
+article.about-me:hover .hidden{
+    display: block;
+}
+button.about-me {
     height:100%;
 }
-p.content {
+button.about-me:hover {
+    color: var(--btn_txt_active);
+}
+p.about-me {
+    /* article content */
+    min-height: 1rem;
+    padding: 1rem 10rem;
+    margin: 0;
+    background-color: var(--bg_Secondary);
+    overflow: hidden;
+    border-top: var(--shadow_1px_25a);
+    text-align: center;    
+}
+/* ABOUT ME END */
+
+/* PROJECTS START */
+article.think-big { 
+    background-color: var(--color_Primary);
+    height: 100%;
+    min-width: 254px;
+    flex: 100%; /* fit 100% of page for now */
+    box-shadow: var(--boxShadow);
+    border-radius: 1rem; /* top-left | top-right | bottom-right | bottom-left */
+}
+button.think-big {
+    /* Each About Me Section */
+    background-color:transparent;
+    color: var(--btn_txt_inactive);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    height: 4rem;
+    min-height: 3rem;
+}
+button.think-big {
+    height:100%;
+}
+p.think-big{
     /* article content */
     min-height: 1rem;
     padding: 1rem 10rem;
@@ -258,30 +320,11 @@ p.content {
     text-align: center;    
 }
 
-.hidden {
-    display: none;
-}
-button:hover {
-    color: var(--btn_txt_active);
-}
-article:hover  {
-    background-color: var(--color_Hover);
-    box-shadow: var(--boxShadow_Hover);
+img.think-big {
+    max-width: 200px;
 }
 
-article:hover .hidden{
-    display: block;
-}
-
-  /* SECTION END */
-/*----------------------------------------------------------------------------*/
-/* ABOUT ME START */
-
-.point {
-    font-weight: 500;
-}
-
-/* ABOUT ME END */
+/* PROJECTS END */
 /*----------------------------------------------------------------------------*/
 /*HERO START */
 
@@ -306,6 +349,7 @@ footer {
     /* HEADER START */
     header {
         position: relative; /* Make header no longer sticky */
+        border-bottom: solid 1px var(--color_Tertiary)
     }
     header h1 {
         font-size: 2.5rem;
@@ -351,7 +395,7 @@ footer {
         margin: 1rem;
     }
     /* SECTION END */
-    p.content {
+    p.about-me {
         /* Make fit box, still look good */
         margin: 0;
         padding: 1rem;
