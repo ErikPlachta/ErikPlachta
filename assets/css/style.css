@@ -128,8 +128,8 @@ h1 {
     font-size: 3rem;
 }
 h2 {
-    font-weight: 400;
-    font-size: 2rem;
+    font-weight: 450;
+    font-size: 2.25rem;
 }
 h3 {
     font-weight: 400;
@@ -168,12 +168,14 @@ header {
     z-index: 100;
     overflow: none;
 }
+header h1 {
+    height: 100%;
+    padding-top: 1rem;
+}
 
 header h1 a,
 header h1 {
     display: inline; /* photo inline w text */
-    background-color: var(--color_title);
-    color:var(--font_title);
 }
 
 header img {
@@ -198,7 +200,7 @@ header nav ul li {
     font-size: 1.25rem;
     font-weight: 100; 
 }
-
+header h1 a,
 header nav ul li a {
     color: var(--color_Tertiary);
 }
@@ -218,6 +220,7 @@ section > :first-child{
     /* The Section Title H2 */
     flex: 100%;
     margin: 1rem;
+    padding-bottom: 2rem;
 } 
 article.content { 
     background-color: var(--color_Primary);
@@ -244,29 +247,38 @@ button.content {
 button.content {
     height:100%;
 }
-p.content.hidden {
+p.content {
     /* article content */
     min-height: 1rem;
-    padding: 1rem;
+    padding: 1rem 10rem;
     margin: 0;
     background-color: var(--bg_Secondary);
     overflow: hidden;
     border-top: var(--shadow_1px_25a);
     text-align: center;    
 }
+
+.hidden {
+    display: none;
+}
 button:hover {
     color: var(--btn_txt_active);
 }
-article:hover {
+article:hover  {
     background-color: var(--color_Hover);
-   box-shadow: var(--boxShadow_Hover);
+    box-shadow: var(--boxShadow_Hover);
 }
+
+article:hover .hidden{
+    display: block;
+}
+
   /* SECTION END */
 /*----------------------------------------------------------------------------*/
 /* ABOUT ME START */
 
 .point {
-    
+    font-weight: 500;
 }
 
 /* ABOUT ME END */
@@ -302,9 +314,11 @@ footer {
         position: sticky;
         z-index: 99;
         top: 0;
+        background-color: var(--color_title);
     }
-    header h1 a span {
-        height: 100%;
+    header h1 a {
+        color:var(--font_title);
+        
     }
     /* HEADER END */
     /* NAV START */
@@ -337,8 +351,12 @@ footer {
         margin: 1rem;
     }
     /* SECTION END */
+    p.content {
+        /* Make fit box, still look good */
+        margin: 0;
+        padding: 1rem;
+    }
 }
-
 @media screen and (max-width: 360px){
 
 
