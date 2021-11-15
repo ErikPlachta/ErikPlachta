@@ -366,6 +366,10 @@ footer {
 
 @media screen and (max-width: 990px){
     /*------------------------------------------------------------------------*/
+    h3 {
+        font-size: 1.1rem;
+    }
+    
     /* HEADER START */
     header {
         position: relative; /* Make header no longer sticky */
