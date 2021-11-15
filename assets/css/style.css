@@ -249,15 +249,17 @@ section.contact {
     margin: 1rem; /* Space around */
     flex: 30%;
 }
+
 a button.contact { 
+    
     background-color: var(--color_Primary);
+    padding: 6rem 10rem;
     box-shadow: var(--boxShadow);
     border-radius: 1rem; /* top-left | top-right | bottom-right | bottom-left */
-    padding: 6rem 10rem;
     font-size: 2rem;
-    text-align: center;
     color: var(--btn_txt_inactive);
-    height: 100%; /* a fits container */
+    height: 100%;
+    
 }
 a button:hover{
     color: var(--btn_txt_active);
@@ -340,12 +342,7 @@ footer {
         margin: 0;
         padding: 1rem;
     }
-    /*CONTACT START */
-    section.contact {
-        width: 80%;
-        
-    }
-    /*CONTACT END */
+    /* FOOTER */
     footer {
         margin-top: 1rem;
     }
