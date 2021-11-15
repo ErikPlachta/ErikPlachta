@@ -257,6 +257,10 @@ a button.contact {
     font-size: 2rem;
     text-align: center;
     color: var(--btn_txt_inactive);
+    margin-bottom: 1rem;
+}
+a button:hover{
+    color: var(--btn_txt_active);
 }
 /*CONTACT END */
 /*----------------------------------------------------------------------------*/
