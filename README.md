@@ -10,14 +10,6 @@
     - [About Me](#about-me)
     - [Projects](#projects)
   - [Contact Me](#contact-me)
-[Projects](#contact-me)
-    - [Contact Me](#contact-me)
-  - [ii. View Live](#ii-view-live)
-  - [iii. Contact Me](#iii-contact-me)
-[i. Goal](#my-about-me-portfolio-pagehttpserikplachtagithubioabout-meportfolio)
-[ii. Submission](#ii-view-live)
-[iii. Contributors](#iii-contact-me)
-
 ---
 
 ## [My About Me & Portfolio Page](https://erikplachta.github.io/About-Me_Portfolio/)
