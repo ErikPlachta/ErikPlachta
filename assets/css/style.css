@@ -262,6 +262,10 @@ a button.contact {
 a button:hover{
     color: var(--btn_txt_active);
 }
+
+section.spacer {
+    height: 3rem;
+}
 /*CONTACT END */
 /*----------------------------------------------------------------------------*/
 /* FOOTER START */
