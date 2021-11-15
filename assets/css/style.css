@@ -1,125 +1,43 @@
 /*----------------------------------------------------------------------------*/
 /* ROOT START*/
 :root {
-    /* Color Theming */
-
+    /* Color Theming
+        Some exist in just one spot but still here to make easy for quick changes.
+    */
     --color_Primary: #172a35;
-    --color_Secondary: #172a35;
-    --color_Tertiary: #fff;
-    --color_Hover: #172a35;
-
     --color_title: #fefdff;
     --font_title: #0b132b;
-
-    --bg_Primary: #F9F9F9; /* A very light shade of gray */
-    --bg_Secondary: #fefdff;
-    --bg_Project: #e5e5e5;
-
+    /* Backgrounds */
+    --bg_Body: #F9F9F9; /* A very light shade of white gray */    
+    --bg_Section: #fefdff; /* A variation of white gray  */
+    /* Buttons */
     --btn_txt_inactive: #F9F9F9;
     --btn_txt_active: #6fffe9;
-
+    /* Accent Colors */
     --accent_Primary: #4ed1c4;
-    --accent_Secondary: #fff;
-
+    /* Borders and Shadows */
     --boxShadow: 0 -.5rem .5rem rgba(0,0,0,.25); /* offset-x | offset-y | blur-radius | color */
     --boxShadow_Hover: 0 -1rem 1rem rgba(0,0,0,.5); /* offset-x | offset-y | blur-radius | color */
-
-    /* COLORS 
-        /* ORDER ON PALLET
-            --color_1: #0b132b
-            --color_2: #1c2541
-            --color_3: #3a506b
-            --color_4: #5bc0be
-            --color_5: #6fffe9
-        */
-        
-        /* ORDER ON PALLET
-            --color_1: #233d4d
-            --color_2: #fe7f2d
-            --color_3: #fcca46
-            --color_4: #a1c181
-            --color_5: #619b8a
-        */
-        /* ORDER ON PALLET
-                --color_1: #00296b
-                --color_2: #003f88
-                --color_3: #00509d
-                --color_4: #fdc500
-                --color_5: #ffd500
-        */
-        /* ORDER ON PALLET
-                --color_1: #3d5a80
-                --color_2: #98c1d9
-                --color_3: #e0fbfc
-                --color_4: #ee6c4d
-                --color_5: #293241
-        */
-        /* ORDER ON PALLET
-                --color_1: #e63946
-                --color_2: #f1faee
-                --color_3: #a8dadc
-                --color_4: #457b9d
-                --color_5: #1d3557
-        */
-        /*
-            ORDER ON PALLET
-                --color_1: #264653
-                --color_2: #2a9d8f
-                --color_3: #e9c46a
-                --color_4: #f4a261
-                --color_5: #e76f51
-        */
-        /*
-            ORDER ON PALLET
-                --color_1: #000000
-                --color_2: #14213d
-                --color_3: #fca311
-                --color_4: #e5e5e5
-                --color_5: #ffffff
-        */
-        /*
-            ORDER ON PALLET
-                --color_1: #ef476f
-                --color_2: #ffd166
-                --color_3: #06d6a0
-                --color_4: #118ab2
-                --color_5: #073b4c
-    */    
-    /**/
-
-
-    
-
-    --margin_Primary: 10px;
-
-    /* Universal shadowing */
     --shadow_color:  rgba(0,0,0,.25);
     --shadow_1px_25a: 2px solid var(--shadow_color);
 }
-/* ROOT END */
+/* :ROOT END */
 /*----------------------------------------------------------------------------*/
 /* UNIVERVSAL STYLING START */
 * {
     box-sizing: border-box; /* Account for parent element pading. ( Keeps elements from overflowing containers) */
 }
-
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--bg_Primary);
+    background-color: var(--bg_Body);
     font-family: Roboto, Arial, sans-serif;
-    
 }
-
 a {
-    text-decoration: none; /* makes sure hyperlinks don't have styling */
+    /* makes sure hyperlinks don't have styling */
+    text-decoration: none; 
 }
-
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1,h2,h3 {
     /* removing all default padding around headers */
     margin: 0;
     padding: 0;
@@ -137,30 +55,43 @@ h3 {
     font-weight: 400;
     font-size: 1.5rem;
 }
-
+button {
+    /* universal button configuration */
+    background-color:transparent;
+    color: var(--btn_txt_inactive);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    min-height: 3rem;
+    height: 4rem;
+}
+button:hover {
+    color: var(--btn_txt_active);
+}
 .text-left {
+    /* Used to push elements around */
     text-align: left;
     float: left;
-  }
-  
-  .text-right {
+} 
+.text-right {
+    /* Used to push elements around */
     text-align: right;
     float: right;
-  }
-
+}
 .icon {
+    /*used for fav icons*/
     color: var(--accent_Primary);
     border-bottom: var(--shadow_1px_25a);
 }
-
 /* UNIVERVSAL STYLING END */
 /*----------------------------------------------------------------------------*/
 /* HEADER START */
-
 header {
     background-color: var(--color_Primary);
-    text-align: center;
-    vertical-align: middle;
     position: -webkit-sticky; /* required for cross compatibility */
     position: sticky;  
     top: 0; /* Top of the website */
@@ -172,22 +103,17 @@ header h1 {
     height: 100%;
     padding-top: 1rem;
 }
-
 header h1 a,
 header h1 {
     display: inline; /* photo inline w text */
 }
-
 header img {
     vertical-align: middle; /* makes sure stays center with h1 text.*/
     height: 3rem;
 }
-
 /* HEADER END */
 /*----------------------------------------------------------------------------*/
 /*HEADER NAV START */
-
-
 header, 
 nav ul {
     list-style: none;
@@ -195,20 +121,22 @@ nav ul {
     justify-content:space-evenly;
 }
 header nav ul li {
-    padding: 0;
     margin: 1rem 2rem;
     font-size: 1.25rem;
     font-weight: 100; 
 }
 header h1 a,
 header nav ul li a {
-    color: var(--color_Tertiary);
+    color: var(--btn_txt_inactive);
 }
-
+header h1 a:hover,
+header nav ul li a:hover {
+    transition: 0.4s;
+    color: var(--btn_txt_active);
+}
 /*HEADER NAV END */
 /*----------------------------------------------------------------------------*/
 /* SECTION START */
-
 section h2 {
     /* The Section Title H2 */
     flex: 100%;
@@ -225,13 +153,13 @@ section.parent {
     margin: 4rem;
 }
 .hidden {
-    /* hide content for on-hover events */
+    /* hide content for hover events */
     display: none;
 }
 .point {
+    /* used to tag a key point stick out */
     font-weight: 500;
 }
-
   /* SECTION END */
 /*----------------------------------------------------------------------------*/
 /* ABOUT ME START */
@@ -240,51 +168,31 @@ article.about-me {
     width: 100%;
     justify-content: space-evenly;
     min-width: 254px;
-    flex: 100%; /* fit 100% of page for now */
+    flex: 100%; /* fit 100% of page */
     background-color: var(--color_Primary);
     box-shadow: var(--boxShadow);
     border-radius: 1rem; /* top-left | top-right | bottom-right | bottom-left */
 }
-button.about-me {
-    /* Each About Me Section */
-    background-color:transparent;
-    color: var(--btn_txt_inactive);
-    cursor: pointer;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    height: 4rem;
-    min-height: 3rem;
-}
 article.about-me:hover  {
-    background-color: var(--color_Hover);
+    transition: 0.4s;
+    background-color: var(--color_Primary);
     box-shadow: var(--boxShadow_Hover);
 }
 article.about-me:hover .hidden{
     display: block;
-}
-button.about-me {
-    height:100%;
-    font-size: 3rem;
-}
-button.about-me:hover {
-    color: var(--btn_txt_active);
 }
 p.about-me {
     /* article content */
     min-height: 1rem;
     padding: 1rem 10rem;
     margin: 0;
-    background-color: var(--bg_Secondary);
+    background-color: var(--bg_Section);
     overflow: hidden;
     border-top: var(--shadow_1px_25a);
     text-align: center;    
 }
 /* ABOUT ME END */
-
+/*----------------------------------------------------------------------------*/
 /* PROJECTS START */
 article.project { 
     background-color: var(--color_Primary);
@@ -295,55 +203,34 @@ article.project {
     margin: 0 .5rem .5rem 0;
     overflow: hidden;
 }
-
 article.project:first-of-type { 
+    /* makes first project fit 100% */
     flex: 100%;
 }
-
 article.project:hover  {
-    background-color: var(--color_Hover);
-    box-shadow: var(--boxShadow_Hover);
-}
-span.project:hover  {
-    background-color: var(--bg_Project);
+    transition: 0.4s;
+    background-color: var(--color_Primary);
     box-shadow: var(--boxShadow_Hover);
 }
 
-button.project {
-    /* Each About Me Section */
-    background-color:transparent;
-    color: var(--btn_txt_inactive);
-    cursor: pointer;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    min-height: 3rem;
-}
-button.project {
-    height:100%;
-}
 p.project {
-    /* article content */
+    /* Project Summary */
     color: var(--color_Primary);
-    background-color: var(--bg_Secondary);
+    background-color: var(--bg_Section);
     border-top: var(--shadow_1px_25a);
     text-align: center;    
-    
     padding: .5rem;
 }
 img.project {
-    
+    /* Fit container and partially transparent */
     width: 100%;
     transition: 0.4s;
     opacity: 50%;
 }
 img.project:hover {
+    /* When hovering IMG, adds color to indicate hovered */
     opacity: 100%;
 }
-
 /* PROJECTS END */
 /*----------------------------------------------------------------------------*/
 /*CONTACT START */
@@ -353,12 +240,8 @@ section.contact {
     flex-wrap: wrap;
     justify-content: space-around; /* space-between | space-around */
 }
-section.links {
-    margin: auto;
-}
 a button.contact { 
-    flex: 100%;
-    cursor: pointer;
+    flex: 30%;
     background-color: var(--color_Primary);
     box-shadow: var(--boxShadow);
     border-radius: 1rem; /* top-left | top-right | bottom-right | bottom-left */
@@ -366,13 +249,10 @@ a button.contact {
     font-size: 2rem;
     text-align: center;
     color: var(--btn_txt_inactive);
-    margin: 0 2rem;
 }
-
 /*CONTACT END */
 /*----------------------------------------------------------------------------*/
 /* FOOTER START */
-
 footer {
     background-color: var(--color_Primary);
     color: var(--accent_Primary);
@@ -398,8 +278,8 @@ footer {
     
     /* HEADER START */
     header {
+        text-align: center; /* centers in rows */
         position: relative; /* Make header no longer sticky */
-        border-bottom: solid 1px var(--color_Tertiary)
     }
     header h1 {
         font-size: 2.5rem;
@@ -433,8 +313,6 @@ footer {
         font-size: 1.5rem;
         font-weight: 200;
     }
-   
-    /* HEADER & NAV END */
     
     nav {
         overflow: hidden;
