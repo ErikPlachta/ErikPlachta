@@ -13,6 +13,7 @@
 
     --bg_Primary: #F9F9F9; /* A very light shade of gray */
     --bg_Secondary: #fefdff;
+    --bg_Project: #e5e5e5;
 
     --btn_txt_inactive: #F9F9F9;
     --btn_txt_active: #6fffe9;
@@ -128,12 +129,13 @@ h1 {
     font-size: 3rem;
 }
 h2 {
+    padding-top: 5rem;
     font-weight: 450;
-    font-size: 2.25rem;
+    font-size: 2.5rem;
 }
 h3 {
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .text-left {
@@ -151,16 +153,12 @@ h3 {
     border-bottom: var(--shadow_1px_25a);
 }
 
-.icon_Secondary{
-    color: var(--accent_Secondary);
-}
-
 /* UNIVERVSAL STYLING END */
 /*----------------------------------------------------------------------------*/
 /* HEADER START */
 
 header {
-    background-color: var(--color_Secondary);
+    background-color: var(--color_Primary);
     text-align: center;
     vertical-align: middle;
     position: -webkit-sticky; /* required for cross compatibility */
@@ -292,14 +290,23 @@ article.project {
     background-color: var(--color_Primary);
     height: 100%; /* makes header fit container */
     flex: 40%;
-    min-width: 300px;
     box-shadow: var(--boxShadow);
     border-radius: 1rem; /* top-left | top-right | bottom-right | bottom-left */
-    margin: .5rem;
+    margin: 0 .5rem .5rem 0;
+    overflow: hidden;
 }
 
 article.project:first-of-type { 
     flex: 100%;
+}
+
+article.project:hover  {
+    background-color: var(--color_Hover);
+    box-shadow: var(--boxShadow_Hover);
+}
+span.project:hover  {
+    background-color: var(--bg_Project);
+    box-shadow: var(--boxShadow_Hover);
 }
 
 button.project {
@@ -320,16 +327,21 @@ button.project {
 }
 p.project {
     /* article content */
+    color: var(--color_Primary);
     background-color: var(--bg_Secondary);
-    overflow: hidden;
     border-top: var(--shadow_1px_25a);
-    text-align: center;
-    align-content: center;
+    text-align: center;    
+    
+    padding: .5rem;
 }
-
 img.project {
-    max-height: 600px;
-
+    
+    width: 100%;
+    transition: 0.4s;
+    opacity: 50%;
+}
+img.project:hover {
+    opacity: 100%;
 }
 
 /* PROJECTS END */
