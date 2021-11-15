@@ -242,29 +242,25 @@ img.project:hover {
 /* PROJECTS END */
 /*----------------------------------------------------------------------------*/
 /*CONTACT START */
-
+section#contact {
+    justify-content: space-around; /* Centers in container */
+}
 section.contact {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* space-between | space-around */
+    margin: 1rem; /* Space around */
+    flex: 30%;
 }
 a button.contact { 
-    flex: 30%;
     background-color: var(--color_Primary);
     box-shadow: var(--boxShadow);
     border-radius: 1rem; /* top-left | top-right | bottom-right | bottom-left */
-    padding: 5rem;
+    padding: 6rem 10rem;
     font-size: 2rem;
     text-align: center;
     color: var(--btn_txt_inactive);
-    margin-bottom: 1rem;
+    height: 100%; /* a fits container */
 }
 a button:hover{
     color: var(--btn_txt_active);
-}
-
-section.spacer {
-    height: 3rem;
 }
 /*CONTACT END */
 /*----------------------------------------------------------------------------*/
@@ -345,9 +341,9 @@ footer {
         padding: 1rem;
     }
     /*CONTACT START */
-    section.contact button.contact {
-        width: 100%;
-        margin: 0 0 1rem 0;
+    section.contact {
+        width: 80%;
+        
     }
     /*CONTACT END */
     footer {
