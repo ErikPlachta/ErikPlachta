@@ -346,16 +346,42 @@ img.project:hover {
 
 /* PROJECTS END */
 /*----------------------------------------------------------------------------*/
-/*HERO START */
+/*CONTACT START */
 
-/*HERO END */
+section.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* space-between | space-around */
+}
+section.links {
+    margin: auto;
+}
+a button.contact { 
+    flex: 100%;
+    cursor: pointer;
+    background-color: var(--color_Primary);
+    box-shadow: var(--boxShadow);
+    border-radius: 1rem; /* top-left | top-right | bottom-right | bottom-left */
+    padding: 5rem;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--btn_txt_inactive);
+    margin: 0 2rem;
+}
+
+/*CONTACT END */
 /*----------------------------------------------------------------------------*/
 /* FOOTER START */
 
 footer {
+    background-color: var(--color_Primary);
+    color: var(--accent_Primary);
     border-top: var(--shadow_1px_25a);
-    margin-top: var(--margin_Primary);
-    display: flex;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: .15rem .5rem;
 }
 
 /* FOOTER END */
@@ -424,10 +450,15 @@ footer {
         margin: 0;
         padding: 1rem;
     }
-}
-@media screen and (max-width: 360px){
-
-
+    /*CONTACT START */
+    section.contact button.contact {
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+    /*CONTACT END */
+    footer {
+        margin-top: 1rem;
+    }
 }
 /* MEDIA END */
 /* CSS EVENT EFFECTS START */
