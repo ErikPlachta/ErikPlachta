@@ -6,6 +6,7 @@
 
 - [Erik Plachta's About Me & Portfolio](#erik-plachtas-about-me--portfolio)
   - [Outline](#outline)
+  - [- Contact Me](#--contact-me)
   - [My About Me & Portfolio Page](#my-about-me--portfolio-page)
     - [About Me](#about-me)
     - [Projects](#projects)
