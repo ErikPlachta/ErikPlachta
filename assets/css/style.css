@@ -17,9 +17,11 @@
     --accent_Primary: #4ed1c4;
     /* Borders and Shadows */
     --boxShadow: 0 -.5rem .5rem rgba(0,0,0,.25); /* offset-x | offset-y | blur-radius | color */
-    --boxShadow_Hover: 0 -1rem 1rem rgba(0,0,0,.5); /* offset-x | offset-y | blur-radius | color */
-    --shadow_color:  rgba(0,0,0,.25);
-    --shadow_1px_25a: 2px solid var(--shadow_color);
+    --boxShadow_Hover_top_black: 0 -1rem 1rem rgba(0,0,0,.5); /* offset-x | offset-y | blur-radius | color */
+    --boxShadow_bottom_accent_Primary: 0 .05rem .5rem var(--accent_Primary); /* offset-x | offset-y | blur-radius | color */
+
+    --shadow_025_black:  rgba(0,0,0,.25);
+    --shadow_1px_25a: 2px solid var(--shadow_025_black);
 }
 /* :ROOT END */
 /*----------------------------------------------------------------------------*/
@@ -97,7 +99,8 @@ header {
     top: 0; /* Top of the website */
     z-index: 100;
     overflow: none;
-    border-bottom: solid .5px var(--accent_Primary);
+    /*--shadow_0_005_05_accent_Primary */
+    box-shadow: var(--boxShadow_bottom_accent_Primary); /* offset-x | offset-y | blur-radius | color */);
 }
 header h1 {
     height: 100%;
@@ -136,7 +139,7 @@ header nav ul li a:hover {
 }
 /*HEADER NAV END */
 /*----------------------------------------------------------------------------*/
-/* SECTION START */
+/* SECTION & ARTICLE START */
 section h2 {
     /* The Section Title H2 */
     flex: 100%;
@@ -152,6 +155,16 @@ section.parent {
     justify-content: space-between; /* space-between | space-around */
     margin: 4rem;
 }
+article {
+    opacity: 97%;
+}
+article:hover h3 {
+    color: var(--btn_txt_active);
+}
+article:hover {
+    /* When hovering IMG, adds color to indicate hovered */
+    opacity: 100%;
+}
 .hidden {
     /* hide content for hover events */
     display: none;
@@ -166,7 +179,7 @@ section.parent {
 section#about-me.parent,
 section#about-me.parent h2 {
     /* Kepeing to clean */
-    padding-top: 0;
+    padding-top: 3rem;
     margin-top: 1rem;
     border-top: none;
 }
@@ -184,7 +197,7 @@ article.about-me {
 article.about-me:hover  {
     transition: 0.4s;
     background-color: var(--color_Primary);
-    box-shadow: var(--boxShadow_Hover);
+    box-shadow: var(--boxShadow_Hover_top_black);
 }
 article.about-me:hover .hidden{
     display: block;
@@ -218,7 +231,7 @@ article.project:first-of-type {
 article.project:hover  {
     transition: 0.4s;
     background-color: var(--color_Primary);
-    box-shadow: var(--boxShadow_Hover);
+    box-shadow: var(--boxShadow_Hover_top_black);
 }
 
 p.project {
@@ -233,11 +246,6 @@ img.project {
     /* Fit container and partially transparent */
     width: 100%;
     transition: 0.4s;
-    opacity: 50%;
-}
-img.project:hover {
-    /* When hovering IMG, adds color to indicate hovered */
-    opacity: 100%;
 }
 /* PROJECTS END */
 /*----------------------------------------------------------------------------*/
@@ -247,22 +255,15 @@ section#contact {
 }
 section.contact {
     margin: 1rem; /* Space around */
-    flex: 30%;
+    flex: 20%; /* allows for all 3 to fit on page until small e nough it affects experience */
 }
 
 a button.contact { 
-    
     background-color: var(--color_Primary);
-    padding: 6rem 10rem;
+    padding: 2rem 0;
     box-shadow: var(--boxShadow);
     border-radius: 1rem; /* top-left | top-right | bottom-right | bottom-left */
-    font-size: 2rem;
-    color: var(--btn_txt_inactive);
     height: 100%;
-    
-}
-a button:hover{
-    color: var(--btn_txt_active);
 }
 /*CONTACT END */
 /*----------------------------------------------------------------------------*/
@@ -286,10 +287,10 @@ footer {
 
 @media screen and (max-width: 990px){
     /*------------------------------------------------------------------------*/
-    h3 {
+    h3 { 
+        /* Making button headers within sections fit */
         font-size: 1.1rem;
-    }
-    
+    } 
     /* HEADER START */
     header {
         text-align: center; /* centers in rows */
@@ -327,7 +328,6 @@ footer {
         font-size: 1.5rem;
         font-weight: 200;
     }
-    
     nav {
         overflow: hidden;
     }
@@ -342,9 +342,20 @@ footer {
         margin: 0;
         padding: 1rem;
     }
+    /* CONTACT */
+    .contact h3 {
+        font-size: 2rem;
+    }
     /* FOOTER */
     footer {
         margin-top: 1rem;
+    }
+}
+@media screen and (max-width: 450px){
+    /* CONTACT */
+    a button.contact { 
+        /* puts on each row */
+        padding: 3rem 2rem;   
     }
 }
 /* MEDIA END */
