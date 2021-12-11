@@ -1,39 +1,13 @@
-# Erik Plachta's About Me & Portfolio
+# 👋 
 
----
+## ![Erik Plachta](https://s.gravatar.com/avatar/cde2e5381aa5e6d8d0220c46edee8f88?s=30) Welcome to my GitHub landing page.
 
-## Outline
+## If you want to learn more about me [check out this link](https://erikplachta.github.io/ErikPlachta/)
 
-- [Erik Plachta's About Me & Portfolio](#erik-plachtas-about-me--portfolio)
-  - [Outline](#outline)
-  - [- Contact Me](#--contact-me)
-  - [My About Me & Portfolio Page](#my-about-me--portfolio-page)
-    - [About Me](#about-me)
-    - [Projects](#projects)
-  - [Contact Me](#contact-me)
----
+## Want to get in touch? 👇
 
-## [My About Me & Portfolio Page](https://erikplachta.github.io/About-Me_Portfolio/)
+> Feel free to reach out to me at any of the following links
 
-> This repo is a landing page to tell you a little bit about me, and demonstrate some of my work.
-
-### About Me
-
-> ![About Me](./assets/images/about-me.png)
-
-### Projects
-
-> ![Projects](./assets/images/projects.png)
-
----
-
-## Contact Me
-
-> Want to get in touch? 👇
-
-![Erik Plachta](https://s.gravatar.com/avatar/cde2e5381aa5e6d8d0220c46edee8f88?s=30) 
-[![Github](https://img.shields.io/badge/-@erikplachta-000?style=flat&logo=Github&logoColor=white)](https://github.com/ErikPlachta)
-![Profile Views](https://gpvc.arturio.dev/erikplachta) <img src="https://img.shields.io/github/followers/erikplachta?label=Follow Me" style=" float:left, margin-right:10px" /> 
 
 [![Medium](https://img.shields.io/badge/-blog.erikplachta.com-000000?style=flat&labelColor=000000&logo=Medium&link=http://blog.erikplachta.com/)](http://blog.erikplachta.com/)
 [![Twitter](https://img.shields.io/badge/-@erikplachta-1ca0f1?style=flat&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/erikplachta)](https://twitter.com/erikplachta)
