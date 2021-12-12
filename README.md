@@ -1,6 +1,6 @@
 # ![Erik Plachta](https://s.gravatar.com/avatar/cde2e5381aa5e6d8d0220c46edee8f88?s=30) Erik Plachta
 
-> Updted December, 12th 2021 - _( Still under active development )_
+> Updated December, 12th 2021 - _( Still under active development )_
 
 :wave: Thanks for checking out my GitHub! 
 
