@@ -10,14 +10,14 @@
 
 **I'm a software developer, IT Director, project manager, and productivity nerd.**
 
-I enjoy identifying patterns to build modular infrastructure. Once you understand the problem, it's easy to build thoughtful, light-weight flexible code.
+I enjoy identifying patterns to build modular infrastructure and designs. Once you understand the problem, it's easy to build thoughtful, light-weight, and modular framework.
 
 ---
 
 🥇 **Python, PowerShell, and SQL are the primary languages I use profesionally**
 
-- Beyond 10 years now, I've beena professional IT Engineer. Building software solutions to automate and manage IT related services with Python and PowerShell is a part of my every-day job.
-- For the past 4 years, I've also been working directly with a SQL Engineer to provide SQL support and services to remote clients.
+- I've beena professional IT Engineer for over 10 years. Along with providing IT services, I build custom software solutions to automate what I can. Developing with Python and PowerShell is a part of my every-day job.
+- In 2017, I also started working directly with a SQL Engineer to provide SQL support and services to remote clients. We primarily use Python, SQL, and PoweShel.
 
 ---
 
