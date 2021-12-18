@@ -8,20 +8,26 @@
 
 ---
 
-**I'm a software developer, IT Director, project manager, and productivity nerd.**
+**I'm a software developer, IT engineer / director, project manager, and productivity nerd.**
 
 I enjoy identifying patterns to build modular infrastructure and designs. Once you understand the problem, it's easy to build thoughtful, light-weight, and modular framework.
 
 ---
 
-🥇 **Python, PowerShell, and SQL are the primary languages I use profesionally**
+**I'm a professional IT Engineer and MSP Director**
 
-- I've beena professional IT Engineer for over 10 years. Along with providing IT services, I build custom software solutions to automate what I can. Developing with Python and PowerShell is a part of my every-day job.
+- I have over 10 years of experince managing and providing IT services to small businesses and large scale businesses.
+- My expertise is in customer service, software support/training, hardware support, Windows, network infrastructure, and small business operating strategy.
+- I also have a lot of experience in building/managing SaaS based MSP service models with an MVP service strategy built around automation and remote services.
+
+**Python, PowerShell, and SQL are the primary languages I use profesionally**
+
+- Along with providing IT services, I build custom software solutions to automate what I can. Developing with Python and PowerShell is a part of my every-day job.
 - In 2017, I also started working directly with a SQL Engineer to provide SQL support and services to remote clients. We primarily use Python, SQL, and PoweShel.
 
 ---
 
-🥈 **Secondary is JavaScript, CSS, and HTML**
+**Secondary is JavaScript, CSS, and HTML**
 
 - For the past 2 years, I've been learning these languages to bridge the gap from backend and front.
 - Currently taking classes at [UNC Charlotte](https://www.charlotte.edu) to expand my knowledge and build a solid foundation. 
