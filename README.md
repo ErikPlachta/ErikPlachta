@@ -8,9 +8,9 @@
 
 ---
 
-**I'm a software developer, IT Director, project manager, and producity nerd.**
+**I'm a software developer, IT Director, project manager, and productivity nerd.**
 
-I enjoy identify patterns to build modular infrastructure. Once you understand the problem, it's easy to build thoughtful, light-weight flexible code.
+I enjoy identifying patterns to build modular infrastructure. Once you understand the problem, it's easy to build thoughtful, light-weight flexible code.
 
 ---
 
