@@ -173,6 +173,11 @@ article.about-me:hover {
     /* opacity: 100%; */
     filter: brightness(110%);
 }
+
+article.about-me:hover button {
+    cursor:default;
+}
+
 .hidden {
     /* hide content for hover events */
     display: none;
