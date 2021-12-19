@@ -19,6 +19,8 @@
     --boxShadow: 0 -.5rem .5rem rgba(0,0,0,.25); /* offset-x | offset-y | blur-radius | color */
     --boxShadow_Hover_top_black: 0 -1rem 1rem rgba(0,0,0,.5); /* offset-x | offset-y | blur-radius | color */
     --boxShadow_bottom_accent_Primary: 0 .05rem .5rem var(--accent_Primary); /* offset-x | offset-y | blur-radius | color */
+    --boxShadow_Hover_top_heavy_bottom_light: 0rem -.4rem 1rem rgba(0,0,0,.5); /* offset-x | offset-y | blur-radius | color */
+    
 
     --shadow_025_black:  rgba(0,0,0,.25);
     --shadow_1px_25a: 2px solid var(--shadow_025_black);
@@ -158,7 +160,7 @@ section.parent {
     
 }
 article {
-    opacity: 97%;
+    /* opacity: 97%; */
 }
 /* Title within each topic */
 article:hover h3 {
@@ -168,7 +170,9 @@ article:hover h3 {
 }
 article:hover {
     /* When hovering IMG, adds color to indicate hovered */
-    opacity: 100%;
+    /* opacity: 100%; */
+    filter: brightness(110%);
+    
 }
 .hidden {
     /* hide content for hover events */
@@ -199,12 +203,15 @@ article.about-me {
     transition: 0.4s ease-in-out;
     background-color: var(--color_Primary);
     box-shadow: var(--boxShadow);
-    border-radius: 1rem; /* top-left | top-right | bottom-right | bottom-left */
+    border-radius: .5rem; /* top-left | top-right | bottom-right | bottom-left */
 }
 article.about-me:hover  {
-    transition: 0.4s ease-in-out;
+    transition: 0.2s ease-in-out;
     background-color: var(--color_Primary);
     /* box-shadow: var(--boxShadow_Hover_top_black); */
+    box-shadow: var(--boxShadow_Hover_top_heavy_bottom_light);
+    /* box-shadow: var(--boxShadow); */
+    /* border-bottom: 1px solid var(--shadow_025_black); */
     
 }
 article.about-me:hover .hidden{
@@ -228,7 +235,7 @@ article.project {
     height: 100%; /* makes header fit container */
     flex: 40%;
     box-shadow: var(--boxShadow);
-    border-radius: 1rem; /* top-left | top-right | bottom-right | bottom-left */
+    border-radius: .5rem; /* top-left | top-right | bottom-right | bottom-left */
     margin: 0 .5rem .5rem 0;
     overflow: hidden;
 }
@@ -270,7 +277,7 @@ a button.contact {
     background-color: var(--color_Primary);
     padding: 2rem 0;
     box-shadow: var(--boxShadow);
-    border-radius: 1rem; /* top-left | top-right | bottom-right | bottom-left */
+    border-radius: .5rem; /* top-left | top-right | bottom-right | bottom-left */
     height: 100%;
 }
 /*CONTACT END */
