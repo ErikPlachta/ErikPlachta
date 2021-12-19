@@ -168,11 +168,10 @@ article:hover h3 {
     color: var(--btn_txt_active);
     
 }
-article:hover {
+article.about-me:hover {
     /* When hovering IMG, adds color to indicate hovered */
     /* opacity: 100%; */
     filter: brightness(110%);
-    
 }
 .hidden {
     /* hide content for hover events */
@@ -238,13 +237,22 @@ article.project {
     border-radius: .5rem; /* top-left | top-right | bottom-right | bottom-left */
     margin: 0 .5rem .5rem 0;
     overflow: hidden;
+    opacity: 98%;
+    
 }
 article.project:first-of-type { 
     /* makes first project fit 100% */
     flex: 100%;
+    max-height: 400px;
+}
+/* making sure the purrfect friend isn't massive */
+article.project:last-of-type { 
+    max-width: 300px;
+
 }
 article.project:hover  {
     transition: 0.4s ease-in-out;
+    opacity: 100%;
     background-color: var(--color_Primary);
     box-shadow: var(--boxShadow_Hover_top_black);
 }
@@ -259,8 +267,10 @@ p.project {
 }
 img.project {
     /* Fit container and partially transparent */
-    width: 100%;
     transition: 0.4s;
+    width: 100%;
+    align-self: top;
+    
 }
 /* PROJECTS END */
 /*----------------------------------------------------------------------------*/
@@ -375,6 +385,13 @@ footer h4 {
     a button.contact { 
         /* puts on each row */
         padding: 3rem 2rem;   
+    }
+
+    #projects { 
+        flex-direction: column;
+    }
+    article.project:last-of-type { 
+        max-width: inherit;
     }
 }
 /* MEDIA END */
