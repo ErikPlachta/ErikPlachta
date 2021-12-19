@@ -130,11 +130,12 @@ header nav ul li {
 }
 header h1 a,
 header nav ul li a {
+    transition: 0.4s ease-in-out;
     color: var(--btn_txt_inactive);
 }
 header h1 a:hover,
 header nav ul li a:hover {
-    transition: 0.4s;
+    transition: 0.4s ease-in-out;
     color: var(--btn_txt_active);
 }
 /*HEADER NAV END */
@@ -154,12 +155,16 @@ section.parent {
     flex-wrap: wrap;
     justify-content: space-between; /* space-between | space-around */
     margin: 4rem;
+    
 }
 article {
     opacity: 97%;
 }
+/* Title within each topic */
 article:hover h3 {
+    transition: 0.4s ease-in-out;
     color: var(--btn_txt_active);
+    
 }
 article:hover {
     /* When hovering IMG, adds color to indicate hovered */
@@ -185,19 +190,22 @@ section#about-me.parent h2 {
 }
 
 article.about-me { 
+    transition: 0.4s ease-in-out;
     height: 100%;
     width: 100%;
     justify-content: space-evenly;
     min-width: 254px;
-    flex: 100%; /* fit 100% of page */
+    flex: 100%;
+    transition: 0.4s ease-in-out;
     background-color: var(--color_Primary);
     box-shadow: var(--boxShadow);
     border-radius: 1rem; /* top-left | top-right | bottom-right | bottom-left */
 }
 article.about-me:hover  {
-    transition: 0.4s;
+    transition: 0.4s ease-in-out;
     background-color: var(--color_Primary);
-    box-shadow: var(--boxShadow_Hover_top_black);
+    /* box-shadow: var(--boxShadow_Hover_top_black); */
+    
 }
 article.about-me:hover .hidden{
     display: block;
@@ -229,7 +237,7 @@ article.project:first-of-type {
     flex: 100%;
 }
 article.project:hover  {
-    transition: 0.4s;
+    transition: 0.4s ease-in-out;
     background-color: var(--color_Primary);
     box-shadow: var(--boxShadow_Hover_top_black);
 }
