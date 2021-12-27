@@ -38,7 +38,8 @@ $(window).resize(function(e){
 
 $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {
-       alert("bottom!");
+    update_PositionData();
+    console.log("bottom!");
        // getData();
    } 
     //-- not to bottom
@@ -50,3 +51,27 @@ $(window).scroll(function() {
 //        console.log($(document).height());
 //    }
 });
+
+
+//-- Scroll to Top Button
+ $(window).scroll(function() {
+    if ($(this).scrollTop()) {
+        $('#toTop').fadeIn();
+    } else {
+        $('#toTop').fadeOut();
+    }
+});
+
+//-- button element to have up arrow
+var top_btn_html= "<button id='toTop' onclick='gotoTop()'>&#8593;</button>";
+
+//-- Add element to body
+$('document').ready(function(){
+    $("body").append(top_btn_html);
+});
+
+//-- Scrolling to top logic
+function gotoTop(){
+    $("html, body").animate({scrollTop: 0}, 200);
+}
+/* END --> Scroll to Top Button */

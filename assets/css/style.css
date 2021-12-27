@@ -177,6 +177,35 @@ header nav ul li a:hover {
 
 }
 
+
+/*Scrool top btn*/
+#toTop {
+    position: fixed;
+    z-index: 10000;
+    opacity: 0.9;
+    right: .5rem;
+    bottom: 2rem;
+    background-color: var(--color_Primary);
+    border: .5px solid black;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2rem;
+    /* border-radius: 20px; */
+    color: var(--btn_txt_inactive);
+    font-size: 3rem;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    /* vertical-align: middle; */
+    box-shadow: var(--boxShadow_bottom_accent_Primary);
+}
+
+#toTop:hover {
+    color: var(--btn_txt_active);
+    box-shadow: var(--boxShadow_bottom_accent_Primary);
+    opacity: 1;
+}
+
 /*POSITION --> END */
 /*----------------------------------------------------------------------------*/
 /* SECTION & ARTICLE START */
