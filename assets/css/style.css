@@ -114,7 +114,6 @@ header {
     box-shadow: var(--boxShadow_bottom_accent_Primary); /* offset-x | offset-y | blur-radius | color */);
 }
 header h1 {
-    height: 100%;
     padding-top: 1rem;
 }
 header h1 a,
@@ -177,18 +176,24 @@ header nav ul li a:hover {
 
 }
 
+#header-2{
+    background: red;
+    position: fixed;
+    width: 100%;
+    border: 1px solid red;
+}
 
 /*Scrool top btn*/
 #toTop {
     position: fixed;
     z-index: 10000;
-    opacity: 0.9;
-    right: .5rem;
-    bottom: 2rem;
+    opacity: 0.5;
+    right: .25rem;
+    bottom: 1.75rem;
     background-color: var(--color_Primary);
-    border: .5px solid black;
+    /* border: .5px solid black; */
     width: 5rem;
-    height: 5rem;
+    height: 4.5rem;
     border-radius: 2rem;
     /* border-radius: 20px; */
     color: var(--btn_txt_inactive);
@@ -398,6 +403,7 @@ footer:hover {
         /* Making button headers within sections fit */
         font-size: 1.1rem;
     } 
+
     /* HEADER START */
     header {
         text-align: center; /* centers in rows */
@@ -405,9 +411,10 @@ footer:hover {
     }
     header h1 {
         font-size: 2.5rem;
-        padding: .5rem 0 .5rem 0;
+        padding: .5rem 0 .25rem 0;
         /* make it over-top of everything else */
-        position: sticky;
+        position: fixed;
+        width: 100%;
         z-index: 99;
         top: 0;
         background-color: var(--color_title);
@@ -430,12 +437,13 @@ footer:hover {
     
     header nav ul li {
         border-top: var(--shadow_1px_25a);
-        padding: .25rem 0; /* space around buttons */
+        padding: .5rem 0; /* space around buttons */
         margin: 0; /* fits full width */
         font-size: 1.5rem;
         font-weight: 200;
     }
     nav {
+        margin-top: 4rem;
         overflow: hidden;
     }
     /* */
