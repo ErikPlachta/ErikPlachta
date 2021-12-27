@@ -154,10 +154,27 @@ header nav ul li a:hover {
 /*----------------------------------------------------------------------------*/
 /*POSITION --> START */
 
-#scrollable {
+/* Container for scrolling awareness
+    TODO:: 12/27/2021 #EP || Remove once done testing
+*/
+#positionData {
     position: fixed;
-    background: white;
+    background: var(--bg_Body);
     z-index: 99;
+
+    width: 100%;
+    flex: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    padding: .5rem 1rem;
+    
+}
+/* For the data elements within */
+#positionData span{
+    /* TODO:: 12/27/2021 #EP || Add styling to this */
+
 }
 
 /*POSITION --> END */

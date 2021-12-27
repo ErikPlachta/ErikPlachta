@@ -19,6 +19,23 @@ function getData() {
     })
 };
 
+const update_PositionData = function(){
+    $( "#positionData" ).html(
+        "<span> Current Top Position: " + $(window).scrollTop() +"</span>"
+        // + "<br>"
+        + "<span> Height of Browser Window: " + $(window).height() +"</span>"
+        // + "<br>"
+        + "<span> Total Height of Page: " + $(document).height() +"</span>"
+    );
+}
+
+
+//-- Listens if resize happens
+$(window).resize(function(e){
+    // console.log(e);
+    update_PositionData();
+});
+
 $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {
        alert("bottom!");
@@ -27,15 +44,7 @@ $(window).scroll(function() {
     //-- not to bottom
     else {
         
-        $( "#positionData" ).html(
-            "Current Top Position: " + $(window).scrollTop()
-            + "<br>"
-            + "Height of Browser Window: " + $(window).height()
-            + "<br>"
-            + "Total Height of Page: " + $(document).height()
-        );
-        console.log("Position: ",$(window).scrollTop());
-        console.log("Height of View Window: ", $(window).height())
+        update_PositionData();
     }
 //    else{
 //        console.log($(document).height());
