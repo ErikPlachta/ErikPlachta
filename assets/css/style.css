@@ -18,7 +18,7 @@
     /* Borders and Shadows */
     --boxShadow: 0 -.5rem .5rem rgba(0,0,0,.25); /* offset-x | offset-y | blur-radius | color */
     --boxShadow_Hover_top_black: 0 -1rem 1rem rgba(0,0,0,.5); /* offset-x | offset-y | blur-radius | color */
-    --boxShadow_bottom_accent_Primary: 0 .05rem .5rem var(--accent_Primary); /* offset-x | offset-y | blur-radius | color */
+    --boxShadow_bottom_accent_Primary: 0 .05rem .5rem var(--color_Primary); /* offset-x | offset-y | blur-radius | color */
     --boxShadow_Hover_top_heavy_bottom_light: 0rem -.4rem 1rem rgba(0,0,0,.5); /* offset-x | offset-y | blur-radius | color */
     
 
@@ -36,6 +36,9 @@ body {
     padding: 0;
     background-color: var(--bg_Body);
     font-family: Roboto, Arial, sans-serif;
+    
+    /* Prevents cursor from changing from arrow unless explicit */
+    cursor: default;
 }
 a {
     /* makes sure hyperlinks don't have styling */
@@ -91,6 +94,12 @@ button:hover {
     color: var(--accent_Primary);
     border-bottom: var(--shadow_1px_25a);
 }
+
+
+html {
+    scroll-behavior: smooth;
+  }
+
 /* UNIVERVSAL STYLING END */
 /*----------------------------------------------------------------------------*/
 /* HEADER START */
@@ -140,9 +149,21 @@ header nav ul li a:hover {
     transition: 0.4s ease-in-out;
     color: var(--btn_txt_active);
 }
+
 /*HEADER NAV END */
 /*----------------------------------------------------------------------------*/
+/*POSITION --> START */
+
+#scrollable {
+    position: fixed;
+    background: white;
+    z-index: 99;
+}
+
+/*POSITION --> END */
+/*----------------------------------------------------------------------------*/
 /* SECTION & ARTICLE START */
+
 section h2 {
     /* The Section Title H2 */
     flex: 100%;
@@ -300,13 +321,15 @@ a button.contact {
 /* FOOTER START */
 footer {
     background-color: var(--color_Primary);
-    color: var(--accent_Primary);
+    color: white;
     border-top: var(--shadow_1px_25a);
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
     padding: .15rem .5rem;
+    /* padding: auto; */
+    margin: auto;
 }
 
 footer h4 {
@@ -315,6 +338,10 @@ footer h4 {
 }
 /* FOOTER END */
 
+footer:hover {
+    color: var(--accent_Primary);
+    cursor: default;
+}
 
 /*----------------------------------------------------------------------------*/
 /* MEDIA START */

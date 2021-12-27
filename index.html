@@ -32,6 +32,14 @@
     <header></header>
     <!-- HEADER & NAV END -->
     <!------------------------------------------------------------------------->
+    <!-- LOCATION - START -->
+
+    <div id="scrollable">
+        <div id="positionData"></div>
+    </div>
+    
+      <!-- LOCATION - END -->
+      <!------------------------------------------------------------------------->
     <!-- ABOUT ME START -->
     <section class='parent' id='about-me'>
         <h2 class='about-me'>About Me <span  class='icon-male icon' /></h2>
@@ -301,14 +309,17 @@
     <!-- FOOTER START -->
     <footer></footer>
     <!-- FOOTER END -->
-
+    <!------------------------------------------------------------------------->
     <!-- SCRIPTS -->
 
+    <!-- Loading Header menu with nav and Footer content -->
     <script>
-        
         $( "header" ).load( "./assets/html/nav.html");
-        $( "#footer" ).load( "./assets/html/footer.html");
-        
+        $( "footer" ).load( "./assets/html/footer.html");
     </script>
+
+    <!-- Adding smooth scrolling -->
+    <script src="./assets/js/location.js"></script>
+
 </body>
 </html>
