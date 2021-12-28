@@ -73,8 +73,6 @@ function get_Database(){
     
     // Get Database from local storage, build into JSON dict
     let database_Current = JSON.parse(localStorage.getItem(database_Name));
-    
-    // console.log("function get_Database(): database_Current: ",database_Current);
 
     // If database exists
     if (database_Current != null) {
@@ -103,8 +101,6 @@ function set_Database(entry) {
     /* Use to set database values in Local Storage. Verify, merge, append, and
         updates. 
     */
-    
-    console.log("//-- set_Database(entry):",entry)
 
     //--------------------------------
     //-- LOCAL VAR --> START
@@ -145,7 +141,6 @@ function set_Database(entry) {
          // If API already defined in local storage, grab it.
          if (database_Current.api != null) {
             api_Current = database_Current.api;
-            console.log("//-- api != null so defined.",database_Current.api)
         }
     }
     
@@ -154,6 +149,7 @@ function set_Database(entry) {
             
         // First login for the user, so update value.
         userdata_Current['login_First'] = datetime_12();
+        
         
     }
 
@@ -170,7 +166,7 @@ function set_Database(entry) {
         if(entry.userdata != null){
             
             // Build userdata results
-            for (key in entry.userdata){
+            for (let key in entry.userdata){
                 
                 // IF userdata key not yet defined in database, add it.
                 if(userdata_Current[key] == undefined){                
@@ -179,18 +175,22 @@ function set_Database(entry) {
             };
             
             /* FOR EACH DATE IN TIMELINE
-
                 Itterate through userdata.timeline dates, update the database.
-                Used when page runs, so if new date on load new timeline entry
+                Used when page runs, so if new date on load new timeline entry.
             */
-            for(date in entry.userdata.timeline){
+            for(let date in entry.userdata.timeline){
                 //add entry value to what will be written to local storage
-                userdata_Current.timeline[date] = entry.userdata.timeline[date];
+                console.log(userdata_Current.timeline[date])
+
                 
-                // if first login for the day
+                // if first login for the day, update login first and last to match
                 if(userdata_Current.timeline[date].login_First == null){
-                    // Set current date and time
                     userdata_Current.timeline[date].login_First = datetime_12();
+                    userdata_Current.timeline[date].login_Last = datetime_12();
+                } 
+                //-- Otherwise only update login last
+                else {
+                    userdata_Current.timeline[date].login_Last = datetime_12();
                 }
             }
         };
@@ -338,3 +338,10 @@ run();
 
 
 //-- RUNNING PROGRAM --> END
+
+
+
+
+
+//-- Makes function public
+export { set_Database, get_Database };
