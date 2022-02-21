@@ -306,27 +306,26 @@ p.about-me {
 /* ABOUT ME END */
 /*----------------------------------------------------------------------------*/
 /* PROJECTS START */
+#projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 article.project { 
     background-color: var(--color_Primary);
     height: 100%; /* makes header fit container */
-    flex: 40%;
+    flex: 1 2 40%;
     box-shadow: var(--boxShadow);
     border-radius: .5rem; /* top-left | top-right | bottom-right | bottom-left */
     margin: 0 .5rem .5rem 0;
     overflow: hidden;
     opacity: 98%;
+    max-height: 400px;
     
 }
-article.project:first-of-type { 
-    /* makes first project fit 100% */
-    flex: 100%;
-    max-height: 400px;
-}
-/* making sure the purrfect friend isn't massive */
-article.project:last-of-type { 
-    max-width: 300px;
 
-}
 article.project:hover  {
     transition: 0.4s ease-in-out;
     opacity: 100%;
