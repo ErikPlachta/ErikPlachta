@@ -316,7 +316,7 @@ p.about-me {
 article.project { 
     background-color: var(--color_Primary);
     height: 100%; /* makes header fit container */
-    flex: 1 2 40%;
+    flex: 1 2 50%;
     box-shadow: var(--boxShadow);
     border-radius: .5rem; /* top-left | top-right | bottom-right | bottom-left */
     margin: 0 .5rem .5rem 0;
