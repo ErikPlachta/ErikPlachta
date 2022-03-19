@@ -5,10 +5,8 @@ import imgErikPlachta from './assets/img/erik/erik_c_72.png'
 
 //-- components
 import Navigation from './components/navigation';
-import AboutMe from './components/about-me';
-import Portfolio from './components/portfolio';
-import Resume from './components/resume';
-import Contact from './components/contact';
+import Main from './components/main';
+
 
 function App() {
 
@@ -28,28 +26,12 @@ function App() {
   
     <header>
       <h1 className='title'>
-      <img
-          className='title-img'
-          src={imgErikPlachta}
-          alt="Erik Plachta"
-          key="erik-title-image"
-        />
+      <img className='title-img' src={imgErikPlachta} alt="Erik Plachta" key="erik-title-image" />
         Erik Plachta
       </h1>
-      <Navigation
-        locations={locations}
-        locationCurrent={location}
-        setLocation={setLocation}
-      ></Navigation>
-      
+      <Navigation locations={locations} locationCurrent={location} setLocation={setLocation}></Navigation>
     </header>,
-
-    <main>
-      <AboutMe></AboutMe>
-      <Contact></Contact>
-      <Resume></Resume>
-      <Portfolio></Portfolio>
-    </main>,
+    <Main locations={locations} locationCurrent={location} setLocation={setLocation}></Main>,
 
     <footer>
       <div>GitHub</div>
