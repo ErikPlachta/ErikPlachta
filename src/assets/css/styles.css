@@ -99,6 +99,7 @@ body {
     --body_fc_dark: var(--c_00);
     --body_fc_darkblue: var(--c_01);
     --body_fc_light: var(--c_06);
+    --body_fc_light_active: var(--c_03);
 
     /*
          BODY STYLING
@@ -204,6 +205,12 @@ img.title-img{
 }
 
 nav {
+    --nav-fc-light: var(--body_fc_light);
+    /* --a-light-hover: var(--body_fc_dark); */
+    --nav-fc-dark: var(--body_fc_dark);
+    /* --a-dark-hover: var(--body_fc_light); */
+    --nav-fc-active: var(--body_fc_light_active);
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -212,18 +219,24 @@ nav {
     font-size: 1.25rem;
 }
 
-nav a{
-    color: var(--a-light);
+.nav{
+    color: var(--nav-fc-light);
+    
     transition: ease-in-out 200ms;
     border-bottom: 2px solid transparent;
  
 }
 
-nav a:hover{
+.nav:hover{
     text-shadow: 0 0 0 var(--accent_p);
     border-bottom: 2px solid var(--accent_p);
 }
 
+/* if the current location */
+.nav.nav-active{
+    color: var(--nav-fc-active);
+    border-bottom: 2px solid var(--nav-fc-light);
+}
 
 
 /*////////////////////////////////////////////////////////////////////////////*/

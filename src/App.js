@@ -14,10 +14,10 @@ function App() {
 
   //-- used to updated DOM title and nav awareness events
   const [locations] = useState([
-    {name: 'About'},
-    {name: 'Portfolio'},
-    {name: 'Resume'},
-    {name: 'Contact'},
+    {name: 'about'},
+    {name: 'portfolio'},
+    {name: 'resume'},
+    {name: 'contact'},
   ])
 
   //-- setting default location to about me

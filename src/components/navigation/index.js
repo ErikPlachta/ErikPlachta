@@ -6,19 +6,26 @@ export default function Navigation( {locations, locationCurrent, setLocation} ) 
   //-- Update DOM title
   useEffect(() => {
     document.title = capitalizeFirstLetter(locationCurrent);
-  });
+  }, 
+  [locationCurrent]);
+
 
   
   return (
     <nav>
-      {/* <a href="/">About</a>
-      <a href="/">Portfolio</a>
-      <a href="/">Resume</a>
-      <a href="/">Contact</a> */}
-
-      {locations.map( (locationEl) => (
+      {locations.map( (location) => (
         // console.log(locationEl)
-        <a href="/">{locationEl.name}</a>
+        <span
+          
+          onClick={() => {
+            setLocation(location.name)
+          }}
+          //-- if location name is current location, add className nav-active. otherwise nothing
+          className={`${locationCurrent === location.name && 'nav nav-active' || 'nav'}`}
+          key={location.name}
+        >
+          {capitalizeFirstLetter(location.name)}
+        </span>
       ))}
       
 
