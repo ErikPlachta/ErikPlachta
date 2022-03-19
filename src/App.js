@@ -1,4 +1,4 @@
-import React, { useState, useHook } from 'react';
+import React, { useState } from 'react';
 
 import Header from './components/header';
 import Navigation from './components/navigation';
@@ -9,8 +9,6 @@ import Contact from './components/contact';
 
 function App() {
 
-  const defaultLocation = {name: "about-me"}
-
   const [location, setLocation] = useState( "about-me" )
 
   
@@ -20,6 +18,7 @@ function App() {
     <Header></Header>,
     <Navigation
       location={location}
+      setLocation={setLocation}
     ></Navigation>,
 
     <main>

@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { capitalizeFirstLetter } from '../../utils/helpers';
 
-export default function Navigation( location ) {
+export default function Navigation( {location, setLocation} ) {
   
   //-- Update DOM title
   useEffect(() => {
-  
-  
-    // Clean up the subscription
-    document.title = location
-  
+    document.title = capitalizeFirstLetter(location);
 });
-
 
   return (
     <nav>
