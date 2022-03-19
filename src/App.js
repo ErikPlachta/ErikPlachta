@@ -1,4 +1,4 @@
-import './App.css';
+import React, { useState, useHook } from 'react';
 
 import Header from './components/header';
 import Navigation from './components/nav';
@@ -8,6 +8,11 @@ import Resume from './components/resume';
 import Contact from './components/contact';
 
 function App() {
+
+  const [location, setLocation] = useState("about-me")
+
+  
+  //-- Returning all content
   return ([
   
     <Header></Header>,
@@ -18,7 +23,12 @@ function App() {
       <Resume></Resume>
       <Portfolio></Portfolio>
     </main>,
-    <footer>Footer element</footer>
+    <footer>
+      <div>GitHub</div>
+      <div>Linked-In</div>
+      <div>Twitter</div>
+      <div>Medium</div>
+    </footer>
   
   ]);
 }
