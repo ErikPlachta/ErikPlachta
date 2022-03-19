@@ -12,8 +12,16 @@ import Contact from './components/contact';
 
 function App() {
 
+  //-- used to updated DOM title and nav awareness events
+  const [locations] = useState([
+    {name: 'About'},
+    {name: 'Portfolio'},
+    {name: 'Resume'},
+    {name: 'Contact'},
+  ])
+
   //-- setting default location to about me
-  const [location, setLocation] = useState( "about-me" )
+  const [location, setLocation] = useState( locations[0].name )
   
   //-- Returning all content
   return ([
@@ -29,7 +37,8 @@ function App() {
         Erik Plachta
       </h1>
       <Navigation
-        location={location}
+        locations={locations}
+        locationCurrent={location}
         setLocation={setLocation}
       ></Navigation>
       
