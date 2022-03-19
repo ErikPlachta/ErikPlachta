@@ -6,20 +6,15 @@ import Contact from './contact';
 
 export default function Main({ locations, locationCurrent, setLocation}) {
 
-    const [locationContent] = useState([
-        {name: 'about', import: <AboutMe></AboutMe>},
-        {name: 'portfolio', import: <Portfolio></Portfolio>},
-        {name: 'resume', import: <Resume></Resume>},
-        {name: 'contact', import: <Contact></Contact>},
-      ])
-
-    return ([
-        <section>
-            {locations.map( (location) => (
-                // console.log(location)
-                <span>{location.name}</span>
-            ))}
-
-        </section>
-]);
+    const [locationContent] = useState({
+        'about': {import: <AboutMe></AboutMe>},
+        'portfolio': {import: <Portfolio></Portfolio>},
+        'resume': {import: <Resume></Resume>},
+        'contact': {import: <Contact></Contact>},
+    })
+    
+    return (
+        //-- returns approriate component based on locationCurrent
+        <section>{locationContent[locationCurrent].import}</section>
+    );
 };
