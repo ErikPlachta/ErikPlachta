@@ -1,6 +1,6 @@
 # ![Erik Plachta](https://s.gravatar.com/avatar/cde2e5381aa5e6d8d0220c46edee8f88?s=30) Erik Plachta
 
-> It was updated March, 20th 2022 - #EP | Updated to a [React SPA](https://github.com/ErikPlachta/ErikPlachta/issues/25), and updated overall content.
+> Updated on March 20th 2022 - #EP | Updated to a [React SPA](https://github.com/ErikPlachta/ErikPlachta/issues/25), simplified, and added up-to-date content.
 
 ---
 
