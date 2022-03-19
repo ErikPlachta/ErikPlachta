@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 
+//-- content
+import imgErikPlachta from './assets/img/erik/erik_c_72.png'
+
+//-- components
 import Navigation from './components/navigation';
 import AboutMe from './components/about-me';
 import Portfolio from './components/portfolio';
@@ -15,7 +19,15 @@ function App() {
   return ([
   
     <header>
-      <h1 className='title'>Erik Plachta</h1>
+      <h1 className='title'>
+      <img
+          className='title-img'
+          src={imgErikPlachta}
+          alt="Erik Plachta"
+          key="erik-title-image"
+        />
+        Erik Plachta
+      </h1>
       <Navigation
         location={location}
         setLocation={setLocation}

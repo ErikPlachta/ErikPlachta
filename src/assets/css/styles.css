@@ -117,7 +117,7 @@ body {
 
 h1,h2,h3,h4,h5 {
     /* Font Size & Weights */
-    --fw_h1: 300;
+    --fw_h1: 350;
     --fs_h1: 3rem;
 
     --fw_h2: 400;
@@ -177,14 +177,30 @@ header {
     justify-content: space-between;
 }
 
+
 h1.title{
-    margin: 0;
+    margin-top: auto;
     padding: .25rem 1rem;
-    flex: 50%;
+
     text-align: center;
+
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: center;
+    align-items: center;
+
+
     font-size: var(--fs_h1);
     font-weight: var(--fw_h1);
     color: var(--title_fc_light);
+}
+
+img.title-img{
+    max-width: 72px;
+    max-height: 72px;
+    margin-top: .3rem;
+    margin-right: 2rem;
+    /* TOOD:: 03/19/2022 #EP || Add an image shadow */
 }
 
 nav {
@@ -216,12 +232,31 @@ nav a:hover{
 */
 
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
     header {
         flex-direction: row;
-    }
-    nav {
-        flex: 100%;
+        
     }
 
+    h1.title {
+        flex: 30%; /* ensure has space around it within flex element */
+        margin: .5rem 0;
+    }
+
+
+    h1.title img{
+        max-width: 72px;
+        max-height: 72px;
+        margin: 0 .5rem;
+    }
+
+    nav {
+        height: 100%;
+        flex: 50%;
+    }
+
+}
+
+@media (min-width: 600px) {
+    
   }
