@@ -11,8 +11,8 @@
     --c_02: #172a35; /* primary theming color */
     --c_03: #4ed1c4;
     --c_04: #6fffe9; /* priamry accent color */
-    --c_05: #F9F9F9;
-    --c_06: #fefdff; 
+    --c_05: #F9F9F9; /* body bg defalt and overall just faded */
+    --c_06: #fefdff; /* section bg default and used for making content pop-out a bit more */
     
 
     /*      Shadows     */
@@ -65,9 +65,9 @@ body {
 
 
     /*  Titles  */
-    --title_bg_dark: #172a35; /* title background color dark */
+    --title_bg_dark: var(--c_02); /* title background color dark */
     --title_fc_light: var(--c_06); /* title font color light */
-    --title_fc_dark: #0b132b; /* title font color dark */
+    --title_fc_dark: var(--c_01); /* title font color dark */
 
 
     /*
