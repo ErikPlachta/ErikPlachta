@@ -43,10 +43,11 @@
                 border and Border Radius
     */
 
+    /* Borders */
     --b_01: 1px solid var(--c_00); /* default border and font color */ 
     --b_02: 1px solid var(--c_01); /* secondary for more obvious accents */
 
-
+    /* Border Radius */
     --br_05: .5rem;
     --br_25: .25rem;
 }
@@ -67,46 +68,37 @@ html{
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none;
+
+    padding: 0;
+    margin: 0;
 }
 
+
+section {
+    /* Backgrounds */
+    --section_bg: var(--c_06); /* Lighter color to make it pop-out a bit more  */
+}
 body {
     /*
          BODY VARIABLES
     */
 
-    /* Background Colors */
-    --bg_body: var(--c_05); /* off-white to make it fade out of attention */    
-    --bg_section: var(--c_06); /* Lighter color to make it pop-out a bit more  */
+    /* Backgrounds */
+    --body_bg: var(--c_05); /* off-white to make it fade out of attention */    
+    --section_bg: var(--c_06); /* Lighter color to make it pop-out a bit more  */
 
     /* Accent Colors */
-    --accent_p: #4ed1c4; /* primary accent color */
+    --accent_p: var(--c_04); /* primary accent color */
 
     /*  Titles  */
     --title_bg_dark: var(--c_02); /* title background color dark */
     --title_fc_light: var(--c_06); /* title font color light */
     --title_fc_dark: var(--c_01); /* title font color dark */
-        
-    /* Buttons */
-    --btn_tc_inactive: #F9F9F9; /* button inactive text color */
-    --btn_tc_active: #6fffe9; /* button active text color for hover and click */
 
     /* Font Colors */
-    --fc_body_dark: var(var(--c_00));
-    --fc_body_darkblue: var(var(--c_01));
-    --fc_body_light: var(var(--c_06));
-
-    /* Font Size & Weights */
-    --fw_h1: 300;
-    --fs_h1: 2rem;
-
-    --fw_h2: 400;
-    --fs_h2: 1.5rem;
-
-    --fw_h3: 500;
-    --fs_h3: 1.25rem;
-
-    --fw_h4: 600;
-    --fs_h4: 1.125rem;
+    --body_fc_dark: var(--c_00);
+    --body_fc_darkblue: var(--c_01);
+    --body_fc_light: var(--c_06);
 
     /*
          BODY STYLING
@@ -116,12 +108,35 @@ body {
     margin: 0;
     width: 100%;
 
-    background-color: var(--bg_body);
-    color: var(--fc_body_dark);
+    background-color: var(--body_bg);
+    color: var(--body_fc_dark);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+h1,h2,h3,h4,h5 {
+    /* Font Size & Weights */
+    --fw_h1: 300;
+    --fs_h1: 3rem;
+
+    --fw_h2: 400;
+    --fs_h2: 2rem;
+
+    --fw_h3: 500;
+    --fs_h3: 1.5rem;
+
+    --fw_h4: 600;
+    --fs_h4: 1.25rem;
+
+    --fw_h5: 800;
+    --fs_h5: 1.125rem;
+    
+    
+    padding: 0;
+    margin: 0;
+}
+
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -130,17 +145,67 @@ code {
   
 
 a {
+    --a-light: var(--body_fc_light);
+    /* --a-light-hover: var(--body_fc_dark); */
+    --a-dark: var(--body_fc_dark);
+    /* --a-dark-hover: var(--body_fc_light); */
     text-decoration: none;
 }
 
 
+
+button {
+         
+    /* Buttons */
+    --btn_tc_inactive: var(--c_05); /* button inactive text color */
+    --btn_tc_active: var(--c_04); /* button active text color for hover and click */
+
+}
+
+/*
+    SPECIFIC ELEMENTS ( non-globals )
+*/
+
+
 header {
     /*  */
+    background-color: var(--title_bg_dark);
     
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1.title{
+    margin: 0;
+    padding: .25rem 1rem;
+    flex: 50%;
+    text-align: center;
+    font-size: var(--fs_h1);
+    font-weight: var(--fw_h1);
+    color: var(--title_fc_light);
 }
 
 nav {
-    /*  */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: auto;
+    font-size: 1.25rem;
+}
+
+nav a{
+    color: var(--a-light);
+    transition: ease-in-out 200ms;
+    border-bottom: 2px solid transparent;
+ 
+}
+
+nav a:hover{
+    text-shadow: 0 0 0 var(--accent_p);
+    border-bottom: 2px solid var(--accent_p);
 }
 
 
@@ -150,3 +215,13 @@ nav {
                               MEDIA TYPES
 */
 
+
+@media (min-width: 600px) {
+    header {
+        flex-direction: row;
+    }
+    nav {
+        flex: 100%;
+    }
+
+  }

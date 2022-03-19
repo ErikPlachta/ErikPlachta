@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-import Header from './components/header';
 import Navigation from './components/navigation';
 import AboutMe from './components/about-me';
 import Portfolio from './components/portfolio';
@@ -9,17 +8,20 @@ import Contact from './components/contact';
 
 function App() {
 
+  //-- setting default location to about me
   const [location, setLocation] = useState( "about-me" )
-
   
   //-- Returning all content
   return ([
   
-    <Header></Header>,
-    <Navigation
-      location={location}
-      setLocation={setLocation}
-    ></Navigation>,
+    <header>
+      <h1 className='title'>Erik Plachta</h1>
+      <Navigation
+        location={location}
+        setLocation={setLocation}
+      ></Navigation>
+      
+    </header>,
 
     <main>
       <AboutMe></AboutMe>
