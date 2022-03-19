@@ -1,39 +1,48 @@
 /* ROOT VARIBLE VALUES */
 :root {
     /* 
-        Defining base theme and styling content here. More explicit var names
-            are within elements below. ( See body for example )
-            
+        Defining base theme and styling content here. 
+        - More explicit var names are within elements below. (See body for ex.) 
     */
-    
-    /*      Color Theme     */
+
+
+    /*
+                Color Theme
+    */
     --c_01: #0b132b;
     --c_02: #172a35; /* primary theming color */
     --c_03: #4ed1c4;
     --c_04: #6fffe9; /* priamry accent color */
     --c_05: #F9F9F9; /* body bg defalt and overall just faded */
     --c_06: #fefdff; /* section bg default and used for making content pop-out a bit more */
+
+
+    /*
+                Alpha Colors 
+    */
+    --a_01: rgba(0 0 0 /.25);
+
+    /* 
+                Shadows & Box Shadows
+    */
+
+    /* Shadows */
+    --s_black_a25: var(--a_01);
+    --s_black_2px_a25: 2px solid var(--a_01);
     
+    /* Box Shadows */ /* offset-x | offset-y | blur-radius | color */
+        
+    --bs_base: 0 -.5rem .5rem rgba(0,0,0,.25); 
+    --bs_Hover_top_black: 0 -1rem 1rem rgba(0,0,0,.5); 
+    --bs_bottom_accent_Primary: 0 .05rem .5rem var(--color_Primary); 
+    --bs_Hover_top_heavy_bottom_light: 0rem -.4rem 1rem rgba(0,0,0,.5); 
 
-    /*      Shadows     */
 
+        /* 
+                Shadows & Box Shadows
+    */
 
-    /* Backgrounds */
     
-    /* Buttons */
-    --btn_txt_inactive: #F9F9F9;
-    --btn_txt_active: #6fffe9;
-    /* Accent Colors */
-    --accent_Primary: #4ed1c4;
-    /* Borders and Shadows */
-    --boxShadow: 0 -.5rem .5rem rgba(0,0,0,.25); /* offset-x | offset-y | blur-radius | color */
-    --boxShadow_Hover_top_black: 0 -1rem 1rem rgba(0,0,0,.5); /* offset-x | offset-y | blur-radius | color */
-    --boxShadow_bottom_accent_Primary: 0 .05rem .5rem var(--color_Primary); /* offset-x | offset-y | blur-radius | color */
-    --boxShadow_Hover_top_heavy_bottom_light: 0rem -.4rem 1rem rgba(0,0,0,.5); /* offset-x | offset-y | blur-radius | color */
-    
-
-    --shadow_025_black:  rgba(0,0,0,.25);
-    --shadow_1px_25a: 2px solid var(--shadow_025_black);
 }
 
 /* Keeps elements from overflowing containers */
@@ -59,15 +68,27 @@ body {
          BODY VARIABLES
     */
 
-    /* Background Colors   */
+    /* Background Colors */
     --bg_body: var(--c_05); /* off-white to make it fade out of attention */    
     --bg_section: var(--c_06); /* Lighter color to make it pop-out a bit more  */
 
+
+    /* Accent Colors */
+    --accent_p: #4ed1c4; /* primary accent color */
 
     /*  Titles  */
     --title_bg_dark: var(--c_02); /* title background color dark */
     --title_fc_light: var(--c_06); /* title font color light */
     --title_fc_dark: var(--c_01); /* title font color dark */
+
+        
+    /* Buttons */
+    --btn_tc_inactive: #F9F9F9; /* button inactive text color */
+    --btn_tc_active: #6fffe9; /* button active text color for hover and click */
+    
+    
+
+
 
 
     /*
