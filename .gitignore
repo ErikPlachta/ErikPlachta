@@ -3,4 +3,5 @@ assignment_README.md
 _ARCHIVE
 desktop.ini
 .DS_Store 
-workspace.code-workspace
+*workspace.code-workspace
+erikplachta-github.code-workspace
