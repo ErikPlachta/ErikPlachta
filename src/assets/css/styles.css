@@ -9,6 +9,7 @@
     /*
                 Color Theme
     */
+    --c_00: #000102; /* very dark-blue-black used for borders and fonts */
     --c_01: #0b132b;
     --c_02: #172a35; /* primary theming color */
     --c_03: #4ed1c4;
@@ -21,6 +22,7 @@
                 Alpha Colors 
     */
     --a_01: rgba(0 0 0 /.25);
+    --a_02: rgba(0 0 0 /.5);
 
     /* 
                 Shadows & Box Shadows
@@ -30,19 +32,23 @@
     --s_black_a25: var(--a_01);
     --s_black_2px_a25: 2px solid var(--a_01);
     
-    /* Box Shadows */ /* offset-x | offset-y | blur-radius | color */
-        
-    --bs_base: 0 -.5rem .5rem rgba(0,0,0,.25); 
-    --bs_Hover_top_black: 0 -1rem 1rem rgba(0,0,0,.5); 
-    --bs_bottom_accent_Primary: 0 .05rem .5rem var(--color_Primary); 
-    --bs_Hover_top_heavy_bottom_light: 0rem -.4rem 1rem rgba(0,0,0,.5); 
+    /* Box Shadows  ( offset-x | offset-y | blur-radius | color ) */
+    --bs_top_a01_lt: 0 -1rem .5rem var(--a_01);
+    --bs_top_a01_heavy: 0 -.5rem .5rem var(--a_01);
+    --bs_top_a02_light: 0 -1rem 1rem var(--a_02);
+    --bs_top_a02_heavy: 0rem -.4rem 1rem rgba(0,0,0,.5); 
 
 
-        /* 
-                Shadows & Box Shadows
+    /* 
+                border and Border Radius
     */
 
-    
+    --b_01: 1px solid var(--c_00); /* default border and font color */ 
+    --b_02: 1px solid var(--c_01); /* secondary for more obvious accents */
+
+
+    --br_05: .5rem;
+    --br_25: .25rem;
 }
 
 /* Keeps elements from overflowing containers */
@@ -55,7 +61,7 @@
 html{
     scroll-behavior: smooth;
 
-    /* Prevent dragging/scrolling/selection of content */
+    /* Disabling user selection */
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -72,7 +78,6 @@ body {
     --bg_body: var(--c_05); /* off-white to make it fade out of attention */    
     --bg_section: var(--c_06); /* Lighter color to make it pop-out a bit more  */
 
-
     /* Accent Colors */
     --accent_p: #4ed1c4; /* primary accent color */
 
@@ -80,16 +85,28 @@ body {
     --title_bg_dark: var(--c_02); /* title background color dark */
     --title_fc_light: var(--c_06); /* title font color light */
     --title_fc_dark: var(--c_01); /* title font color dark */
-
         
     /* Buttons */
     --btn_tc_inactive: #F9F9F9; /* button inactive text color */
     --btn_tc_active: #6fffe9; /* button active text color for hover and click */
-    
-    
 
+    /* Font Colors */
+    --fc_body_dark: var(var(--c_00));
+    --fc_body_darkblue: var(var(--c_01));
+    --fc_body_light: var(var(--c_06));
 
+    /* Font Size & Weights */
+    --fw_h1: 300;
+    --fs_h1: 2rem;
 
+    --fw_h2: 400;
+    --fs_h2: 1.5rem;
+
+    --fw_h3: 500;
+    --fs_h3: 1.25rem;
+
+    --fw_h4: 600;
+    --fs_h4: 1.125rem;
 
     /*
          BODY STYLING
@@ -99,6 +116,8 @@ body {
     margin: 0;
     width: 100%;
 
+    background-color: var(--bg_body);
+    color: var();
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
