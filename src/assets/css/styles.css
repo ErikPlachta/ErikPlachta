@@ -239,6 +239,16 @@ nav {
 }
 
 
+footer {
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+}
+
+
 /*////////////////////////////////////////////////////////////////////////////*/
 /* 
                               MEDIA TYPES
