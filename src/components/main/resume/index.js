@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Resume() {
+export default function Resume({ uuid }) {
   return (
     <section className='container'>
       <h2>Resume</h2>

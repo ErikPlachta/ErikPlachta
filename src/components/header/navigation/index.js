@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react'
 import { capitalizeFirstLetter } from '../../../utils/helpers';
 
-export default function Navigation( {locations, locationCurrent, setLocation} ) {
+//-- Being used to generate unique keys for react
+// import { v4 as uuidv4 } from 'uuid';
+
+export default function Navigation({ uuid, locations, locationCurrent, setLocation }) {
   
   //-- Update DOM title
   useEffect(() => {

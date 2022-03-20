@@ -1,3 +1,5 @@
+//-- Layer 2: ROOT ELEMENT MANAGING CONTENT AND UI
+
 import React, { useState } from 'react';
 
 //-- components
@@ -6,7 +8,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 
 
-export default function App() {
+export default function App({uuidv4}) {
 
 //-- used to updated DOM title and nav awareness events
 const [locations] = useState([
@@ -21,9 +23,9 @@ const [locations] = useState([
   
   //-- Returning all content
   return ([  
-    <Header locations={locations} locationCurrent={location} setLocation={setLocation}></Header>,
-    <Main locations={locations} locationCurrent={location} setLocation={setLocation}></Main>,
-    <Footer></Footer>
+    <Header uuidv4={uuidv4} locations={locations} locationCurrent={location} setLocation={setLocation}></Header>,
+    <Main uuidv4={uuidv4} locations={locations} locationCurrent={location} setLocation={setLocation}></Main>,
+    <Footer uuidv4={uuidv4}></Footer>
 
   ]);
 };

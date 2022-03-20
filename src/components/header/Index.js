@@ -3,8 +3,7 @@ import Navigation from './navigation';
 //-- content
 import imgErikPlachta from '../../assets/img/erik/erik_c_72.png'
 
-
-export default function Header({locations, locationCurrent, setLocation}) {
+export default function Header({ uuid, locations, locationCurrent, setLocation }) {
   return ([
     <header>
       <h1 className='title'>

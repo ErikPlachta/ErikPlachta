@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Portfolio() {
+export default function Portfolio({ uuid }) {
   return (
     <section className='container'>
       <h2>Portfolio</h2>

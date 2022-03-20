@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default function AboutMe() {
+export default function AboutMe({ uuid }) {
   return (
     <section className='container'>
       <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css" rel="stylesheet"></link>

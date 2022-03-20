@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Footer() {
+export default function Footer({ uuid }) {
   return (
     <footer>
       <span className="nav">GitHub</span>

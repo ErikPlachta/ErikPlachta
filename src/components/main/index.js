@@ -5,13 +5,13 @@ import Portfolio from './portfolio';
 import Resume from './resume';
 import Contact from './contact';
 
-export default function Main({ locations, locationCurrent, setLocation}) {
+export default function Main({ uuid, locations, locationCurrent, setLocation }) {
 
     const [locationContent] = useState({
-        'about': {import: <AboutMe></AboutMe>},
-        'portfolio': {import: <Portfolio></Portfolio>},
-        'resume': {import: <Resume></Resume>},
-        'contact': {import: <Contact></Contact>},
+        'about': {import: <AboutMe uuid={uuid} ></AboutMe>},
+        'portfolio': {import: <Portfolio uuid={uuid}></Portfolio>},
+        'resume': {import: <Resume uuid={uuid}></Resume>},
+        'contact': {import: <Contact uuid={uuid}></Contact>},
     })
     
     return (
