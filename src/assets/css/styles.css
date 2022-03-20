@@ -331,9 +331,10 @@ footer {
 
 .contact-form{
     padding: 0 1rem;
-    background: var(--body_bg);
+    /* background: var(--body_bg); */
     border-radius: var(--br_05);
     border: var(--b_04);
+    box-shadow: inset var(--bs_even_a01_hvy);
     width: 100%;
     display: flex;
     flex-direction: column;
