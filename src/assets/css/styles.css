@@ -29,14 +29,17 @@
     */
 
     /* Shadows */
-    --s_black_a25: var(--a_01);
+    --s_black_a25: 0 0 .5rem var(--a_01);
     --s_black_2px_a25: 2px solid var(--a_01);
     
     /* Box Shadows  ( offset-x | offset-y | blur-radius | color ) */
+    /* --bs_even_a01_lt: .3rem .3rem .3rem var(--a_01); */
+    --bs_even_a01_lt: 0rem 0rem .5rem rgba(0 0 0 / .3), 0 0 .2rem rgba(0 0 0 / .3);
+    --bs_even_a01_hvy: 0 0rem .5rem var(--a_01);
     --bs_top_a01_lt: 0 -1rem .5rem var(--a_01);
-    --bs_top_a01_heavy: 0 -.5rem .5rem var(--a_01);
-    --bs_top_a02_light: 0 -1rem 1rem var(--a_02);
-    --bs_top_a02_heavy: 0rem -.4rem 1rem rgba(0,0,0,.5); 
+    --bs_top_a01_hvy: 0 -.5rem .5rem var(--a_01);
+    --bs_top_a02_lt: 0 -1rem 1rem var(--a_02);
+    --bs_top_a02_hvy: 0rem -.4rem 1rem var(--a_02); 
 
 
     /* 
@@ -46,6 +49,10 @@
     /* Borders */
     --b_01: 1px solid var(--c_00); /* default border and font color */ 
     --b_02: 1px solid var(--c_01); /* secondary for more obvious accents */
+    --b_03: 1px solid var(--c_01); /* secondary for more obvious accents */
+    --b_04: 1px solid var(--a_01); /* secondary for more obvious accents */
+    --b_05: 1px solid var(--c_05); /* default border and font color */ 
+    --b_06: 1px solid var(--c_06); /* default border and font color */ 
 
     /* Border Radius */
     --br_05: .5rem;
@@ -238,6 +245,7 @@ nav {
 }
 
 main{
+    
     margin: 2rem auto;
     display: flex;
     flex-direction: column;
@@ -247,19 +255,19 @@ main{
 }
 
 .container{
+    
     margin: auto;
-    background-color: var(--section_bg);
+    padding: 1rem;
     width: 90%;
     border-radius: var(--br_05);
-    border: var(--b_01);
-    min-height: 60vh;
-    max-height: 60vh;
-    padding: 1rem;
-    overflow: scroll;
+    border: var(--b_04);
+    box-shadow: var(--bs_even_a01_lt);
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     
+    background-color: var(--section_bg);
 }
 
 div.content {
@@ -271,14 +279,13 @@ div.content {
 }
 
 footer {
+    margin-top: auto;
     bottom: 0;
-    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-    width: 100%;
     /* min-height: 4rem; */
-    margin-top: auto;
     background-color: var(--title_bg_dark);
     color: var(--title_fc_light);
 }
