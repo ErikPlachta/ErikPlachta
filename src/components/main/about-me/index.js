@@ -8,7 +8,8 @@ export default function AboutMe({ uuid }) {
         <h2 className="article-header">Hi, I'm Erik.</h2>
       </section>
       
-      <section>
+      {/* <section> */}
+      <section className="article-content-container">
 
         <div className="article-content">
           <p className="article-content-title">

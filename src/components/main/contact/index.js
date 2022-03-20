@@ -11,9 +11,6 @@ const handleSubmit = e => {
 
 export default function Contact({ uuid }) {
   return (
-    
-        
-    
     <article className='container'>
       
       <section>
@@ -27,7 +24,7 @@ export default function Contact({ uuid }) {
       </section>
     
 
-      <section className="article-content contact-form">
+      <section className="article-content-container contact-form">
         <form onSubmit={handleSubmit}>
 
           <div className='form-section'>
@@ -49,11 +46,12 @@ export default function Contact({ uuid }) {
 
 
           <span className="form-element">
-            <label htmlFor="reason">What did you want to talk about?</label>
-            <select id='reason' name='reason' size='1'>
-              <option>Collaborate</option>
-              <option>Job Opportunity</option>
-              <option>Other</option>
+            <label htmlFor="reason">Subject</label>
+            <select id='subject' name='subject' size='3' required>
+              <option value="none" selected disabled hidden>Select an Option</option>
+              <option value="social">Social</option>
+              <option value="work">Work</option>
+              <option value="other">Other</option>
             </select>
           </span>
           {/* TODO: 03/20/2022 #EP || ADD TOGGLE */}
@@ -66,7 +64,7 @@ export default function Contact({ uuid }) {
 
           <span className="form-element">
             <label htmlFor="message">Message</label>
-            <textarea name="message" type="textarea" rows='10' required></textarea>
+            <textarea name="message" type="textarea" rows='10' placeholder="I'm reaching out because..." required></textarea>
           </span>
 
           <span className="form-element"> 
