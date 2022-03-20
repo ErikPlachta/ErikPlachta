@@ -2,15 +2,16 @@
 
 import React, { useState } from 'react';
 
-//-- components
+//-- Header that contains nav
 import Header from './components/header';
+//-- Main Section with Sub-Components
 import Main   from './components/main';
 import AboutMe from './components/main/about-me';
 import Portfolio from './components/main/portfolio';
 import Resume from './components/main/resume';
 import Contact from './components/main/contact';
 
-// import Footer from './components/footer';
+import Footer from './components/footer';
 
 
 export default function App({ uuidv4 }) {
@@ -29,8 +30,8 @@ export default function App({ uuidv4 }) {
   //-- Returning all content
   return ([  
     <Header key={uuidv4()} uuidv4={uuidv4} locations={locations} setLocations={setLocations} location={location} setLocation={setLocation}></Header>,
-    // <Main   key={uuidv4()} uuidv4={uuidv4} locations={locations} setLocations={setLocations} location={location} setLocation={setLocation}></Main>
-    // <Footer uuidv4={uuidv4}></Footer>
+    <Main   key={uuidv4()} uuidv4={uuidv4} locations={locations} setLocations={setLocations} location={location} setLocation={setLocation}></Main>,
+    <Footer key={uuidv4()} uuidv4={uuidv4}></Footer>
 
   ]);
 };
