@@ -16,9 +16,8 @@ import './assets/js/script.js';
 
 
 ReactDOM.render(
-  
-  <React.StrictMode>
-    <App uuidv4={uuidv4} />
+  <React.StrictMode key={uuidv4()}>
+    <App key={uuidv4()} uuidv4={uuidv4} />
   </React.StrictMode>,
   document.getElementById('root')
 );

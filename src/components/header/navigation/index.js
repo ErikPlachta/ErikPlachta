@@ -4,7 +4,7 @@ import { capitalizeFirstLetter } from '../../../utils/helpers';
 //-- Being used to generate unique keys for react
 // import { v4 as uuidv4 } from 'uuid';
 
-export default function Navigation({ uuid, locations, locationCurrent, setLocation }) {
+export default function Navigation({ locations, locationCurrent, setLocation }) {
   
   //-- Update DOM title
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function Navigation({ uuid, locations, locationCurrent, setLocati
           onClick={() => { setLocation(location.name) }}
           //-- if location name is current location, add className nav-active. otherwise nothing
           className={`${locationCurrent === location.name && 'nav nav-active' || 'nav'}`}
-          key={location.name}
+          key={`${location.key}`}
         >
           {capitalizeFirstLetter(location.name)}
         </span>
