@@ -279,18 +279,24 @@ footer {
                               MEDIA TYPES
 */
 
+@media (min-width: 1200px) {
+    header {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0 8rem;
+    }
+}
+
 
 @media (min-width: 900px) {
     header {
         flex-direction: row;
-        
     }
 
     h1.title {
         flex: 30%; /* ensure has space around it within flex element */
         margin: .5rem 0;
     }
-
 
     h1.title img{
         max-width: 72px;
@@ -302,12 +308,15 @@ footer {
         height: 100%;
         flex: 50%;
     }
-
 }
 
 @media (min-width: 600px) {
    .container{
        width: 80%;
-       min-height: 70vh;
+       min-height: 60vh;
    } 
+
+   .container{
+    max-width: 800px;
+}
   }
