@@ -7,17 +7,18 @@ import Contact from './contact';
 
 export default function Main({ uuid, locations, locationCurrent, setLocation }) {
 
-    const [locationContent] = useState({
-        'about': {import: <AboutMe uuid={uuid} ></AboutMe>},
-        'portfolio': {import: <Portfolio uuid={uuid}></Portfolio>},
-        'resume': {import: <Resume uuid={uuid}></Resume>},
-        'contact': {import: <Contact uuid={uuid}></Contact>},
+    //-- Sub-Components within the main container
+    const [locationContent, setLocationContent] = useState({
+        'about':     {component: <AboutMe   uuid={uuid} ></AboutMe>},
+        'portfolio': {component: <Portfolio uuid={uuid}></Portfolio>},
+        'resume':    {component: <Resume    uuid={uuid}></Resume>},
+        'contact':   {component: <Contact   uuid={uuid}></Contact>},
     })
     
     return (
         //-- returns approriate component based on locationCurrent
-        <main>
-            {locationContent[locationCurrent].import}
+        <main clasName="container">
+            {locationContent[locationCurrent].component}
         </main>
     );
 };
