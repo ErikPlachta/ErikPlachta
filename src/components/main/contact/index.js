@@ -17,10 +17,6 @@ export default function Contact({ uuid }) {
         <p className="article-content-title">
           Do you want to get in touch?
         </p>
-        <p className="article-content-indent">
-          Fill out the form below, including anything you think I should know, 
-          and I'll reach back out to you!
-        </p>
       </section>
     
 
@@ -39,7 +35,7 @@ export default function Contact({ uuid }) {
             </span>
             <span className="form-element">
               <label name="phone">Phone Number</label>
-              <input name="phone" id="phone" type="tel" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" />
+              <input name="phone" id="phone" type="tel" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
             </span>
 
           </div>
@@ -67,7 +63,7 @@ export default function Contact({ uuid }) {
           </span>
 
           <span className="form-element"> 
-            <input type="submit" class="button" value="Submit" />
+            <input type="submit" className="button" id="contact-me-submit" value="Submit" />
           </span>
         </form>
       </section>

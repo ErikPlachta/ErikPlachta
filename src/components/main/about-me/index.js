@@ -36,7 +36,7 @@ export default function AboutMe({ uuid }) {
           <p className="article-content-indent">
             To learn more about those projects, check out my Portfolio, above
           </p>          
-          <p className="signature">Erik Plachta - March 20th, 2022</p>
+          <p className="signature">- Erik Plachta on March 20th, 2022</p>
         </div>
       </section>
     </article>

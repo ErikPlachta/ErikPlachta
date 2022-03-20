@@ -167,16 +167,20 @@ button {
 */
 
 header {
+    position: fixed;
+    width: 100%;
+    top: 0;
     background-color: var(--title_bg_dark);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0 .2rem .3rem rgba(0,0,0,.5);
 }
 
 
 h1.title{
     margin-top: auto;
-    padding: .25rem 1rem;
+    padding: 0 1rem;
 
     text-align: center;
 
@@ -192,9 +196,9 @@ h1.title{
 }
 
 img.title-img{
-    max-width: 72px;
-    max-height: 72px;
-    margin-top: .3rem;
+    max-width: 50px;
+    max-height: 50px;
+    /* margin-top: .3rem; */
     margin-right: 2rem;
     /* TOOD:: 03/19/2022 #EP || Add an image shadow */
 }
@@ -209,7 +213,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0 1rem;
     margin-top: auto;
     font-size: 1.25rem;
 }
@@ -232,7 +236,8 @@ nav {
 }
 
 main{
-    margin: 2rem auto;
+    margin: 115px auto 50px;
+    /* margin-top: 115px; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -301,8 +306,6 @@ section {
 
 .signature{
     width: 100%;
-    float: right;
-    text-align: right;
     padding: 1rem 0;
     font-style: italic;
 }
@@ -431,12 +434,12 @@ input[type=submit]:hover{
 
     h1.title {
         flex: 30%; /* ensure has space around it within flex element */
-        margin: .5rem 0;
+        
     }
 
     h1.title img{
-        max-width: 72px;
-        max-height: 72px;
+        max-width: 50px;
+        max-height: 50px;
         margin: 0 .5rem;
     }
 
@@ -447,12 +450,16 @@ input[type=submit]:hover{
 }
 
 @media (min-width: 600px) {
+    main{
+        margin: 100px 0;
+    }
    .container{
        padding: 2rem;
        min-height: 60vh;
        max-width: 800px;
    } 
    .article-content-indent-list ul{
-    padding: 0 1.0417rem;
-}
+        padding: 0 1.0417rem;
+    }
+
 }
