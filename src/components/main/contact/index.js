@@ -1,6 +1,13 @@
 import React from 'react';
 import '../../../assets/css/toggle.css'
-import '../../../assets/js/contact.js'
+
+
+const handleSubmit = e => {
+  console.log(e)
+  e.preventDefault();
+
+};
+
 
 export default function Contact({ uuid }) {
   return (
@@ -21,20 +28,20 @@ export default function Contact({ uuid }) {
     
 
       <section className="article-content contact-form">
-        <form>
+        <form onSubmit={handleSubmit}>
 
           <div className='form-section'>
             
             <span className="form-element">
-              <label for="fullname">Full Name</label>
+              <label htmlFor="fullname">Full Name</label>
               <input name="fullname" id="fullname" type="text" placeholder="What should I call you?" required />
             </span>
             <span className="form-element">
-              <label for="email">Email Address</label>
+              <label htmlFor="email">Email Address</label>
               <input name="email" id="email" type="email" placeholder="your@email.com" required />
             </span>
             <span className="form-element">
-              <label name="phone">Phone Number</label>
+              <label htmlFor="phone">Phone Number</label>
               <input name="phone" id="phone" type="tel" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
             </span>
 
@@ -42,7 +49,7 @@ export default function Contact({ uuid }) {
 
 
           <span className="form-element">
-            <label name="reason">What did you want to talk about?</label>
+            <label htmlFor="reason">What did you want to talk about?</label>
             <select id='reason' name='reason' size='1'>
               <option>Collaborate</option>
               <option>Job Opportunity</option>
@@ -58,7 +65,7 @@ export default function Contact({ uuid }) {
           </div>, */}
 
           <span className="form-element">
-            <label name="message">Message</label>
+            <label htmlFor="message">Message</label>
             <textarea name="message" type="textarea" rows='10' required></textarea>
           </span>
 
