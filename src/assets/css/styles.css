@@ -253,8 +253,9 @@ main{
     border-radius: var(--br_05);
     border: var(--b_01);
     min-height: 60vh;
+    max-height: 60vh;
     padding: 1rem;
-
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
