@@ -239,6 +239,11 @@ nav {
 
 main{
     margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    
 }
 
 .container{
@@ -271,7 +276,13 @@ footer {
     justify-content: space-evenly;
     flex-direction: row;
     width: 100%;
+    /* min-height: 4rem; */
+    margin-top: auto;
+    background-color: var(--title_bg_dark);
+    color: var(--title_fc_light);
 }
+
+
 
 
 /*////////////////////////////////////////////////////////////////////////////*/

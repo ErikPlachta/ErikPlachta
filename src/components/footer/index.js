@@ -3,10 +3,10 @@ import React from 'react'
 export default function Footer() {
   return (
     <footer>
-      <div>GitHub</div>
-      <div>Linked-In</div>
-      <div>Twitter</div>
-      <div>Medium</div>
+      <span className="nav">GitHub</span>
+      <span className="nav">Linked-In</span>
+      <span className="nav">Twitter</span>
+      <span className="nav">Medium</span>
     </footer>
   )
 }
