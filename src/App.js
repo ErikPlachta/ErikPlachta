@@ -2,15 +2,17 @@
 
 import React, { useState } from 'react';
 
-//-- Header that contains nav
+//-- Header component that contains nav sub-component
 import Header from './components/header';
-//-- Main Section with Sub-Components
+
+//-- Main component with sub-components ( Importing subs here vs in main to allow for just 1 locations state obj )
 import Main   from './components/main';
 import AboutMe from './components/main/about-me';
 import Portfolio from './components/main/portfolio';
 import Resume from './components/main/resume';
 import Contact from './components/main/contact';
 
+//-- Footer component
 import Footer from './components/footer';
 
 
