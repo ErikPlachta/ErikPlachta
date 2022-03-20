@@ -19,13 +19,11 @@ export default function Navigation({ location, setLocation, locations, setLocati
     <nav>
       
       {Object.keys(locations).map( (name, number) => (
-        // const currentLocation = locations[locationName].name;
-        // console.log(name, number )
         <span
           //-- if clicked event to update the location state to update the DOM
           onClick={() => { setLocation(locations[name].name) }}
           //-- if location name is current location, add className nav-active. otherwise nothing
-          className={`${location === locations[name] && 'nav nav-active' || 'nav'}`}
+          className={`${( location === locations[name].name && 'nav nav-active' ) || 'nav'}`}
           key={`${locations[name].key}`}
         >
           {capitalizeFirstLetter(locations[name].name)}
