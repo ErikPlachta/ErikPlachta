@@ -222,10 +222,8 @@ nav {
 
 .nav{
     color: var(--nav-fc-light);
-    
     transition: ease-in-out 200ms;
     border-bottom: 2px solid transparent;
- 
 }
 
 .nav:hover{
@@ -240,8 +238,17 @@ nav {
 }
 
 main{
-    margin: 1rem auto;
+    margin: 2rem auto;
+}
+
+.container{
+    margin: auto;
+    background-color: var(--section_bg);
     width: 90%;
+    border-radius: var(--br_05);
+    border: var(--b_01);
+    min-height: 60vh;
+    padding: 1rem;
 }
 
 footer {
@@ -286,5 +293,8 @@ footer {
 }
 
 @media (min-width: 600px) {
-    
+   .container{
+       width: 80%;
+       min-height: 70vh;
+   } 
   }

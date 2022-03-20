@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function AboutMe() {
   return (
-    <h3>About Me</h3>
+    <section className='container'>
+      <h2>About Me</h2>
+    </section>
   )
 }
