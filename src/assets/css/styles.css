@@ -329,6 +329,27 @@ footer {
     transition: ease-in-out 200ms;
 }
 
+.contact-form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.form-element{
+    width: 100%;
+}
+
+.contact-form input {
+    border-radius: var(--br_25);
+    min-height: 2rem;
+    padding: .25rem;
+}
+
+.form-element textarea {
+    width: 100%;
+    border-radius: var(--br_25);
+}
 
 
 
