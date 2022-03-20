@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import '../../../assets/css/toggle.css'
+import '../../../assets/js/contact.js'
 
 export default function Contact({ uuid }) {
   return (
@@ -22,22 +24,22 @@ export default function Contact({ uuid }) {
       </section>
     
 
-      <section className="article-content">
-        <form className="contact-form">
+      <section className="article-content contact-form">
+        <form>
 
           <div className='form-section'>
             
             <span className="form-element">
-              <label name="fullname">Name</label>
-              <input name="full-name" type="text" required />
+              <label for="fullname">Full Name</label>
+              <input name="fullname" id="fullname" type="text" placeholder="What should I call you?" required />
             </span>
             <span className="form-element">
-              <label name="email">Email</label>
-              <input name="email" type="email" required />
+              <label for="email">Email Address</label>
+              <input name="email" id="email" type="email" placeholder="your@email.com" required />
             </span>
             <span className="form-element">
-              <label name="phone">Phone</label>
-              <input name="phone" type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" />
+              <label name="phone">Phone Number</label>
+              <input name="phone" id="phone" type="tel" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" />
             </span>
 
           </div>
@@ -46,8 +48,9 @@ export default function Contact({ uuid }) {
           <span className="form-element">
             <label name="reason">What did you want to talk about?</label>
             <select id='reason' name='reason' size='1'>
-              <option>Personal</option>
-              <option>Professional</option>
+              <option>Collaborate</option>
+              <option>Job Opportunity</option>
+              <option>Other</option>
             </select>
           </span>
           {/* TODO: 03/20/2022 #EP || ADD TOGGLE */}
@@ -61,6 +64,10 @@ export default function Contact({ uuid }) {
           <span className="form-element">
             <label name="message">Message</label>
             <textarea name="message" type="textarea" rows='10' required></textarea>
+          </span>
+
+          <span className="form-element"> 
+            <input type="submit" class="button" value="Submit" />
           </span>
         </form>
       </section>

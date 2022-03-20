@@ -9,8 +9,7 @@ import reportWebVitals from './utils/reportWebVitals';
 //-- Being used to generate unique keys for react
 import { v4 as uuidv4 } from 'uuid';
 
-//-- Mine
-import './assets/css/toggle.css'; //-- my toggle css
+//-- My imports
 import './assets/css/styles.css';
 import './assets/js/script.js';
 
