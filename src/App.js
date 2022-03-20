@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 //-- components
 import Main   from './components/main';
-import Header from './components/header/Index.js';
+import Header from './components/header';
+import Footer from './components/footer';
 
 
 export default function App() {
@@ -19,17 +20,10 @@ const [locations] = useState([
   const [location, setLocation] = useState( locations[0].name )
   
   //-- Returning all content
-  return ([
-  
+  return ([  
     <Header locations={locations} locationCurrent={location} setLocation={setLocation}></Header>,
     <Main locations={locations} locationCurrent={location} setLocation={setLocation}></Main>,
+    <Footer></Footer>
 
-    <footer>
-      <div>GitHub</div>
-      <div>Linked-In</div>
-      <div>Twitter</div>
-      <div>Medium</div>
-    </footer>
-  
   ]);
 };
