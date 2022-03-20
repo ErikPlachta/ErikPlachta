@@ -279,7 +279,7 @@ div.content {
 }
 
 footer {
-    margin-top: auto;
+    position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -288,6 +288,7 @@ footer {
     /* min-height: 4rem; */
     background-color: var(--title_bg_dark);
     color: var(--title_fc_light);
+    transition: ease-in-out 200ms;
 }
 
 
