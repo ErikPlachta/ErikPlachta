@@ -15,6 +15,8 @@ export default function Main({ locations, locationCurrent, setLocation}) {
     
     return (
         //-- returns approriate component based on locationCurrent
-        <section>{locationContent[locationCurrent].import}</section>
+        <main>
+            {locationContent[locationCurrent].import}
+        </main>
     );
 };

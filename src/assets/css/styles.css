@@ -163,6 +163,7 @@ button {
 
 }
 
+/*////////////////////////////////////////////////////////////////////////////*/
 /*
     SPECIFIC ELEMENTS ( non-globals )
 */
@@ -238,6 +239,10 @@ nav {
     border-bottom: 2px solid var(--nav-fc-light);
 }
 
+main{
+    margin: 1rem auto;
+    width: 90%;
+}
 
 footer {
     bottom: 0;
