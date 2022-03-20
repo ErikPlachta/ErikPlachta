@@ -80,11 +80,6 @@ html{
     margin: 0;
 }
 
-
-section {
-    /* Backgrounds */
-    --section_bg: var(--c_06); /* Lighter color to make it pop-out a bit more  */
-}
 body {
     /*
          BODY VARIABLES
@@ -140,18 +135,16 @@ h1,h2,h3,h4,h5 {
     --fw_h5: 800;
     --fs_h5: 1.125rem;
     
-    
+    /* remove all defaults */
     padding: 0;
     margin: 0;
 }
-
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
   
-
 a {
     --a-light: var(--body_fc_light);
     /* --a-light-hover: var(--body_fc_dark); */
@@ -159,8 +152,6 @@ a {
     /* --a-dark-hover: var(--body_fc_light); */
     text-decoration: none;
 }
-
-
 
 button {
          
@@ -175,12 +166,8 @@ button {
     SPECIFIC ELEMENTS ( non-globals )
 */
 
-
 header {
-    /*  */
     background-color: var(--title_bg_dark);
-    
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -245,17 +232,19 @@ nav {
 }
 
 main{
-    
     margin: 2rem auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    
-    
+}
+
+article,
+section {
+    /* Backgrounds */
+    --section_bg: var(--c_06); /* Lighter color to make it pop-out a bit more  */
 }
 
 .container{
-    
     margin: auto;
     padding: 1rem;
     width: 90%;
@@ -270,7 +259,55 @@ main{
     background-color: var(--section_bg);
 }
 
-div.content {
+.article-header{
+    /* border-bottom: var(--b_04); */
+    width: 100%;
+    margin: 0 auto;
+    /* padding-bottom: 1rem; */
+    font-size: var(--fs_h2);
+    font-weight: var(--fw_h2);
+}
+
+.article-content{
+    /* border-bottom: var(--b_04); */
+    
+    /* max-width: 50ch; */
+    line-height: 1.6;
+    font-size: 1.1rem;
+    /* text-align: center; */
+    margin: auto;
+}
+
+.article-content-title{
+    font-weight: 500;
+}
+
+.article-content-indent,
+.article-content-indent-list{
+    border-left: var(--b_04);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.article-content-indent{
+    padding-left: 1rem;
+    /* font-style: italic; */
+}
+
+.article-content-indent-list ul{
+    padding: 0 .9rem;
+}
+
+
+.signature{
+    width: 100%;
+    float: right;
+    text-align: right;
+    padding: 1rem 0;
+    font-style: italic;
+}
+
+div.content-old {
     padding-top: 2rem;
     max-width: 50ch;
     line-height: 2;
@@ -281,6 +318,7 @@ div.content {
 footer {
     position: fixed;
     bottom: 0;
+    padding: .25rem 0;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -331,11 +369,11 @@ footer {
 
 @media (min-width: 600px) {
    .container{
-       width: 80%;
+       /* width: 80%; */
        min-height: 60vh;
+       max-width: 800px;
    } 
-
-   .container{
-    max-width: 800px;
+   .article-content-indent-list ul{
+    padding: 0 1.0417rem;
 }
-  }
+}
