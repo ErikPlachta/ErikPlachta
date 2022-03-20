@@ -8,6 +8,10 @@ export default function AboutMe({ uuid }) {
       <h2>About Me</h2>
       <article className="content">
         <div>
+        <h3>Hello!</h3>
+          <p className='about-me'>In 2014, I married my best friend; <em>Emily Plachta</em>.</p>
+        </div>
+        <div>
           <h3>I'm a husband.</h3>
           <p className='about-me'>In 2014, I married my best friend; <em>Emily Plachta</em>.</p>
         </div>
