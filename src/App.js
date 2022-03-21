@@ -17,6 +17,7 @@ import Footer from './components/footer';
 
 
 export default function App({ uuidv4 }) {
+  // <script src="https://www.google.com/recaptcha/api.js" async defer></script>
      
   //-- Sub-Components within the main container and also used for navigation
   const [locations, setLocations] = useState({

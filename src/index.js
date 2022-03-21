@@ -13,6 +13,9 @@ import { v4 as uuidv4 } from 'uuid';
 import './assets/css/styles.css';
 import './assets/js/script.js';
 
+if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') 
+{console.log('dev')}  // development
+else { console.log('prod')}// production 
 
 
 ReactDOM.render(
