@@ -332,7 +332,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: var(--a_01);
+    background-color: var(--body_bg);
     flex-wrap: wrap;
     grid-gap: 1rem;
     padding: .5rem;
