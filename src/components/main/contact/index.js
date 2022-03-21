@@ -5,16 +5,16 @@ import { send } from 'emailjs-com';
 
 import ReCAPTCHA from "react-google-recaptcha";
 
+
+import{ init } from '@emailjs/browser';
+init(process.env.REACT_APP_EMAILJS_USER_ID);
+
+
 export default function Contact({ uuid }) {
 
   const recaptchaRef = React.createRef();
 
-  //-- preventing default
-  const handleSubmit = e => {
-    console.log(e)
-    e.preventDefault();
   
-  };
 
   //-- managing sending email
   const [toSend, setToSend] = useState({
@@ -22,24 +22,34 @@ export default function Contact({ uuid }) {
     to_name: 'Erik Plachta',
     message: '',
     reply_to: '',
-    reCAPTCHA: '',
+    'g-recaptcha-response': '',
   });
 
+  //-- setting captcha value to send params
+  // const [recaptcha, setRecaptcha] = useState (e => { toSend['g-recaptcha-response'] = e});
 
   const onSubmit = (e) => {
     e.preventDefault();
+    
     send(
-      process.env.REACT_APP_EMAILJS_ID,
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
       process.env.REACT_APP_EMAILJS_TEMPLATE,
       toSend,
-      process.env.REACT_APP_EMAILJS_API,
-      recaptchaRef.current.getValue()
+      process.env.REACT_APP_EMAILJS_USER_ID,
     )
       .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
+        // console.log('SUCCESS!', , response.text);
+        alert(`${response.status} - ${response.text}`)
+        
+        document.getElementById("from_name").value = "";
+        document.getElementById("to_name").value = "";
+        document.getElementById("message").value = "";
+        document.getElementById("reply_to").value = "";
+        
       })
       .catch((err) => {
-        console.log('FAILED...', err);
+        // console.log('FAILED...', err);
+        alert(`ERROR: Message did not send: ${err}`)
       });
   };
 
@@ -66,10 +76,9 @@ export default function Contact({ uuid }) {
       
         
 
-      {/*Email Form  */}
+      {/*Email Form with captcha */}
       <section className="article-content-container contact-form">
         <form onSubmit={onSubmit}>
-
           <div className='form-section'>
             
             <span className="form-element">
@@ -84,6 +93,7 @@ export default function Contact({ uuid }) {
                 onChange={handleChange}
               />
             </span>
+
             <span className="form-element">
               <label htmlFor="email">Email Address</label>
               <input
@@ -96,13 +106,12 @@ export default function Contact({ uuid }) {
                 onChange={handleChange}
               />
             </span>
+
             <span className="form-element">
               <label htmlFor="phone">Phone Number</label>
               <input name="phone" id="phone" type="tel" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
             </span>
-
           </div>
-
 
           <span className="form-element">
             <label htmlFor="reason">Subject</label>
@@ -113,7 +122,6 @@ export default function Contact({ uuid }) {
               <option value="other">Other</option>
             </select>
           </span>
-        
 
           <span className="form-element">
             <label htmlFor="message">Message</label>
@@ -128,12 +136,12 @@ export default function Contact({ uuid }) {
               ></textarea>
           </span>
 
-          <span className="form-element">
+          <span className="form-element" id='recaptcha'>
             {/* Captcha*/}
             <ReCAPTCHA
               ref={recaptchaRef}
               sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY}
-              onChange={setToSend.reCAPTCHA}
+              onChange={e => (toSend['g-recaptcha-response']=e)}
             />
           </span>
 

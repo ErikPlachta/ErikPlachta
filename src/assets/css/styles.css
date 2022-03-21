@@ -364,7 +364,10 @@ footer {
     transition: ease-in-out 200ms;
 }
 
-
+#recaptcha *{
+    width: 100%;
+    margin: auto;
+}
 
 
 select,
@@ -446,6 +449,7 @@ option:checked {
 }
 
 input[type=submit].button{
+    border-radius: var(--br_25);
     width: 100%;
     margin: 1rem 0 ;
     padding: 3rem 0;
