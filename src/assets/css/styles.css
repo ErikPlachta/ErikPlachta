@@ -310,19 +310,59 @@ section {
     padding: 0 .9rem;
 }
 
-
 .signature{
     width: 100%;
     padding: 1rem 0;
     font-style: italic;
 }
 
-div.content-old {
-    padding-top: 2rem;
-    max-width: 50ch;
-    line-height: 2;
-    text-align: center;
+/* makes sure no extra lien below */
+#prtfolio-header{
+    border-bottom: none;
+}
+
+/* makes fit better on mobile */
+#portfolio-article{
     margin: auto;
+    width: 95%;
+}
+
+#portfolio-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--a_01);
+    flex-wrap: wrap;
+    grid-gap: 1rem;
+    padding: .5rem;
+    border-radius: var(--br_05);
+    border: var(--b_04);
+}
+.portfolio-project{
+    padding: 1.5rem;
+    min-height: 400px;
+    min-width: 300px;
+    max-width: 300px;
+    border: var(--b_04);
+    border-radius: var(--br_05);
+    box-shadow: var(--bs_even_a01_hvy);
+    background-color: var(--section_bg);
+    transition: ease-in-out 200ms;
+    /* margin: 0 1rem; */
+}
+
+.flex_100{
+    flex: 100%;
+    max-width: 100%;
+}
+
+.flex_50{
+    flex: 40%;
+    max-width: 50%;
+}
+
+.portfolio-project:hover{
+    box-shadow: var(--bs_even_a01_lt), var(--bs_even_a01_hvy);
 }
 
 footer {
@@ -532,6 +572,9 @@ input[type=submit]:hover{
         padding: 0 1.0417rem;
     }
 
+    #portfolio-container{
+        padding: 1rem;
+    }
     footer{
         justify-content: space-evenly;
         flex-direction: row;
