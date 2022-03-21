@@ -14,7 +14,6 @@ export default function Contact({ uuid }) {
 
   const recaptchaRef = React.createRef();
 
-  
 
   //-- managing sending email
   const [toSend, setToSend] = useState({
@@ -41,8 +40,6 @@ export default function Contact({ uuid }) {
         // console.log('SUCCESS!', , response.text);
         alert(`${response.status} - ${response.text}`)
         
-        
-        
       })
       //-- clear form
       .then( () => {
@@ -60,8 +57,6 @@ export default function Contact({ uuid }) {
     setToSend({ ...toSend, [e.target.name]: e.target.value,  });
   };
 
-
-
   return (
     <article className='container'>
       
@@ -74,9 +69,6 @@ export default function Contact({ uuid }) {
           Do you want to get in touch?
         </p>
       </section>
-
-      
-        
 
       {/*Email Form with captcha */}
       <section className="article-content-container contact-form">

@@ -1,12 +1,79 @@
-import React from 'react'
+import { object } from 'prop-types'
+import React, { useState } from 'react'
 
 export default function Portfolio({ uuid }) {
+
+  const [portfolioProjects, setPortfolioProjects ] = useState([
+    {
+      title: "title 2",
+      description: "desc 2",
+      url: "url 2",
+      img: "img 2",
+      style: .5
+    },
+    {
+      title: "title 1",
+      description: "desc 1",
+      url: "url 1",
+      img: "img 1",
+      style: .5
+    },
+    {
+      title: "title 1",
+      description: "desc 1",
+      url: "url 1",
+      img: "img 1",
+      style: 1
+    },
+    {
+      title: "title 2",
+      description: "desc 2",
+      url: "url 2",
+      img: "img 2",
+      style: .5
+    },
+    {
+      title: "title 1",
+      description: "desc 1",
+      url: "url 1",
+      img: "img 1",
+      style: .5
+    },
+    {
+      title: "title 2",
+      description: "desc 2",
+      url: "url 2",
+      img: "img 2",
+      style: 1
+    }
+  ])
+
+
   return (
-    <section className='container'>
-      <h2>Portfolio</h2>
-      <div className="content">
-        Duis minim ut mollit Lorem nisi voluptate velit. Eu tempor non tempor eiusmod non magna aute non qui id ex labore tempor. Ad dolore esse deserunt esse eu labore minim. Elit aute pariatur consequat eu occaecat ea voluptate exercitation non. Dolor magna qui eu commodo anim labore cillum adipisicing Lorem nisi ipsum ad.
-      </div>
-    </section>
+    <article className='container' id='portfolio-article'>
+      <section>
+        <h2 className="article-header" id="prtfolio-header">Portfolio</h2>
+      </section>
+      <section className="article-content">
+        <p className="article-content-title">
+          Below is a collection of my favorite projects.
+        </p>
+      </section>
+      <section className="article-content-container" id='portfolio-container'>
+        { portfolioProjects.map( project => (
+          // {number}
+          <div
+          // className=`portfolio-project ${flex_100}`
+          // >
+            className={`portfolio-project ${( project.style === 1 && 'flex_100' ) || 'flex_50'}`}
+          >
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <span>{project.url}</span>
+            <img src={project.img} alt={project.title}></img>
+          </div>
+        ))}
+      </section>
+    </article>
   )
 }
