@@ -111,7 +111,8 @@ body {
     margin: 0;
     width: 100%;
 
-    background-color: var(--body_bg);
+    /* background-color: var(--body_bg); */
+    background-color: var(--a_01);
     color: var(--body_fc_dark);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -253,7 +254,7 @@ section {
 .container{
     margin: auto;
     padding: 1rem;
-    width: 90%;
+    width: 95%;
     border-radius: var(--br_05);
     border: var(--b_04);
     box-shadow: var(--bs_even_a01_lt);
@@ -402,7 +403,7 @@ footer a{
     border-radius: var(--br_25);
     border: var(--b_04);
     /* box-shadow: inset var(--bs_even_a01_hvy); */
-    width: 100%;
+    width: %;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -421,11 +422,14 @@ footer a{
     transition: ease-in-out 200ms;
 }
 
-#recaptcha *{
-    width: 100%;
-    margin: auto;
-}
 
+#recaptcha * {
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+    
 
 select,
 option,

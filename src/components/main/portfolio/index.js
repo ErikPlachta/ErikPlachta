@@ -54,6 +54,11 @@ export default function Portfolio({ uuid }) {
       <section>
         <h2 className="article-header" id="prtfolio-header">Portfolio</h2>
       </section>
+      <section className="article-content">
+        <p className="article-content-title">
+          Below is a collection of my favorite projects.
+        </p>
+      </section>
       <section className="article-content-container" id='portfolio-container'>
         { portfolioProjects.map( project => (
           // {number}
