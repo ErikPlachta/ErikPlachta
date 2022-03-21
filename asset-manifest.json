@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ErikPlachta/static/css/main.6c0416f6.css",
-    "main.js": "/ErikPlachta/static/js/main.7f2c85ad.js",
+    "main.css": "/ErikPlachta/static/css/main.c38b9591.css",
+    "main.js": "/ErikPlachta/static/js/main.deb8da29.js",
     "static/js/787.1b36caa0.chunk.js": "/ErikPlachta/static/js/787.1b36caa0.chunk.js",
     "static/media/erik_c_72.png": "/ErikPlachta/static/media/erik_c_72.0854f9e508364209def6.png",
     "index.html": "/ErikPlachta/index.html",
-    "main.6c0416f6.css.map": "/ErikPlachta/static/css/main.6c0416f6.css.map",
-    "main.7f2c85ad.js.map": "/ErikPlachta/static/js/main.7f2c85ad.js.map",
+    "main.c38b9591.css.map": "/ErikPlachta/static/css/main.c38b9591.css.map",
+    "main.deb8da29.js.map": "/ErikPlachta/static/js/main.deb8da29.js.map",
     "787.1b36caa0.chunk.js.map": "/ErikPlachta/static/js/787.1b36caa0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c0416f6.css",
-    "static/js/main.7f2c85ad.js"
+    "static/css/main.c38b9591.css",
+    "static/js/main.deb8da29.js"
   ]
 }
