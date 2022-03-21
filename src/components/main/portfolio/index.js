@@ -1,12 +1,40 @@
-import React from 'react'
+import { object } from 'prop-types'
+import React, { useState } from 'react'
 
 export default function Portfolio({ uuid }) {
+
+  const [portfolioProjects, setPortfolioProjects ] = useState([
+    {
+      title: "title 1",
+      description: "desc 1",
+      url: "url 1",
+      img: "img 1"
+    },
+    {
+      title: "title 2",
+      description: "desc 2",
+      url: "url 2",
+      img: "img 2"
+    }
+  ])
+
+
   return (
-    <section className='container'>
-      <h2>Portfolio</h2>
-      <div className="content">
-        Duis minim ut mollit Lorem nisi voluptate velit. Eu tempor non tempor eiusmod non magna aute non qui id ex labore tempor. Ad dolore esse deserunt esse eu labore minim. Elit aute pariatur consequat eu occaecat ea voluptate exercitation non. Dolor magna qui eu commodo anim labore cillum adipisicing Lorem nisi ipsum ad.
-      </div>
-    </section>
+    <article className='container'>
+      <section>
+        <h2 className="article-header">Portfolio</h2>
+      </section>
+      <section className="article-content-container">
+        { portfolioProjects.map( project => (
+          // {number}
+          <div className='portfolio-project'>
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <span>{project.url}</span>
+            <img src={project.img} alt={project.title}></img>
+          </div>
+        ))};
+      </section>
+    </article>
   )
 }
