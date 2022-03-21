@@ -19,6 +19,8 @@ import Footer from './components/footer';
 export default function App({ uuidv4 }) {
   // <script src="https://www.google.com/recaptcha/api.js" async defer></script>
      
+  
+
   //-- Sub-Components within the main container and also used for navigation
   const [locations, setLocations] = useState({
     'about':     { name:'about',      subComponent:{AboutMe},    key:uuidv4(), jsx: <AboutMe   uuidv4={uuidv4}></AboutMe>   },
@@ -26,10 +28,10 @@ export default function App({ uuidv4 }) {
     'resume':    { name:'resume',     subComponent:{Resume},     key:uuidv4(), jsx: <Resume    uuidv4={uuidv4}></Resume>    },
     'contact':   { name:'contact',    subComponent:{Contact},    key:uuidv4(), jsx: <Contact   uuidv4={uuidv4}></Contact>   },
   });
-    
+
   //-- setting default location to about me
   const [ location, setLocation ] = useState( 'about' );
-
+    
   //-- Returning all content
   return ([  
     <Header key={uuidv4()} uuidv4={uuidv4} locations={locations} setLocations={setLocations} location={location} setLocation={setLocation}></Header>,

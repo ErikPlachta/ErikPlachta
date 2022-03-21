@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AboutMe({ uuid }) {
+export default function AboutMe({ uuidv4 }) {
   return (
     <article className='container'>
       
@@ -26,7 +26,7 @@ export default function AboutMe({ uuid }) {
             Outside of work, my primary focus is family and enjoying life. 
           </p>
           <p className="article-content-indent">
-            Time goes by fast, and I want to make memories with the people I love.
+            Time goes by fast and I want to make memories with the people I love.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export default function AboutMe({ uuid }) {
             When it comes to hobbies, software development is my focus lately.
           </p>
           <p className="article-content-indent">
-            To learn more about those projects, check out my Portfolio, above
+            To learn more about my projects, check out my Portfolio.
           </p>          
           <p className="signature">- Erik Plachta on March 20th, 2022</p>
         </div>
