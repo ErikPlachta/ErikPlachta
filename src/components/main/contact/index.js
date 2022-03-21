@@ -19,6 +19,7 @@ export default function Contact({ uuid }) {
   const [toSend, setToSend] = useState({
     from_name: '',
     to_name: 'Erik Plachta',
+    from_phone: '',
     message: '',
     reply_to: '',
     'g-recaptcha-response': '',
@@ -57,13 +58,57 @@ export default function Contact({ uuid }) {
     setToSend({ ...toSend, [e.target.name]: e.target.value,  });
   };
 
+  function onKeyUpPhone(e){
+
+    //-- if trying to erase, don't try to format
+    if(e.key === "Backspace" || e.key === 'Delete'){ return null;}
+     
+    //-- extract value
+     const phoneIn = e.target.value;
+     //-- get current stored value
+    //  const phoneCurrent = toSend.from_phone;
+     
+     //-- if nothing just exit
+     if(!phoneIn) return;
+
+    //-- clean it up  
+    const digits = phoneIn.replace(/\D/g, '');
+
+    //-- format it
+    // const formattedDigits = (digits.substring(0,1) + '(' + digits.substring(1,4) + ')' + digits.substring(4,7) + '-' + digits.substring(7,11));
+    const formattedDigits = ('(' + digits.substring(0,3) + ')' + digits.substring(3,7) + '-' + digits.substring(7,11));
+    
+    //-- update ui input
+    e.target.value = formattedDigits;
+    //-- update data to send
+    toSend.from_phone = formattedDigits;
+    return null;
+  }
+
+  const formatPhone= (e) => {
+    //-- extract value
+    const phoneIn = e.target.value;
+    //-- if nothing just exit
+    if(!phoneIn) return;
+    
+    //-- strip spec characters
+    var phoneInCleaned = ('' + phoneIn).replace(/\D/g, '')
+    //-- format
+    var match = phoneInCleaned.match(/^(\d{3})(\d{3})(\d{4})$/)
+      if (match) {
+        console.log(match)
+        toSend.from_phone = '(' + match[1] + ') ' + match[2] + '-' + match[3];
+        return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+    } 
+    return null;
+  };
+
+  //-- JSX
   return (
     <article className='container'>
-      
       <section>
         <h2 className="article-header">Contact Me</h2>
       </section>
-
       <section className="article-content">
         <p className="article-content-title">
           Do you want to get in touch?
@@ -75,6 +120,7 @@ export default function Contact({ uuid }) {
         <form onSubmit={onSubmit}>
           <div className='form-section'>
             
+            {/* name */}
             <span className="form-element">
               <label htmlFor="from_name">Your Name</label>
               <input
@@ -83,11 +129,11 @@ export default function Contact({ uuid }) {
                 type='text'
                 placeholder='from...'
                 required
-                value={toSend.from_name}
                 onChange={handleChange}
+                value={toSend.from_name}
               />
             </span>
-
+            {/* email */}
             <span className="form-element">
               <label htmlFor="email">Email Address</label>
               <input
@@ -100,10 +146,20 @@ export default function Contact({ uuid }) {
                 onChange={handleChange}
               />
             </span>
-
+            {/* phone */}
             <span className="form-element">
               <label htmlFor="phone">Phone Number</label>
-              <input name="phone" id="phone" type="tel" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+              <input
+                name="phone"
+                id="phone"
+                type="tel"
+                aria-label="Please enter your phone number"
+                placeholder="ex. 1(111)-111-1111"
+                // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                // onKeyDown={onKeyDownPhone}
+                onKeyUp={onKeyUpPhone}
+                // value={toSend.from_phone}
+              />
             </span>
           </div>
 
