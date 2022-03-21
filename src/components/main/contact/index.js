@@ -82,7 +82,7 @@ export default function Contact({ uuid }) {
     
     //-- inline styling so red border until good.
     var input = e.target;
-    var isError = ( (formattedPhone.length) < 14 );
+    var isError = ( (formattedPhone.length) < 13 );
     var color =  (isError) ? "red" : "grey";
     var borderWidth =  (isError)? "3px" : "1px"; 
     input.style.borderColor = color;
@@ -124,6 +124,7 @@ export default function Contact({ uuid }) {
                 required
                 onChange={handleChange}
                 value={toSend.from_name}
+                autoComplete='given-name'
               />
             </span>
             {/* email */}
@@ -137,6 +138,7 @@ export default function Contact({ uuid }) {
                 required
                 value={toSend.reply_to}
                 onChange={handleChange}
+                autoComplete="email"
               />
             </span>
             {/* phone */}
@@ -148,10 +150,8 @@ export default function Contact({ uuid }) {
                 type="tel"
                 aria-label="Please enter your phone number"
                 placeholder="ex. (111)-111-1111"
-                // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                // onKeyDown={onKeyDownPhone}
                 onKeyUp={onKeyUpPhone}
-                // value={toSend.from_phone}
+                autoComplete='tel'
               />
             </span>
           </div>
