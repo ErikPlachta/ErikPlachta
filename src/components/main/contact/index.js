@@ -41,15 +41,17 @@ export default function Contact({ uuid }) {
         // console.log('SUCCESS!', , response.text);
         alert(`${response.status} - ${response.text}`)
         
-        document.getElementById("from_name").value = "";
-        document.getElementById("to_name").value = "";
-        document.getElementById("message").value = "";
-        document.getElementById("reply_to").value = "";
         
+        
+      })
+      //-- clear form
+      .then( () => {
+        window.location.reload(false);
+
       })
       .catch((err) => {
         // console.log('FAILED...', err);
-        alert(`ERROR: Message did not send: ${err}`)
+        alert(`ERROR: Message did not send: - ${err.status}`,err)
       });
   };
 
