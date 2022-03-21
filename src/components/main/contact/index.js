@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 // import '../../../assets/css/toggle.css'
 import { send } from 'emailjs-com';
+// import { Captcha } from 'reactjs-captcha';
 
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact({ uuid }) {
+
+  const recaptchaRef = React.createRef();
 
   //-- preventing default
   const handleSubmit = e => {
@@ -18,7 +22,9 @@ export default function Contact({ uuid }) {
     to_name: 'Erik Plachta',
     message: '',
     reply_to: '',
+    reCAPTCHA: '',
   });
+
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -26,7 +32,8 @@ export default function Contact({ uuid }) {
       'service_g06t4eg',
       'template_rg1kx7u',
       toSend,
-      'gJH1FFdLLZ-ojMYbQ'
+      'gJH1FFdLLZ-ojMYbQ',
+      recaptchaRef.current.getValue()
     )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
@@ -36,8 +43,9 @@ export default function Contact({ uuid }) {
       });
   };
 
+
   const handleChange = (e) => {
-    setToSend({ ...toSend, [e.target.name]: e.target.value });
+    setToSend({ ...toSend, [e.target.name]: e.target.value,  });
   };
 
 
@@ -53,8 +61,12 @@ export default function Contact({ uuid }) {
         <p className="article-content-title">
           Do you want to get in touch?
         </p>
-      </section>    
+      </section>
 
+      
+        
+
+      {/*Email Form  */}
       <section className="article-content-container contact-form">
         <form onSubmit={onSubmit}>
 
@@ -67,6 +79,7 @@ export default function Contact({ uuid }) {
                 id="from_name"
                 type='text'
                 placeholder='from...'
+                required
                 value={toSend.from_name}
                 onChange={handleChange}
               />
@@ -115,13 +128,20 @@ export default function Contact({ uuid }) {
               ></textarea>
           </span>
 
+          <span className="form-element">
+            {/* Captcha*/}
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY}
+              onChange={setToSend.reCAPTCHA}
+            />
+          </span>
+
           <span className="form-element"> 
             <input type="submit" className="button" id="contact-me-submit" value="Submit" />
           </span>
         </form>
       </section>
-
-
   </article>
   )
 }
