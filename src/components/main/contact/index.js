@@ -75,33 +75,26 @@ export default function Contact({ uuid }) {
     const digits = phoneIn.replace(/\D/g, '');
 
     //-- format it
-    // const formattedDigits = (digits.substring(0,1) + '(' + digits.substring(1,4) + ')' + digits.substring(4,7) + '-' + digits.substring(7,11));
-    const formattedDigits = ('(' + digits.substring(0,3) + ')' + digits.substring(3,7) + '-' + digits.substring(7,11));
+    // const formattedDigits = (digits.substring(0,1) + '(' + digits.substring(1,4) + ')' + digits.substring(4,7) + '-' + digits.substring(7,11)); //-- with area code
+    const formattedPhone = ('(' + digits.substring(0,3) + ')' + digits.substring(3,6) + '-' + digits.substring(6,10)); //-- without area-code
+
+    console.log(formattedPhone.length)
+    
+    //-- inline styling so red border until good.
+    var input = e.target;
+    var isError = ( (formattedPhone.length) < 14 );
+    var color =  (isError) ? "red" : "grey";
+    var borderWidth =  (isError)? "3px" : "1px"; 
+    input.style.borderColor = color;
+    input.style.borderWidth = borderWidth;
+   
     
     //-- update ui input
-    e.target.value = formattedDigits;
+    e.target.value = formattedPhone;
     //-- update data to send
-    toSend.from_phone = formattedDigits;
+    toSend.from_phone = formattedPhone;
     return null;
   }
-
-  const formatPhone= (e) => {
-    //-- extract value
-    const phoneIn = e.target.value;
-    //-- if nothing just exit
-    if(!phoneIn) return;
-    
-    //-- strip spec characters
-    var phoneInCleaned = ('' + phoneIn).replace(/\D/g, '')
-    //-- format
-    var match = phoneInCleaned.match(/^(\d{3})(\d{3})(\d{4})$/)
-      if (match) {
-        console.log(match)
-        toSend.from_phone = '(' + match[1] + ') ' + match[2] + '-' + match[3];
-        return '(' + match[1] + ') ' + match[2] + '-' + match[3];
-    } 
-    return null;
-  };
 
   //-- JSX
   return (
@@ -154,7 +147,7 @@ export default function Contact({ uuid }) {
                 id="phone"
                 type="tel"
                 aria-label="Please enter your phone number"
-                placeholder="ex. 1(111)-111-1111"
+                placeholder="ex. (111)-111-1111"
                 // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 // onKeyDown={onKeyDownPhone}
                 onKeyUp={onKeyUpPhone}
