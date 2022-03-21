@@ -111,8 +111,7 @@ body {
     margin: 0;
     width: 100%;
 
-    /* background-color: var(--body_bg); */
-    background-color: var(--a_01);
+    background-color: var(--body_bg);
     color: var(--body_fc_dark);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -177,7 +176,6 @@ header {
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 .2rem .3rem rgba(0,0,0,.5);
-    transition: ease-in-out 200ms;
 }
 
 
@@ -219,24 +217,23 @@ nav {
     padding: 0 1rem;
     margin-top: auto;
     font-size: 1.25rem;
-    transition: ease-in-out 200ms;
 }
 
 .nav{
     color: var(--nav-fc-light);
     transition: ease-in-out 200ms;
-    border-bottom: 4px solid transparent;
+    border-bottom: 2px solid transparent;
 }
 
 .nav:hover{
     text-shadow: 0 0 0 var(--accent_p);
-    border-bottom: 4px solid var(--accent_p);
+    border-bottom: 2px solid var(--accent_p);
 }
 
 /* if the current location */
 .nav.nav-active{
     color: var(--nav-fc-active);
-    border-bottom: 4px solid var(--nav-fc-light);
+    border-bottom: 2px solid var(--nav-fc-light);
 }
 
 main{
@@ -256,7 +253,7 @@ section {
 .container{
     margin: auto;
     padding: 1rem;
-    width: 95%;
+    width: 90%;
     border-radius: var(--br_05);
     border: var(--b_04);
     box-shadow: var(--bs_even_a01_lt);
@@ -313,59 +310,19 @@ section {
     padding: 0 .9rem;
 }
 
+
 .signature{
     width: 100%;
     padding: 1rem 0;
     font-style: italic;
 }
 
-/* makes sure no extra lien below */
-#prtfolio-header{
-    border-bottom: none;
-}
-
-/* makes fit better on mobile */
-#portfolio-article{
+div.content-old {
+    padding-top: 2rem;
+    max-width: 50ch;
+    line-height: 2;
+    text-align: center;
     margin: auto;
-    width: 95%;
-}
-
-#portfolio-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-color: var(--body_bg);
-    flex-wrap: wrap;
-    grid-gap: 1rem;
-    padding: .5rem;
-    border-radius: var(--br_05);
-    border: var(--b_04);
-}
-.portfolio-project{
-    padding: 1.5rem;
-    min-height: 400px;
-    min-width: 300px;
-    max-width: 300px;
-    border: var(--b_04);
-    border-radius: var(--br_05);
-    box-shadow: var(--bs_even_a01_hvy);
-    background-color: var(--section_bg);
-    transition: ease-in-out 200ms;
-    /* margin: 0 1rem; */
-}
-
-.flex_100{
-    flex: 100%;
-    max-width: 100%;
-}
-
-.flex_50{
-    flex: 40%;
-    max-width: 50%;
-}
-
-.portfolio-project:hover{
-    box-shadow: var(--bs_even_a01_lt), var(--bs_even_a01_hvy);
 }
 
 footer {
@@ -405,7 +362,7 @@ footer a{
     border-radius: var(--br_25);
     border: var(--b_04);
     /* box-shadow: inset var(--bs_even_a01_hvy); */
-    width: %;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -424,14 +381,11 @@ footer a{
     transition: ease-in-out 200ms;
 }
 
-
-#recaptcha * {
-    align-items: center;
-    margin: 0 auto;
-    padding: 0;
-    overflow: hidden;
+#recaptcha *{
+    width: 100%;
+    margin: auto;
 }
-    
+
 
 select,
 option,
@@ -511,9 +465,12 @@ option:checked {
     background-color: var(--title_bg_dark) !important;
 }
 
+#contact-me-submit,
 input[type=submit].button{
+    -webkit-appearance: none;
     border-radius: var(--br_25);
     width: 100%;
+    min-height: 3rem;
     margin: 1rem 0 ;
     padding: 3rem 0;
     background: var(--title_bg_dark);
@@ -543,10 +500,9 @@ input[type=submit]:hover{
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
     header {
         flex-direction: row;
-        justify-content: center;
     }
 
     h1.title {
@@ -559,9 +515,6 @@ input[type=submit]:hover{
         max-height: 50px;
         margin: 0 .5rem;
     }
-    header{
-        padding: 0 7vw;
-    }
 
     nav {
         height: 100%;
@@ -573,12 +526,6 @@ input[type=submit]:hover{
     main{
         margin: 100px 0;
     }
-
-
-    nav {
-        justify-content: space-around;
-    }
-    
    .container{
        padding: 2rem;
        min-height: 60vh;
@@ -588,9 +535,6 @@ input[type=submit]:hover{
         padding: 0 1.0417rem;
     }
 
-    #portfolio-container{
-        padding: 1rem;
-    }
     footer{
         justify-content: space-evenly;
         flex-direction: row;
