@@ -29,10 +29,10 @@ export default function Contact({ uuid }) {
   const onSubmit = (e) => {
     e.preventDefault();
     send(
-      'service_g06t4eg',
-      'template_rg1kx7u',
+      process.env.REACT_APP_EMAILJS_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE,
       toSend,
-      'gJH1FFdLLZ-ojMYbQ',
+      process.env.REACT_APP_EMAILJS_API,
       recaptchaRef.current.getValue()
     )
       .then((response) => {
