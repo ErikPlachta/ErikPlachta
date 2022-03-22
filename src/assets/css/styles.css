@@ -280,6 +280,7 @@ section {
 
 .article-content-container{
     /* border-radius: var(--br_05); */
+    padding: .25rem;
     border: var(--b_05);
 }
 

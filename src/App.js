@@ -1,6 +1,6 @@
 //-- Layer 2: ROOT ELEMENT MANAGING CONTENT AND UI
-
 import React, { useState } from 'react';
+
 
 //-- Header component that contains nav sub-component
 import Header from './components/header';
@@ -37,6 +37,5 @@ export default function App({ uuidv4 }) {
     <Header key={uuidv4()} uuidv4={uuidv4} locations={locations} setLocations={setLocations} location={location} setLocation={setLocation}></Header>,
     <Main   key={uuidv4()} uuidv4={uuidv4} locations={locations} setLocations={setLocations} location={location} setLocation={setLocation}></Main>,
     <Footer key={uuidv4()} uuidv4={uuidv4}></Footer>
-
   ]);
 };

@@ -1,5 +1,5 @@
 {
-  "homepage" : "https://erikplachta.github.io/ErikPlachta/",
+  "homepage": "https://erikplachta.github.io/ErikPlachta/",
   "name": "erikplachta",
   "version": "0.2.0",
   "private": true,
@@ -12,6 +12,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-google-recaptcha": "^2.1.0",
+    "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
