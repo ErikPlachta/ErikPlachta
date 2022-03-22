@@ -12,12 +12,19 @@ export default function AboutMe({ uuidv4 }) {
       <section className="article-content-container">
 
         <div className="article-content">
+          
           <p className="article-content-title">
-            Professionally, I'm an IT Engineer, MSP Director, Project Manager,
-            and Software Developer. 
+            Thanks for checking out my website.
           </p>
           <p className="article-content-indent">
-            I specalize in designing modular and efficient systems that scale.
+            Magna magna voluptate excepteur labore aliqua.
+          </p>
+
+          <p className="article-content-title">
+            IT Engineer, MSP Director, Project Manager, and Software Developer. 
+          </p>
+          <p className="article-content-indent">
+            Officia sunt cillum dolor proident excepteur elit.
           </p>
         </div>
 

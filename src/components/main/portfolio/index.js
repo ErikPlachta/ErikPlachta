@@ -10,16 +10,18 @@ export default function Portfolio({ uuidv4 }) {
       title: "Image Manager",
       description:
         <span>
-          <b>This is a Windows App that I've built to automate IT related services remotely.</b>
+          <b>A compiled Windows application built to automate IT related services remotely.</b>
           
           <p className='article-content-indent'>
-            Image Manager is a passion project of mine, and I do all development
-            for it outside of work as a hobby. I use it as a way to expand my Python
-            knowledge and strengthen my development skills. 
-          
+            Image Manager is a passion project of mine -- and I've done all development
+            as a hobby and for fun outside of work. It's a headless executable 
+            that identifies and then resolves IT related issues specific to my 
+            priamry customer's needs.
             <br /><br />
+            The project initially started out as me wanting to learn Python and
+            strengthen my development skills.
 
-            Three years after it's offical release, it's become an integral tool
+            several years after it's offical release, it's become an integral tool
             used POS Nation. With a active user base of over 6,000 clients, it
             automates more than 40 hours of IT related services every week. 
           </p>
@@ -146,9 +148,10 @@ export default function Portfolio({ uuidv4 }) {
       </section>
       <section className="article-content">
         <p className="article-content-title">
-          Below is a collection of my most recent projects. It's a collection concept
-          applications that I've built as I was learning, and live Apps with an active
-          customer base.
+          Welcome to my portfolio. I've put together a small collection of my 
+          work. Below, you'll find a collection of full stack Windows and Web
+          apps. A few are active with a live customer base. Others are concepts
+          that I'm proud of for unique reasons.
         </p>
         
       </section>
