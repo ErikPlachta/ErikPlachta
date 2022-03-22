@@ -36,7 +36,7 @@ export default function Portfolio({ uuidv4 }) {
         </ul>
       ,
       // img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/imagemanager_map.png",
-      media_description: "See the map below for a visualization of it's global footprint.",
+      media_description: "See the map below for a visualization of Image Manager's global footprint.",
       iframe: <iframe title="Image Manager's Global Footprint" src="https://datastudio.google.com/embed/reporting/ec3bf210-888a-4bb2-a166-f40c152afd01/page/xYNXC" allowFullScreen></iframe>,
       style: 1
     },
