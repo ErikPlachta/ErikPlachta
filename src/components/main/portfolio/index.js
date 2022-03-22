@@ -8,11 +8,10 @@ export default function Portfolio({ uuidv4 }) {
   const [portfolioProjects, setPortfolioProjects ] = useState([
     {
       title: "Image Manager",
+      summary: "Automating IT Related Services, Remotely",
       description:
         <span>
-          <b>A compiled Windows application built to automate IT related services remotely.</b>
-          
-          <p className='article-content-indent'>
+          <p>
             Image Manager is a passion project of mine -- and I've done all development
             as a hobby and for fun outside of work. It's a headless executable 
             that identifies and then resolves IT related issues specific to my 
@@ -147,11 +146,10 @@ export default function Portfolio({ uuidv4 }) {
         <h2 className="article-header" id="prtfolio-header">Portfolio</h2>
       </section>
       <section className="article-content">
-        <p className="article-content-title">
-          Welcome to my portfolio. I've put together a small collection of my 
-          work. Below, you'll find a collection of full stack Windows and Web
-          apps. A few are active with a live customer base. Others are concepts
-          that I'm proud of for unique reasons.
+        <p className="article-content-title" id="portfolio-title-summary">
+          This is a small collection of my work. I've included a full stack Windows
+          App, and several full stack Web apps. A few are active with a live
+          customer base. Others are concepts that I'm proud of for unique reasons.
         </p>
         
       </section>
@@ -162,15 +160,22 @@ export default function Portfolio({ uuidv4 }) {
             key={uuidv4()}
             className={`portfolio-project ${( project.style === 1 && 'flex_100' ) || 'flex_50'}`}
           >
-            <h3 className='portfolio-title'>{project.title}</h3>
-            <div className="">
+            <div className="portfolio-head">
+              <h3 className='portfolio-title'>{project.title}</h3>
+              {project.summary ? <p className="portfolio-summary">{project.summary}</p> : null}
+            </div>
+            
+            <div className="article-content-indent">
+              <h4>About</h4>
               {project.description}
             </div>
             
-            <div className='nerd-notes article-content-indent-list'>
-              <h4>Nerd Notes</h4>
-              {project.nerd_notes}
-            </div>
+            <section>
+              <div className='nerd-notes article-content-indent-list'>
+                <h4>Nerd Notes</h4>
+                {project.nerd_notes}
+              </div>
+            </section>
             
             {project.media_description ? <p className='article-content media_description'>{project.media_description}</p> : null}
             {project.img ? <img src={project.img} alt={project.title}></img> : <span><a href={project.url} target="_blank" rel="noreferrer">{project.url_description}</a></span>}
