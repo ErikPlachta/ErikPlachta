@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/ErikPlachta/static/css/main.89481c1a.css",
-    "main.js": "/ErikPlachta/static/js/main.8daae957.js",
+    "main.js": "/ErikPlachta/static/js/main.160501f5.js",
     "static/js/787.1b36caa0.chunk.js": "/ErikPlachta/static/js/787.1b36caa0.chunk.js",
     "static/media/restful-api-social-network-concept.png": "/ErikPlachta/static/media/restful-api-social-network-concept.f27f37f20afc4e08a601.png",
     "static/media/erik_c_72.png": "/ErikPlachta/static/media/erik_c_72.0854f9e508364209def6.png",
     "index.html": "/ErikPlachta/index.html",
     "main.89481c1a.css.map": "/ErikPlachta/static/css/main.89481c1a.css.map",
-    "main.8daae957.js.map": "/ErikPlachta/static/js/main.8daae957.js.map",
+    "main.160501f5.js.map": "/ErikPlachta/static/js/main.160501f5.js.map",
     "787.1b36caa0.chunk.js.map": "/ErikPlachta/static/js/787.1b36caa0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.89481c1a.css",
-    "static/js/main.8daae957.js"
+    "static/js/main.160501f5.js"
   ]
 }
