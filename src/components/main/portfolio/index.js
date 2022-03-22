@@ -12,12 +12,13 @@ export default function Portfolio({ uuidv4 }) {
         <span>
           <b>This is a Windows App that I've built to automate IT related services remotely.</b>
           
-          <p>
+          <p className='article-content-indent'>
             Image Manager is a passion project of mine, and I do all development
             for it outside of work as a hobby. I use it as a way to expand my Python
             knowledge and strengthen my development skills. 
-          </p>
-          <p>
+          
+            <br /><br />
+
             Three years after it's offical release, it's become an integral tool
             used POS Nation. With a active user base of over 6,000 clients, it
             automates more than 40 hours of IT related services every week. 
@@ -158,9 +159,9 @@ export default function Portfolio({ uuidv4 }) {
             key={uuidv4()}
             className={`portfolio-project ${( project.style === 1 && 'flex_100' ) || 'flex_50'}`}
           >
+            <h3 className='portfolio-title'>{project.title}</h3>
             <div className="">
-              <h3 className='portfolio-title'>{project.title}</h3>
-              <span className='article-content-indent'>{project.description}</span>
+              {project.description}
             </div>
             
             <div className='nerd-notes article-content-indent-list'>
