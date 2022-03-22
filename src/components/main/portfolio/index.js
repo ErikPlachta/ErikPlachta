@@ -42,7 +42,7 @@ export default function Portfolio({ uuidv4 }) {
     },
     {
       title: "posnation.support",
-      description: <span>A web app that servers as a front-end to an <b>AWS S3 storage bucket</b>. I built the website and own the domain.</span>,
+      description: <span>A web app that servers as a front-end to an <b>AWS S3 storage bucket</b>. I've built the website, manage AWS resources, and own the domain.</span>,
       nerd_notes:  
         <ul>
           <li>WebHost: GitHub</li>
