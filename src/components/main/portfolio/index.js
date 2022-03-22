@@ -27,8 +27,8 @@ export default function Portfolio({ uuidv4 }) {
       nerd_notes:  
         <ul>
           <li>Host: Windows OS</li>
-          <li>Database: Local - Windows Registry/JSON/CSV/TXT</li>
-          <li>Database: Cloud - Google Sheets</li>
+          <li>Database-Local: Windows Registry/JSON/TXT</li>
+          <li>Database-Cloud: Google Sheets</li>
           <li>API: Google Apps Scripts</li>
           <li>Framework: Python/Powershell</li>
           <li>Key Feature: Remote Updating</li>
