@@ -7,8 +7,42 @@ export default function Portfolio({ uuidv4 }) {
 
   const [portfolioProjects, setPortfolioProjects ] = useState([
     {
+      title: "Image Manager",
+      description:
+        <span>
+          <b>This is a Windows App that I've built to automate IT related services remotely.</b>
+          
+          <p>
+            Image Manager is a passion project of mine, and I do all development
+            for it outside of work as a hobby. I use it as a way to expand my Python
+            knowledge and strengthen my development skills. 
+          </p>
+          <p>
+            Three years after it's offical release, it's become an integral tool
+            used POS Nation. With a active user base of over 6,000 clients, it
+            automates more than 40 hours of IT related services every week. 
+          </p>
+        </span>
+      ,
+      nerd_notes:  
+        <ul>
+          <li>Host: Windows OS</li>
+          <li>Database: Local - Windows Registry/JSON/CSV/TXT</li>
+          <li>Database: Cloud - Google Sheets</li>
+          <li>API: Google Apps Scripts</li>
+          <li>Framework: Python/Powershell</li>
+          <li>Key Feature: Remote Updating</li>
+          <li>Key Feature: Cloud Logging</li>
+        </ul>
+      ,
+      // img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/imagemanager_map.png",
+      media_description: "See the map below for a visualization of it's global footprint.",
+      iframe: <iframe title="Image Manager's Global Footprint" src="https://datastudio.google.com/embed/reporting/ec3bf210-888a-4bb2-a166-f40c152afd01/page/xYNXC" allowFullScreen></iframe>,
+      style: 1
+    },
+    {
       title: "posnation.support",
-      description: "A web app that servers as a front-end to an AWS S3 storage bucket. I built the website and own the domain.",
+      description: <span>A web app that servers as a front-end to an <b>AWS S3 storage bucket</b>. I built the website and own the domain.</span>,
       nerd_notes:  
         <ul>
           <li>WebHost: GitHub</li>
@@ -19,16 +53,6 @@ export default function Portfolio({ uuidv4 }) {
       url_description: "Click Here to checkout the live website.",
       url: "https://posnation.support/index.html",
       img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/posnation-support-example.gif",
-      style: 1
-    },
-    {
-      title: "Image Manager",
-      description: "A python app compiled into an executable designed to automate IT related services. Has over 5,000 active end-points.",
-      nerd_notes: "Website hosted on GitHub. Files hosted on AWS S3 Bucket. Accessing data with the AWS JS SDK.",
-      // url_description: "Click Here to checkout the live website.",
-      // url: "https://posnation.support/index.html",
-      img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/imagemanager_map.png",
-      // iframe: <iframe title="Image Manager's Global Footprint" src="https://datastudio.google.com/embed/reporting/ec3bf210-888a-4bb2-a166-f40c152afd01/page/xYNXC" allowFullScreen></iframe>,
       style: 1
     },
     // {
@@ -42,7 +66,17 @@ export default function Portfolio({ uuidv4 }) {
     {
       title: "My Budget - PWA - Concept App",
       description: "A Budget concept PWA demonstrating a seamless user experience no matter the users network connection. Hosted on Heroku, running a Node/express.js server, no SQL Database with MongoDB.",
-      nerd_notes: "",
+      nerd_notes: 
+        <ul>
+          <li>WebHost: Heroku</li>
+          <li>Framework: Express Server on Node.js</li>
+          <li>Framework: JS/CSS/HTML</li>
+          <li>Database: MongoDB Atlas</li>
+          <li>API: 1</li>
+          <li>API: 2</li>
+          <li>API: 3</li>
+        </ul>
+      ,
       url: "https://github.com/ErikPlachta/pwa-personal-budget",
       url_description: "Click Here to checkout the GitHub.",
       img: "https://raw.githubusercontent.com/ErikPlachta/pwa-personal-budget/main/demo.gif",
@@ -59,8 +93,15 @@ export default function Portfolio({ uuidv4 }) {
     // },
     {
       title: "A Daily Scheduler",
-      description: "A daily scheduler management web app concept.",
-      nerd_notes: "",
+      description: "A concept app built to demonstrate the power and flexabiliy of the Web Storage API framework.",
+      nerd_notes: 
+        <ul>
+          <li>WebHost: GitHub</li>
+          <li>Framework: JS/HTML/CSS</li>
+          <li>Database: Local Storage</li>
+          <li>API: Web Storage</li>
+        </ul>
+      ,
       url_description: "Click here to checkout GitHub!",
       url: "https://github.com/ErikPlachta/a_Daily_Scheduler_WebApp",
       img: "https://raw.githubusercontent.com/ErikPlachta/a_Daily_Scheduler_WebApp/main/assets/images/demo.gif",
@@ -69,7 +110,17 @@ export default function Portfolio({ uuidv4 }) {
     {
       title: "node-express-notes-app",
       description: "This is a Note Taking concept web APP built on Node with Express to manage API calls to a JSON database. Demonstrate how Express.js can be used as an API gateway to a JSON database. Using Heroku to host node.js server.",
-      nerd_notes: "",
+      nerd_notes: 
+        <ul>
+          <li>WebHost: Heroku</li>
+          <li>Framework: Express Server on Node.js</li>
+          <li>Framework: JS/CSS/HTML</li>
+          <li>Database: MongoDB Atlas</li>
+          <li>API: 1</li>
+          <li>API: 2</li>
+          <li>API: 3</li>
+        </ul>
+      ,
       url_description: "Click here to checkout GitHub!",
       url: "https://github.com/ErikPlachta/node-express-notes-app",
       img: "https://raw.githubusercontent.com/ErikPlachta/node-express-notes-app/main/public/assets/images/demo-full.gif",
@@ -117,6 +168,7 @@ export default function Portfolio({ uuidv4 }) {
               {project.nerd_notes}
             </div>
             
+            {project.media_description ? <p className='article-content media_description'>{project.media_description}</p> : null}
             {project.img ? <img src={project.img} alt={project.title}></img> : <span><a href={project.url} target="_blank" rel="noreferrer">{project.url_description}</a></span>}
             {project.iframe ? project.iframe : null }
 
