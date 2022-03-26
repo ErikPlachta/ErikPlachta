@@ -8,7 +8,7 @@ import Header from './components/header';
 //-- Main component with sub-components ( Importing subs here vs in main to allow for just 1 locations state obj )
 import Main   from './components/main';
 import AboutMe from './components/main/about-me';
-import Portfolio from './components/main/portfolio';
+import Projects from './components/main/projects';
 import Resume from './components/main/resume';
 import Contact from './components/main/contact';
 
@@ -24,7 +24,7 @@ export default function App({ uuidv4 }) {
   //-- Sub-Components within the main container and also used for navigation
   const [locations, setLocations] = useState({
     'about':     { name:'about',      subComponent:{AboutMe},    key:uuidv4(), jsx: <AboutMe   uuidv4={uuidv4}></AboutMe>   },
-    'portfolio': { name:'portfolio',  subComponent:{Portfolio},  key:uuidv4(), jsx: <Portfolio uuidv4={uuidv4}></Portfolio> },
+    'projects': { name:'projects',  subComponent:{Projects},  key:uuidv4(), jsx: <Projects uuidv4={uuidv4}></Projects> },
     'resume':    { name:'resume',     subComponent:{Resume},     key:uuidv4(), jsx: <Resume    uuidv4={uuidv4}></Resume>    },
     'contact':   { name:'contact',    subComponent:{Contact},    key:uuidv4(), jsx: <Contact   uuidv4={uuidv4}></Contact>   },
   });
