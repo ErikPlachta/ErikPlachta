@@ -6,35 +6,63 @@ import restfulApiConcept from '../../../assets/img/restful-api-social-network-co
 export default function Projects({ uuidv4 }) {
 
   const [Projects, setProjects ] = useState([
+    //-- Image Manager
     {
+      id: 'image-manager',
       title: "Image Manager",
-      summary: "Automating IT Related Services, Remotely",
+      summary: "Automating IT Related Services -- Remotely",
       description:
         <span>
           <p>
-            Image Manager is a passion project of mine -- and I've done all development
-            as a hobby and for fun outside of work. It's a headless executable 
-            that identifies and then resolves IT related issues specific to my 
-            priamry customer's needs.
+            Image Manager is a Windows App that automates IT services. It's a
+            headless executable that identifies and then resolves issues specific
+            to my primary customer's needs. As issues are resolved, it logs
+            the results to a cloud database.
             <br /><br />
-            The project initially started out as me wanting to learn Python and
+            This project initially started out as me wanting to learn Python and
             strengthen my development skills.
 
-            several years after it's offical release, it's become an integral tool
-            used POS Nation. With a active user base of over 6,000 clients, it
-            automates more than 40 hours of IT related services every week. 
+            several years after it's release, it's become an integral tool
+            used by <a href="https://www.posnation.com/" target="_blank"
+            rel="noreferrer">POS Nation</a>. With an active user base of over
+            6,000 clients, it automates 40+ hours of IT related services every
+            week. 
           </p>
         </span>
       ,
       nerd_notes:  
         <ul>
-          <li>Host: Windows OS</li>
-          <li>Database-Local: Windows Registry/JSON/TXT</li>
-          <li>Database-Cloud: Google Sheets</li>
-          <li>API: Google Apps Scripts</li>
-          <li>Framework: Python/Powershell</li>
-          <li>Key Feature: Remote Updating</li>
-          <li>Key Feature: Cloud Logging</li>
+          <li><b>Platform</b>
+            <ul>
+              <li>Windows</li>
+            </ul>
+          </li>
+          <li><b>Database</b>
+            <ul>
+              <li>WindowsRegistry/JSON/TXT</li>
+              <li>Google Cloud Platform</li>
+            </ul> 
+          </li>
+          <li><b>API</b>
+            <ul>
+              <li>Google Apps Scripts</li>
+              <li>Network Profile</li>
+              <li>Windows OS</li>
+            </ul>
+          </li>
+          <li><b>Framework</b>
+            <ul>
+              <li>Google Apps Script</li>
+              <li>Python</li>
+              <li>PowerShell</li>
+            </ul>
+          </li>
+          <li><b>Key Features</b>
+            <ul>
+              <li>Remote Updates</li>
+              <li>Cloud Logging</li>
+            </ul>
+          </li>
         </ul>
       ,
       // img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/imagemanager_map.png",
@@ -42,7 +70,9 @@ export default function Projects({ uuidv4 }) {
       iframe: <iframe title="Image Manager's Global Footprint" src="https://datastudio.google.com/embed/reporting/ec3bf210-888a-4bb2-a166-f40c152afd01/page/xYNXC" allowFullScreen></iframe>,
       style: 1
     },
+    //-- posnation.support
     {
+      id: 'posnation-support',
       title: "posnation.support",
       description: <span>A web app that servers as a front-end to an <b>AWS S3 storage bucket</b>. I've built the website, manage AWS resources, and own the domain.</span>,
       nerd_notes:  
@@ -57,14 +87,16 @@ export default function Projects({ uuidv4 }) {
       img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/posnation-support-example.gif",
       style: 1
     },
-    // {
-    //   title: "Sheet Show",
-    //   description: "The Sheet Show app is a group Project concept app I worked on with friends to demonstrate a JawsDB/MySQL database hosted on Heroku with full CRUD functionality.",
-    //   nerd_notes: "",
-    //   url: "https://github.com/barrantesc/The-Sheet-Show",
-    //   img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/sheetshow.gif",
-    //   style: .5
-    // },
+     //-- RESTful API Gateway
+     {
+      title: "RESTful API Gateway for a Social Network Platform - Concept App",
+      description: "A ReSTful API Gateway Concept App built on MongoDB using Mongoose as a ODM for a social-media style platform.",
+      nerd_notes: "",
+      url: "https://github.com/ErikPlachta/api-gateway-express-mongodb",
+      url_description: "Click here to checkout GitHub!",
+      img: 'https://raw.githubusercontent.com/ErikPlachta/api-gateway-express-mongodb/main/public/images/restful-api-social-network-concept.png',
+      style: 1
+    },
     {
       title: "My Budget - PWA - Concept App",
       description: "A Budget concept PWA demonstrating a seamless user experience no matter the users network connection. Hosted on Heroku, running a Node/express.js server, no SQL Database with MongoDB.",
@@ -93,6 +125,7 @@ export default function Projects({ uuidv4 }) {
     //   img: "https://raw.githubusercontent.com/ErikPlachta/get_Weather_arg_City/main/assets/images/demo1.png",
     //   style: .5
     // },
+    //-- A Daily Scheduler
     {
       title: "A Daily Scheduler",
       description: "A concept app built to demonstrate the power and flexabiliy of the Web Storage API framework.",
@@ -109,6 +142,7 @@ export default function Projects({ uuidv4 }) {
       img: "https://raw.githubusercontent.com/ErikPlachta/a_Daily_Scheduler_WebApp/main/assets/images/demo.gif",
       style: 1,
     },
+    //-- node-express-notes-app
     {
       title: "node-express-notes-app",
       description: "This is a Note Taking concept web APP built on Node with Express to manage API calls to a JSON database. Demonstrate how Express.js can be used as an API gateway to a JSON database. Using Heroku to host node.js server.",
@@ -127,16 +161,7 @@ export default function Projects({ uuidv4 }) {
       url: "https://github.com/ErikPlachta/node-express-notes-app",
       img: "https://raw.githubusercontent.com/ErikPlachta/node-express-notes-app/main/public/assets/images/demo-full.gif",
       style: 1,
-    },
-    {
-      title: "RESTful API Gateway for a Social Network Platform - Concept App",
-      description: "A ReSTful API Gateway Concept App built on MongoDB using Mongoose as a ODM for a social-media style platform.",
-      nerd_notes: "",
-      url: "https://github.com/ErikPlachta/api-gateway-express-mongodb",
-      url_description: "Click here to checkout GitHub!",
-      img: 'https://raw.githubusercontent.com/ErikPlachta/api-gateway-express-mongodb/main/public/images/restful-api-social-network-concept.png',
-      style: 1
-    },
+    }
   ])
 
 
@@ -146,19 +171,33 @@ export default function Projects({ uuidv4 }) {
         <h2 className="article-header" id="projects-header">Projects</h2>
       </section>
       <section className="article-content">
-        <p className="article-content-title" id="projects-title-summary">
-          This is a small collection of my work. I've included a full stack Windows
-          App, and several full stack Web apps. A few are active with a live
-          customer base. Others are concepts that I'm proud of for unique reasons.
-        </p>
-        
+        <section class="article-content-container">
+          <p className="article-content-title">
+            This page is a showcase of my favorites development projects. 
+          </p>
+          <p className="article-content-indent">
+            First on the list are <a href='#image-manager'><b>Image Manager</b>
+            ( <em>a full-stack windows app</em> )</a> and  <a href="#posnation-support">
+            <b>posnation.support</b> <em>( a full-stack web app )</em></a>. These are live
+            applications with thousands of active users. I've built and maintain 
+            both in my free-time outside of work. Together, they save my company
+            40-80 hours a week on payroll.
+          <br />
+          <br />
+            The rest of the projects are proof-of-concept Apps that I've built
+            while I'm learning new concepts. Each one represents a unique aspect
+            of full stack web development.
+          </p>
+        </section>
       </section>
       <section className="article-content-container" id='projects-container'>
         { Projects.map( project => (
           // {number}
           <article
-            key={uuidv4()}
+            id={project.id}
+            key={project.id}
             className={`projects-project ${( project.style === 1 && 'flex_100' ) || 'flex_50'}`}
+            // id={project.title}
           >
             <div className="projects-head">
               <h3 className='projects-title'>{project.title}</h3>
