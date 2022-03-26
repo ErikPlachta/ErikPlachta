@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 
 import restfulApiConcept from '../../../assets/img/restful-api-social-network-concept.png'
 
-export default function Portfolio({ uuidv4 }) {
+export default function Projects({ uuidv4 }) {
 
-  const [portfolioProjects, setPortfolioProjects ] = useState([
+  const [Projects, setProjects ] = useState([
     {
       title: "Image Manager",
       summary: "Automating IT Related Services, Remotely",
@@ -141,28 +141,28 @@ export default function Portfolio({ uuidv4 }) {
 
 
   return (
-    <article className='container' id='portfolio-article'>
+    <article className='container' id='projects-article'>
       <section>
-        <h2 className="article-header" id="prtfolio-header">Portfolio</h2>
+        <h2 className="article-header" id="projects-header">Projects</h2>
       </section>
       <section className="article-content">
-        <p className="article-content-title" id="portfolio-title-summary">
+        <p className="article-content-title" id="projects-title-summary">
           This is a small collection of my work. I've included a full stack Windows
           App, and several full stack Web apps. A few are active with a live
           customer base. Others are concepts that I'm proud of for unique reasons.
         </p>
         
       </section>
-      <section className="article-content-container" id='portfolio-container'>
-        { portfolioProjects.map( project => (
+      <section className="article-content-container" id='projects-container'>
+        { Projects.map( project => (
           // {number}
           <article
             key={uuidv4()}
-            className={`portfolio-project ${( project.style === 1 && 'flex_100' ) || 'flex_50'}`}
+            className={`projects-project ${( project.style === 1 && 'flex_100' ) || 'flex_50'}`}
           >
-            <div className="portfolio-head">
-              <h3 className='portfolio-title'>{project.title}</h3>
-              {project.summary ? <p className="portfolio-summary">{project.summary}</p> : null}
+            <div className="projects-head">
+              <h3 className='projects-title'>{project.title}</h3>
+              {project.summary ? <p className="projects-summary">{project.summary}</p> : null}
             </div>
             
             <div className="article-content-indent">
