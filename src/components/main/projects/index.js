@@ -47,7 +47,7 @@ export default function Projects({ uuidv4 }) {
           </li>
           <li><b>Database</b>
             <ul>
-              <li>WindowsRegistry/JSON/TXT</li>
+              <li>WindowsRegistry, JSON, TXT</li>
               <li>Google Cloud Platform</li>
             </ul> 
           </li>
@@ -56,16 +56,17 @@ export default function Projects({ uuidv4 }) {
               <li>Google Apps Scripts</li>
               <li>Network Profile</li>
               <li>Windows OS</li>
+              <li>PowerShell</li>
+              <li>SQL Server</li>
             </ul>
           </li>
           <li><b>Framework</b>
             <ul>
-              <li>Google Apps Script</li>
               <li>Python</li>
-              <li>PowerShell</li>
+              <li>Google Apps Script</li>
             </ul>
           </li>
-          <li><b>Key Features</b>
+          <li><b>Features</b>
             <ul>
               <li>Remote Updates</li>
               <li>Cloud Logging</li>
@@ -120,8 +121,7 @@ export default function Projects({ uuidv4 }) {
           </li>
           <li><b>Database</b>
             <ul>
-              <li>SQL/WindowsRegistry/JSON/TXT</li>
-              <li>Google Cloud Platform</li>
+              <li>Web API Local Storage</li>
               <li>AWS S3 Bucket</li>
             </ul> 
           </li>
@@ -167,7 +167,7 @@ export default function Projects({ uuidv4 }) {
       summary:
         <span>
           <p>
-            <b>ReSTful API Gateway</b>
+            <b>A ReSTful API Gateway</b>
             <br />
             Node/Express Server to MongoDB
           </p>
@@ -229,8 +229,9 @@ export default function Projects({ uuidv4 }) {
       media_description: 
         <span>
           <p>
-          Below is a screen-shot of the Wiki I built for the API on my GitHub
-          page. 
+            Below is a screen-shot of the Wiki I built for the API. Check it
+            out <a href="https://github.com/ErikPlachta/api-gateway-express-mongodb/wiki"
+            target="_blank" rel="noreferrer">here, on my GitHub Repo for this app</a>.
           </p>
         </span>
       ,
