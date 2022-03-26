@@ -10,7 +10,15 @@ export default function Projects({ uuidv4 }) {
     {
       id: 'image-manager',
       title: "Image Manager",
-      summary: "Automating IT Related Services -- Remotely",
+      summary: 
+        <span>
+          <p>
+            <b>Automating IT Related Services -- Remotely</b>
+            <br />
+            Windows App
+          </p>
+        </span>
+      ,
       description:
         <span>
           <p>
@@ -74,7 +82,16 @@ export default function Projects({ uuidv4 }) {
     {
       id: 'posnation-support',
       title: "posnation.support",
-      summary: "A Technical Support Engineer Resource",
+      summary:
+        <span>
+          <p>
+            <b>A Technical Support Engineer Resource</b>
+            <br />
+            Web and Progress Web App
+          </p>
+        </span>
+      ,
+      
       description:
         <span>
           <p>
@@ -93,7 +110,6 @@ export default function Projects({ uuidv4 }) {
           </p>
         </span>
       ,
-      
       nerd_notes:  
         <ul>
           <li><b>Platform</b>
@@ -134,16 +150,84 @@ export default function Projects({ uuidv4 }) {
       ,
       url_description: "Click Here to checkout the live website.",
       url: "https://posnation.support/index.html",
+      media_description: 
+        <p>
+          See the giphy below where the AWS Bucket is being queried to provide
+          dynamic resources based on the users needs. You can also check-it out
+          live here, at <a href="https://posnation.support" target="_blank"
+          rel="noreferrer">https://posnation.support</a>.
+        </p>
+      ,
       img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/posnation-support-example.gif",
       style: 1
     },
      //-- RESTful API Gateway
      {
-      title: "RESTful API Gateway for a Social Network Platform - Concept App",
-      description: "A ReSTful API Gateway Concept App built on MongoDB using Mongoose as a ODM for a social-media style platform.",
-      nerd_notes: "",
+      title: "RESTful API Gateway for a Concept Social Network",
+      summary:
+        <span>
+          <p>
+            <b>ReSTful API Gateway</b>
+            <br />
+            Node/Express Server to MongoDB
+          </p>
+        </span>
+      ,
+      description: 
+      <span>
+        <p>
+          I built this App because I wanted to learn more about using a NoSQL
+          Database in collaboration with an Express server running on Node. I used
+          MongoDB as my Database, and Mongoose as my ODM.
+          <br />
+          <br />
+          The concept is a social network API platform that can be accessed VIA
+          RESTful API calls. I built a basic API with full CRUD functionality
+          regarding Users, Posts, and Comments on Posts. The API connects to a
+          NoSQL Database, MonogoDB, so it can be fast, flexible, and allows for
+          a large volumes of unstructured data.
+        </p>
+      </span>
+      ,
+      nerd_notes:  
+        <ul>
+          <li><b>Platform</b>
+            <ul>
+              <li>Node / Express</li>
+              <li>Mongoose</li>
+              <li>MongoDB</li>
+            </ul>
+          </li>
+          <li><b>Database</b>
+            <ul>
+              <li>MongoDB / MongoDB Atlas</li>
+            </ul> 
+          </li>
+          <li><b>API</b>
+            <ul>
+              <li>Built Custom</li>
+            </ul>
+          </li>
+          <li><b>Framework</b>
+            <ul>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>MongoDb</li>
+              <li>Mongoose.js</li>
+            </ul>
+          </li>
+          <li><b>Key Features</b>
+            <ul>
+              <li>RESTful API</li>
+              <li>Custom API</li>
+              <li>Social Media User Functionality</li>
+            </ul>
+          </li>
+        </ul>
+      ,
       url: "https://github.com/ErikPlachta/api-gateway-express-mongodb",
       url_description: "Click here to checkout GitHub!",
+      media_description: "tset",
       img: 'https://raw.githubusercontent.com/ErikPlachta/api-gateway-express-mongodb/main/public/images/restful-api-social-network-concept.png',
       style: 1
     },
