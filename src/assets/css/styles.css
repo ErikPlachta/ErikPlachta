@@ -126,20 +126,20 @@ body {
 
 h1,h2,h3,h4,h5 {
     /* Font Size & Weights */
-    --fw_h1: 350;
-    --fs_h1: 3rem;
+    --fw_h1: 300;
+    --fs_h1: 4rem;
 
     --fw_h2: 400;
-    --fs_h2: 2rem;
+    --fs_h2: 3rem;
 
     --fw_h3: 500;
-    --fs_h3: 1.5rem;
+    --fs_h3: 2.5rem;
 
     --fw_h4: 600;
-    --fs_h4: 1.25rem;
+    --fs_h4: 2rem;
 
     --fw_h5: 800;
-    --fs_h5: 1.125rem;
+    --fs_h5: 1.5rem;
     
     /* remove all defaults */
     padding: 0;
@@ -285,10 +285,7 @@ section {
 }
 
 .article-content-container{
-    /* border-radius: var(--br_05); */
-    padding: .25rem;
     border: var(--b_05);
-    margin: auto;
 }
 
 .article-content{
@@ -363,13 +360,13 @@ section {
     background-color: var(--a_01);
     flex-wrap: wrap;
     grid-gap: 1rem;
-    padding: .5rem;
+    /* padding: .5rem; */
     border-radius: var(--br_05);
     border: var(--b_04);
 }
 .projects-project{
     z-index: 10;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
     min-height: 400px;
     min-width: 300px;
     max-width: 300px;
@@ -410,14 +407,29 @@ section {
     margin: auto 0;
     padding: 1rem;
     flex: 40%;
-    width: 100%;
+    width: 40%;
     justify-content: center;
 }
 
-.nerd-notes {
-    float: right;
-    padding: 1rem 0 !important;
+.projects-project div.project-about{
+    height: inherit;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    flex: 50%;
+    margin: 0 1rem;
 }
+
+.projects-project div.nerd-notes {
+    flex: 30%;
+    float: right;
+    padding: 0;
+    height: inherit;
+    margin: 0 1rem;
+    
+}
+/* h4.project-h4{
+    font-size: 2rem;
+} */
 
 .media_description{
     font-weight: 500;
@@ -629,17 +641,20 @@ input[type=submit]:hover{
                               MEDIA TYPES
 */
 
+
+/* 1200!!?! */
 @media (min-width: 1200px) {
     /*  ensure content fits in middle of screen */
     header {
         justify-content: center;
         padding: 0 8rem;
+        flex-direction: row;
     }
 }
 
+/* 1000 !! */
 @media (min-width: 1000px) {
     header {
-        flex-direction: row;
         justify-content: center;
     }
 
@@ -661,8 +676,40 @@ input[type=submit]:hover{
         height: 100%;
         flex: 50%;
     }
+
+    .article-content-container{
+        /* border-radius: var(--br_05); */
+        padding: 0 3em;
+        /* border: var(--b_05); */
+        /* margin: auto; */
+    }
+    #projects-container{
+        background-color: var(--body_bg);
+        padding: 2rem;
+    }
+
+    #projects-article{
+        width: 100%;
+    }
+    
+    
 }
 
+
+@media (min-width: 800px){
+    
+    
+        
+    .projects-project div.nerd-notes{
+        padding: 0;
+    }
+    .projects-project div.project-about{
+        padding: 0 3rem;
+        margin-left: 4rem;
+    }
+}
+
+/* 600 !! */
 @media (min-width: 600px) {
     main{
         margin: 100px 0;
@@ -693,15 +740,7 @@ input[type=submit]:hover{
         padding: 0 1.0417rem;
     }
 
-    #projects-article{
-        width: 95%;
-    }
     
-    #projects-container{
-        background-color: var(--body_bg);
-        padding: 1rem;
-        
-    }
     
     .projects-project iframe{
         min-height: 450px;

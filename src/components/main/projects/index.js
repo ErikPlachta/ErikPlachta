@@ -74,12 +74,62 @@ export default function Projects({ uuidv4 }) {
     {
       id: 'posnation-support',
       title: "posnation.support",
-      description: <span>A web app that servers as a front-end to an <b>AWS S3 storage bucket</b>. I've built the website, manage AWS resources, and own the domain.</span>,
+      summary: "A Technical Support Engineer Resource",
+      description:
+        <span>
+          <p>
+            This primary goal of <a href="https://posnation.support" target="_blank"
+            rel="noreferrer">posnation.support</a> is to centralize resources into
+            an easy-to-access cloud location. I've also built in a few tools
+            connected to third-party APIs related to providing IT Support and 
+            services. 
+            <br />
+            <br />
+            This is another App with that I've built for my team in my time outside
+            of work. <a href="https://posnation.support" target="_blank"
+            rel="noreferrer"> The app</a> saves a lot of time, and provides a
+            professional customer facing experience too. It's actively used
+            daily to provide service to thousands of customers around the world.
+          </p>
+        </span>
+      ,
+      
       nerd_notes:  
         <ul>
-          <li>WebHost: GitHub</li>
-          <li>Database: AWS S3 Bucket</li>
-          <li>API: AWS SDK</li>
+          <li><b>Platform</b>
+            <ul>
+              <li>Website</li>
+              <li>PWA</li>
+            </ul>
+          </li>
+          <li><b>Database</b>
+            <ul>
+              <li>SQL/WindowsRegistry/JSON/TXT</li>
+              <li>Google Cloud Platform</li>
+              <li>AWS S3 Bucket</li>
+            </ul> 
+          </li>
+          <li><b>API</b>
+            <ul>
+              <li>AWS JS SDK</li>
+              <li>SQL Server</li>
+              <li>Network Profile</li>
+              <li>Serial Number Lookup</li>
+            </ul>
+          </li>
+          <li><b>Framework</b>
+            <ul>
+              <li>React</li>
+              <li>GitHub</li>
+              <li>Google Domain</li>
+            </ul>
+          </li>
+          <li><b>Key Features</b>
+            <ul>
+              <li>Remote Updates</li>
+              <li>Cloud Logging</li>
+            </ul>
+          </li>
         </ul>
       ,
       url_description: "Click Here to checkout the live website.",
@@ -199,22 +249,22 @@ export default function Projects({ uuidv4 }) {
             className={`projects-project ${( project.style === 1 && 'flex_100' ) || 'flex_50'}`}
             // id={project.title}
           >
+            {/* title */}
             <div className="projects-head">
               <h3 className='projects-title'>{project.title}</h3>
               {project.summary ? <p className="projects-summary">{project.summary}</p> : null}
             </div>
-            
-            <div className="article-content-indent">
-              <h4>About</h4>
+            {/* About */}
+            <div className="project-about article-content-indent">
+              <h4 className='project-h4'>About</h4>
               {project.description}
             </div>
+            {/* Nerd Notes */}
+            <div className='nerd-notes article-content-indent-list'>
+            <h4 className='project-h4'>Nerd Notes</h4>
+              {project.nerd_notes}
+            </div>
             
-            <section>
-              <div className='nerd-notes article-content-indent-list'>
-                <h4>Nerd Notes</h4>
-                {project.nerd_notes}
-              </div>
-            </section>
             
             {project.media_description ? <p className='article-content media_description'>{project.media_description}</p> : null}
             {project.img ? <img src={project.img} alt={project.title}></img> : <span><a href={project.url} target="_blank" rel="noreferrer">{project.url_description}</a></span>}
