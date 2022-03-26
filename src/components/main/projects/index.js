@@ -218,8 +218,7 @@ export default function Projects({ uuidv4 }) {
           </li>
           <li><b>Key Features</b>
             <ul>
-              <li>RESTful API</li>
-              <li>Custom API</li>
+              <li>Custom Built RESTful API</li>
               <li>Social Media User Functionality</li>
             </ul>
           </li>
@@ -227,8 +226,15 @@ export default function Projects({ uuidv4 }) {
       ,
       url: "https://github.com/ErikPlachta/api-gateway-express-mongodb",
       url_description: "Click here to checkout GitHub!",
-      media_description: "tset",
-      img: 'https://raw.githubusercontent.com/ErikPlachta/api-gateway-express-mongodb/main/public/images/restful-api-social-network-concept.png',
+      media_description: 
+        <span>
+          <p>
+          Below is a screen-shot of the Wiki I built for the API on my GitHub
+          page. 
+          </p>
+        </span>
+      ,
+      img: 'https://raw.githubusercontent.com/ErikPlachta/api-gateway-express-mongodb/main/public/images/api-gateway.png',
       style: 1
     },
     {
@@ -305,7 +311,7 @@ export default function Projects({ uuidv4 }) {
         <h2 className="article-header" id="projects-header">Projects</h2>
       </section>
       <section className="article-content">
-        <section class="article-content-container">
+        <section className="article-content-container">
           <p className="article-content-title">
             This page is a showcase of my favorites development projects. 
           </p>
@@ -329,14 +335,14 @@ export default function Projects({ uuidv4 }) {
           // {number}
           <article
             id={project.id}
-            key={project.id}
+            key={uuidv4()}
             className={`projects-project ${( project.style === 1 && 'flex_100' ) || 'flex_50'}`}
             // id={project.title}
           >
             {/* title */}
             <div className="projects-head">
               <h3 className='projects-title'>{project.title}</h3>
-              {project.summary ? <p className="projects-summary">{project.summary}</p> : null}
+              {project.summary ? <div className="projects-summary">{project.summary}</div> : null}
             </div>
             {/* About */}
             <div className="project-about article-content-indent">
@@ -350,9 +356,9 @@ export default function Projects({ uuidv4 }) {
             </div>
             
             
-            {project.media_description ? <p className='article-content media_description'>{project.media_description}</p> : null}
+            {project.media_description ? <div className='article-content media_description'>{project.media_description}</div> : null}
             {project.img ? <img src={project.img} alt={project.title}></img> : <span><a href={project.url} target="_blank" rel="noreferrer">{project.url_description}</a></span>}
-            {project.iframe ? project.iframe : null }
+            {/* {project.iframe ? project.iframe : null } */}
 
 
           </article>
