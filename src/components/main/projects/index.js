@@ -245,21 +245,81 @@ export default function Projects({ uuidv4 }) {
       style: 1
     },
     {
-      title: "My Budget - PWA - Concept App",
-      description: "A Budget concept PWA demonstrating a seamless user experience no matter the users network connection. Hosted on Heroku, running a Node/express.js server, no SQL Database with MongoDB.",
-      nerd_notes: 
+      title: "Concept Budget - Web App / PWA",
+      summary:
+        <span>
+          <p>
+            <b>A ReSTful API Gateway</b>
+            <br />
+            Node/Express Server to MongoDB
+          </p>
+        </span>
+      ,
+      description: 
+      <span>
+        <p>
+          A Budget concept PWA built to demonstrate a seamless user experience
+          no matter the users network connection. Hosted on Heroku, running a
+          Node/express.js server, no SQL Database with MongoDB. 
+          <br />
+          <br />
+          If the User attempts to interact with the database and they are offline, 
+          a Service Worker will intercept the request and record it to the browsers
+          Cached Storage. When a network connection is restored, the database post
+          will execute.
+        </p>
+      </span>
+      ,
+      nerd_notes:  
         <ul>
-          <li>WebHost: Heroku</li>
-          <li>Framework: Express Server on Node.js</li>
-          <li>Framework: JS/CSS/HTML</li>
-          <li>Database: MongoDB Atlas</li>
-          <li>API: 1</li>
-          <li>API: 2</li>
-          <li>API: 3</li>
+          <li><b>Platform</b>
+            <ul>
+              <li>Heroku</li>
+              <li>Node / Express</li>
+              <li>MongoDB Atlas</li>
+              <li>Mongoose</li>
+            </ul>
+          </li>
+          <li><b>Database</b>
+            <ul>
+              <li>MongoDB / MongoDB Atlas</li>
+            </ul> 
+          </li>
+          <li><b>API</b>
+            <ul>
+              <li>Built Custom</li>
+            </ul>
+          </li>
+          <li><b>Framework</b>
+            <ul>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>MongoDb</li>
+              <li>Mongoose.js</li>
+            </ul>
+          </li>
+          <li><b>Key Features</b>
+            <ul>
+              <li>Custom Built RESTful API</li>
+              <li>PWA with Offline Functionality</li>
+              <li></li>
+            </ul>
+          </li>
         </ul>
       ,
       url: "https://github.com/ErikPlachta/pwa-personal-budget",
       url_description: "Click Here to checkout the GitHub.",
+      media_description: 
+        <span>
+          <p>
+            Below is a giphy showing basic user functionality. If you want to
+            learn more,  check out <a href="https://github.com/ErikPlachta/pwa-personal-budget"
+            target="_blank" rel="noreferrer">the GitHub Repo for this app</a>. If
+            you want to <a href="https://erikplachta-budget-pwa.herokuapp.com/#transaction-details"
+            target="_blank" rel="noreferrer">see the app live, you can see it here</a>.
+          </p>
+        </span>
+      ,
       img: "https://raw.githubusercontent.com/ErikPlachta/pwa-personal-budget/main/demo.gif",
       style: 1,
     },
