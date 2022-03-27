@@ -294,7 +294,7 @@ section {
     max-width: 100%;
     line-height: 1.6;
     font-size: 1.1rem;
-    padding: 0 1.5rem;
+    padding: 2rem;
     /* text-align: center; */
 }
 
@@ -687,7 +687,7 @@ input[type=submit]:hover{
 
     .article-content-container{
         /* border-radius: var(--br_05); */
-        padding: 0 3em;
+        padding: 1rem 3em;
         /* border: var(--b_05); */
         /* margin: auto; */
     }
