@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/ErikPlachta/static/css/main.827b0b4d.css",
-    "main.js": "/ErikPlachta/static/js/main.44ab898e.js",
+    "main.css": "/ErikPlachta/static/css/main.8b56c7ec.css",
+    "main.js": "/ErikPlachta/static/js/main.b4872a6e.js",
     "static/js/787.1b36caa0.chunk.js": "/ErikPlachta/static/js/787.1b36caa0.chunk.js",
     "static/media/restful-api-social-network-concept.png": "/ErikPlachta/static/media/restful-api-social-network-concept.f27f37f20afc4e08a601.png",
     "static/media/erik_c_72.png": "/ErikPlachta/static/media/erik_c_72.0854f9e508364209def6.png",
     "index.html": "/ErikPlachta/index.html",
-    "main.827b0b4d.css.map": "/ErikPlachta/static/css/main.827b0b4d.css.map",
-    "main.44ab898e.js.map": "/ErikPlachta/static/js/main.44ab898e.js.map",
+    "main.8b56c7ec.css.map": "/ErikPlachta/static/css/main.8b56c7ec.css.map",
+    "main.b4872a6e.js.map": "/ErikPlachta/static/js/main.b4872a6e.js.map",
     "787.1b36caa0.chunk.js.map": "/ErikPlachta/static/js/787.1b36caa0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.827b0b4d.css",
-    "static/js/main.44ab898e.js"
+    "static/css/main.8b56c7ec.css",
+    "static/js/main.b4872a6e.js"
   ]
 }
