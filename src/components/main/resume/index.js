@@ -10,6 +10,23 @@ init(process.env.REACT_APP_EMAILJS_USER_ID);
 
 
 export default function Resume({ uuid }) {
+
+  //-- reference variable used with captcha
+  const recaptchaRef = React.createRef();
+  //-- managing sending email
+  const [toSend, setToSend] = useState({
+      from_name: '',
+      to_name: 'Erik Plachta',
+      from_phone: '',
+      from_company_position: '',
+      from_company: '',
+      from_company_website: '',
+      message: '',
+      reply_to: '',
+      subject: '',
+      'g-recaptcha-response': '',
+  });
+
     
   //-- when submitting form, make request to email.js to send me an email
   const onSubmit = (e) => {
@@ -21,18 +38,17 @@ export default function Resume({ uuid }) {
         toSend,
         process.env.REACT_APP_EMAILJS_USER_ID,
     )
-        .then((response) => {
-        //-- TODO:: 03/27/2022 #EP || Update response workflow
-        alert(`${response.status} - ${response.text}`)
-        })
-        //-- clear form
+        // .then((response) => {
+        // //-- TODO:: 03/27/2022 #EP || Update response workflow
+        // alert(`${response.status} - ${response.text}`)
+        // })
+        //-- navigate back to home
         .then( () => {
-        window.location.reload(false);
-
+          window.location.reload(false);
         })
         .catch((err) => {
-        // console.log('FAILED...', err);
-        alert(`ERROR: Message did not send: - ${err.status}`,err)
+          console.log(`ERROR: ${err.status} . FAILED TO SEND MSG - Check your internet connection...`);
+        // alert(`ERROR: Message did not send: - ${err.status}`,err)
         });
   };
   //-- As changes happen, ensure what's being sent is up-to-date in the toSend OBJ
@@ -76,24 +92,8 @@ export default function Resume({ uuid }) {
       toSend.from_phone = formattedPhone;
       return null;
   }
-  //-- reference variable used with captcha
-  const recaptchaRef = React.createRef();
-  //-- managing sending email
-  const [toSend, setToSend] = useState({
-      from_name: '',
-      to_name: 'Erik Plachta',
-      from_phone: '',
-      from_company_position: '',
-      from_company: '',
-      from_company_website: '',
-      message: '',
-      reply_to: '',
-      'g-recaptcha-response': '',
-  });
-
-
-  return ([
-
+  
+  return (
     //-- Header section with note
     <article className='container' id='projects-article'>
       <section>
@@ -115,9 +115,9 @@ export default function Resume({ uuid }) {
       </section>
       
       <section className="article-content">
-        <p className="article-content-title">
-          <h3>Request a Copy of Erik's Resume</h3>
-        </p>
+        <h3 className="article-content-title">
+          Request a Copy of Erik's Resume
+        </h3>
       </section>
 
       {/*Email Form with captcha */}
@@ -206,17 +206,18 @@ export default function Resume({ uuid }) {
             </span>
           </div>
 
-          
-
           <span className="form-element">
-            <label htmlFor="reason">About You</label>
-            <select id='subject' name='subject' size='3' required>
-              <option value="none" defaultValue disabled hidden>Select an Option</option>
-              <option value="employer">I'm an Employer</option>
-              <option value="recruiter">I'm a Recruiter</option>
-              <option value="other">Other</option>
-            </select>
-          </span>
+              <label htmlFor="from_name">Subject</label>
+              <input
+                name='subject'
+                id="subject"
+                type='text'
+                placeholder="Recruiter, Employer"
+                required
+                onChange={handleChange}
+                value={toSend.subject}
+              />
+            </span>
 
           <span className="form-element">
             <label htmlFor="message">Message</label>
@@ -246,6 +247,5 @@ export default function Resume({ uuid }) {
         </form>
       </section>
     </article>
-
-  ])
+  )
 }
