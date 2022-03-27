@@ -7,17 +7,11 @@ import { capitalizeFirstLetter } from '../../../utils/helpers';
 
 export default function Navigation({ location, setLocation, locations, setLocations }) {
   
-  
-  
   //-- Update DOM title
   useEffect(() => { document.title = `${capitalizeFirstLetter(location)} - Erik Plachta`; }, [location]);
 
-  
-
-  
   return (
     <nav>
-      
       {Object.keys(locations).map( (name, number) => (
         <span
           //-- if clicked event to update the location state to update the DOM
@@ -29,8 +23,6 @@ export default function Navigation({ location, setLocation, locations, setLocati
           {capitalizeFirstLetter(locations[name].name)}
         </span>
       ))}
-      
-
     </nav>
   )
 }

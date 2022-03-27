@@ -3,6 +3,7 @@
 //-- React Specific
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import App from './App';
 import reportWebVitals from './utils/reportWebVitals';
 
@@ -15,7 +16,7 @@ import './assets/js/script.js';
 
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') 
 {console.log('dev')}  // development
-else { console.log('prod')}// production 
+// else { console.log('prod')}// production 
 
 
 ReactDOM.render(
