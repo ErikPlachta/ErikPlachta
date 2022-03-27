@@ -83,6 +83,9 @@ export default function Resume({ uuid }) {
       from_name: '',
       to_name: 'Erik Plachta',
       from_phone: '',
+      from_company_position: '',
+      from_company: '',
+      from_company_website: '',
       message: '',
       reply_to: '',
       'g-recaptcha-response': '',
@@ -94,12 +97,12 @@ export default function Resume({ uuid }) {
     //-- Header section with note
     <article className='container' id='projects-article'>
       <section>
-        <h2 className="article-header" id="projects-header">Resume</h2>
+        <h2 className="article-header" id="projects-header">Professional Resume</h2>
       </section>
       <section className="article-content">
         <section className="article-content-container">
           <p className="article-content-title">
-            Are you looking for me resume?
+            Are you looking for a copy of my Resume?
           </p>
           <p className="article-content-indent">
               Please fill out the contact-form below with your best contact
@@ -163,7 +166,47 @@ export default function Resume({ uuid }) {
                 autoComplete='tel'
               />
             </span>
+
+            <span className="form-element">
+              <label htmlFor="from_company">Company Name</label>
+              <input
+                name='from_company'
+                id="from_company"
+                type='text'
+                placeholder="Your company name"
+                required
+                onChange={handleChange}
+                value={toSend.from_company}
+              />
+            </span>
+
+            <span className="form-element">
+              <label htmlFor="from_company">Company Website</label>
+              <input
+                name='from_company_website'
+                id="from_company_website"
+                type='url'
+                placeholder="Please include your website if you have one"
+                onChange={handleChange}
+                value={toSend.from_company_website}
+              />
+            </span>
+
+            <span className="form-element">
+              <label htmlFor="from_company_position">Position</label>
+              <input
+                name='from_company_position'
+                id="from_company_position"
+                type='text'
+                placeholder="Your official title"
+                required
+                onChange={handleChange}
+                value={toSend.from_company_position}
+              />
+            </span>
           </div>
+
+          
 
           <span className="form-element">
             <label htmlFor="reason">About You</label>

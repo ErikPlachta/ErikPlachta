@@ -21,6 +21,7 @@ export default function Contact({ uuid }) {
     from_phone: '',
     message: '',
     reply_to: '',
+    subject: '',
     'g-recaptcha-response': '',
   });
 
@@ -119,9 +120,9 @@ export default function Contact({ uuid }) {
                 type='text'
                 placeholder='from...'
                 required
+                autoComplete='given-name'
                 onChange={handleChange}
                 value={toSend.from_name}
-                autoComplete='given-name'
               />
             </span>
             {/* email */}
@@ -133,9 +134,9 @@ export default function Contact({ uuid }) {
                 type="email"
                 placeholder='your@email.com'
                 required
-                value={toSend.reply_to}
-                onChange={handleChange}
                 autoComplete="email"
+                onChange={handleChange}
+                value={toSend.reply_to}
               />
             </span>
             {/* phone */}
@@ -147,15 +148,22 @@ export default function Contact({ uuid }) {
                 type="tel"
                 aria-label="Please enter your phone number"
                 placeholder="ex. (111)-111-1111"
-                onKeyUp={onKeyUpPhone}
                 autoComplete='tel'
+                onKeyUp={onKeyUpPhone}
+                value={toSend.from_phone}
               />
             </span>
           </div>
 
           <span className="form-element">
             <label htmlFor="reason">Subject</label>
-            <select id='subject' name='subject' size='3' required>
+            <select
+              id='subject'
+              name='subject'
+              size='3'
+              required
+              vale={toSend.subject}
+            >
               <option value="none" defaultValue disabled hidden>Select an Option</option>
               <option value="social">Social</option>
               <option value="work">Work</option>
