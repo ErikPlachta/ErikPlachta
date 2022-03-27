@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
-// import '../../../assets/css/toggle.css'
-import { send } from 'emailjs-com';
-// import { Captcha } from 'reactjs-captcha';
-
 import ReCAPTCHA from "react-google-recaptcha";
-
-
+//-- email.js onboarding
+import { send } from 'emailjs-com';
 import{ init } from '@emailjs/browser';
 init(process.env.REACT_APP_EMAILJS_USER_ID);
 
 
+// import '../../../assets/css/toggle.css' //-- TOOD:: 03/27/2022 #EP | Add Toggle
+// import { Captcha } from 'reactjs-captcha';
+
+//-- contact form function
 export default function Contact({ uuid }) {
 
+  //-- reference variable for the captcha result response code
   const recaptchaRef = React.createRef();
-
-
   //-- managing sending email
   const [toSend, setToSend] = useState({
     from_name: '',
@@ -25,9 +24,7 @@ export default function Contact({ uuid }) {
     'g-recaptcha-response': '',
   });
 
-  //-- setting captcha value to send params
-  // const [recaptcha, setRecaptcha] = useState (e => { toSend['g-recaptcha-response'] = e});
-
+  //-- when submitting form, send to email.js
   const onSubmit = (e) => {
     e.preventDefault();
     
