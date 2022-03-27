@@ -21,8 +21,7 @@ The majority of my repos are public, because building in public improves the qua
 
 [![Buy Me A Coffee](https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-FF813F?style=flat&logo=buy-me-a-coffee&logoColor=ffffff&link=https://www.buymeacoffee.com/erikplachta)](https://www.buymeacoffee.com/erikplachta)
 
-
-## Repo Updates
+## Updates
 
 ### March 27th 2022 - Upgrade to [#25 Upgrade: Convert to React SPA](https://github.com/ErikPlachta/ErikPlachta/issues/25).
 
@@ -31,4 +30,8 @@ Did a complete overhaul of the website.
 
 ## December, 12th 2021 - Updated and simplified overall
 
-TODO:: Add content
+Cleaned up content, styling, and simplified overall design.
+
+## November 14th, 2021 - Initial release
+
+Created a basic portfolio page.
