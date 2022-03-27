@@ -74,9 +74,15 @@ export default function Projects({ uuidv4 }) {
           </li>
         </ul>
       ,
-      // img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/imagemanager_map.png",
-      media_description: "See the map below for a visualization of Image Manager's global footprint.",
-      iframe: <iframe title="Image Manager's Global Footprint" src="https://datastudio.google.com/embed/reporting/ec3bf210-888a-4bb2-a166-f40c152afd01/page/xYNXC" allowFullScreen></iframe>,
+      img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/imagemanager_map.png",
+      media_description: 
+        <span>
+          See the map below for a visualization of a part Image Manager's global
+          footprint. For an interactive map, <a href="https://datastudio.google.com/embed/reporting/ec3bf210-888a-4bb2-a166-f40c152afd01/page/xYNXC"
+          target="_blank" rel="noreferrer"> click on this link</a>.
+        </span>
+      ,
+      // iframe: <iframe title="Image Manager's Global Footprint" src="https://datastudio.google.com/embed/reporting/ec3bf210-888a-4bb2-a166-f40c152afd01/page/xYNXC" allowFullScreen></iframe>,
       style: 1
     },
     //-- posnation.support
@@ -359,7 +365,7 @@ export default function Projects({ uuidv4 }) {
             
             {project.media_description ? <div className='article-content media_description'>{project.media_description}</div> : null}
             {project.img ? <img src={project.img} alt={project.title}></img> : <span><a href={project.url} target="_blank" rel="noreferrer">{project.url_description}</a></span>}
-            {/* {project.iframe ? project.iframe : null } */}
+            {project.iframe ? project.iframe : null }
 
 
           </article>

@@ -127,16 +127,16 @@ body {
 h1,h2,h3,h4,h5 {
     /* Font Size & Weights */
     --fw_h1: 300;
-    --fs_h1: 4rem;
+    --fs_h1: 3.25rem;
 
     --fw_h2: 400;
-    --fs_h2: 3rem;
+    --fs_h2: 2.8rem;
 
     --fw_h3: 500;
-    --fs_h3: 2.5rem;
+    --fs_h3: 2.25rem;
 
-    --fw_h4: 600;
-    --fs_h4: 2rem;
+    --fw_h4: 500;
+    --fs_h4: 1.8rem;
 
     --fw_h5: 800;
     --fs_h5: 1.5rem;
