@@ -42,7 +42,7 @@ export default function AboutMe({ uuidv4 }) {
             Welcome to my professional portfolio.
           </p>
           <p className="article-content-indent">
-            Check out the <b>Projects</b> tab to learn about what projects I"m working
+            Check out the <b>Projects</b> tab to learn about what projects I'm working
             on. Check out my <b>Resume</b> to learn about my professional experience.
             If you want to get in touch, head on over to the <b>Contact</b> page or
             reach out to me on my social links below.

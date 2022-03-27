@@ -30,7 +30,7 @@ export default function Projects({ uuidv4 }) {
             This project initially started out as me wanting to learn Python and
             strengthen my development skills.
 
-            several years after it's release, it's become an integral tool
+            Several years after it's release, it's become an integral tool
             used by <a href="https://www.posnation.com/" target="_blank"
             rel="noreferrer">POS Nation</a>. With an active user base of over
             6,000 clients, it automates 40+ hours of IT related services every
@@ -237,9 +237,9 @@ export default function Projects({ uuidv4 }) {
       media_description: 
         <span>
           <p>
-            Below is a screen-shot of the Wiki I built for the API. Check it
-            out <a href="https://github.com/ErikPlachta/api-gateway-express-mongodb/wiki"
-            target="_blank" rel="noreferrer">here, on my GitHub Repo for this app</a>.
+            Below is a screen-shot of the Wiki I built for the API. You can
+             <a href="https://github.com/ErikPlachta/api-gateway-express-mongodb/wiki"
+            target="_blank" rel="noreferrer">see it here on the GitHub</a>.
           </p>
         </span>
       ,

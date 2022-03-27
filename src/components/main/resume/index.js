@@ -16,7 +16,7 @@ export default function Resume({ uuid }) {
               visit my Contact page with your information and I'll reach back out.
           </p>
           <p className="signature">- Erik Plachta - March 2022</p>
-        </section>
+        </section>a
       </section>
     </article>
 
