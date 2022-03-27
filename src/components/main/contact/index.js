@@ -35,19 +35,20 @@ export default function Contact({ uuid }) {
       toSend,
       process.env.REACT_APP_EMAILJS_USER_ID,
     )
-      .then((response) => {
-        // console.log('SUCCESS!', , response.text);
-        alert(`${response.status} - ${response.text}`)
+      // .then((response) => {
+      //   // console.log('SUCCESS!', , response.text);
+      //   // alert(`${response.status} - ${response.text}`)
         
-      })
-      //-- clear form
+      // })
+      //-- clear form and re-navigate
       .then( () => {
+        //-- TODO:: 03/27/2022 #EP || MAKE A UI MESSAGE
         window.location.reload(false);
 
       })
       .catch((err) => {
-        // console.log('FAILED...', err);
-        alert(`ERROR: Message did not send: - ${err.status}`,err)
+        console.log(`ERROR: ${err.status} . FAILED TO SEND MSG - Check your internet connection...`);
+        // alert(`ERROR: Message did not send: - ${err.status}`,err)
       });
   };
 
