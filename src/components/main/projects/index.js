@@ -468,7 +468,6 @@ export default function Projects({ uuidv4 }) {
     }
   ])
 
-
   //-- BUILDING THE CONTENT
   return (
     <article className='container' id='projects-article'>
