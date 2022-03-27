@@ -76,7 +76,7 @@ export default function Contact({ uuid }) {
     // const formattedDigits = (digits.substring(0,1) + '(' + digits.substring(1,4) + ')' + digits.substring(4,7) + '-' + digits.substring(7,11)); //-- with area code
     const formattedPhone = ('(' + digits.substring(0,3) + ')' + digits.substring(3,6) + '-' + digits.substring(6,10)); //-- without area-code
 
-    console.log(formattedPhone.length)
+    // console.log(formattedPhone.length)
     
     //-- inline styling so red border until good.
     var input = e.target;
@@ -150,26 +150,32 @@ export default function Contact({ uuid }) {
                 placeholder="ex. (111)-111-1111"
                 autoComplete='tel'
                 onKeyUp={onKeyUpPhone}
-                // value={toSend.from_phone}
+                // value={toSend.from_phone} //-- not needed, defined above in cleanup function.
               />
             </span>
           </div>
 
           <span className="form-element">
+              <label htmlFor="from_name">Subject</label>
+              <input
+                name='subject'
+                id="subject"
+                type='text'
+                placeholder='Job Opportunity'
+                required
+                onChange={handleChange}
+                value={toSend.subject}
+              />
+            </span>
+          {/* <span className="form-element">
             <label htmlFor="reason">Subject</label>
-            <select
-              id='subject'
-              name='subject'
-              size='3'
-              required
-              vale={toSend.subject}
-            >
-              <option value="none" defaultValue disabled hidden>Select an Option</option>
-              <option value="social">Social</option>
-              <option value="work">Work</option>
-              <option value="other">Other</option>
+            <select id='subject' name='subject' size='3'>
+              <option value="none" defaultValue disabled hidden > Select an Option </option>
+              <option value="social"> Social </option>
+              <option value="work"  > Work   </option>
+              <option value="other" > Other  </option>
             </select>
-          </span>
+          </span> */}
 
           <span className="form-element">
             <label htmlFor="message">Message</label>
