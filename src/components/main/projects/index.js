@@ -471,15 +471,15 @@ export default function Projects({ uuidv4 }) {
 
   //-- BUILDING THE CONTENT
   return (
-    <article className='container' id='projects-article'>
+    <article className='container'>
       <section>
         <h2 className="article-header">Development Projects</h2>
       </section>
       
-      <section className="article-content">
-        <section className="article-content-container">
+      <section className="article-content-container">
+        <section className="article-content">
           <p className="article-content-title">
-            This page is a showcase of my favorites development projects. 
+            This page is a showcase of my favorite development projects. 
           </p>
           <p className="article-content-indent">
             First on the list are <a href='#image-manager'><b>Image Manager</b>
@@ -496,6 +496,7 @@ export default function Projects({ uuidv4 }) {
           </p>
         </section>
       </section>
+
       <section className="article-content-container" id='projects-container'>
         { Projects.map( project => (
           // {number}

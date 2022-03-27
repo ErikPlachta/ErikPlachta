@@ -359,7 +359,7 @@ section {
     justify-content: space-evenly;
     background-color: var(--a_01);
     flex-wrap: wrap;
-    grid-gap: 1rem;
+    grid-gap: 2rem;
     /* padding: .5rem; */
     border-radius: var(--br_05);
     border: var(--b_04);
@@ -693,7 +693,7 @@ input[type=submit]:hover{
     }
     #projects-container{
         background-color: var(--body_bg);
-        padding: 2rem;
+        padding: .25rem;
     }
 
     #projects-article{
