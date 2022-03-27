@@ -422,17 +422,6 @@ export default function Projects({ uuidv4 }) {
           </p>
         </span>
       ,
-      // nerd_notes: 
-      //   <ul>
-      //     <li>WebHost: Heroku</li>
-      //     <li>Framework: Express Server on Node.js</li>
-      //     <li>Framework: JS/CSS/HTML</li>
-      //     <li>Database: MongoDB Atlas</li>
-      //     <li>API: 1</li>
-      //     <li>API: 2</li>
-      //     <li>API: 3</li>
-      //   </ul>
-      // ,
       nerd_notes:  
         <ul>
           <li><b>Platform</b>
@@ -480,6 +469,7 @@ export default function Projects({ uuidv4 }) {
   ])
 
 
+  //-- BUILDING THE CONTENT
   return (
     <article className='container' id='projects-article'>
       <section>
