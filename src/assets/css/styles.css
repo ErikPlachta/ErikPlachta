@@ -467,9 +467,10 @@ section {
 }
 
 .flex_50{
-    flex: 40%;
-    max-width: 50%;
+    flex: 100%;
+    max-width: 100%;
 }
+
 .projects-project img:hover{
     /* filter: contrast(105%); */
     box-shadow: var(--bs_even_a01_lt);
@@ -742,16 +743,30 @@ input[type=submit]:hover{
         padding: 0 3rem;
         /* text-align: center; */
     }
+    
+    /* For when flex_50, side border in line with nerd notes side border */
+    .flex_50.projects-project div.project-about{
+        margin: 1rem;
+        padding: 1rem;
+        flex: 100%;
+    }
 
    .article-content-indent-list ul{
         padding: 0 1.0417rem;
     }
 
-    
+    .projects-project{
+        grid-gap: 0;
+    }
     
     .projects-project iframe{
         min-height: 450px;
         min-width: 600px;
+    }
+
+    .flex_50{
+        flex: 40%;
+        max-width: 50%;
     }
 
     footer{

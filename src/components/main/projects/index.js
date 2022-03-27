@@ -157,12 +157,14 @@ export default function Projects({ uuidv4 }) {
       url_description: "Click Here to checkout the live website.",
       url: "https://posnation.support/index.html",
       media_description: 
-        <p>
-          See the giphy below where the AWS Bucket is being queried to provide
-          dynamic resources based on the users needs. You can also check-it out
-          live here, at <a href="https://posnation.support" target="_blank"
-          rel="noreferrer">https://posnation.support</a>.
-        </p>
+        <span>
+            <p>
+            See the giphy below where the AWS Bucket is being queried to provide
+            dynamic resources based on the users needs. You can also check-it out
+            live here, at <a href="https://posnation.support" target="_blank"
+            rel="noreferrer">https://posnation.support</a>.
+          </p>
+        </span>
       ,
       img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/posnation-support-example.gif",
       style: 1
@@ -244,14 +246,23 @@ export default function Projects({ uuidv4 }) {
       img: 'https://raw.githubusercontent.com/ErikPlachta/api-gateway-express-mongodb/main/public/images/api-gateway.png',
       style: 1
     },
+    //-- My Budget Concept App
     {
-      title: "Concept Budget - Web App / PWA",
+      title: 
+        <span>
+          <p>
+            My Budget Concept App 
+            <br />
+            <br />
+          </p>
+        </span>
+      ,
       summary:
         <span>
           <p>
-            <b>A ReSTful API Gateway</b>
+            <b>A PWA with a Custom RESTful API</b>
             <br />
-            Node/Express Server to MongoDB
+            Service Workers and Node/Express Server to MongoDB
           </p>
         </span>
       ,
@@ -263,7 +274,7 @@ export default function Projects({ uuidv4 }) {
           Node/express.js server, no SQL Database with MongoDB. 
           <br />
           <br />
-          If the User attempts to interact with the database and they are offline, 
+          If the user attempts to interact with the database and they are offline, 
           a Service Worker will intercept the request and record it to the browsers
           Cached Storage. When a network connection is restored, the database post
           will execute.
@@ -302,7 +313,6 @@ export default function Projects({ uuidv4 }) {
             <ul>
               <li>Custom Built RESTful API</li>
               <li>PWA with Offline Functionality</li>
-              <li></li>
             </ul>
           </li>
         </ul>
@@ -321,53 +331,151 @@ export default function Projects({ uuidv4 }) {
         </span>
       ,
       img: "https://raw.githubusercontent.com/ErikPlachta/pwa-personal-budget/main/demo.gif",
-      style: 1,
+      style: 1
     },
-    // {
-    //   title: "get_Weather_arg_City",
-    //   description: "Using the OpenWeather API to get a weather forecast",
-    //   nerd_notes: "",
-    //   url_description: "Click here to checkout GitHub!",
-    //   url: "https://github.com/ErikPlachta/get_Weather_arg_City",
-    //   img: "https://raw.githubusercontent.com/ErikPlachta/get_Weather_arg_City/main/assets/images/demo1.png",
-    //   style: .5
-    // },
-    //-- A Daily Scheduler
+    //-- a Daily Scheudler
     {
       title: "A Daily Scheduler",
-      description: "A concept app built to demonstrate the power and flexabiliy of the Web Storage API framework.",
-      nerd_notes: 
+      summary:
+        <span>
+            <b>Web API Local Storage</b>
+            <br />
+            Hosted on GitHub Pages
+          <p>
+          </p>
+        </span>
+      ,
+      description: 
+        <span>
+          <p>
+            A concept app built to demonstrate the power and flexibility of the
+            Web Storage API framework. Users have full CRUD functionality.
+          </p>
+        </span>
+      ,
+      nerd_notes:  
         <ul>
-          <li>WebHost: GitHub</li>
-          <li>Framework: JS/HTML/CSS</li>
-          <li>Database: Local Storage</li>
-          <li>API: Web Storage</li>
+          <li><b>Platform</b>
+            <ul>
+              <li>GitHub Pages</li>
+            </ul>
+          </li>
+          <li><b>Database</b>
+            <ul>
+              <li>Browser Local Storage</li>
+            </ul> 
+          </li>
+          <li><b>API</b>
+            <ul>
+              <li>Moment.js</li>
+              <li>Web Storage API</li>
+            </ul>
+          </li>
+          <li><b>Framework</b>
+            <ul>
+              <li>HTML/CSS/JS</li>
+            </ul>
+          </li>
+          <li><b>Key Features</b>
+            <ul>
+              <li>Data cached in local storage</li>
+            </ul>
+          </li>
         </ul>
       ,
       url_description: "Click here to checkout GitHub!",
       url: "https://github.com/ErikPlachta/a_Daily_Scheduler_WebApp",
+      media_description: 
+        <span>
+          <p>
+            Below is a giphy demonstrating the app in action. If you want to <a 
+            href="https://github.com/ErikPlachta/a_Daily_Scheduler_WebApp"
+            target="_blank" rel="noreferrer">learn more about this project,
+            check out the GitHub Repo here</a>. If you want to <a
+            href="https://erikplachta.github.io/a_Daily_Scheduler_WebApp/"
+            target="_blank" rel="noreferrer">see it live, check it out here</a>.
+          </p>
+        </span>
+      ,
       img: "https://raw.githubusercontent.com/ErikPlachta/a_Daily_Scheduler_WebApp/main/assets/images/demo.gif",
-      style: 1,
+      style: .5,
     },
     //-- node-express-notes-app
     {
-      title: "node-express-notes-app",
-      description: "This is a Note Taking concept web APP built on Node with Express to manage API calls to a JSON database. Demonstrate how Express.js can be used as an API gateway to a JSON database. Using Heroku to host node.js server.",
-      nerd_notes: 
+      title: "Note Taking Concept App",
+      summary:
+        <span>
+          <p>
+            <b>Node/Express Web App with JSON Database</b>
+            <br />
+            Hosted on Heroku
+          </p>
+        </span>
+      ,
+      description: 
+        <span>
+          <p>
+            This is a Note Taking concept web APP built on Node with Express to
+            manage API calls to a JSON database. It was built to demonstrate how
+            Express.js can be used as an API gateway to a JSON database all 
+            hosted on a Heroku server.
+          </p>
+        </span>
+      ,
+      // nerd_notes: 
+      //   <ul>
+      //     <li>WebHost: Heroku</li>
+      //     <li>Framework: Express Server on Node.js</li>
+      //     <li>Framework: JS/CSS/HTML</li>
+      //     <li>Database: MongoDB Atlas</li>
+      //     <li>API: 1</li>
+      //     <li>API: 2</li>
+      //     <li>API: 3</li>
+      //   </ul>
+      // ,
+      nerd_notes:  
         <ul>
-          <li>WebHost: Heroku</li>
-          <li>Framework: Express Server on Node.js</li>
-          <li>Framework: JS/CSS/HTML</li>
-          <li>Database: MongoDB Atlas</li>
-          <li>API: 1</li>
-          <li>API: 2</li>
-          <li>API: 3</li>
+          <li><b>Platform</b>
+            <ul>
+              <li>Heroku</li>
+            </ul>
+          </li>
+          <li><b>Database</b>
+            <ul>
+              <li>JSON</li>
+            </ul> 
+          </li>
+          <li><b>Framework</b>
+            <ul>
+              <li>Node/Experss</li>
+              <li>Heroku</li>
+              <li>JSON</li>
+              <li>HTML/CSS/JS</li>
+            </ul>
+          </li>
+          <li><b>Key Features</b>
+            <ul>
+              <li>Express server talking to JSON database on Heroku</li>
+            </ul>
+          </li>
         </ul>
       ,
       url_description: "Click here to checkout GitHub!",
       url: "https://github.com/ErikPlachta/node-express-notes-app",
+      media_description:
+        <span>
+          <p>
+            In the giphy below I am demonstrating creating, and deleting a note.
+            If you want to <a href="https://github.com/ErikPlachta/node-express-notes-app"
+            target="_blank" rel="noreferrer"> learn more about this project, you
+            can check out the GitHub repo here</a>. If you want to <a
+            href="https://fast-peak-76189.herokuapp.com/" target="_blank"
+            rel="noreferrer">see it live, you can see it here on Heroku</a>.
+          </p>
+        </span>
+      ,
       img: "https://raw.githubusercontent.com/ErikPlachta/node-express-notes-app/main/public/assets/images/demo-full.gif",
-      style: 1,
+      style: .5,
     }
   ])
 
