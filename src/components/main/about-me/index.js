@@ -28,7 +28,7 @@ export default function AboutMe({ uuidv4 }) {
             Want to learn more about me or my work?
           </h3>
           <p className="article-content-indent">
-            Check out the <b>Projects</b> tab to learn more about my work!
+            Check out the <b>Projects</b> tab to learn more about my work.
             <br />
             <br />
             Head over to the <b>Resume</b> page to request a copy.

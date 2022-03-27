@@ -94,9 +94,9 @@ export default function Resume({ uuid }) {
   
   return (
     //-- Header section with note
-    <article className='container' id='projects-article'>
+    <article className='container'>
       <section>
-        <h2 className="article-header" id="projects-header">Professional Resume</h2>
+        <h2 className="article-header">Professional Resume</h2>
       </section>
       <section className="article-content">
         <section className="article-content-container">

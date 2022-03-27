@@ -473,8 +473,9 @@ export default function Projects({ uuidv4 }) {
   return (
     <article className='container' id='projects-article'>
       <section>
-        <h2 className="article-header" id="projects-header">Projects</h2>
+        <h2 className="article-header">Development Projects</h2>
       </section>
+      
       <section className="article-content">
         <section className="article-content-container">
           <p className="article-content-title">
