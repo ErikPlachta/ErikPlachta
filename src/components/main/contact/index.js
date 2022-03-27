@@ -150,7 +150,7 @@ export default function Contact({ uuid }) {
                 placeholder="ex. (111)-111-1111"
                 autoComplete='tel'
                 onKeyUp={onKeyUpPhone}
-                value={toSend.from_phone}
+                // value={toSend.from_phone}
               />
             </span>
           </div>
@@ -201,13 +201,3 @@ export default function Contact({ uuid }) {
   </article>
   )
 }
-
-
-
-{/* TODO: 03/20/2022 #EP || ADD TOGGLE */}
-          {/* <div id="user-form">
-            <div className="checkboxes">
-              <label for="toggle">Toggle</label>
-              <input type="checkbox" id="toggle" className="toggle"/>
-            </div>
-          </div>, */}

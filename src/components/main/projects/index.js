@@ -1,11 +1,12 @@
-import { object } from 'prop-types'
 import React, { useState } from 'react'
 
-import restfulApiConcept from '../../../assets/img/restful-api-social-network-concept.png'
+// import { object } from 'prop-types'
+// import restfulApiConcept from '../../../assets/img/restful-api-social-network-concept.png'
 
 export default function Projects({ uuidv4 }) {
 
-  const [Projects, setProjects ] = useState([
+  // const [ Projects, setProjects ] = useState([
+  const [ Projects ] = useState([
     //-- Image Manager
     {
       id: 'image-manager',
