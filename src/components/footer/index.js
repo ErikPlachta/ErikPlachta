@@ -17,9 +17,9 @@ export default function Footer({ uuid }) {
         <span className="nav">
           <a href="https://www.twitter.com/erikplachta" target="_blank" rel="noreferrer" >Twitter</a>
         </span>
-        {/* <span className="nav">
+        <span className="nav">
           <a href="https://blog.erikplachta.com/" target="_blank" rel="noreferrer" >Medium</a>
-        </span> */}
+        </span>
         </section>
     </footer>
   )
