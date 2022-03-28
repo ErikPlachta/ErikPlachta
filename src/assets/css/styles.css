@@ -653,28 +653,31 @@ input[type=submit]:hover{
 /* 1200!!?! */
 @media (min-width: 1200px) {
     /*  ensure content fits in middle of screen */
-    header {
-        justify-content: center;
-        padding: 0 8rem;
+    
+    header {    
+        padding: 0 7vw;
+        justify-content: space-around;
+    }
+
+    header h1{
+        max-width: 490px;
+    }
+
+    nav {
+        max-width: 570px;
     }
 }
 
 /* 1000 !! */
 @media (min-width: 1000px) {
 
-    h1.title {
-        flex: 10%; /* ensure has space around it within flex element */
-        
-    }
+    
 
-    h1.title img{
+    /* h1.title img{
         max-width: 50px;
         max-height: 50px;
         margin: 0 .5rem;
-    }
-    header{
-        padding: 0 7vw;
-    }
+    } */
     
 
     nav {
@@ -702,7 +705,7 @@ input[type=submit]:hover{
 
 
 @media (min-width: 800px){
-    
+   
     
         
     .projects-project div.nerd-notes{
@@ -723,29 +726,22 @@ input[type=submit]:hover{
     
         --fw_h2: 400;
         --fs_h2: 2.8rem;
-    
-        --fw_h3: 500;
-        --fs_h3: 2.25rem;
-    
-        --fw_h4: 500;
-        --fs_h4: 1.8rem;
-    
-        --fw_h5: 800;
-        --fs_h5: 1.5rem;
-        
-        /* remove all defaults */
-        padding: 0;
-        margin: 0;
     }
     header {
         flex-direction: row;
         justify-content: space-evenly;
     }
-    header.h1,
-    nav {
+    header.h1, 
+    nav{
         justify-content: space-around;
+    }
+    header.h1{
+        flex: 10%;
+    }
+    nav {
         flex: 20%;
     }
+
 
     .title-img{
         margin: .25rem 0;
