@@ -13,6 +13,8 @@ The majority of my repos are public, because building in public improves the qua
 
 ---
 
+## Contact Me
+
 :handshake: **Get in Touch?**
 
 [![Twitter](https://img.shields.io/badge/-@erikplachta-1ca0f1?style=flat&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/erikplachta)](https://twitter.com/erikplachta)  [![Linkedin](https://img.shields.io/badge/-@erikplachta-blue?style=flat&logo=Linkedin&logoColor=white&link=https://linkedin.com/in/erikplachta/)](https://www.linkedin.com/in/erikplachta/)
@@ -21,17 +23,25 @@ The majority of my repos are public, because building in public improves the qua
 
 [![Buy Me A Coffee](https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-FF813F?style=flat&logo=buy-me-a-coffee&logoColor=ffffff&link=https://www.buymeacoffee.com/erikplachta)](https://www.buymeacoffee.com/erikplachta)
 
-## Updates
+---
 
-### March 27th 2022 - Upgrade to [#25 Upgrade: Convert to React SPA](https://github.com/ErikPlachta/ErikPlachta/issues/25).
+---
 
-Did a complete overhaul of the website.
-> During the upgrade, I added new up-to-date content to spotlight some of my newer projects.
+## Change Log
 
-## December, 12th 2021 - Updated and simplified overall
+---
 
-Cleaned up content, styling, and simplified overall design.
+### March 27th 2022 - Upgrade to [#25 Upgrade: Convert to React SPA](https://github.com/ErikPlachta/ErikPlachta/issues/25)
 
-## November 14th, 2021 - Initial release
+- Did a complete overhaul of the website.
+    > During the upgrade, I added new up-to-date content to spotlight some of my newer projects.
 
-Created a basic portfolio page.
+### December, 12th 2021 - Updated and Simplified Overall Content and Styling
+
+- Simplified sections by removing un-needed info.
+- Simplified style and design around the entire app.
+- Updated project section with new project.
+
+### November 14th, 2021 - Initial release
+
+- Created a basic portfolio page.
