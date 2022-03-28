@@ -109,7 +109,6 @@ export default function Resume({ uuid }) {
               href="https://www.linkedin.com/in/erikplachta/" target="_blank"
               rel="noreferrer"> my LinkedIn Profile up to date</a>!
           </p>
-          <p className="signature">- Erik Plachta - March 2022</p>
         </section>
       </section>
       
