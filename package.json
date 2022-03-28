@@ -1,7 +1,7 @@
 {
-  "homepage": "https://erikplachta.github.io/ErikPlachta/",
-  "name": "erikplachta",
-  "version": "0.2.0",
+  "homepage": "https://erikplachta.com",
+  "name": "ErikPlachta.com",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
