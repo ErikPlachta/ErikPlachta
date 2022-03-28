@@ -12,14 +12,14 @@ export default function Footer({ uuid }) {
           <a href="https://www.github.com/erikplachta" target="_blank" rel="noreferrer" >GitHub</a>
         </span>
         <span className="nav">
-          <a href="https://www.linkedin.com/e/erikplachta" target="_blank" rel="noreferrer" >Linked-In</a>
+          <a href="https://www.linkedin.com/in/erikplachta" target="_blank" rel="noreferrer" >Linked-In</a>
         </span>
         <span className="nav">
           <a href="https://www.twitter.com/erikplachta" target="_blank" rel="noreferrer" >Twitter</a>
         </span>
-        <span className="nav">
+        {/* <span className="nav">
           <a href="https://blog.erikplachta.com/" target="_blank" rel="noreferrer" >Medium</a>
-        </span>
+        </span> */}
         </section>
     </footer>
   )
