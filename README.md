@@ -1,53 +1,47 @@
 # ![Erik Plachta](https://s.gravatar.com/avatar/cde2e5381aa5e6d8d0220c46edee8f88?s=30) Erik Plachta
 
-> Updated December, 12th 2021 - _( Still under active development )_
+## :wave: Hello, and welcome to my GitHub landing page
 
-:wave: Thanks for checking out my GitHub! 
+My name is Erik, and I'm a Software Developer and IT Engineer by hobby and profession.
 
-### About Me
+I use this Repo as a personal portfolio.
+If you want to learn more about me and my work, [I've published the content in this Repo to a GitHub Site](https://erikplachta.github.io/ErikPlachta/)
 
----
-
-**I'm a software developer, IT engineer / director, project manager, and productivity nerd.**
-
-I enjoy identifying patterns to build modular infrastructure and designs. Once you understand the problem, it's easy to build thoughtful, light-weight, and modular framework.
-
----
-
-**I'm a professional IT Engineer and MSP Director**
-
-- I have over 10 years of experince managing and providing IT services to small businesses and large scale businesses.
-- My expertise is in customer service, software support/training, hardware support, Windows, network infrastructure, and small business operating strategy.
-- I also have a lot of experience in building/managing SaaS based MSP service models with an MVP service strategy built around automation and remote services.
-
-**Python, PowerShell, and SQL are the primary languages I use profesionally**
-
-- Along with providing IT services, I build custom software solutions to automate what I can. Developing with Python and PowerShell is a part of my every-day job.
-- In 2017, I also started working directly with a SQL Engineer to provide SQL support and services to remote clients. We primarily use Python, SQL, and PoweShel.
+I use GitHub to manage my apps, and host custom domains.
+The majority of my repos are public, because building in public improves the quality of my work.
+> I find myself more challenged and focused on releasing MVP.
 
 ---
 
-**Secondary is JavaScript, CSS, and HTML**
+## Contact Me
 
-- For the past 2 years, I've been learning these languages to bridge the gap from backend and front.
-- Currently taking classes at [UNC Charlotte](https://www.charlotte.edu) to expand my knowledge and build a solid foundation. 
-
----
-
-**If you want to learn more about me and my work**, [check out this link](https://erikplachta.github.io/ErikPlachta/)
-
-**I also publish development guides on Medium.com** 👉 [![Medium](https://img.shields.io/badge/-blog.erikplachta.com-000000?style=flat&labelColor=000000&logo=Medium&link=http://blog.erikplachta.com/)](http://blog.erikplachta.com/)
-
----
-
-:handshake: **Want to get in touch?**
+:handshake: **Get in Touch?**
 
 [![Twitter](https://img.shields.io/badge/-@erikplachta-1ca0f1?style=flat&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/erikplachta)](https://twitter.com/erikplachta)  [![Linkedin](https://img.shields.io/badge/-@erikplachta-blue?style=flat&logo=Linkedin&logoColor=white&link=https://linkedin.com/in/erikplachta/)](https://www.linkedin.com/in/erikplachta/)
 
-❤️ **Did you get value from my work?**
+❤️ **Get value from my work?**
 
 [![Buy Me A Coffee](https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-FF813F?style=flat&logo=buy-me-a-coffee&logoColor=ffffff&link=https://www.buymeacoffee.com/erikplachta)](https://www.buymeacoffee.com/erikplachta)
 
 ---
 
-👇 **Lastly, I've pinned a few projects I'm actively working on below**
+---
+
+## Change Log
+
+---
+
+### March 27th 2022 - Upgrade to [#25 Upgrade: Convert to React SPA](https://github.com/ErikPlachta/ErikPlachta/issues/25)
+
+- Did a complete overhaul of the website.
+    > During the upgrade, I added new up-to-date content to spotlight some of my newer projects.
+
+### December, 12th 2021 - Updated and Simplified Overall Content and Styling
+
+- Simplified sections by removing un-needed info.
+- Simplified style and design around the entire app.
+- Updated project section with new project.
+
+### November 14th, 2021 - Initial release
+
+- Created a basic portfolio page.
