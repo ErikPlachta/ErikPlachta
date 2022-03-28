@@ -127,10 +127,10 @@ body {
 h1,h2,h3,h4,h5 {
     /* Font Size & Weights */
     --fw_h1: 300;
-    --fs_h1: 3.25rem;
+    --fs_h1: 3rem;
 
-    --fw_h2: 400;
-    --fs_h2: 2.8rem;
+    --fw_h2: 600;
+    --fs_h2: 2.5rem;
 
     --fw_h3: 500;
     --fs_h3: 2.25rem;
@@ -656,18 +656,14 @@ input[type=submit]:hover{
     header {
         justify-content: center;
         padding: 0 8rem;
-        flex-direction: row;
     }
 }
 
 /* 1000 !! */
 @media (min-width: 1000px) {
-    header {
-        justify-content: center;
-    }
 
     h1.title {
-        flex: 30%; /* ensure has space around it within flex element */
+        flex: 10%; /* ensure has space around it within flex element */
         
     }
 
@@ -679,6 +675,7 @@ input[type=submit]:hover{
     header{
         padding: 0 7vw;
     }
+    
 
     nav {
         height: 100%;
@@ -719,12 +716,43 @@ input[type=submit]:hover{
 
 /* 600 !! */
 @media (min-width: 600px) {
-    main{
-        margin: 100px 0;
+    h1,h2,h3,h4,h5 {
+        /* Font Size & Weights */
+        --fw_h1: 300;
+        --fs_h1: 2rem;
+    
+        --fw_h2: 400;
+        --fs_h2: 2.8rem;
+    
+        --fw_h3: 500;
+        --fs_h3: 2.25rem;
+    
+        --fw_h4: 500;
+        --fs_h4: 1.8rem;
+    
+        --fw_h5: 800;
+        --fs_h5: 1.5rem;
+        
+        /* remove all defaults */
+        padding: 0;
+        margin: 0;
     }
-   
+    header {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    header.h1,
     nav {
         justify-content: space-around;
+        flex: 20%;
+    }
+
+    .title-img{
+        margin: .25rem 0;
+    }
+
+    main{
+        margin: 100px 0;
     }
    
     .container{
