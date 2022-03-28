@@ -75,7 +75,7 @@ export default function Projects({ uuidv4 }) {
           </li>
         </ul>
       ,
-      img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/imagemanager_map.png",
+      img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/imagemanager.png",
       media_description: 
         <span>
           See the map below for a visualization of a part Image Manager's global
