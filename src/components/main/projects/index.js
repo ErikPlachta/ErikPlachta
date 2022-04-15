@@ -170,6 +170,76 @@ export default function Projects({ uuidv4 }) {
       img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/posnation-support-example.gif",
       style: 1
     },
+    //-- Calendari
+    { id: 'Calendari',
+      title: "Calendari",
+      summary: 
+        <span>
+          <p>
+            <b>Schedule Management</b>
+            <br />
+            Fullstack MERN SPA
+          </p>
+        </span>
+      ,
+      description:
+        <span>
+          <p>
+            Calendari is a concept scheduling app, built with small business owners
+            in mind. It gives you the ability to create account, and then provide
+            a link to their customers to make appointments.
+            <br /><br />
+            I worked on this project with a some friends to help solidify my knowledge
+            with React, GraphQL, and the MERN stack as a whole.
+          </p>
+        </span>
+      ,
+      nerd_notes:  
+        <ul>
+          <li><b>Platform</b>
+            <ul>
+              <li>Web App</li>
+            </ul>
+          </li>
+          <li><b>Database</b>
+            <ul>
+              <li>MongoDB Atlas</li>
+            </ul> 
+          </li>
+          <li><b>API</b>
+            <ul>
+              <li>Apollo / GraphQL</li>
+            </ul>
+          </li>
+          <li><b>Framework</b>
+            <ul>
+              <li>MongoDB</li>
+              <li>Express</li>
+              <li>React</li>
+              <li>Node</li>
+              <li>Apollo / GraphQL</li>
+              <li>Heroku</li>
+            </ul>
+          </li>
+          <li><b>Features</b>
+            <ul>
+              <li>User Account Creation</li>
+              <li>Online Scheduling</li>
+              <li>PWA</li>
+            </ul>
+          </li>
+        </ul>
+      ,
+      img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/bf895d9ae85684e58bc1bdffd3161555115dcb04/assets/images/calendari.gif",
+      media_description: 
+        <span>
+          Below is a gif of the landing page. <a href="https://calendari-day.herokuapp.com"
+          target="_blank" rel="noreferrer"> click on this link to see it live</a>.
+        </span>
+      ,
+      // iframe: <iframe title="Image Manager's Global Footprint" src="https://datastudio.google.com/embed/reporting/ec3bf210-888a-4bb2-a166-f40c152afd01/page/xYNXC" allowFullScreen></iframe>,
+      style: 1
+    },
      //-- RESTful API Gateway
      {
       title: "RESTful API Gateway for a Concept Social Network",
@@ -482,7 +552,7 @@ export default function Projects({ uuidv4 }) {
             This page is a showcase of my favorite development projects. 
           </p>
           <p className="article-content-indent">
-            First on the list are <a href='#image-manager'><b>Image Manager</b>
+            First on the list is <a href='#image-manager'><b>Image Manager</b>
             ( <em>a full-stack windows app</em> )</a> and  <a href="#posnation-support">
             <b>posnation.support</b> <em>( a full-stack web app )</em></a>. These are live
             applications with thousands of active users. I've built and maintain 
