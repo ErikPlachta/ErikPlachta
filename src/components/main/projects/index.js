@@ -218,6 +218,7 @@ export default function Projects({ uuidv4 }) {
               <li>React</li>
               <li>Node</li>
               <li>Apollo / GraphQL</li>
+              <li>Heroku</li>
             </ul>
           </li>
           <li><b>Features</b>
@@ -229,12 +230,11 @@ export default function Projects({ uuidv4 }) {
           </li>
         </ul>
       ,
-      img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/imagemanager.png",
+      img: "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/bf895d9ae85684e58bc1bdffd3161555115dcb04/assets/images/calendari.gif",
       media_description: 
         <span>
-          See the map below for a visualization of a part Image Manager's global
-          footprint. For an interactive map, <a href="https://datastudio.google.com/embed/reporting/ec3bf210-888a-4bb2-a166-f40c152afd01/page/xYNXC"
-          target="_blank" rel="noreferrer"> click on this link</a>.
+          Below is a gif of the landing page. <a href="https://calendari-day.herokuapp.com"
+          target="_blank" rel="noreferrer"> click on this link to see it live</a>.
         </span>
       ,
       // iframe: <iframe title="Image Manager's Global Footprint" src="https://datastudio.google.com/embed/reporting/ec3bf210-888a-4bb2-a166-f40c152afd01/page/xYNXC" allowFullScreen></iframe>,

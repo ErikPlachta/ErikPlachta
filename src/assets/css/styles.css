@@ -772,7 +772,7 @@ input[type=submit]:hover{
     }
 
    .article-content-indent-list ul{
-        padding: 0 1.0417rem;
+        /* padding: 0 1.0417rem; */
     }
 
     .projects-project{
