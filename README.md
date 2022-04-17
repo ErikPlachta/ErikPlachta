@@ -9,7 +9,6 @@ If you want to learn more about me and my work, [I've published the content in t
 
 I use GitHub to manage my apps, and host custom domains.
 The majority of my repos are public, because building in public improves the quality of my work.
-> I find myself more challenged and focused on releasing MVP.
 
 ---
 
