@@ -2,13 +2,12 @@
 
 ## :wave: Hello, and welcome to my GitHub landing page
 
-My name is Erik, and I'm a Software Developer and IT Engineer by hobby and profession.
+My name is Erik 👋
 
-I use this Repo as a personal portfolio.
-If you want to learn more about me and my work, [I've published the content in this Repo to a GitHub Site](https://erikplachta.github.io/ErikPlachta/)
+> I'm a Software Developer and IT Engineer. 
 
-I use GitHub to manage my apps, and host custom domains.
-The majority of my repos are public, because building in public improves the quality of my work.
+This Repo hosts my website, [ErikPlachta.com](https://erikplachta.com), where you can go to learn more about me and my work. 
+
 
 ---
 
