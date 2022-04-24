@@ -5,7 +5,7 @@ export default function Footer({ uuid }) {
     <footer>
 
       <section className='footer-copyright'>
-        Erik Plachta - 2021 ©
+        Erik Plachta - 2022 ©
       </section>
       <section className='footer-social'>
         <span className="nav">
