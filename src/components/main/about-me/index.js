@@ -11,16 +11,34 @@ export default function AboutMe({ uuidv4 }) {
       <section className="article-content-container">
         <div className="article-content">
           <h3 className="article-content-title">
-            About
+            A little bit about me.
           </h3>
           
-          <p className="article-content-indent">
-            <b>A little bit about me.</b> I am passionate, dedicated, and
-            focused. Strengths in problem solving, system thinking, project
-            management, documentation, organization, teaching, learning, and
-            long-term strategy.
+          <p>
+            <b>Professionally</b>, I'm a Technical Support Director and Software
+            Engineer at a software development company. I'm passionate about
+            building and maintaining modular systems that can scale thoughtfully
+            and effectively.
           </p>
-          
+          <p className="article-content-indent">
+            Check out my Resume to learn more about my professional experience.
+          </p>
+
+          <hr />
+
+          <p>
+            <b>Outside of work</b>, I spend a lot of time with family. <b>As far as 
+            hobbies go</b>, the thing I enjoy the most is software development, and
+            I spend a lot of free-time sharpening and expanding my development skills.
+          </p>
+          <p className="article-content-indent">
+            Check out my Projects to learn more about what I'm working on.
+          </p>
+
+          <p>
+            
+          </p>
+
           <p className="signature">
             - Erik Plachta - March 2022
           </p>
