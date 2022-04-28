@@ -23,8 +23,8 @@ export default function Projects({ uuidv4 }) {
         </span>
       ,
       description:
-        <span>
-          <p>
+        <p className="project-about-description">
+          {/* <p> */}
             Image Manager is a Windows App that automates IT services. It's a
             headless executable that identifies and then resolves issues specific
             to my primary customer's needs. As issues are resolved, it logs
@@ -38,8 +38,8 @@ export default function Projects({ uuidv4 }) {
             rel="noreferrer">POS Nation</a>. With an active user base of over
             3,600 clients, it automates 40+ hours of IT related services every
             week. 
-          </p>
-        </span>
+          {/* </p> */}
+        </p>
       ,
       nerd_notes:  
         <ul>

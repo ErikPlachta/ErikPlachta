@@ -368,7 +368,6 @@ section {
 }
 .projects-project{
     z-index: 10;
-    /* padding: 1.5rem; */
     min-height: 400px;
     min-width: 300px;
     max-width: 300px;
@@ -430,13 +429,18 @@ section {
     border-right: var(--b_04);
 }
 
+.project-about-description{
+    margin: 1rem;
+}
+
 .projects-project div.nerd-notes {
     flex: 30%;
     float: right;
-    padding: 0;
+    /* padding: 0; */
     height: inherit;
     margin: 0;
 }
+
 
 /* Remove border inherited by indent */
 div.project-about,
@@ -720,13 +724,13 @@ input[type=submit]:hover{
    
     
         
-    .projects-project div.nerd-notes{
+    /* .projects-project div.nerd-notes{
         padding: 0;
     }
     .projects-project div.project-about{
         padding: 0 3rem;
         margin-left: 4rem;
-    }
+    } */
 }
 
 /* 600 !! */
@@ -791,7 +795,7 @@ input[type=submit]:hover{
     }
 
     .projects-project{
-        grid-gap: 0;
+        grid-gap: 1rem;
     }
     
     .projects-project iframe{
