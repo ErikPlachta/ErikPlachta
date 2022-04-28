@@ -480,7 +480,7 @@ export default function Projects({ uuidv4 }) {
         </span>
       ,
       img: "https://raw.githubusercontent.com/ErikPlachta/a_Daily_Scheduler_WebApp/main/assets/images/demo.gif",
-      style: .5,
+      style: 1,
     },
     //-- node-express-notes-app
     {
@@ -548,7 +548,7 @@ export default function Projects({ uuidv4 }) {
         </span>
       ,
       img: "https://raw.githubusercontent.com/ErikPlachta/node-express-notes-app/main/public/assets/images/demo-full.gif",
-      style: .5,
+      style: 1,
     }
   ])
 
