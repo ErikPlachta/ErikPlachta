@@ -39,6 +39,12 @@ This certificate badge indicates that the holder completed the UNC Charlotte Cod
 
 ## Change Log
 
+### April 28th, 2022 - Cleanup and Simplify content overall
+
+- Cleaned up styling and updated content in About, Project and Resume.
+- Minified and simplified navigation and footer styling.
+- Updated Footer with Copyright of 2022.
+
 ### April 26th, 2022 - Add Certification and Clean Up Header
 
 - Add Certificates & Continued Education Section.
