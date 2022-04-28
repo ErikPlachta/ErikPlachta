@@ -14,9 +14,11 @@ export default function Projects({ uuidv4 }) {
       summary: 
         <span>
           <p>
-            <b>Automating IT Related Services -- Remotely</b>
+            <hr />
+            <b>Remotely Automate IT Related Services</b>
             <br />
-            Windows App
+            Windows Application
+            <hr />
           </p>
         </span>
       ,
@@ -30,11 +32,11 @@ export default function Projects({ uuidv4 }) {
             <br /><br />
             This project initially started out as me wanting to learn Python and
             strengthen my development skills.
-
+            <br /><br />
             Several years after it's release, it's become an integral tool
             used by <a href="https://www.posnation.com/" target="_blank"
             rel="noreferrer">POS Nation</a>. With an active user base of over
-            6,000 clients, it automates 40+ hours of IT related services every
+            3,600 clients, it automates 40+ hours of IT related services every
             week. 
           </p>
         </span>
@@ -93,9 +95,11 @@ export default function Projects({ uuidv4 }) {
       summary:
         <span>
           <p>
+            <hr />
             <b>A Technical Support Engineer Resource</b>
             <br />
-            Web and Progress Web App
+            PWA
+            <hr />
           </p>
         </span>
       ,
@@ -160,10 +164,9 @@ export default function Projects({ uuidv4 }) {
       media_description: 
         <span>
             <p>
-            See the giphy below where the AWS Bucket is being queried to provide
-            dynamic resources based on the users needs. You can also check-it out
-            live here, at <a href="https://posnation.support" target="_blank"
-            rel="noreferrer">https://posnation.support</a>.
+            See the gif below where an API call to AWS S# Bucket is returning
+            dynamic results. Check-it out live here, at <a href="https://posnation.support"
+            target="_blank" rel="noreferrer">https://posnation.support</a>.
           </p>
         </span>
       ,
@@ -176,9 +179,11 @@ export default function Projects({ uuidv4 }) {
       summary: 
         <span>
           <p>
+            <hr />
             <b>Schedule Management</b>
             <br />
             Fullstack MERN SPA
+            <hr />
           </p>
         </span>
       ,
@@ -246,9 +251,11 @@ export default function Projects({ uuidv4 }) {
       summary:
         <span>
           <p>
+            <hr />
             <b>A ReSTful API Gateway</b>
             <br />
             Node/Express Server to MongoDB
+            <hr />
           </p>
         </span>
       ,
@@ -319,21 +326,23 @@ export default function Projects({ uuidv4 }) {
     },
     //-- My Budget Concept App
     {
-      title: 
-        <span>
-          <p>
-            My Budget Concept App 
-            <br />
-            <br />
-          </p>
-        </span>
+      title: "A Budget Concept App"
+        // <span>
+        //   <p>
+        //     My Budget Concept App 
+        //     <br />
+        //     <br />
+        //   </p>
+        // </span>
       ,
       summary:
         <span>
           <p>
+            <hr />
             <b>A PWA with a Custom RESTful API</b>
             <br />
             Service Workers and Node/Express Server to MongoDB
+            <hr />
           </p>
         </span>
       ,
@@ -409,9 +418,11 @@ export default function Projects({ uuidv4 }) {
       title: "A Daily Scheduler",
       summary:
         <span>
+            <hr />
             <b>Web API Local Storage</b>
             <br />
-            Hosted on GitHub Pages
+            Web App - Hosted on GitHub Pages
+            <hr />
           <p>
           </p>
         </span>
@@ -477,9 +488,11 @@ export default function Projects({ uuidv4 }) {
       summary:
         <span>
           <p>
+            <hr />
             <b>Node/Express Web App with JSON Database</b>
             <br />
-            Hosted on Heroku
+            Web App - Hosted on Heroku
+            <hr />
           </p>
         </span>
       ,
@@ -548,21 +561,29 @@ export default function Projects({ uuidv4 }) {
       
       <section className="article-content-container">
         <section className="article-content">
-          <p className="article-content-title">
-            This page is a showcase of my favorite development projects. 
-          </p>
+          <h3 className="article-content-title">
+            Below I've included six my favorite development projects.
+          </h3>
           <p className="article-content-indent">
+            For each project, I included a short summary, highlighted the 
+            key technical framework used, and included links.
+          </p>
+          <p>
             First on the list is <a href='#image-manager'><b>Image Manager</b>
             ( <em>a full-stack windows app</em> )</a> and  <a href="#posnation-support">
-            <b>posnation.support</b> <em>( a full-stack web app )</em></a>. These are live
-            applications with thousands of active users. I've built and maintain 
-            both in my free-time outside of work. Together, they save my company
-            40-80 hours a week on payroll.
-          <br />
-          <br />
-            The rest of the projects are proof-of-concept Apps that I've built
-            while I'm learning new concepts. Each one represents a unique aspect
-            of full stack web development.
+            <b>posnation.support</b> <em>( a full-stack web app )</em></a>.
+          </p>
+          <p className="article-content-indent">
+            Both of these application have an active customer base with thousands
+            of active users.
+          </p>
+          <p>
+            The remaining four are proof-of-concept Apps that I've built
+            while learning new concepts or sharpening my skills.
+          </p>
+          <p className="article-content-indent">
+            Each one represents a unique aspect of my full stack web development
+            experience.
           </p>
         </section>
       </section>
@@ -588,7 +609,7 @@ export default function Projects({ uuidv4 }) {
             </div>
             {/* Nerd Notes */}
             <div className='nerd-notes article-content-indent-list'>
-            <h4 className='project-h4'>Nerd Notes</h4>
+            <h4 className='project-h4'>Framework</h4>
               {project.nerd_notes}
             </div>
             

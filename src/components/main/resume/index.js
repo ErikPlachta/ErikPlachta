@@ -110,9 +110,9 @@ export default function Resume({ uuid }) {
             <p className="article-content">
               with over fifteen years of professional experience. My expertise is
               in customer service, software & hardware support, software training,
-              leadership, managed service, documentation, knowledge building,
-              project management, small/medium size business strategy,
-              IT/networking, and a wide range of IT related services.
+              leadership, managed services, help desk strategy, documentation,
+              knowledge building, project management, small/medium size business
+              strategy, IT/networking, and a wide range of IT related services.
             </p>
 
             <hr />
