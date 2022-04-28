@@ -95,30 +95,71 @@ export default function Resume({ uuid }) {
   return (
     //-- Header section with note
     <article className='container'>
-      <section>
-        <h2 className="article-header">Professional Resume</h2>
-      </section>
-      <section className="article-content">
-        <section className="article-content-container">
-          <p className="article-content-title">
-            Are you looking for a copy of my Resume?
-          </p>
-          <p className="article-content-indent">
-              Please fill out the contact-form below with your best contact
-              email, and I'll send over a copy! Otherwise, I keep  <a 
-              href="https://www.linkedin.com/in/erikplachta/" target="_blank"
-              rel="noreferrer"> my LinkedIn Profile up to date</a>!
-          </p>
-        </section>
-      </section>
       
-      <section className="article-content">
-        <h3 className="article-content-title">
-          Request a Copy of Erik's Resume
-        </h3>
+      <section>
+        <h2 className="article-header">Resume</h2>
       </section>
 
-      {/*Email Form with captcha */}
+      <section className="article-content-container">
+            
+          {/* BASIC ABOUT ME/RESUME SECTION */}
+          <div className="article-content">
+            <h3 className="article-content-title">
+              I'm a Technical Support Director and Software Engineer...
+            </h3>
+            <p className="article-content">
+              with over fifteen years of professional experience. My expertise is
+              in customer service, software & hardware support, software training,
+              leadership, managed service, documentation, knowledge building,
+              project management, small/medium size business strategy,
+              IT/networking, and a wide range of IT related services.
+            </p>
+
+            <hr />
+
+            <p className="article-content-indent">
+              <b>As a technical support director</b>, I define and execute strategies
+              to ensure my team stays focused on providing services our customer
+              deserve. I also build and the manage a knowledge base for my team
+              regarding technical services, software solutions, and company
+              policies / procedures.
+            </p>
+
+            <p className="article-content-indent">
+              <b>As a software engineer</b>, I use my experience and knowledge to
+              build and manage software solutions focused resolving IT related 
+              issues proactively, automatically, and remotely.
+            </p>
+            <hr />
+            <p className="article-content">
+              <b>My primary development languages are</b> Python, PowerShell, JavaScript,
+              HTML, and CSS.
+            </p>
+            <p className="article-content">
+              <b>My professional database experience</b> is centered
+              around SQL, MySQL, and MongoDB.
+            </p>
+            <p className="article-content">
+              <b>The platforms I use professionally and personally</b> are AWS, Heroku,
+              GitHub, and GCP.
+            </p>
+            <hr />
+          </div>
+        </section>
+
+        <section className="article-content">
+          {/* REQUEST RESUME SECTION */}
+          <div className="article-content">
+            <br />
+            <h3 className="article-content-title">
+              Request a Copy of My Resume
+            </h3>
+            <p className="article-content-indent">
+              
+            </p>
+          </div>
+        </section>
+    {/*Email Form with captcha */}
       <section className="article-content-container contact-form">
         <form onSubmit={onSubmit}>
           <div className='form-section'>

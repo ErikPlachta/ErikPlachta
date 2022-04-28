@@ -184,7 +184,7 @@ header {
 
 
 h1.title{
-    margin-top: auto;
+    margin: auto;
     padding: 0 1rem;
 
     text-align: center;
@@ -201,10 +201,10 @@ h1.title{
 }
 
 img.title-img{
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 40px;
+    max-height: 40px;
     /* margin-top: .3rem; */
-    margin-right: 2rem;
+    margin-right: 1rem;
     /* TOOD:: 03/19/2022 #EP || Add an image shadow */
 }
 
@@ -219,26 +219,33 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     padding: 0 1rem;
-    margin-top: auto;
-    font-size: 1.25rem;
+    margin: auto;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
     transition: ease-in-out 200ms;
 }
 
+h1.title,
 .nav{
-    color: var(--nav-fc-light);
+    /* color: var(--nav-fc-light); */
+    color: var(--title_fc_light);
     transition: ease-in-out 200ms;
-    border-bottom: 4px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+
+h1.title:hover,
+.nav:hover{
+    text-shadow: 0 0 0 var(--accent_p);
 }
 
 .nav:hover{
-    text-shadow: 0 0 0 var(--accent_p);
-    border-bottom: 4px solid var(--accent_p);
+    cursor: pointer;
+    border-bottom: 3px solid var(--accent_p);
 }
-
 /* if the current location */
 .nav.nav-active{
     color: var(--nav-fc-active);
-    border-bottom: 4px solid var(--nav-fc-light);
+    border-bottom: 3px solid var(--nav-fc-light);
 }
 
 main{
@@ -284,15 +291,13 @@ section {
     border: var(--b_05);
 }
 
-.article-content{
+/* .article-content{ */
     /* border-bottom: var(--b_04); */
-    margin: auto;
-    max-width: 100%;
-    line-height: 1.6;
-    font-size: 1.1rem;
-    padding: 2rem;
+    /* margin: auto;
+    max-width: 100%; */
+    
     /* text-align: center; */
-}
+/* } */
 
 .article-content-title{
     font-weight: 500;
@@ -305,8 +310,9 @@ section {
     font-weight: 400;
 }
 
+.article-content,
 .article-content-indent{
-    padding-left: 1rem;
+    padding: 0 1rem;
     /* font-style: italic; */
 }
 
@@ -414,8 +420,8 @@ section {
 
 .projects-project div.project-about{
     height: inherit;
-    line-height: 1.6;
-    font-size: 1.2rem;
+    line-height: 1.4;
+    /* font-size: 1.2rem; */
     flex: 50%;
     margin: 0 1rem;
 }
@@ -481,7 +487,7 @@ footer {
     z-index: 1000;
     position: fixed;
     bottom: 0;
-    padding: .25rem 0;
+    padding: 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -759,7 +765,6 @@ input[type=submit]:hover{
         margin: auto;
         max-width: 100%;
         line-height: 1.6;
-        font-size: 1.1rem;
         padding: 0 3rem;
         /* text-align: center; */
     }
