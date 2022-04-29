@@ -100,35 +100,29 @@ export default function Resume({ uuid }) {
         <h2 className="article-header">Resume</h2>
       </section>
 
-      <section className="article-content-container">
-            
-          {/* BASIC ABOUT ME/RESUME SECTION */}
-          <div className="article-content">
-            <h3 className="article-content-title">
-              I'm a Technical Support Director and Software Engineer
-            </h3>
-
-            <br />
-
-            <p className="article-content-indent">
-              <b>As a technical support director</b>, I define and execute strategies
-              to ensure my team stays focused on providing services our customer
-              deserve. I also build and the manage a knowledge base for my team
-              regarding technical services, software solutions, and company
-              policies / procedures.
-            </p>
-
-            <hr />
-
-            <p className="article-content-indent">
-              <b>As a software engineer</b>, I use my experience and knowledge to
-              build and manage software solutions focused resolving IT related 
-              issues proactively, automatically, and remotely.
-            </p>
-            
-            <hr />
-          </div>
-        </section>
+      <section className="article-content-container">    
+        <div className="article-content">
+          <h3 className="article-content-title">
+            Technical Support Director and Software Engineer
+          </h3>
+          <hr />
+          {/* Technical Support Director */}
+          <p className="article-content-indent">
+            <b>As a technical support director</b>, I define and execute strategies
+            to ensure my team stays focused on providing services our customer
+            deserve. I also build and the manage a knowledge base for my team
+            regarding technical services, software solutions, and company
+            policies / procedures.
+          </p>
+          <hr />
+          {/* Software Engineer */}
+          <p className="article-content-indent">
+            <b>As a software engineer</b>, I use my experience and knowledge to
+            build and manage software solutions that resolve IT related issues
+            <u>proactively</u>, <u>automatically</u>, and <u>remotely</u>.
+          </p>
+        </div>
+      </section>
 
         <section className="article-content">
           {/* REQUEST RESUME SECTION */}
