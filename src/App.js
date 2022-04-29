@@ -24,8 +24,8 @@ export default function App({ uuidv4 }) {
   //-- Sub-Components within the main container and also used for navigation
   const [locations, setLocations] = useState({
     'about':     { name:'about',      subComponent:{AboutMe},    key:uuidv4(), jsx: <AboutMe   uuidv4={uuidv4}></AboutMe>   },
-    'projects': { name:'projects',  subComponent:{Projects},  key:uuidv4(), jsx: <Projects uuidv4={uuidv4}></Projects> },
     'resume':    { name:'resume',     subComponent:{Resume},     key:uuidv4(), jsx: <Resume    uuidv4={uuidv4}></Resume>    },
+    'projects': { name:'projects',  subComponent:{Projects},  key:uuidv4(), jsx: <Projects uuidv4={uuidv4}></Projects> },
     'contact':   { name:'contact',    subComponent:{Contact},    key:uuidv4(), jsx: <Contact   uuidv4={uuidv4}></Contact>   },
   });
 

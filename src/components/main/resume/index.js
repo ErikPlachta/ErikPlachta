@@ -105,17 +105,10 @@ export default function Resume({ uuid }) {
           {/* BASIC ABOUT ME/RESUME SECTION */}
           <div className="article-content">
             <h3 className="article-content-title">
-              I'm a Technical Support Director and Software Engineer...
+              I'm a Technical Support Director and Software Engineer
             </h3>
-            <p className="article-content">
-              with over fifteen years of professional experience. My expertise is
-              in customer service, software & hardware support, software training,
-              leadership, managed services, help desk strategy, documentation,
-              knowledge building, project management, small/medium size business
-              strategy, IT/networking, and a wide range of IT related services.
-            </p>
 
-            <hr />
+            <br />
 
             <p className="article-content-indent">
               <b>As a technical support director</b>, I define and execute strategies
@@ -125,24 +118,14 @@ export default function Resume({ uuid }) {
               policies / procedures.
             </p>
 
+            <hr />
+
             <p className="article-content-indent">
               <b>As a software engineer</b>, I use my experience and knowledge to
               build and manage software solutions focused resolving IT related 
               issues proactively, automatically, and remotely.
             </p>
-            <hr />
-            <p className="article-content">
-              <b>My primary development languages are</b> Python, PowerShell, JavaScript,
-              HTML, and CSS.
-            </p>
-            <p className="article-content">
-              <b>My professional database experience</b> is centered
-              around SQL, MySQL, and MongoDB.
-            </p>
-            <p className="article-content">
-              <b>The platforms I use professionally and personally</b> are AWS, Heroku,
-              GitHub, and GCP.
-            </p>
+            
             <hr />
           </div>
         </section>
