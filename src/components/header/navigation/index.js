@@ -25,8 +25,7 @@ export default function Navigation({ location, setLocation, locations, setLocati
       }
       //-- Otherwise set to default location for nav awareness
       else {
-        setLocation(location);
-        
+        setLocation(location); 
       }
     },
     []
