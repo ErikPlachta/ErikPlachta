@@ -39,22 +39,19 @@ export default function App({ uuidv4 }) {
     <>
       <BrowserRouter basename="/">
         <Header
-          key={uuidv4()}
-          uuidv4={uuidv4}
-          locations={locations}
-          setLocations={setLocations}
-          location={location}
-          setLocation={setLocation}
+          key={uuidv4()} uuidv4={uuidv4} 
+          locations={locations} setLocations={setLocations}
+          location={location} setLocation={setLocation}
         ></Header>
         <main>
           <Routes>
-          <Route exact path="/" element={locations['about'].jsx}/>
+            <Route exact path="/" element={locations['about'].jsx}/>
             <Route exact path="/about" element={locations['about'].jsx}/>
             <Route exact path="/resume" element={locations['resume'].jsx}/>
             <Route exact path="/projects" element={locations['projects'].jsx}/>
             <Route exact path="/contact" element={locations['contact'].jsx}/>            
-            <Route path='/404' element={<PageNotFound />}/>
-            <Route exact path="*" element={<PageNotFound />}/>
+            <Route path='/404' element={<PageNotFound     location={location} setLocation={setLocation}/>}/>
+            <Route exact path="*" element={<PageNotFound  location={location} setLocation={setLocation}/>}/>
           </Routes>
         </main>
         <Footer key={uuidv4()} uuidv4={uuidv4}></Footer>

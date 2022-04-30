@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export default function AboutMe({ uuidv4 }) {
   return (
@@ -75,4 +75,5 @@ export default function AboutMe({ uuidv4 }) {
       </section>
     </article>
   )
+  
 };

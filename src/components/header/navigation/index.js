@@ -13,13 +13,18 @@ export default function Navigation({ location, setLocation, locations, setLocati
   const [currentLocation, setCurrentLocation] = useState(
     (useLocation().pathname).split("/")[1]
   );
-  
+
   //----------------------------------------------------------------------------
   //-- Update DOM title and set location based on requested Route
   useEffect(() => {
       
-      //-- if the requested Route is an existing location, update nav accordingly
-      if(locations[currentLocation]){
+      //-- If the default landing-page
+      if (currentLocation === "" || currentLocation === "/" ){
+        setLocation("about");
+        document.title = `${capitalizeFirstLetter('about')} - Erik Plachta`;
+      }
+      //-- if requesting another location
+      else if(locations[currentLocation] ){
         setLocation(currentLocation)
         document.title = `${capitalizeFirstLetter(location)} - Erik Plachta`;
       }

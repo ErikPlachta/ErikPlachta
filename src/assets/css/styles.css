@@ -648,7 +648,7 @@ input[type=submit].button{
     border-radius: var(--br_25);
     width: 100%;
     margin: 1rem 0 ;
-    padding: 3rem 0;
+    padding: 2rem 0;
     background: var(--title_bg_dark);
     color: var(--title_fc_light);
     font-weight: 500;
@@ -658,6 +658,7 @@ input[type=submit].button{
 
 input[type=submit]:hover{
     color: var(--accent_p);
+    cursor: pointer;
     
 }
 
