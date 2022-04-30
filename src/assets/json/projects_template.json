@@ -1,18 +1,21 @@
 {
-    "id"            : "",
-    "title"         : "",
-    "summary"       : "",
-    "platform"      : "",
-    "description"   : "",
-    "nerd_notes"    :   {
-        "platform"  :   [],
-        "database"  :   []
-    },
-    "api"           : [],
-    "technologies"  : [],
-    "features"      : [],
-    "github"        : "",
-    "img"           : "",
-    "media_description": "",
-    "style"         : 1
+    "id"                    : "",
+    "title"                 : "",
+    "summary"               : "",
+    "platform"              : "",
+    "description"           : "",
+    "nerd_notes"            :   {
+        "platform"          :   [],
+        "database"          :   []
+    },      
+    "api"                   : [],
+    "technologies"          : [],
+    "features"              : [],
+    "website"   : "",
+    "website_description"   : "Click here to checkout the website live.",
+    "github"                : "",
+    "website_description"   : "Click here to checkout the website live.",
+    "img"                   : "",
+    "media_description"     : "",
+    "style"                 : 1
 }

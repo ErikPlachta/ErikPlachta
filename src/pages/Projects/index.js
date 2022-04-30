@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-
-// import { object } from 'prop-types'
-// import restfulApiConcept from '../../../assets/img/restful-api-social-network-concept.png'
+import { capitalizeFirstLetter } from '../../utils/helpers';
+const projectData = require('../../assets/json/projects.json');
 
 export default function Projects({ uuidv4 }) {
+
+  const [myProjects, setMyProjects] = useState(projectData);
 
   // const [ Projects, setProjects ] = useState([
   const [ Projects ] = useState([
@@ -552,76 +553,81 @@ export default function Projects({ uuidv4 }) {
     }
   ])
 
-  //-- BUILDING THE CONTENT
+
   return (
     <article className='container'>
-      <section>
-        <h2 className="article-header">Development Projects</h2>
-      </section>
-      
-      <section className="article-content-container">
-        <section className="article-content">
-          <h3 className="article-content-title">
-            Below I've included six my favorite development projects.
-          </h3>
-          <p className="article-content-indent">
-            For each project, I included a short summary, highlighted the 
-            key technical framework used, and included links.
-          </p>
-          <p>
-            First on the list is <a href='#image-manager'><b>Image Manager</b>
-            ( <em>a full-stack windows app</em> )</a> and  <a href="#posnation-support">
-            <b>posnation.support</b> <em>( a full-stack web app )</em></a>.
-          </p>
-          <p className="article-content-indent">
-            Both of these application have an active customer base with thousands
-            of active users.
-          </p>
-          <p>
-            The remaining four are proof-of-concept Apps that I've built
-            while learning new concepts or sharpening my skills.
-          </p>
-          <p className="article-content-indent">
-            Each one represents a unique aspect of my full stack web development
-            experience.
-          </p>
-        </section>
-      </section>
+      <h2>Testing</h2>
 
-      <section className="article-content-container" id='projects-container'>
-        { Projects.map( project => (
-          // {number}
-          <article
-            id={project.id}
-            key={uuidv4()}
-            className={`projects-project ${( project.style === 1 && 'flex_100' ) || 'flex_50'}`}
-            // id={project.title}
+      {Object.keys(myProjects).map((project, index) => (
+
+        <article
+          id={project}
+          key={uuidv4()}
+          className={`projects-project ${( myProjects[project].style === 1 && 'flex_100' ) || 'flex_50'}`}
+          // id={project.title}
           >
-            {/* title */}
-            <div className="projects-head">
-              <h3 className='projects-title'>{project.title}</h3>
-              {project.summary ? <div className="projects-summary">{project.summary}</div> : null}
-            </div>
-            {/* About */}
-            <div className="project-about article-content-indent">
-              <h4 className='project-h4'>About</h4>
-              {project.description}
-            </div>
-            {/* Nerd Notes */}
-            <div className='nerd-notes article-content-indent-list'>
+          {/* title */}
+          <div className="projects-head">
+            <h3 className='projects-title'>{myProjects[project].title}</h3>
+            {myProjects[project].summary ? <div className="projects-summary">{myProjects[project].summary}</div> : null}
+          </div>
+          {/* About */}
+          <div className="project-about article-content-indent">
+            <h4 className='project-h4'>About</h4>
+            {myProjects[project].description}
+          </div>
+          {/* Nerd Notes */}
+          <div className='nerd-notes article-content-indent-list'>
             <h4 className='project-h4'>Framework</h4>
-              {project.nerd_notes}
-            </div>
             
-            
-            {project.media_description ? <div className='article-content media_description'>{project.media_description}</div> : null}
-            {project.img ? <img src={project.img} alt={project.title}></img> : <span><a href={project.url} target="_blank" rel="noreferrer">{project.url_description}</a></span>}
-            {project.iframe ? project.iframe : null }
+            {/* itterate through sub values  */}
+            {Object.keys(myProjects[project].nerd_notes).map((group, index) => ( 
+              <span>
+                {/* sections within nerd_notes */}
+                <h5>{capitalizeFirstLetter(group)}</h5>
+                {/* get values within each section within nerd_notes */}
+                <ul className="project-framework">  
+                  {Object.keys(myProjects[project].nerd_notes[group]).map((values, index) => ( 
+                    <li>
+                      {myProjects[project].nerd_notes[group][values]}
+                    </li>
+                  ))}
+                </ul>
+              </span>
+            ))}
+
+            {/* <p>
+              <b>Platform</b>: {myProjects[project].nerd_notes.platform}
+            </p>
+            <p>
+              <b>Database</b>: {
+              myProjects[project].nerd_notes.database
+              }
+            </p> */}
+          </div>
+
+          { myProjects[project].media_description 
+            ? <div className='article-content media_description'>
+                <a className="project-website" href={myProjects[project].website} target='_blank' rel='noreferrer'>
+                  {myProjects[project].media_description}
+                </a>
+              </div> 
+            : null
+          }
+          {
+           myProjects[project].img 
+            ? <img src={myProjects[project].img} alt={myProjects[project].title}></img>
+            : <span>
+                <a href={myProjects[project].website} target="_blank" rel="noreferrer">
+                  {myProjects[project].website_description}
+                </a>
+              </span>
+          }
+          {/* {project.iframe ? project.iframe : null } */}
 
 
-          </article>
-        ))}
-      </section>
+        </article>
+      ))}
     </article>
   )
-}
+};

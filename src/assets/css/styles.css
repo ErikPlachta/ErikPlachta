@@ -135,11 +135,17 @@ h1,h2,h3,h4,h5 {
     --fs_h4: 1.8rem;
 
     --fw_h5: 800;
-    --fs_h5: 1.5rem;
+    --fs_h5: 1rem;
     
     /* remove all defaults */
     padding: 0;
     margin: 0;
+}
+
+h5 {
+    padding-top: .25rem;
+    font-weight: var(--fw_h5);
+    font-size: var(--fs_h5);
 }
 
 code {
@@ -439,6 +445,11 @@ section {
     margin: 1rem;
 }
 
+.project-framework {
+    padding: 0;
+    margin: 0;
+}
+
 .projects-project div.nerd-notes {
     flex: 30%;
     float: right;
@@ -446,6 +457,16 @@ section {
     height: inherit;
     margin: 0;
 }
+
+.project-website{
+    transition: ease-in-out 200ms;
+    text-decoration: underline;
+}
+.project-website:hover {
+    font-size: 1.01rem;
+    font-weight: bold;
+}
+
 .about-div {
     display: inline-block;
 }
