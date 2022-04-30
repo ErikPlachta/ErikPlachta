@@ -17,15 +17,17 @@ export default function Navigation({ location, setLocation, locations, setLocati
   //----------------------------------------------------------------------------
   //-- Update DOM title and set location based on requested Route
   useEffect(() => {
-      document.title = `${capitalizeFirstLetter(location)} - Erik Plachta`;
       
       //-- if the requested Route is an existing location, update nav accordingly
       if(locations[currentLocation]){
         setLocation(currentLocation)
+        document.title = `${capitalizeFirstLetter(location)} - Erik Plachta`;
       }
       //-- Otherwise set to default location for nav awareness
       else {
-        setLocation(location); 
+        //   setLocation(location); 
+        document.title = `404 - Erik Plachta`;
+        setLocation("")
       }
     },
     []

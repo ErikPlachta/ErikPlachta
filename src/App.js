@@ -14,6 +14,7 @@ import About from './pages/About';
 import Resume from './pages/Resume';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import PageNotFound from './pages/PageNotFound';
 
 
 //------------------------------------------------------------------------------
@@ -52,7 +53,8 @@ export default function App({ uuidv4 }) {
             <Route exact path="/resume" element={locations['resume'].jsx}/>
             <Route exact path="/projects" element={locations['projects'].jsx}/>
             <Route exact path="/contact" element={locations['contact'].jsx}/>            
-            <Route exact path="/*" element={locations['about'].jsx}/> {/* All typos or non-existing paths to go to default page */}
+            <Route path='/404' element={<PageNotFound />}/>
+            <Route exact path="*" element={<PageNotFound />}/>
           </Routes>
         </main>
         <Footer key={uuidv4()} uuidv4={uuidv4}></Footer>
