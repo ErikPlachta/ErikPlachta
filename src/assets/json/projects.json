@@ -3,7 +3,7 @@
                         "title"         : "Image Manager",
                         "summary"       : "Remotely Automate IT Related Services",
                         "platform"      : "Windows",
-                        "description"   : "Image Manager is a Windows App that automates IT services. It's a headless executable that identifies and then resolves issues specific to my primary customer's needs. As issues are resolved, it logs the results to a cloud database.\n\nThis project initially started out as me wanting to learn Python and strengthen my development skills.\n\nSeveral years after it's release, it's become an integral tool used by my team at https://www.posnation.com . \n\nIt has an active user base of over 3,600 clients, and automates 40+ hours of IT related services every week.",
+                        "description"   : "Image Manager is a Windows App that automates IT services. It's a headless executable that identifies and then resolves issues specific to my primary customer's needs. As issues are resolved, it logs the results to a cloud database.\n\nThis project initially started out as me wanting to learn Python and strengthen my development skills.\n\nSeveral years after it's release, it's become an integral tool used by my team at https://www.posnation.com. \n\nIt has an active user base of over 3,600 clients, and automates 40+ hours of IT related services every week.",
                         "nerd_notes"    : {
                                             "platform"  : ["Windows"],
                                             "database"  : ["Google Cloud Platform", "WindowsRegistry", "JSON", "TXT"]
