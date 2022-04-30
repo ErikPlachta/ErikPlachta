@@ -37,7 +37,7 @@ export default function App({ uuidv4 }) {
   //-- Return Function
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Header
           key={uuidv4()}
           uuidv4={uuidv4}
