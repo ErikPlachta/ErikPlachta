@@ -431,9 +431,11 @@ section {
     text-align: center;
 }
 
+/* Left column which is About */
 .projects-project div.project-about{
     height: inherit;
-    line-height: 1.4;
+    line-height: 2;
+    letter-spacing: 2px;
     /* font-size: 1.2rem; */
     flex: 40%;
     margin: 0;
@@ -450,8 +452,10 @@ section {
     margin: 0;
 }
 
+/* right column which is Framework */
 .projects-project div.nerd-notes {
-    flex: 30%;
+    
+    flex: 40%;
     float: right;
     /* padding: 0; */
     height: inherit;
