@@ -98,144 +98,50 @@
         "img"                   : "https://raw.githubusercontent.com/ErikPlachta/pwa-personal-budget/main/demo.gif",
         "media_description"     : "Below is a giphy showing basic user functionality. If you want to learn more,  check out <a href='https://github.com/ErikPlachta/pwa-personal-budget' target='_blank' rel='noreferrer'>the GitHub Repo for this app</a>. If you want to <a href='https://erikplachta-budget-pwa.herokuapp.com' target='_blank' rel='noreferrer'>see the app live, you can see it here</a>.",
         "style"                 : 1
+    },
+    {
+        "id"                    : "daily-scheduler",
+        "title"                 : "Daily Scheduler",
+        "summary"               : "Local Storage",
+        "platform"              : "Web App",
+        "description"           : "A concept app built to demonstrate the power and flexibility of the Web Storage API framework. Users have full CRUD functionality.",
+        "nerd_notes"            :   {
+            "platform"          :   ["GitHub Pages"],
+            "database"          :   ["Browser Local Storage"]
+        },
+        "api"                   : ["Moment.js","Web Storage"],
+        "technologies"          : ["HTML","CSS","JS"],
+        "features"              : ["Local Storage Caching", "Date-Time Awareness", "Modal Managing CRUD"],
+        "website"               : "https://erikplachta.github.io/a_Daily_Scheduler_WebApp/",
+        "website_description"   : "Click here to checkout the website live.",
+        "github"                : "https://github.com/ErikPlachta/a_Daily_Scheduler_WebApp",
+        "img"                   : "https://raw.githubusercontent.com/ErikPlachta/a_Daily_Scheduler_WebApp/main/assets/images/demo.gif",
+        "media_description"     : "Below is a gif demonstrating the app in action. If you want to <a 
+        href='https://github.com/ErikPlachta/a_Daily_Scheduler_WebApp'
+        target='_blank' rel='noreferrer'>learn more about this project,
+        check out the GitHub Repo here</a>. If you want to <a
+        href='https://erikplachta.github.io/a_Daily_Scheduler_WebApp/'
+        target='_blank' rel='noreferrer'>see it live, check it out here</a>.",
+        "style"                 : 1
+    },
+    {
+        "id"                    : "",
+        "title"                 : "",
+        "summary"               : "",
+        "platform"              : "",
+        "description"           : "",
+        "nerd_notes"            :   {
+            "platform"          :   [],
+            "database"          :   []
+        },
+        "api"                   : [],
+        "technologies"          : [],
+        "features"              : [],
+        "website"               : "",
+        "website_description"   : "Click here to checkout the website live.",
+        "github"                : "",
+        "img"                   : "",
+        "media_description"     : "",
+        "style"                 : 1
     }
-  }
-
-  //-- a Daily Scheudler
-  {
-    title: "A Daily Scheduler",
-    summary:
-      <span>
-          <hr />
-          <b>Web API Local Storage</b>
-          <br />
-          Web App - Hosted on GitHub Pages
-          <hr />
-        <p>
-        </p>
-      </span>
-    ,
-    description: 
-      <span>
-        <p>
-          A concept app built to demonstrate the power and flexibility of the
-          Web Storage API framework. Users have full CRUD functionality.
-        </p>
-      </span>
-    ,
-    nerd_notes:  
-      <ul>
-        <li><b>Platform</b>
-          <ul>
-            <li>GitHub Pages</li>
-          </ul>
-        </li>
-        <li><b>Database</b>
-          <ul>
-            <li>Browser Local Storage</li>
-          </ul> 
-        </li>
-        <li><b>API</b>
-          <ul>
-            <li>Moment.js</li>
-            <li>Web Storage API</li>
-          </ul>
-        </li>
-        <li><b>Framework</b>
-          <ul>
-            <li>HTML/CSS/JS</li>
-          </ul>
-        </li>
-        <li><b>Key Features</b>
-          <ul>
-            <li>Data cached in local storage</li>
-          </ul>
-        </li>
-      </ul>
-    ,
-    website_description: "Click here to checkout GitHub!",
-    url: "https://github.com/ErikPlachta/a_Daily_Scheduler_WebApp",
-    media_description: 
-      <span>
-        <p>
-          Below is a giphy demonstrating the app in action. If you want to <a 
-          href="https://github.com/ErikPlachta/a_Daily_Scheduler_WebApp"
-          target="_blank" rel="noreferrer">learn more about this project,
-          check out the GitHub Repo here</a>. If you want to <a
-          href="https://erikplachta.github.io/a_Daily_Scheduler_WebApp/"
-          target="_blank" rel="noreferrer">see it live, check it out here</a>.
-        </p>
-      </span>
-    ,
-    img: "https://raw.githubusercontent.com/ErikPlachta/a_Daily_Scheduler_WebApp/main/assets/images/demo.gif",
-    style: 1,
-  },
-  //-- node-express-notes-app
-  {
-    title: "Note Taking Concept App",
-    summary:
-      <span>
-        <p>
-          <hr />
-          <b>Node/Express Web App with JSON Database</b>
-          <br />
-          Web App - Hosted on Heroku
-          <hr />
-        </p>
-      </span>
-    ,
-    description: 
-      <span>
-        <p>
-          This is a Note Taking concept web APP built on Node with Express to
-          manage API calls to a JSON database. It was built to demonstrate how
-          Express.js can be used as an API gateway to a JSON database all 
-          hosted on a Heroku server.
-        </p>
-      </span>
-    ,
-    nerd_notes:  
-      <ul>
-        <li><b>Platform</b>
-          <ul>
-            <li>Heroku</li>
-          </ul>
-        </li>
-        <li><b>Database</b>
-          <ul>
-            <li>JSON</li>
-          </ul> 
-        </li>
-        <li><b>Framework</b>
-          <ul>
-            <li>Node/Experss</li>
-            <li>Heroku</li>
-            <li>JSON</li>
-            <li>HTML/CSS/JS</li>
-          </ul>
-        </li>
-        <li><b>Key Features</b>
-          <ul>
-            <li>Express server talking to JSON database on Heroku</li>
-          </ul>
-        </li>
-      </ul>
-    ,
-    website_description: "Click here to checkout GitHub!",
-    url: "https://github.com/ErikPlachta/node-express-notes-app",
-    media_description:
-      <span>
-        <p>
-          In the giphy below I am demonstrating creating, and deleting a note.
-          If you want to <a href="https://github.com/ErikPlachta/node-express-notes-app"
-          target="_blank" rel="noreferrer"> learn more about this project, you
-          can check out the GitHub repo here</a>. If you want to <a
-          href="https://fast-peak-76189.herokuapp.com/" target="_blank"
-          rel="noreferrer">see it live, you can see it here on Heroku</a>.
-        </p>
-      </span>
-    ,
-    img: "https://raw.githubusercontent.com/ErikPlachta/node-express-notes-app/main/public/assets/images/demo-full.gif",
-    style: 1,
-  }
 ]
