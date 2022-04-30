@@ -118,10 +118,28 @@ export default function Resume({ uuid }) {
           {/* Software Engineer */}
           <p className="article-content-indent">
             <b>As a software engineer</b>, I use my experience and knowledge to
-            build and manage software solutions that resolve IT related issues
-            <u>proactively</u>, <u>automatically</u>, and <u>remotely</u>.
+            build and manage software solutions that resolve IT related issues <u>
+              proactively</u>, <u>automatically</u>, and <u>remotely</u>.
           </p>
-        </div>
+          < hr/>
+          <p className='article-content-indent'>
+            <b>Soft Skills:</b>
+            <br />
+            Communication, empathy, self-awareness, problem-solving, patience,
+            dedication, focus, passionate, flexible, organized, time management,
+            teachable, driven, leadership.
+          </p>
+          
+          <p className='article-content-indent'>
+            <b>Hard Skills:</b>
+            <br />
+            IT automation, IT & Networking, Customer Service, Software &
+            Hardware Support, MSP Strategy, Documentation, Project Management,
+            DevOps, Full-stack Development, Python, PowerShell, JavaScript,
+            HTML, CSS, SQL, MySQL, MongoDB, AWS, GCP, Heroku, and GitHub.
+          </p>
+
+            </div>
       </section>
 
         <section className="article-content">

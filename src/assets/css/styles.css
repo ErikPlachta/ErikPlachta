@@ -154,11 +154,14 @@ a {
     color: var(--body_fc_dark);
 }
 
+input[type='button']
 button {
          
     /* Buttons */
     --btn_tc_inactive: var(--c_05); /* button inactive text color */
     --btn_tc_active: var(--c_04); /* button active text color for hover and click */
+
+    --btn_bg_dark: var(--title_bg_dark);
 
 }
 
@@ -442,6 +445,26 @@ section {
     /* padding: 0; */
     height: inherit;
     margin: 0;
+}
+.about-div {
+    display: inline-block;
+}
+
+.about-button{
+    /* width: fit-content; */
+    background: var(--title_bg_dark);
+    color: var(--title_fc_light);
+    padding: .5rem;
+    margin-top: 1rem;
+    float: right;
+    border-radius: var(--br_25);
+    cursor: pointer;
+    transition: ease-in-out 200ms;
+}
+
+.about-button:hover {
+    background: var(--title_bg_dark);
+    color: var(--accent_p);
 }
 
 

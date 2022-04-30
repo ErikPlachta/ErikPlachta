@@ -27,7 +27,7 @@ export default function PageNotFound({setLocation}) {
           <p>
           
           <Link to='/'>
-            <span className="form-element"> 
+            
               <input 
                 type="submit"
                 className="button"
@@ -35,7 +35,7 @@ export default function PageNotFound({setLocation}) {
                 value="Take Me Home"
                 onClick={ navigateHome }
                 />
-            </span>
+            
           </Link>
           </p>
         </div>

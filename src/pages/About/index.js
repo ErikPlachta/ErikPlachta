@@ -1,6 +1,17 @@
 import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-export default function AboutMe({ uuidv4 }) {
+
+export default function AboutMe({ uuidv4, setLocation }) {
+  let navigate = useNavigate(); //-- used for navigational buttons
+  
+  const navigateButon = (event) => {
+    event.preventDefault();
+    document.title = `${event.target.id} - Erik Plachta`; 
+    setLocation(event.target.id); //-- for navigation
+    navigate(`/${event.target.id}`, {replace: true}) //-- change route
+  }
+
   return (
     <article className='container'>
       {/* header banner */}
@@ -26,25 +37,39 @@ export default function AboutMe({ uuidv4 }) {
             </div>
             <hr />
           {/* PERSONALLY */}
-            <div>
+            <div className='about-div'>
               <b>Outside of work</b>, I spend a lot of time with family. As far as 
               hobbies go, I enjoy being challenged so I'd say my hobby is learning.
               Technology, Software development, personal knowledge management, and
               stoicism are my go-tos over the past few years.
               
-              {/* TODO:: 04/29/22 #EP || Add Learn More Button */}
-              {/* <p className="article-content-indent">
-                Check out my Projects to learn more about what I'm working on!
-              </p> */}
+              {/* <p className="article-content-indent"> */}
+                <input 
+                  type="button"
+                  className="about-button"
+                  id="projects"
+                  value='Projects'
+                  onClick={navigateButon}
+                  >
+                </input>
+              {/* </p> */}
             </div>
             <hr />
           {/* PROFESSIONALLY */}
-            <div>
+          <div className="about-div">
               <b>My professional experience is in the IT field.</b> I'm a Technical Support
               Director and Software Engineer at a software development company.
+              <input 
+                type="button"
+                className="about-button"
+                id="resume"
+                value='Resume'
+                onClick={navigateButon}
+                >
+              </input>
             </div>
             <hr />
-            <div>
+            {/* <div className="about-div">
               <p className='article-content-indent'>
                 <b>Soft Skills:</b>
                 <br />
@@ -61,11 +86,8 @@ export default function AboutMe({ uuidv4 }) {
                 DevOps, Full-stack Development, Python, PowerShell, JavaScript,
                 HTML, CSS, SQL, MySQL, MongoDB, AWS, GCP, Heroku, and GitHub.
               </p>
-            </div>
-            {/* TODO:: 04/29/22 #EP || Add Learn More Button */}
-            {/* <span className="article-content-indent">
-              Check out my Resume to learn more about my professional experience.
-            </span> */}
+
+            </div> */}
           </section>
         {/* SIGNATURE LINE */}
           <p className="signature">

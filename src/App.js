@@ -23,15 +23,15 @@ export default function App({ uuidv4 }) {
     
   //----------------------------------------------------------------------------
   //-- STATES
+  const [ location, setLocation ] = useState( 'about' ); //-- setting default location to About. Used by Nav for location awareness
   
   const [locations, setLocations] = useState({ //-- Components within the main element. State is managed by Navigation and Routing.
-    'about':    { name:'about',     subComponent:{About},    key:uuidv4(), jsx: <About    uuidv4={uuidv4}>  </About>    },
-    'resume':   { name:'resume',    subComponent:{Resume},   key:uuidv4(), jsx: <Resume   uuidv4={uuidv4}>  </Resume>   },
-    'projects': { name:'projects',  subComponent:{Projects}, key:uuidv4(), jsx: <Projects uuidv4={uuidv4}>  </Projects> },
-    'contact':  { name:'contact',   subComponent:{Contact},  key:uuidv4(), jsx: <Contact  uuidv4={uuidv4}>  </Contact>  },
+    'about':    { name:'about',     subComponent:{About},    key:uuidv4(), jsx: <About    uuidv4={uuidv4} location={location} setLocation={setLocation} >  </About>    },
+    'resume':   { name:'resume',    subComponent:{Resume},   key:uuidv4(), jsx: <Resume   uuidv4={uuidv4} >  </Resume>   },
+    'projects': { name:'projects',  subComponent:{Projects}, key:uuidv4(), jsx: <Projects uuidv4={uuidv4} >  </Projects> },
+    'contact':  { name:'contact',   subComponent:{Contact},  key:uuidv4(), jsx: <Contact  uuidv4={uuidv4} >  </Contact>  },
   });
 
-  const [ location, setLocation ] = useState( 'about' ); //-- setting default location to About. Used by Nav for location awareness
 
   //----------------------------------------------------------------------------
   //-- Return Function
@@ -46,7 +46,7 @@ export default function App({ uuidv4 }) {
         <main>
           <Routes>
             <Route exact path="/" element={locations['about'].jsx}/>
-            <Route exact path="/about" element={locations['about'].jsx}/>
+            <Route exact path="/about" element={locations['about'].jsx} />
             <Route exact path="/resume" element={locations['resume'].jsx}/>
             <Route exact path="/projects" element={locations['projects'].jsx}/>
             <Route exact path="/contact" element={locations['contact'].jsx}/>            
