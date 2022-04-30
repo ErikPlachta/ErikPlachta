@@ -149,10 +149,8 @@ code {
   
 a {
     --a-light: var(--body_fc_light);
-    /* --a-light-hover: var(--body_fc_dark); */
     --a-dark: var(--body_fc_dark);
-    /* --a-dark-hover: var(--body_fc_light); */
-    /* text-decoration: none; */
+    text-decoration: none;
     color: var(--body_fc_dark);
 }
 
@@ -225,12 +223,16 @@ nav {
     transition: ease-in-out 200ms;
 }
 
+nav a {
+    color: var(--nav-fc-light);
+}
+
 h1.title,
 .nav{
     /* color: var(--nav-fc-light); */
     color: var(--title_fc_light);
-    transition: ease-in-out 200ms;
     border-bottom: 3px solid transparent;
+    transition: ease-in-out 200ms;
 }
 
 h1.title:hover,
@@ -243,6 +245,7 @@ h1.title:hover,
     border-bottom: 3px solid var(--accent_p);
 }
 /* if the current location */
+.nav.nav-active a,
 .nav.nav-active{
     color: var(--nav-fc-active);
     border-bottom: 3px solid var(--nav-fc-light);
