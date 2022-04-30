@@ -1,5 +1,6 @@
 //-- Layer 2: ROOT ELEMENT MANAGING CONTENT AND UI
 import React, { useState } from 'react';
+import {  BrowserRouter, Route, Routes, useParams  } from 'react-router-dom';
 
 
 //-- Header component that contains nav sub-component
@@ -33,9 +34,15 @@ export default function App({ uuidv4 }) {
   const [ location, setLocation ] = useState( 'about' );
     
   //-- Returning all content
-  return ([  
-    <Header key={uuidv4()} uuidv4={uuidv4} locations={locations} setLocations={setLocations} location={location} setLocation={setLocation}></Header>,
-    <Main   key={uuidv4()} uuidv4={uuidv4} locations={locations} setLocations={setLocations} location={location} setLocation={setLocation}></Main>,
-    <Footer key={uuidv4()} uuidv4={uuidv4}></Footer>
-  ]);
+  return (
+    <section>
+      <BrowserRouter>
+        <Header key={uuidv4()} uuidv4={uuidv4} locations={locations} setLocations={setLocations} location={location} setLocation={setLocation}></Header>
+        <Routes>
+          <Route exact path="/" element={<Main key={uuidv4()} uuidv4={uuidv4} locations={locations} setLocations={setLocations} location={location} setLocation={setLocation} />} />
+        </Routes>
+        <Footer key={uuidv4()} uuidv4={uuidv4}></Footer>
+      </BrowserRouter>
+    </section>
+  );
 };

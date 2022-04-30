@@ -1,4 +1,4 @@
-{[
+[
     {
         "id"            : "image-manager",
         "title"         : "Image Manager",
@@ -12,67 +12,33 @@
         "api"           : ["Google Apps Scripts", "Network Profile", "Windows OS", "PowerShell", "SQL Server"],
         "technologies"  : ["Python", "JavaScript", "Google Apps Script"],
         "features"      : ["Automated IT Services", "Remote Management", "Cloud Logging"],
+        "website"       : "https://imagemanager.app",
         "github"        : "https://github.com/ErikPlachta/ImageManager",
         "img"           : "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/imagemanager.png",
         "media_description": "See the map below for a visualization of a part Image Manager's global footprint. For an interactive map, <a href='https://datastudio.google.com/embed/reporting/ec3bf210-888a-4bb2-a166-f40c152afd01/page/xYNXC' target='_blank' rel='noreferrer'> click on this link</a>.",
         "style": 1
     },
-  
-  {
-    id: 'posnation-support',
-    title: "posnation.support",
-    summary:
-      <span>
-        <p>
-          <hr />
-          <b>A Technical Support Engineer Resource</b>
-          <br />
-          PWA
-          <hr />
-        </p>
-      </span>
-    ,
+    {
+        "id"            : "posnation-support",
+        "title"         : "posnation.support",
+        "summary"       : "A Technical Support Tool",
+        "platform"      : "React PWA",
+        "description"   : "This primary goal of <a href='https://posnation.support'  target='_blank' rel='noreferrer'>posnation.support</a> is to centralize resources into an easy-to-access cloud location. I've also built in a few tools connected to services.\n\nThis is another App I've built for my team outside of work. <a href='https://posnation.support' target='_blank' rel='noreferrer'> This PWA</a> saves a lot of time, and provides a professional customer facing experience too. It's actively used daily to provide service to thousands of customers around the world.",
+        "nerd_notes"    :   {
+            "platform"  :   ["PWA", "GitHub", "Google Domain"],
+            "database"  :   ["AWS S3", "Local Storage"]
+        },
+        "api"           : ["AWS S3", "IPInfo", "POS-Link"],
+        "technologies"  : ["React","Full-Stack Web"],
+        "features"      : "",
+        "website"       : "https://posnation.support",
+        "github"        : "https://github.com/erikplachta/posnation.support",
+        "img"           : "",
+        "media_description": "",
+        "style"         : 1
+    },
     
-    description:
-      <span>
-        <p>
-          This primary goal of <a href="https://posnation.support" target="_blank"
-          rel="noreferrer">posnation.support</a> is to centralize resources into
-          an easy-to-access cloud location. I've also built in a few tools
-          connected to third-party APIs related to providing IT Support and 
-          services. 
-          <br />
-          <br />
-          This is another App with that I've built for my team in my time outside
-          of work. <a href="https://posnation.support" target="_blank"
-          rel="noreferrer"> The app</a> saves a lot of time, and provides a
-          professional customer facing experience too. It's actively used
-          daily to provide service to thousands of customers around the world.
-        </p>
-      </span>
-    ,
-    nerd_notes:  
-      <ul>
-        <li><b>Platform</b>
-          <ul>
-            <li>Website</li>
-            <li>PWA</li>
-          </ul>
-        </li>
-        <li><b>Database</b>
-          <ul>
-            <li>Web API Local Storage</li>
-            <li>AWS S3 Bucket</li>
-          </ul> 
-        </li>
-        <li><b>API</b>
-          <ul>
-            <li>AWS JS SDK</li>
-            <li>SQL Server</li>
-            <li>Network Profile</li>
-            <li>Serial Number Lookup</li>
-          </ul>
-        </li>
+        
         <li><b>Framework</b>
           <ul>
             <li>React</li>
@@ -479,4 +445,4 @@
     img: "https://raw.githubusercontent.com/ErikPlachta/node-express-notes-app/main/public/assets/images/demo-full.gif",
     style: 1,
   }
-]}
+]

@@ -1,0 +1,18 @@
+{
+    "id"            : "",
+    "title"         : "",
+    "summary"       : "",
+    "platform"      : "",
+    "description"   : "",
+    "nerd_notes"    :   {
+        "platform"  :   [],
+        "database"  :   []
+    },
+    "api"           : [],
+    "technologies"  : [],
+    "features"      : [],
+    "github"        : "",
+    "img"           : "",
+    "media_description": "",
+    "style"         : 1
+}
