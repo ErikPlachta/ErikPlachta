@@ -345,12 +345,17 @@ section {
     font-style: italic;
 }
 
-/* makes sure no extra lien below */
-#projects-header{
+/*------------------------------------------------------------------------------
+PROJECTS                                                                      */
+
+
+#projects-header
+{ /* makes sure no extra lien below */
     border-bottom: none;
 }
 
-#projects-title-summary {
+#projects-title-summary
+{
     font-size: 1.125rem;
     font-weight: 400;
     max-width: 75%;
@@ -359,15 +364,15 @@ section {
     padding-bottom: 1rem;
 }
 
-
-#projects-article {
+#projects-article 
+{
     margin: auto;
     width: 100%;
     padding: .2rem;
     text-align: justify;
 }
-
-#projects-container{
+#projects-container
+{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -378,7 +383,8 @@ section {
     border-radius: var(--br_05);
     border: var(--b_04);
 }
-.projects-project{
+.projects-project
+{
     z-index: 10;
     min-height: 400px;
     min-width: 300px;
@@ -395,67 +401,53 @@ section {
     flex-wrap: wrap;
     justify-content: space-between;
     grid-gap: 1rem;
-    /* filter:brightness(99%); */
-    /* margin: 0 1rem; */
-    
 }
-
-.projects-title {
-    
+.projects-title
+{
     text-align: center;
     font-size: var(--fs_h3);
     font-weight: var(--fw_h3);
     margin: 1rem 0 0;
 }
-
 .projects-summary span p,
-.projects-summary{
-    /* font-weight: bold; */
+.projects-summary
+{
     flex: 100%;
     text-align: center;
     width: 100%;
     font-size: 1.25rem;
     margin: .5rem 0;
 }
-
-.projects-project div {
+.projects-project div
+{
     margin: auto 0;
     padding: 0 1rem;
     flex: 40%;
     width: 100%;
-    /* justify-content: center; */
 }
-
-.projects-project div.projects-head{
+.projects-project div.projects-head
+{
     flex: 100%;
     text-align: center;
 }
 
-/* Left column which is About */
-.projects-project div.project-about{
+
+.projects-project div.project-about
+{ /* Left column IN EACH project which is the project description ( about section ) */
     height: inherit;
-    line-height: 1.6;
-    letter-spacing: 2px;
-    /* font-size: 1.2rem; */
+    line-height: 1.3;
+    letter-spacing: 1px;
     flex: 40%;
     margin: 0;
     text-align: justify;
     border-right: var(--b_04);
 }
-
-.project-about-description{
-    margin: 1rem;
-    
+.project-about-description
+{
+    margin: 1rem;    
 }
-
-.project-framework {
-    padding: 0;
-    margin: 0;
-}
-
-/* right column which is Framework */
-.projects-project div.nerd-notes {
-    
+.projects-project div.nerd-notes
+{ /* right column which is Framework */
     line-height: 1.6;
     letter-spacing: 2px;
     flex: 40%;
@@ -464,10 +456,15 @@ section {
     height: inherit;
     margin: 0;
 }
-
-/* .project-technology-group{
-    
-} */
+.project-technology-group
+{ /* Span holding each group within framework Title */
+    margin-left: 1rem;
+} 
+.project-framework
+{ /* UL within each project that contains Nerd Note Details */
+    padding: 0;
+    margin: 0;
+}
 
 .project-website{
     transition: ease-in-out 200ms;
@@ -479,6 +476,9 @@ section {
     /* font-weight: bold; */
     letter-spacing: 1.1px;
 }
+
+/*------------------------------------------------------------------------------
+ABOUT                                                                         */
 
 .about-div {
     display: inline-block;
