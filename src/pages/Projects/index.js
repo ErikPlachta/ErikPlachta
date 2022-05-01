@@ -21,33 +21,28 @@ export default function Projects({ uuidv4 }) {
   return (
     <article className='container'>
       <section>
-        <h2 className="article-header">Development Projects</h2>
+        <h2 className="article-header">Projects</h2>
       </section>
       
       <section className="article-content-container">
         <section className="article-content">
           <h3 className="article-content-title">
-            Below I've included six my favorite development projects.
+            This page is a collection of my favorite development projects
           </h3>
-          <p className="article-content-indent">
-            For each project, I included a short summary, highlighted the 
-            key technical framework used, and included links.
-          </p>
-          <p>
+          <br />
+          <p className="">
+          
             First on the list is <a href='#image-manager'><b>Image Manager</b>
             ( <em>a full-stack windows app</em> )</a> and  <a href="#posnation-support">
-            <b>posnation.support</b> <em>( a full-stack web app )</em></a>.
-          </p>
-          <p className="article-content-indent">
-            Both of these application have an active customer base with thousands
-            of active users.
+            <b>posnation.support</b> <em>( a full-stack web app )</em></a>. Both 
+            of these Apps are live and have an active customer base. Also 
+            important to note, all work on these apps was done outside of work
+            in my own free-time.
           </p>
           <p>
             The remaining four are proof-of-concept Apps that I've built
-            while learning new concepts or sharpening my skills.
-          </p>
-          <p className="article-content-indent">
-            Each one represents a unique aspect of my full stack web development
+            while learning new concepts or sharpening my skills. Each one
+            represents a unique aspect of my full stack web development
             experience.
           </p>
         </section>
