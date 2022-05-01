@@ -484,11 +484,13 @@ ABOUT                                                                         */
     display: inline-block;
 }
 
-.about-button{
+.about-button
+{ /* Buttons that navigates to other pages on About */
     /* width: fit-content; */
+    min-width: 10rem;
     background: var(--title_bg_dark);
     color: var(--title_fc_light);
-    padding: .5rem;
+    padding: 1rem .5rem;
     margin-top: 1rem;
     float: right;
     border-radius: var(--br_25);
@@ -496,36 +498,30 @@ ABOUT                                                                         */
     transition: ease-in-out 200ms;
 }
 
-.about-button:hover {
+.about-button:hover
+{ /* Buttons that navigates to other pages on About */
     background: var(--title_bg_dark);
     color: var(--accent_p);
 }
 
-
-/* Remove border inherited by indent */
 div.project-about,
-div.nerd-notes {
-    border-left: none;
-    
+div.nerd-notes
+{ /* Remove border inherited by article-content-indent but retain other styles */
+    border-left: none;   
 }
-/* h4.project-h4{
-    font-size: 2rem;
-} */
-
-.article-content.media-description{
+.article-content.media-description
+{ /* Summary above the Image/GIF within each project */
     font-weight: 500;
     text-align: center;
     margin: 0 10%;
 }
-
-.projects-project img{
-    /* max-width: 600px; */
+.projects-project img
+{ /* Image/GIF within each project */
     margin: 0 auto;
     border-radius: var(--br_05);
     max-width: 100%;
     object-fit: contain;
     object-position: center;
-    
     transition: ease-in-out 200ms;
     box-shadow: var(--bs_even_a01_hvy);
 }
