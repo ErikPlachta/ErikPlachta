@@ -1,96 +1,96 @@
 {
     "image-manager" : {
-                        "title"         : "Image Manager",
-                        "summary"       : "Remotely Automate IT Related Services",
-                        "platform"      : "Windows",
-                        "description"   : "Image Manager is a Windows App that automates IT services. It's a headless executable that identifies and then resolves issues specific to my primary customer's needs. As issues are resolved, it logs the results to a cloud database.\n\nThis project initially started out as me wanting to learn Python and strengthen my development skills.\n\nSeveral years after it's release, it's become an integral tool used by my team at https://www.posnation.com. \n\nIt has an active user base of over 3,600 clients, and automates 40+ hours of IT related services every week.",
-                        "nerd_notes"    : {
-                                            "platform"  : ["Windows"],
-                                            "database"  : ["Google Cloud Platform", "WindowsRegistry", "JSON", "TXT"],
-                                            "technologies"  : ["Python", "JavaScript", "GCP/Google Apps Script", "Windows OS", "PowerShell", "SQL", "IPInfo.io"]
-                                        },
-                        "features"      : ["Automated IT Services", "Remote Management", "Cloud Logging"],
-                        "website"       : "https://imagemanager.app",
-                        "website_description"   : "Click here to learn more about Image Manager.",
-                        "github"        : "https://github.com/ErikPlachta/ImageManager",
-                        "img"           : "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/imagemanager.png",
-                        "media_description": "Below is an image of Image Managers's global footprint. To learn more, click here!",
-                        "style": 1
+            "title"                 : "Image Manager",
+            "summary"               : "Remotely Automate IT Related Services",
+            "description"           : "Image Manager is a Windows App that automates IT services. It's a headless executable that identifies and then resolves issues specific to my primary customer's needs. As issues are resolved, it logs the results to a cloud database.\n\nThis project initially started out as me wanting to learn Python and strengthen my development skills.\n\nSeveral years after it's release, it's become an integral tool used by my team at https://www.posnation.com. \n\nIt has an active user base of over 3,600 clients, and automates 40+ hours of IT related services every week.",
+            "platform"              : "Windows",
+            "database"              : ["Google Cloud Platform", "WindowsRegistry", "JSON", "TXT"],
+            "features"              : ["Automated IT Services", "Remote Management", "Cloud Logging"],
+            "nerd_notes"            : {
+                    "platform"          : ["Windows"],
+                    "technologies"      : ["Python", "JavaScript", "GCP/Google Apps Script", "Windows OS", "PowerShell", "SQL", "IPInfo.io"]
+            },
+            "website"               : "https://imagemanager.app",
+            "website_description"   : "Click here to learn more about Image Manager.",
+            "github"                : "https://github.com/ErikPlachta/ImageManager",
+            "img"                   : "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/imagemanager.png",
+            "media_description"     : "Below is an image of Image Managers's global footprint. To learn more, click here!",
+            "style"                 : 1
     },
 
     "posnation-support" : {
-                        "title"                 : "posnation.support",
-                        "summary"               : "A Technical Support Tool",
-                        "platform"              : "Web / PWA / React SPA",
-                        "description"           : "The primary goal of this App, https://posnation.support, is to centralize tools and resources in the cloud. By connecting to the AWS S3 API to serve as a GUI to several AWS storage buckets, my team is able to easily access critical resources they need to do their jobs. \n\nThis is another App I've built for my team outside of work.",
-                        "nerd_notes"            :   {
-                            "platform"          :   ["PWA", "GitHub", "Google Domain"],
-                            "database"          :   ["AWS S3", "Local Storage"],
-                            "technologies"          : ["Express","Node","React", "AWS S3", "IPInfo.io", "POS-Link"]
-                        },
-                        "features"              : ["Public IP Discover", "AWS S3 Bucket"],
-                        "website"               : "https://posnation.support",
-                        "website_description"   : "Link to the Web App https://posnation.support",
-                        "github"                : "https://github.com/erikplachta/posnation.support",
-                        "img"                   : "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/posnation-support-example.gif",
-                        "media_description"     : "In the gif below, you can see the AWS S3 API returning dynamic results based on user request. To see it live, click here!",
-                        "style"                 : 1
+            "title"                 : "posnation.support",
+            "summary"               : "A Technical Support Tool",
+            "description"           : "The primary goal of this App, https://posnation.support, is to centralize tools and resources in the cloud. By connecting to the AWS S3 API to serve as a GUI to several AWS storage buckets, my team is able to easily access critical resources they need to do their jobs. \n\nThis is another App I've built for my team outside of work.",
+            "platform"              : "Web / PWA / React SPA",
+            "database"              : ["AWS S3", "Local Storage"],
+            "features"              : ["Public IP Discover", "AWS S3 Bucket"],
+            "nerd_notes"            :   {
+                    "platform"          : ["PWA", "GitHub", "Google Domain"],
+                    "technologies"      : ["Express","Node","React", "AWS S3", "IPInfo.io", "POS-Link"]
+            },
+            "website"               : "https://posnation.support",
+            "website_description"   : "Link to the Web App https://posnation.support",
+            "github"                : "https://github.com/erikplachta/posnation.support",
+            "img"                   : "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/main/assets/images/posnation-support-example.gif",
+            "media_description"     : "In the gif below, you can see the AWS S3 API returning dynamic results based on user request. To see it live, click here!",
+            "style"                 : 1
     },
 
     "calendari" : {
-                        "title"                 : "Calendari.app",
-                        "summary"               : "Schedule Management Concept App",
-                        "platform"              : "Web / PWA / React SPA",
-                        "description"           : "Calendari is an online scheduling concept app. Users can create accounts, define a unique URL, and provide that URL to their customers to allow them to schedule an appointment. I worked on this project with a group of friends to learn from one-another and solidify my MERN and GraphQL knowledge.",
-                        "nerd_notes"            :   {
-                            "platform"          :   ["Heroku", "GraphQL", "MongoDB Atlas", "Google Domain"],
-                            "database"          :   ["MongoDB Atlas(NoSQL)"],
-                            "technologies"          : ["MongoDB","Express.js","React","Node","Apollo/GraphQL"]
-                        },
-                        "features"              : ["User Accounts", "Online Scheduling", "PWA" ],
-                        "website"               : "https://www.calendari.day",
-                        "website_description"   : "Click here to checkout the website live.",
-                        "github"                : "https://github.com/erikplachta/calendari",
-                        "img"                   : "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/bf895d9ae85684e58bc1bdffd3161555115dcb04/assets/images/calendari.gif",
-                        "media_description"     : "Below is a gif of the landing page. Click here to see it live!",
-                        "style"                 : 1
-                    },
+            "title"                 : "Calendari.app",
+            "summary"               : "Schedule Management Concept App",
+            "description"           : "Calendari is an online scheduling concept app. Users can create accounts, define a unique URL, and provide that URL to their customers to allow them to schedule an appointment. I worked on this project with a group of friends to learn from one-another and solidify my MERN and GraphQL knowledge.",
+            "platform"              : "Web / PWA / React SPA",
+            "database"              : ["MongoDB Atlas(NoSQL)"],
+            "features"              : ["User Accounts", "Online Scheduling", "PWA" ],
+            "nerd_notes"            :   {
+                "platform"              : ["Heroku", "GraphQL", "MongoDB Atlas", "Google Domain"],
+                "technologies"          : ["MongoDB","Express.js","React","Node","Apollo/GraphQL"]
+            },
+            "website"               : "https://www.calendari.day",
+            "website_description"   : "Click here to checkout the website live.",
+            "github"                : "https://github.com/erikplachta/calendari",
+            "img"                   : "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/bf895d9ae85684e58bc1bdffd3161555115dcb04/assets/images/calendari.gif",
+            "media_description"     : "Below is a gif of the landing page. Click here to see it live!",
+            "style"                 : 1
+    },
 
     "my-budget" : {
-                        "title"                 : "My Budget",
-                        "summary"               : "Budget Concept PWA",
-                        "platform"              : "RESTful API / PWA / MongoDB",
-                        "description"           : "A Budget concept PWA built to demonstrate a seamless user experience via a Service Worker. Hosted on Heroku, running a Node/express.js server, no SQL Database with MongoDB.\n\n If the user attempts to interact with the database and they are offline, the Service Worker will intercept the request and record it to the browsers Cached Storage. When a network connection is restored, the database post will execute.",
-                        "nerd_notes"            :   {
-                            "platform"          :   ["Heroku","MongoDB","Express","Node"],
-                            "database"          :   ["MongoDB / MongoDB Atlas(NoSQL)"],
-                            "technologies"          : ["Heroku","MongoDB","Express","Node", "Moment.js"]
-                        },
-                        "features"              : ["Custom Built RESTful API", "PWA with Offline Functionality"],
-                        "website"               : "https://erikplachta-budget-pwa.herokuapp.com",
-                        "website_description"   : "Click here to checkout the website live.",
-                        "github"                : "https://github.com/ErikPlachta/pwa-personal-budget",
-                        "img"                   : "https://raw.githubusercontent.com/ErikPlachta/pwa-personal-budget/main/demo.gif",
-                        "media_description"     : "Below is a gif demonstrating the apps functionality. If you want to see it live, check it out here!",
-                        "style"                 : 1
-                    },
+            "title"                 : "My Budget",
+            "summary"               : "Budget Concept PWA",
+            "description"           : "A Budget concept PWA built to demonstrate a seamless user experience via a Service Worker. Hosted on Heroku, running a Node/express.js server, no SQL Database with MongoDB.\n\n If the user attempts to interact with the database and they are offline, the Service Worker will intercept the request and record it to the browsers Cached Storage. When a network connection is restored, the database post will execute.",
+            "platform"              : "RESTful API / PWA / MongoDB",
+            "database"              : ["MongoDB / MongoDB Atlas(NoSQL)"],
+            "features"              : ["Custom Built RESTful API", "PWA with Offline Functionality"],
+            "nerd_notes"            : {
+                "platform"              : ["Heroku","MongoDB","Express","Node"],
+                "technologies"          : ["Heroku","MongoDB","Express","Node", "Moment.js"]
+            },
+            "website"               : "https://erikplachta-budget-pwa.herokuapp.com",
+            "website_description"   : "Click here to checkout the website live.",
+            "github"                : "https://github.com/ErikPlachta/pwa-personal-budget",
+            "img"                   : "https://raw.githubusercontent.com/ErikPlachta/pwa-personal-budget/main/demo.gif",
+            "media_description"     : "Below is a gif demonstrating the apps functionality. If you want to see it live, check it out here!",
+            "style"                 : 1
+    },
                     
     "daily-scheduler" : {
-                        "title"                 : "Daily Scheduler",
-                        "summary"               : "An Hour-by-Hour Schedule Concept App",
-                        "platform"              : "Web App",
-                        "description"           : "A concept app built to demonstrate the power and flexibility of the Web Storage API framework. Users have full CRUD functionality, and are able to create appointments in hour increments.",
-                        "nerd_notes"            :   {
-                            "platform"          :   ["GitHub Pages"],
-                            "database"          :   ["Browser Local Storage"],
-                            "technologies"      : ["HTML","CSS","JS","Moment.js","Web Storage"]
-                        },
-                        "features"          : ["Local Storage Caching", "Date-Time Awareness", "Modal Managing CRUD"],
-                        "website"               : "https://erikplachta.github.io/a_Daily_Scheduler_WebApp/",
-                        "website_description"   : "Click here to checkout the website live.",
-                        "github"                : "https://github.com/ErikPlachta/a_Daily_Scheduler_WebApp",
-                        "img"                   : "https://raw.githubusercontent.com/ErikPlachta/a_Daily_Scheduler_WebApp/main/assets/images/demo.gif",
-                        "media_description"     : "Below is a gif demonstrating the app in action. To see it live, click here!",
-                        "style"                 : 1
+            "title"                 : "Daily Scheduler",
+            "summary"               : "An Hour-by-Hour Schedule Concept App",
+            "description"           : "A concept app built to demonstrate the power and flexibility of the Web Storage API framework. Users have full CRUD functionality, and are able to create appointments in hour increments.",
+            "platform"              : "Web App",
+            "database"              : ["Browser Local Storage"],
+            "features"              : ["Local Storage Caching", "Date-Time Awareness", "Modal Managing CRUD"],
+            "nerd_notes"            : {
+                "platform"              : ["GitHub Pages"],
+                "technologies"          : ["HTML","CSS","JS","Moment.js","Web Storage"]
+            },
+            "website"               : "https://erikplachta.github.io/a_Daily_Scheduler_WebApp/",
+            "website_description"   : "Click here to see Calendari live.",
+            "github"                : "https://github.com/ErikPlachta/a_Daily_Scheduler_WebApp",
+            "img"                   : "https://raw.githubusercontent.com/ErikPlachta/a_Daily_Scheduler_WebApp/main/assets/images/demo.gif",
+            "media_description"     : "Below is a gif demonstrating the app in action. To see it live, click here!",
+            "style"                 : 1
     }
 }

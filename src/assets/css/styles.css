@@ -1,14 +1,10 @@
 /* ROOT VARIBLE VALUES */
-:root {
-    /* 
-        Defining base theme and styling content here. 
-        - More explicit var names are within elements below. (See body for ex.) 
-    */
+:root 
+{ /*  Defining base theme and styling content here.  More explicit var names are within elements below. (See body for ex.) */
 
+    /* -------------------------------------------- */
+    /*              Color Theme                     */
 
-    /*
-                Color Theme
-    */
     --c_00: #000102; /* very dark-blue-black used for borders and fonts */
     --c_01: #0b132b;
     --c_02: #172a35; /* primary theming color */
@@ -18,19 +14,14 @@
     --c_05: #F9F9F9; /* body bg defalt and overall just faded */
     --c_06: #fefdff; /* section bg default and used for making content pop-out a bit more */
 
+    /* -------------------------------------------- */
+    /*                Alpha Colors                  */
 
-    /*
-                Alpha Colors 
-
-    /*
-                Alpha Colors 
-    */
     --a_01: rgba(0 0 0 /.25);
     --a_02: rgba(0 0 0 /.5);
 
-    /* 
-                Shadows & Box Shadows
-    */
+    /* -------------------------------------------- */
+    /*          Shadows & Box Shadows               */
 
     /* Shadows */
     --s_black_a25: 0 0 .5rem var(--a_01);
@@ -42,10 +33,9 @@
     --bs_even_a01_hvy: 0 0rem .5rem var(--a_01);
 
 
-    /* 
-                border and Border Radius
-    */
-
+    /* -------------------------------------------- */
+    /*          border and Border Radius            */
+    
     /* Borders */
     --b_01: 1px solid var(--c_00); /* default border and font color */ 
     --b_02: 1px solid var(--c_01); /* secondary for more obvious accents */
@@ -60,16 +50,19 @@
     --br_25: .25rem;
 }
 
-/* Keeps elements from overflowing containers */
-*, *::before, *::after {  
+/*------------------------------------------------------------------------------
+Universal Elements                                                            */
+
+*, *::before, *::after
+{ /* Keeps elements from overflowing containers */
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-html{
+html
+{
     scroll-behavior: smooth;
-
     /* Disabling user selection */
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -143,17 +136,18 @@ h1,h2,h3,h4,h5 {
 }
 
 h5 {
-    padding-top: .25rem;
     font-weight: var(--fw_h5);
     font-size: var(--fs_h5);
 }
 
-code {
+code 
+{
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
   
-a {
+a 
+{
     --a-light: var(--body_fc_light);
     --a-dark: var(--body_fc_dark);
     text-decoration: none;
@@ -161,7 +155,8 @@ a {
 }
 
 input[type='button']
-button {
+button
+{
          
     /* Buttons */
     --btn_tc_inactive: var(--c_05); /* button inactive text color */
@@ -171,10 +166,108 @@ button {
 
 }
 
-/*////////////////////////////////////////////////////////////////////////////*/
-/*
-    SPECIFIC ELEMENTS ( non-globals )
-*/
+
+main
+{ /* Element holding all pages in App.js */
+    margin: 115px auto 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+article,
+section 
+{ 
+    /* Backgrounds variables */
+    --section_bg: var(--c_06); /* Lighter color to make it pop-out a bit more  */
+}
+
+.container
+{ /* Based article class for all pages */
+    margin: auto;
+    padding: 1rem;
+    width: 100%;
+    border-radius: var(--br_05);
+    border: var(--b_04);
+    box-shadow: var(--bs_even_a01_lt);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    background-color: var(--section_bg);
+}
+
+.article-header
+{ /* Used by each Page for title header element */
+    border-bottom: var(--b_04);
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    font-size: var(--fs_h2);
+    font-weight: var(--fw_h2);
+}
+
+.article-content-container
+{ /* Section element holding all content inside page  */
+    border: var(--b_05);
+}
+
+/* .article-content{ 
+TODO:: 05/01/22 #EP || Commented out but keeping for future dev goals.
+    */
+    /* border-bottom: var(--b_04); */
+    /* margin: auto;
+    max-width: 100%; */
+    
+    /* text-align: center; */
+/* } */
+
+.article-content,
+.article-content-indent
+{
+    padding: 0 1rem;
+}
+
+.article-content-title
+{ /* Used as a sub-header / title for the specific content within div.article-content container */
+    font-weight: 500;
+}
+
+.article-content-indent,
+.article-content-indent-list
+{ /* Add-border so indent more prominent */
+    border-left: var(--b_04);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.article-content-indent-list ul
+{ /* Add padding on left-side of all lists */
+    padding: 0 0 0 2rem;
+}
+
+.article-content-indent h4,
+.article-content-indent-list h4
+{ /*  */
+    /* padding-left: 1rem; */
+    width: 100%;
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+    font-size: var(--fs_h4);
+    font-weight: var(--fw_h4);
+}
+
+.signature
+{ /* Bottom of About page */
+    width: 100%;
+    padding: 1rem 0;
+    font-style: italic;
+}
+
+/*------------------------------------------------------------------------------
+components/header & components/header/navigation                              */
 
 header {
     position: fixed;
@@ -190,38 +283,36 @@ header {
 }
 
 
-h1.title{
+h1.title
+{
+    display: flex;
+    justify-content: center;
     margin: auto;
     padding: 0 1rem;
-
     text-align: center;
-
-    display: flex;
-    /* justify-content: space-around; */
-    justify-content: center;
     align-items: center;
-
 
     font-size: var(--fs_h1);
     font-weight: var(--fw_h1);
     color: var(--title_fc_light);
 }
 
-img.title-img{
+img.title-img
+{
     max-width: 40px;
     max-height: 40px;
-    /* margin-top: .3rem; */
     margin-right: 1rem;
     /* TOOD:: 03/19/2022 #EP || Add an image shadow */
 }
 
-nav {
+nav 
+{
+    /* Variables */
     --nav-fc-light: var(--body_fc_light);
-    /* --a-light-hover: var(--body_fc_dark); */
     --nav-fc-dark: var(--body_fc_dark);
-    /* --a-dark-hover: var(--body_fc_light); */
     --nav-fc-active: var(--body_fc_light_active);
 
+    /* Styling */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -232,142 +323,43 @@ nav {
     transition: ease-in-out 200ms;
 }
 
-nav a {
+nav a
+{
     color: var(--nav-fc-light);
 }
 
 h1.title,
-.nav{
-    /* color: var(--nav-fc-light); */
+.nav
+{
     color: var(--title_fc_light);
     border-bottom: 3px solid transparent;
     transition: ease-in-out 200ms;
 }
 
 h1.title:hover,
-.nav:hover{
+.nav:hover
+{
     text-shadow: 0 0 0 var(--accent_p);
 }
 
-.nav:hover{
+.nav:hover
+{
     cursor: pointer;
     border-bottom: 3px solid var(--accent_p);
 }
-/* if the current location */
+
 .nav.nav-active a,
-.nav.nav-active{
+.nav.nav-active
+{ /* if the current location */
     color: var(--nav-fc-active);
     border-bottom: 3px solid var(--nav-fc-light);
 }
 
-main{
-    margin: 115px auto 50px;
-    /* margin-top: 115px; */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
+/*------------------------------------------------------------------------------
+PROJECTS                                                                      */
 
-article,
-section {
-    /* Backgrounds */
-    --section_bg: var(--c_06); /* Lighter color to make it pop-out a bit more  */
-}
-
-.container{
-    margin: auto;
-    padding: 1rem;
-    width: 100%;
-    border-radius: var(--br_05);
-    border: var(--b_04);
-    box-shadow: var(--bs_even_a01_lt);
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    background-color: var(--section_bg);
-}
-
-.article-header{
-    border-bottom: var(--b_04);
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-    font-size: var(--fs_h2);
-    font-weight: var(--fw_h2);
-}
-
-.article-content-container{
-    border: var(--b_05);
-}
-
-/* .article-content{ */
-    /* border-bottom: var(--b_04); */
-    /* margin: auto;
-    max-width: 100%; */
-    
-    /* text-align: center; */
-/* } */
-
-.article-content-title{
-    font-weight: 500;
-}
-
-.article-content-indent,
-.article-content-indent-list{
-    border-left: var(--b_04);
-    font-size: 1rem;
-    font-weight: 400;
-}
-
-.article-content,
-.article-content-indent{
-    padding: 0 1rem;
-    /* font-style: italic; */
-}
-
-.article-content-indent-list ul{
-    padding: 0 .9rem;
-}
-
-.article-content-indent h4,
-.article-content-indent-list h4{
-    padding-left: 1rem;
-    font-size: var(--fs_h4);
-    font-weight: var(--fw_h4);
-}
-
-.signature{
-    width: 100%;
-    padding: 1rem 0;
-    font-style: italic;
-}
-
-/* makes sure no extra lien below */
-#projects-header{
-    border-bottom: none;
-}
-
-#projects-title-summary {
-    font-size: 1.125rem;
-    font-weight: 400;
-    max-width: 75%;
-    margin: auto;
-    text-align: justify;
-    padding-bottom: 1rem;
-}
-
-
-#projects-article {
-    margin: auto;
-    width: 100%;
-    padding: .2rem;
-    text-align: justify;
-}
-
-#projects-container{
+#projects-container
+{ /* Section holding all projects */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -378,7 +370,9 @@ section {
     border-radius: var(--br_05);
     border: var(--b_04);
 }
-.projects-project{
+
+.projects-card
+{ /* Each individual project card */
     z-index: 10;
     min-height: 400px;
     min-width: 300px;
@@ -395,13 +389,10 @@ section {
     flex-wrap: wrap;
     justify-content: space-between;
     grid-gap: 1rem;
-    /* filter:brightness(99%); */
-    /* margin: 0 1rem; */
-    
 }
 
-.projects-title {
-    
+.projects-title
+{ /* Each Project Card's title value */
     text-align: center;
     font-size: var(--fs_h3);
     font-weight: var(--fw_h3);
@@ -409,8 +400,8 @@ section {
 }
 
 .projects-summary span p,
-.projects-summary{
-    /* font-weight: bold; */
+.projects-summary
+{
     flex: 100%;
     text-align: center;
     width: 100%;
@@ -418,44 +409,37 @@ section {
     margin: .5rem 0;
 }
 
-.projects-project div {
+.projects-card div
+{
     margin: auto 0;
     padding: 0 1rem;
     flex: 40%;
     width: 100%;
-    /* justify-content: center; */
 }
-
-.projects-project div.projects-head{
+.projects-card div.projects-head
+{ /* Contains the Project Title, Summary, and Expand button  */
     flex: 100%;
     text-align: center;
 }
 
-/* Left column which is About */
-.projects-project div.project-about{
+.projects-card div.project-about
+{ /* Left column IN EACH project which is the project description ( about section ) */
     height: inherit;
-    line-height: 1.6;
-    letter-spacing: 2px;
-    /* font-size: 1.2rem; */
+    line-height: 1.3;
+    letter-spacing: 1px;
     flex: 40%;
     margin: 0;
     text-align: justify;
     border-right: var(--b_04);
 }
 
-.project-about-description{
-    margin: 1rem;
-    
+.project-about-description
+{
+    margin: 1rem;    
 }
 
-.project-framework {
-    padding: 0;
-    margin: 0;
-}
-
-/* right column which is Framework */
-.projects-project div.nerd-notes {
-    
+.projects-card div.nerd-notes
+{ /* right column which is Framework */
     line-height: 1.6;
     letter-spacing: 2px;
     flex: 40%;
@@ -465,30 +449,55 @@ section {
     margin: 0;
 }
 
-/* .project-technology-group{
-    
-} */
+.project-technology-group
+{ /* Span holding each group within framework Title */
+    margin: 0;
+} 
+.project-framework
+{ /* UL within each project that contains Project Framework / Nerd Note Details. */
+    padding: 0;
+    margin: 0;
+}
 
-.project-website{
+.project-website
+{
     transition: ease-in-out 200ms;
     text-decoration: underline;
     letter-spacing: 1px;
 }
-.project-website:hover {
+
+.project-website:hover
+{
     font-size: 1.01rem;
-    /* font-weight: bold; */
     letter-spacing: 1.1px;
 }
 
+.project-expand {
+    /* width: 100%;
+    text-align: center;
+    float: 100%; */
+    display: none;
+}
+
+/* .project-about,
+.nerd-notes {
+    display: none;
+} */
+
+
+/*------------------------------------------------------------------------------
+ABOUT                                                                         */
 .about-div {
     display: inline-block;
 }
 
-.about-button{
+.about-button
+{ /* Buttons that navigates to other pages on About */
     /* width: fit-content; */
+    min-width: 10rem;
     background: var(--title_bg_dark);
     color: var(--title_fc_light);
-    padding: .5rem;
+    padding: 1rem .5rem;
     margin-top: 1rem;
     float: right;
     border-radius: var(--br_25);
@@ -496,68 +505,70 @@ section {
     transition: ease-in-out 200ms;
 }
 
-.about-button:hover {
+.about-button:hover
+{ /* Buttons that navigates to other pages on About */
     background: var(--title_bg_dark);
     color: var(--accent_p);
 }
 
-
-/* Remove border inherited by indent */
 div.project-about,
-div.nerd-notes {
-    border-left: none;
-    
+div.nerd-notes
+{ /* Remove border inherited by article-content-indent but retain other styles */
+    border-left: none;   
 }
-/* h4.project-h4{
-    font-size: 2rem;
-} */
 
-.article-content.media_description{
+.article-content.media-description
+{ /* Summary above the Image/GIF within each project */
     font-weight: 500;
     text-align: center;
     margin: 0 10%;
 }
 
-.projects-project img{
-    /* max-width: 600px; */
+.projects-card img
+{ /* Image/GIF within each project */
     margin: 0 auto;
     border-radius: var(--br_05);
     max-width: 100%;
     object-fit: contain;
     object-position: center;
-    
     transition: ease-in-out 200ms;
     box-shadow: var(--bs_even_a01_hvy);
 }
-
-.projects-project iframe{
+/* .projects-card iframe
+{ /* 05/01/22 #EP || Originally used in the Image Manager Card to show map. Commented out at this time * /
     border-radius: var(--br_05);
     width: 100%;
     flex: 100%;
     width: 100%;
-}
+} */
 
-.flex_100{
+.flex_100
+{ /* Used by project cards style value. */
     flex: 1 100%;
     max-width: 100%;
 }
 
-.flex_50{
+.flex_50
+{ /* Used by project cards style value. */
     flex: 100%;
     max-width: 100%;
 }
 
-.projects-project img:hover{
-    /* filter: contrast(105%); */
+.projects-card img:hover
+{
     box-shadow: var(--bs_even_a01_lt);
-    
 }
-.projects-project:hover{
+.projects-card:hover
+{ /* Minor responsiveness to UI Cards */
     box-shadow: var(--bs_even_a01_lt), var(--bs_even_a01_hvy);
     filter:brightness(100%);
 }
 
-footer {
+/*------------------------------------------------------------------------------
+components/footer                                                             */
+
+footer
+{
     z-index: 1000;
     position: fixed;
     bottom: 0;
@@ -567,34 +578,35 @@ footer {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    /* min-height: 4rem; */
     background-color: var(--title_bg_dark);
     color: var(--title_fc_light);
     transition: ease-in-out 200ms;
 }
-
-.footer-copyright{
+.footer-copyright
+{
     margin-bottom: .5rem;
 }
-
-.footer-social{
+.footer-social
+{ /* Social links */
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     gap: 2rem;
 }
-
-footer a{
+footer a
+{ /* Social links */
     color: var(--title_fc_light);
 }
 
-.contact-form{
+/*------------------------------------------------------------------------------
+pages/contact                                                                 */
+
+.contact-form
+{
     padding: 0 .5rem;
-    /* background: var(--body_bg); */
     border-radius: var(--br_25);
     border: var(--b_04);
-    /* box-shadow: inset var(--bs_even_a01_hvy); */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -603,8 +615,8 @@ footer a{
     grid-gap: 1rem;
     transition: ease-in-out 200ms;
 }
-
-.form-element{
+.form-element
+{
     flex: 100%;
     display: flex;
     flex-direction: column;
@@ -613,22 +625,20 @@ footer a{
     padding: .25rem 0;
     transition: ease-in-out 200ms;
 }
-
-
-#recaptcha * {
+#recaptcha *
+{ /* Making sure ALL elements within ReCAPTCHA are minified and centered */
     align-items: center;
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
 }
     
-
 select,
-option,
 .form-element textarea,
 .contact-form input, 
 .contact-form select,
-.contact-form input {
+.contact-form input 
+{ /* Contact Form element universal styling */
     text-align: center;
     font-size: 1rem;
     align-items: center;
@@ -639,69 +649,24 @@ option,
     transition: ease-in-out 200ms;
     border: var(--b_04);
 }
-
-select {
-    /* prevents a border */
-    padding: 0;
-    display: inline-block;
-    vertical-align: top;
-    overflow: hidden;
-}
-
-option{
-    /* center option into it's container */
-    padding: 2rem;
-}
-
-
-option:hover,
-.form-element textarea:hover,
-.form-element textarea:focus,
-.form-element textarea:not(:placeholder-shown),
-.contact-form select:focus,
-.contact-form select:not(:placeholder-shown),
-.contact-form input:focus,
-.contact-form input:not(:placeholder-shown),
-.contact-form input:hover{
-    background-color: var(--section_bg);
-    border: var(--b_03);
-    font-size: 1.1;
-    outline: none;
-}
-
-option:focus-visible,
-.form-element textarea:focus-visible,
-.contact-form select:focus-visible,
-.contact-form input:focus-visible {
-    border: var(--b_03_focus);
-}
-
-.contact-form label {
+.contact-form label
+{
     font-weight: 500;
     padding: .5rem 0 0 0;
 } 
-
-.form-element textarea {
-    padding: .5rem;
-    
+.form-element textarea
+{
+    padding: .5rem;    
 }
-
 input[type=select],
-.form-element textarea {
+.form-element textarea
+{
     width: 100%;
     border-radius: var(--br_25);
-    /* border: none; */
     box-shadow: inset 0 0 .1rem rgba(0,0,0,1);
 }
-
-option:focus,
-option:active,
-option:checked {
-    color: var(--accent_p);
-    background-color: var(--title_bg_dark) !important;
-}
-
-input[type=submit].button{
+input[type=submit].button
+{
     border-radius: var(--br_25);
     width: 100%;
     margin: 1rem 0 ;
@@ -712,91 +677,92 @@ input[type=submit].button{
     transition: ease-in-out 200ms;
     font-weight: 800;
 }
-
-input[type=submit]:hover{
+input[type=submit]:hover
+{
     color: var(--accent_p);
-    cursor: pointer;
-    
+    cursor: pointer;    
+}
+.form-element textarea:hover,
+.form-element textarea:focus,
+.form-element textarea:focus-visible,
+.form-element textarea:not(:placeholder-shown),
+.contact-form select:focus,
+.contact-form select:focus-visible,
+.contact-form select:not(:placeholder-shown),
+.contact-form input:focus,
+.contact-form input:focus-visible,
+.contact-form input:not(:placeholder-shown),
+.contact-form input:hover
+{ 
+    background-color: var(--section_bg);
+    border: var(--b_03);
+    font-size: 1.1;
+    outline: none;
 }
 
 
 
 /*////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////*/
 /* 
                               MEDIA TYPES
 */
+/*////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////*/
 
-
-/* 1200!!?! */
-@media (min-width: 1200px) {
-    /*  ensure content fits in middle of screen */
-    
-    header {    
+/*------------------------------------------------------------------------------
+1200                                                                          */
+@media (min-width: 1200px) 
+{ /*  Ensure content fits in middle of screen */
+    header
+    {    
         padding: 0 7vw;
         justify-content: space-around;
     }
-
-    header h1{
+    header h1
+    {
         max-width: 490px;
     }
-
-    nav {
+    nav
+    {
         max-width: 570px;
     }
 }
 
-/* 1000 !! */
-@media (min-width: 1000px) {
-
-    
-
-    /* h1.title img{
-        max-width: 50px;
-        max-height: 50px;
-        margin: 0 .5rem;
-    } */
-    
-
-    nav {
+/*------------------------------------------------------------------------------
+1000                                                                          */
+@media (min-width: 1000px) 
+{ /*  Ensure content fits in middle of screen and look clean */
+    nav
+    {
         height: 100%;
         flex: 50%;
     }
-
-    .article-content-container{
-        /* border-radius: var(--br_05); */
+    .article-content-container
+    {
         padding: 1rem 3em;
-        /* border: var(--b_05); */
-        /* margin: auto; */
     }
-    #projects-container{
+    #projects-container
+    { /* Adding spacing around for more dynamic viewing experience */
         background-color: var(--body_bg);
         padding: .25rem;
     }
-
-    #projects-article{
-        width: 100%;
-    }
-    
-    
 }
 
 
+/*------------------------------------------------------------------------------
+800                                                                           */
 @media (min-width: 800px){
-   
-    
-        
-    /* .projects-project div.nerd-notes{
-        padding: 0;
-    }
-    .projects-project div.project-about{
-        padding: 0 3rem;
-        margin-left: 4rem;
-    } */
 }
 
-/* 600 !! */
+
+/*------------------------------------------------------------------------------
+600                                                                           */
 @media (min-width: 600px) {
-    h1,h2,h3,h4,h5 {
+    /*--------------------------------------------------------------------------
+    root elements                                                             */
+    h1,h2,h3,h4,h5
+    { 
         /* Font Size & Weights */
         --fw_h1: 300;
         --fs_h1: 2rem;
@@ -804,27 +770,38 @@ input[type=submit]:hover{
         --fw_h2: 400;
         --fs_h2: 2.8rem;
     }
-    header {
+
+    /*--------------------------------------------------------------------------
+    components/header & components/header/navigation                          */
+    
+    header
+    { /* Update so more desktop friendly */
         flex-direction: row;
         justify-content: space-evenly;
     }
     header.h1, 
-    nav{
+    nav
+    { /* Update nav so more desktop friendly */
         justify-content: space-around;
     }
-    header.h1{
+    header.h1
+    { /* Take up less space */
         flex: 10%;
     }
-    nav {
+    nav
+    { /* Take up less space */
         flex: 20%;
     }
 
-
-    .title-img{
+    .title-img
+    { /* Remove padding around edges, add to top/bottom for cleaner feel */
         margin: .25rem 0;
     }
 
-    main{
+    /*--------------------------------------------------------------------------
+    App.js                                                                    */
+    main
+    {  /* Container holding  */
         margin: 100px 0;
     }
    
@@ -845,7 +822,7 @@ input[type=submit]:hover{
     }
     
     /* For when flex_50, side border in line with nerd notes side border */
-    .flex_50.projects-project div.project-about{
+    .flex_50.projects-card div.project-about{
         margin: 1rem;
         padding: 1rem;
         flex: 100%;
@@ -856,11 +833,12 @@ input[type=submit]:hover{
         
     }
 
-    .projects-project{
+    
+    .projects-card{
         grid-gap: 1rem;
     }
     
-    .projects-project iframe{
+    .projects-card iframe{
         min-height: 450px;
         min-width: 600px;
     }
@@ -870,6 +848,8 @@ input[type=submit]:hover{
         max-width: 50%;
     }
 
+    /*--------------------------------------------------------------------------
+    components/footer                                                         */
     footer{
         justify-content: space-evenly;
         flex-direction: row;
