@@ -434,7 +434,7 @@ section {
 /* Left column which is About */
 .projects-project div.project-about{
     height: inherit;
-    line-height: 2;
+    line-height: 1.6;
     letter-spacing: 2px;
     /* font-size: 1.2rem; */
     flex: 40%;
@@ -445,6 +445,7 @@ section {
 
 .project-about-description{
     margin: 1rem;
+    
 }
 
 .project-framework {
@@ -455,12 +456,18 @@ section {
 /* right column which is Framework */
 .projects-project div.nerd-notes {
     
+    line-height: 1.6;
+    letter-spacing: 2px;
     flex: 40%;
     float: right;
     /* padding: 0; */
     height: inherit;
     margin: 0;
 }
+
+/* .project-technology-group{
+    
+} */
 
 .project-website{
     transition: ease-in-out 200ms;
@@ -846,6 +853,7 @@ input[type=submit]:hover{
 
    .article-content-indent-list ul{
         /* padding: 0 1.0417rem; */
+        
     }
 
     .projects-project{

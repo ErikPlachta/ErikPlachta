@@ -7,9 +7,9 @@
                         "nerd_notes"    : {
                                             "platform"  : ["Windows"],
                                             "database"  : ["Google Cloud Platform", "WindowsRegistry", "JSON", "TXT"],
-                                            "technologies"  : ["Python", "JavaScript", "GCP/Google Apps Script", "Windows OS", "PowerShell", "SQL", "IPInfo.io"],
-                                            "features"      : ["Automated IT Services", "Remote Management", "Cloud Logging"]
-                        },
+                                            "technologies"  : ["Python", "JavaScript", "GCP/Google Apps Script", "Windows OS", "PowerShell", "SQL", "IPInfo.io"]
+                                        },
+                        "features"      : ["Automated IT Services", "Remote Management", "Cloud Logging"],
                         "website"       : "https://imagemanager.app",
                         "website_description"   : "Click here to learn more about Image Manager.",
                         "github"        : "https://github.com/ErikPlachta/ImageManager",
@@ -26,9 +26,9 @@
                         "nerd_notes"            :   {
                             "platform"          :   ["PWA", "GitHub", "Google Domain"],
                             "database"          :   ["AWS S3", "Local Storage"],
-                            "technologies"          : ["Express","Node","React", "AWS S3", "IPInfo.io", "POS-Link"],
-                            "features"              : ["Public IP Discover", "AWS S3 Bucket"]
+                            "technologies"          : ["Express","Node","React", "AWS S3", "IPInfo.io", "POS-Link"]
                         },
+                        "features"              : ["Public IP Discover", "AWS S3 Bucket"],
                         "website"               : "https://posnation.support",
                         "website_description"   : "Link to the Web App https://posnation.support",
                         "github"                : "https://github.com/erikplachta/posnation.support",
@@ -45,9 +45,9 @@
                         "nerd_notes"            :   {
                             "platform"          :   ["Heroku", "GraphQL", "MongoDB Atlas", "Google Domain"],
                             "database"          :   ["MongoDB Atlas(NoSQL)"],
-                            "technologies"          : ["MongoDB","Express.js","React","Node","Apollo/GraphQL"],
-                            "features"              : ["User Accounts", "Online Scheduling", "PWA" ]
+                            "technologies"          : ["MongoDB","Express.js","React","Node","Apollo/GraphQL"]
                         },
+                        "features"              : ["User Accounts", "Online Scheduling", "PWA" ],
                         "website"               : "https://www.calendari.day",
                         "website_description"   : "Click here to checkout the website live.",
                         "github"                : "https://github.com/erikplachta/calendari",
@@ -64,9 +64,9 @@
                         "nerd_notes"            :   {
                             "platform"          :   ["Heroku","MongoDB","Express","Node"],
                             "database"          :   ["MongoDB / MongoDB Atlas(NoSQL)"],
-                            "technologies"          : ["Heroku","MongoDB","Express","Node", "Moment.js"],
-                            "features"              : ["Custom Built RESTful API", "PWA with Offline Functionality"]
+                            "technologies"          : ["Heroku","MongoDB","Express","Node", "Moment.js"]
                         },
+                        "features"              : ["Custom Built RESTful API", "PWA with Offline Functionality"],
                         "website"               : "https://erikplachta-budget-pwa.herokuapp.com",
                         "website_description"   : "Click here to checkout the website live.",
                         "github"                : "https://github.com/ErikPlachta/pwa-personal-budget",
@@ -83,9 +83,9 @@
                         "nerd_notes"            :   {
                             "platform"          :   ["GitHub Pages"],
                             "database"          :   ["Browser Local Storage"],
-                            "technologies"      : ["HTML","CSS","JS","Moment.js","Web Storage"],
-                            "features"          : ["Local Storage Caching", "Date-Time Awareness", "Modal Managing CRUD"]
+                            "technologies"      : ["HTML","CSS","JS","Moment.js","Web Storage"]
                         },
+                        "features"          : ["Local Storage Caching", "Date-Time Awareness", "Modal Managing CRUD"],
                         "website"               : "https://erikplachta.github.io/a_Daily_Scheduler_WebApp/",
                         "website_description"   : "Click here to checkout the website live.",
                         "github"                : "https://github.com/ErikPlachta/a_Daily_Scheduler_WebApp",

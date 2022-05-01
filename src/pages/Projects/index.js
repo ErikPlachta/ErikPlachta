@@ -600,8 +600,11 @@ export default function Projects({ uuidv4 }) {
             >
             {/* title */}
             <div className="projects-head">
-              <h3 className='projects-title'>{myProjects[project].title}</h3>
-              {myProjects[project].summary ? <div className="projects-summary">{myProjects[project].summary}</div> : null}
+              <h3 key={uuidv4()} className='projects-title'>{myProjects[project].title}</h3>
+              {myProjects[project].summary 
+                ? <div key={uuidv4()} className="projects-summary">{myProjects[project].summary}</div> 
+                : null
+              }
             </div>
             {/* About */}
             <div className="project-about article-content-indent">
@@ -614,13 +617,15 @@ export default function Projects({ uuidv4 }) {
               
               {/* itterate through sub values  */}
               {Object.keys(myProjects[project].nerd_notes).map((group, index) => ( 
-                <span>
+                <span key={uuidv4()} className="project-technology-group">
+                  <h5 key={uuidv4()}>{capitalizeFirstLetter(group)}</h5>
                   {/* sections within nerd_notes */}
-                  <h5>{capitalizeFirstLetter(group)}</h5>
                   {/* get values within each section within nerd_notes */}
-                  <ul className="project-framework">  
+                  <ul key={uuidv4()} className="project-framework">  
                     {Object.keys(myProjects[project].nerd_notes[group]).map((values, index) => ( 
-                      <li>
+                      <li
+                        key={uuidv4()}
+                      >
                         {myProjects[project].nerd_notes[group][values]}
                       </li>
                     ))}
