@@ -113,8 +113,13 @@ export default function Projects({ uuidv4 }) {
             </div>
 
             { myProjects[project].media_description 
-              ? <div className='article-content media_description'>
-                  <a className="project-website" href={myProjects[project].website} target='_blank' rel='noreferrer'>
+              ? <div className='article-content media-description'>
+                  <a className='project-website'
+                     href={myProjects[project].website}
+                     target='_blank'
+                     rel='noreferrer'
+                     alt={myProjects[project].website_description}
+                  >
                     {myProjects[project].media_description}
                   </a>
                 </div> 
@@ -124,7 +129,11 @@ export default function Projects({ uuidv4 }) {
             myProjects[project].img 
               ? <img src={myProjects[project].img} alt={myProjects[project].title}></img>
               : <span>
-                  <a href={myProjects[project].website} target="_blank" rel="noreferrer">
+                  <a href={myProjects[project].website}
+                     target="_blank"
+                     rel="noreferrer"
+                     alt={myProjects[project].media_description}
+                  >
                     {myProjects[project].website_description}
                   </a>
                 </span>
