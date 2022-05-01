@@ -143,8 +143,6 @@ export default function Projects({ uuidv4 }) {
                 </span>
             }
             {/* {project.iframe ? project.iframe : null } */}
-
-
           </article>
         ))}
       </section>
