@@ -472,6 +472,19 @@ PROJECTS                                                                      */
     letter-spacing: 1.1px;
 }
 
+.project-expand {
+    /* width: 100%;
+    text-align: center;
+    float: 100%; */
+    display: none;
+}
+
+/* .project-about,
+.nerd-notes {
+    display: none;
+} */
+
+
 /*------------------------------------------------------------------------------
 ABOUT                                                                         */
 .about-div {

@@ -17,6 +17,13 @@ export default function Projects({ uuidv4 }) {
   const [myProjects, setMyProjects] = useState(projectData);
 
   //----------------------------------------------------------------------------
+  //-- When click learn more... open modal
+  // const expand = () => {
+  //    document.querySelectorAll('.project-expand');
+  //   console.log(expand)
+  // };
+
+  //----------------------------------------------------------------------------
   //-- Return function
   return (
     <article className='container'>
@@ -68,8 +75,9 @@ export default function Projects({ uuidv4 }) {
                 ? <div key={uuidv4()} className="projects-summary">{myProjects[project].features}</div> 
                 : null
               } */}
-              <span className='project-expand'>Expand</span>
             </div>
+            {/* Expands Card content */}
+            <span className='project-expand'>Learn more...</span>
             {/* About */}
             <div className="project-about article-content-indent">
               <h4 className='project-h4'>About</h4>
@@ -115,6 +123,7 @@ export default function Projects({ uuidv4 }) {
                      rel='noreferrer'
                      alt={myProjects[project].website_description}
                   >
+                    <br />
                     {myProjects[project].media_description}
                   </a>
                 </div> 
