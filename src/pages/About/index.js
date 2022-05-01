@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 export default function AboutMe({ uuidv4, setLocation }) {
   let navigate = useNavigate(); //-- used for navigational buttons
   
-  const navigateButon = (event) => {
+  const navigateButton = (event) => {
     event.preventDefault();
     document.title = `${event.target.id} - Erik Plachta`; 
     setLocation(event.target.id); //-- for navigation
@@ -27,20 +27,19 @@ export default function AboutMe({ uuidv4, setLocation }) {
           <br />
           <section>
             <div>
-              <b>I'm passionate and purpose driven.</b> My strengths center around
+              I'm passionate and purpose driven. My strengths center around
               an ability to think systematically and solve problems objectively.
-              <p className='article-content-indent'>
+              
                 I enjoy building systems and workflows that are scalable,
                 modular, and efficient. It's something I've learned to do in all
                 of my work.
-              </p>
             </div>
             <hr />
           {/* PERSONALLY */}
             <div className='about-div'>
-              <b>Outside of work</b>, I spend a lot of time with family. As far as 
-              hobbies go, I enjoy being challenged so I'd say my hobby is learning.
-              Technology, Software development, personal knowledge management, and
+              <b>Outside of work</b>, I spend a lot of time with family. I enjoy
+              being challenged and I'd say my hobby is learning. Technology,
+              Software development, personal knowledge management, and
               stoicism are my go-tos over the past few years.
               
               {/* <p className="article-content-indent"> */}
@@ -48,8 +47,8 @@ export default function AboutMe({ uuidv4, setLocation }) {
                   type="button"
                   className="about-button"
                   id="projects"
-                  value='Projects'
-                  onClick={navigateButon}
+                  value='Learn more...'
+                  onClick={navigateButton}
                   >
                 </input>
               {/* </p> */}
@@ -63,8 +62,8 @@ export default function AboutMe({ uuidv4, setLocation }) {
                 type="button"
                 className="about-button"
                 id="resume"
-                value='Resume'
-                onClick={navigateButon}
+                value='Learn more...'
+                onClick={navigateButton}
                 >
               </input>
             </div>
