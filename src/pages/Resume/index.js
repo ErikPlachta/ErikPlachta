@@ -103,7 +103,7 @@ export default function Resume({ uuid }) {
       <section className="article-content-container">    
         <div className="article-content">
           <h3 className="article-content-title">
-            Technical Support Director and Software Engineer
+            Technical Support Director and Full-Developer, and Software Engineer
           </h3>
           <hr />
           {/* Technical Support Director */}

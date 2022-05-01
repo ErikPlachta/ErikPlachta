@@ -38,7 +38,7 @@ export default function AboutMe({ uuidv4, setLocation }) {
           {/* PERSONALLY */}
             <div className='about-div'>
               <b>Outside of work</b>, I spend a lot of time with family. I enjoy
-              being challenged and I'd say my hobby is learning. Technology,
+              being challenged and my hobby is learning. Technology,
               Software development, personal knowledge management, and
               stoicism are my go-tos over the past few years.
               
