@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-
-// import { object } from 'prop-types'
-// import restfulApiConcept from '../../../assets/img/restful-api-social-network-concept.png'
+import { capitalizeFirstLetter } from '../../utils/helpers';
+const projectData = require('../../assets/json/projects.json');
 
 export default function Projects({ uuidv4 }) {
+
+  const [myProjects, setMyProjects] = useState(projectData);
 
   // const [ Projects, setProjects ] = useState([
   const [ Projects ] = useState([
@@ -552,7 +553,7 @@ export default function Projects({ uuidv4 }) {
     }
   ])
 
-  //-- BUILDING THE CONTENT
+
   return (
     <article className='container'>
       <section>
@@ -589,34 +590,77 @@ export default function Projects({ uuidv4 }) {
       </section>
 
       <section className="article-content-container" id='projects-container'>
-        { Projects.map( project => (
-          // {number}
+        {Object.keys(myProjects).map((project, index) => (
+
           <article
-            id={project.id}
+            id={project}
             key={uuidv4()}
-            className={`projects-project ${( project.style === 1 && 'flex_100' ) || 'flex_50'}`}
+            className={`projects-project ${( myProjects[project].style === 1 && 'flex_100' ) || 'flex_50'}`}
             // id={project.title}
-          >
+            >
             {/* title */}
             <div className="projects-head">
-              <h3 className='projects-title'>{project.title}</h3>
-              {project.summary ? <div className="projects-summary">{project.summary}</div> : null}
+              <h3 key={uuidv4()} className='projects-title'>{myProjects[project].title}</h3>
+              {myProjects[project].summary 
+                ? <div key={uuidv4()} className="projects-summary">{myProjects[project].summary}</div> 
+                : null
+              }
             </div>
             {/* About */}
             <div className="project-about article-content-indent">
               <h4 className='project-h4'>About</h4>
-              {project.description}
+              {myProjects[project].description}
             </div>
             {/* Nerd Notes */}
             <div className='nerd-notes article-content-indent-list'>
-            <h4 className='project-h4'>Framework</h4>
-              {project.nerd_notes}
+              <h4 className='project-h4'>Framework</h4>
+              
+              {/* itterate through sub values  */}
+              {Object.keys(myProjects[project].nerd_notes).map((group, index) => ( 
+                <span key={uuidv4()} className="project-technology-group">
+                  <h5 key={uuidv4()}>{capitalizeFirstLetter(group)}</h5>
+                  {/* sections within nerd_notes */}
+                  {/* get values within each section within nerd_notes */}
+                  <ul key={uuidv4()} className="project-framework">  
+                    {Object.keys(myProjects[project].nerd_notes[group]).map((values, index) => ( 
+                      <li
+                        key={uuidv4()}
+                      >
+                        {myProjects[project].nerd_notes[group][values]}
+                      </li>
+                    ))}
+                  </ul>
+                </span>
+              ))}
+
+              {/* <p>
+                <b>Platform</b>: {myProjects[project].nerd_notes.platform}
+              </p>
+              <p>
+                <b>Database</b>: {
+                myProjects[project].nerd_notes.database
+                }
+              </p> */}
             </div>
-            
-            
-            {project.media_description ? <div className='article-content media_description'>{project.media_description}</div> : null}
-            {project.img ? <img src={project.img} alt={project.title}></img> : <span><a href={project.url} target="_blank" rel="noreferrer">{project.url_description}</a></span>}
-            {project.iframe ? project.iframe : null }
+
+            { myProjects[project].media_description 
+              ? <div className='article-content media_description'>
+                  <a className="project-website" href={myProjects[project].website} target='_blank' rel='noreferrer'>
+                    {myProjects[project].media_description}
+                  </a>
+                </div> 
+              : null
+            }
+            {
+            myProjects[project].img 
+              ? <img src={myProjects[project].img} alt={myProjects[project].title}></img>
+              : <span>
+                  <a href={myProjects[project].website} target="_blank" rel="noreferrer">
+                    {myProjects[project].website_description}
+                  </a>
+                </span>
+            }
+            {/* {project.iframe ? project.iframe : null } */}
 
 
           </article>
@@ -624,4 +668,4 @@ export default function Projects({ uuidv4 }) {
       </section>
     </article>
   )
-}
+};

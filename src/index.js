@@ -2,7 +2,7 @@
 
 //-- React Specific
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import App from './App';
 import reportWebVitals from './utils/reportWebVitals';
@@ -14,17 +14,18 @@ import { v4 as uuidv4 } from 'uuid';
 import './assets/css/styles.css';
 import './assets/js/script.js';
 
-if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') 
-{console.log('dev')}  // development
-// else { console.log('prod')}// production 
-
-
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container); // 
+root.render(
   <React.StrictMode key={uuidv4()}>
     <App key={uuidv4()} uuidv4={uuidv4} />
   </React.StrictMode>,
-  document.getElementById('root')
 );
 
-// Having web-vitals print for awarness.  ( SRC -> https://bit.ly/CRA-vitals )
-reportWebVitals();
+
+// if in Development
+if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development'){
+  console.log('dev')
+  reportWebVitals(); // Having web-vitals print for awareness.  ( SRC -> https://bit.ly/CRA-vitals )
+} 
+// else { console.log('prod')}// production 

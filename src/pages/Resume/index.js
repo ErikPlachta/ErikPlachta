@@ -100,52 +100,47 @@ export default function Resume({ uuid }) {
         <h2 className="article-header">Resume</h2>
       </section>
 
-      <section className="article-content-container">
-            
-          {/* BASIC ABOUT ME/RESUME SECTION */}
-          <div className="article-content">
-            <h3 className="article-content-title">
-              I'm a Technical Support Director and Software Engineer...
-            </h3>
-            <p className="article-content">
-              with over fifteen years of professional experience. My expertise is
-              in customer service, software & hardware support, software training,
-              leadership, managed services, help desk strategy, documentation,
-              knowledge building, project management, small/medium size business
-              strategy, IT/networking, and a wide range of IT related services.
-            </p>
+      <section className="article-content-container">    
+        <div className="article-content">
+          <h3 className="article-content-title">
+            Technical Support Director and Software Engineer
+          </h3>
+          <hr />
+          {/* Technical Support Director */}
+          <p className="article-content-indent">
+            <b>As a technical support director</b>, I define and execute strategies
+            to ensure my team stays focused on providing services our customer
+            deserve. I also build and the manage a knowledge base for my team
+            regarding technical services, software solutions, and company
+            policies / procedures.
+          </p>
+          <hr />
+          {/* Software Engineer */}
+          <p className="article-content-indent">
+            <b>As a software engineer</b>, I use my experience and knowledge to
+            build and manage software solutions that resolve IT related issues <u>
+              proactively</u>, <u>automatically</u>, and <u>remotely</u>.
+          </p>
+          < hr/>
+          <p className='article-content-indent'>
+            <b>Soft Skills:</b>
+            <br />
+            Communication, empathy, self-awareness, problem-solving, patience,
+            dedication, focus, passionate, flexible, organized, time management,
+            teachable, driven, leadership.
+          </p>
+          
+          <p className='article-content-indent'>
+            <b>Hard Skills:</b>
+            <br />
+            IT automation, IT & Networking, Customer Service, Software &
+            Hardware Support, MSP Strategy, Documentation, Project Management,
+            DevOps, Full-stack Development, Python, PowerShell, JavaScript,
+            HTML, CSS, SQL, MySQL, MongoDB, AWS, GCP, Heroku, and GitHub.
+          </p>
 
-            <hr />
-
-            <p className="article-content-indent">
-              <b>As a technical support director</b>, I define and execute strategies
-              to ensure my team stays focused on providing services our customer
-              deserve. I also build and the manage a knowledge base for my team
-              regarding technical services, software solutions, and company
-              policies / procedures.
-            </p>
-
-            <p className="article-content-indent">
-              <b>As a software engineer</b>, I use my experience and knowledge to
-              build and manage software solutions focused resolving IT related 
-              issues proactively, automatically, and remotely.
-            </p>
-            <hr />
-            <p className="article-content">
-              <b>My primary development languages are</b> Python, PowerShell, JavaScript,
-              HTML, and CSS.
-            </p>
-            <p className="article-content">
-              <b>My professional database experience</b> is centered
-              around SQL, MySQL, and MongoDB.
-            </p>
-            <p className="article-content">
-              <b>The platforms I use professionally and personally</b> are AWS, Heroku,
-              GitHub, and GCP.
-            </p>
-            <hr />
-          </div>
-        </section>
+            </div>
+      </section>
 
         <section className="article-content">
           {/* REQUEST RESUME SECTION */}

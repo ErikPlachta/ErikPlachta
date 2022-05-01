@@ -1,41 +1,61 @@
-//-- Layer 2: ROOT ELEMENT MANAGING CONTENT AND UI
+//------------------------------------------------------------------------------
+//-- IMPORTS
 import React, { useState } from 'react';
+import {  BrowserRouter, Route, Routes, useParams } from 'react-router-dom';
 
-
-//-- Header component that contains nav sub-component
+//------------------------------------------------------------------------------
+//-- COMPONENTS
 import Header from './components/header';
-
-//-- Main component with sub-components ( Importing subs here vs in main to allow for just 1 locations state obj )
-import Main   from './components/main';
-import AboutMe from './components/main/about-me';
-import Projects from './components/main/projects';
-import Resume from './components/main/resume';
-import Contact from './components/main/contact';
-
-//-- Footer component
 import Footer from './components/footer';
 
+//------------------------------------------------------------------------------
+//-- PAGES
+import About from './pages/About';
+import Resume from './pages/Resume';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import PageNotFound from './pages/PageNotFound';
 
+
+//------------------------------------------------------------------------------
+//-- App Function
 export default function App({ uuidv4 }) {
-  // <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-     
+    
+  //----------------------------------------------------------------------------
+  //-- STATES
+  const [ location, setLocation ] = useState( 'about' ); //-- setting default location to About. Used by Nav for location awareness
   
-
-  //-- Sub-Components within the main container and also used for navigation
-  const [locations, setLocations] = useState({
-    'about':     { name:'about',      subComponent:{AboutMe},    key:uuidv4(), jsx: <AboutMe   uuidv4={uuidv4}></AboutMe>   },
-    'projects': { name:'projects',  subComponent:{Projects},  key:uuidv4(), jsx: <Projects uuidv4={uuidv4}></Projects> },
-    'resume':    { name:'resume',     subComponent:{Resume},     key:uuidv4(), jsx: <Resume    uuidv4={uuidv4}></Resume>    },
-    'contact':   { name:'contact',    subComponent:{Contact},    key:uuidv4(), jsx: <Contact   uuidv4={uuidv4}></Contact>   },
+  const [locations, setLocations] = useState({ //-- Components within the main element. State is managed by Navigation and Routing.
+    'about':    { name:'about',     subComponent:{About},    key:uuidv4(), jsx: <About    uuidv4={uuidv4} location={location} setLocation={setLocation} >  </About>    },
+    'resume':   { name:'resume',    subComponent:{Resume},   key:uuidv4(), jsx: <Resume   uuidv4={uuidv4} >  </Resume>   },
+    'projects': { name:'projects',  subComponent:{Projects}, key:uuidv4(), jsx: <Projects uuidv4={uuidv4} >  </Projects> },
+    'contact':  { name:'contact',   subComponent:{Contact},  key:uuidv4(), jsx: <Contact  uuidv4={uuidv4} >  </Contact>  },
   });
 
-  //-- setting default location to about me
-  const [ location, setLocation ] = useState( 'about' );
-    
-  //-- Returning all content
-  return ([  
-    <Header key={uuidv4()} uuidv4={uuidv4} locations={locations} setLocations={setLocations} location={location} setLocation={setLocation}></Header>,
-    <Main   key={uuidv4()} uuidv4={uuidv4} locations={locations} setLocations={setLocations} location={location} setLocation={setLocation}></Main>,
-    <Footer key={uuidv4()} uuidv4={uuidv4}></Footer>
-  ]);
+
+  //----------------------------------------------------------------------------
+  //-- Return Function
+  return (
+    <>
+      <BrowserRouter basename="/">
+        <Header
+          key={uuidv4()} uuidv4={uuidv4} 
+          locations={locations} setLocations={setLocations}
+          location={location} setLocation={setLocation}
+        ></Header>
+        <main>
+          <Routes>
+            <Route exact path="/" element={locations['about'].jsx}/>
+            <Route exact path="/about" element={locations['about'].jsx} />
+            <Route exact path="/resume" element={locations['resume'].jsx}/>
+            <Route exact path="/projects" element={locations['projects'].jsx}/>
+            <Route exact path="/contact" element={locations['contact'].jsx}/>            
+            <Route path='/404' element={<PageNotFound     location={location} setLocation={setLocation}/>}/>
+            <Route exact path="*" element={<PageNotFound  location={location} setLocation={setLocation}/>}/>
+          </Routes>
+        </main>
+        <Footer key={uuidv4()} uuidv4={uuidv4}></Footer>
+      </BrowserRouter>
+    </>
+  );
 };

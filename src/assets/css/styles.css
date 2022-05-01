@@ -135,11 +135,17 @@ h1,h2,h3,h4,h5 {
     --fs_h4: 1.8rem;
 
     --fw_h5: 800;
-    --fs_h5: 1.5rem;
+    --fs_h5: 1rem;
     
     /* remove all defaults */
     padding: 0;
     margin: 0;
+}
+
+h5 {
+    padding-top: .25rem;
+    font-weight: var(--fw_h5);
+    font-size: var(--fs_h5);
 }
 
 code {
@@ -149,18 +155,19 @@ code {
   
 a {
     --a-light: var(--body_fc_light);
-    /* --a-light-hover: var(--body_fc_dark); */
     --a-dark: var(--body_fc_dark);
-    /* --a-dark-hover: var(--body_fc_light); */
-    /* text-decoration: none; */
+    text-decoration: none;
     color: var(--body_fc_dark);
 }
 
+input[type='button']
 button {
          
     /* Buttons */
     --btn_tc_inactive: var(--c_05); /* button inactive text color */
     --btn_tc_active: var(--c_04); /* button active text color for hover and click */
+
+    --btn_bg_dark: var(--title_bg_dark);
 
 }
 
@@ -225,12 +232,16 @@ nav {
     transition: ease-in-out 200ms;
 }
 
+nav a {
+    color: var(--nav-fc-light);
+}
+
 h1.title,
 .nav{
     /* color: var(--nav-fc-light); */
     color: var(--title_fc_light);
-    transition: ease-in-out 200ms;
     border-bottom: 3px solid transparent;
+    transition: ease-in-out 200ms;
 }
 
 h1.title:hover,
@@ -243,6 +254,7 @@ h1.title:hover,
     border-bottom: 3px solid var(--accent_p);
 }
 /* if the current location */
+.nav.nav-active a,
 .nav.nav-active{
     color: var(--nav-fc-active);
     border-bottom: 3px solid var(--nav-fc-light);
@@ -419,9 +431,11 @@ section {
     text-align: center;
 }
 
+/* Left column which is About */
 .projects-project div.project-about{
     height: inherit;
-    line-height: 1.4;
+    line-height: 1.6;
+    letter-spacing: 2px;
     /* font-size: 1.2rem; */
     flex: 40%;
     margin: 0;
@@ -431,14 +445,60 @@ section {
 
 .project-about-description{
     margin: 1rem;
+    
 }
 
+.project-framework {
+    padding: 0;
+    margin: 0;
+}
+
+/* right column which is Framework */
 .projects-project div.nerd-notes {
-    flex: 30%;
+    
+    line-height: 1.6;
+    letter-spacing: 2px;
+    flex: 40%;
     float: right;
     /* padding: 0; */
     height: inherit;
     margin: 0;
+}
+
+/* .project-technology-group{
+    
+} */
+
+.project-website{
+    transition: ease-in-out 200ms;
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+.project-website:hover {
+    font-size: 1.01rem;
+    /* font-weight: bold; */
+    letter-spacing: 1.1px;
+}
+
+.about-div {
+    display: inline-block;
+}
+
+.about-button{
+    /* width: fit-content; */
+    background: var(--title_bg_dark);
+    color: var(--title_fc_light);
+    padding: .5rem;
+    margin-top: 1rem;
+    float: right;
+    border-radius: var(--br_25);
+    cursor: pointer;
+    transition: ease-in-out 200ms;
+}
+
+.about-button:hover {
+    background: var(--title_bg_dark);
+    color: var(--accent_p);
 }
 
 
@@ -645,7 +705,7 @@ input[type=submit].button{
     border-radius: var(--br_25);
     width: 100%;
     margin: 1rem 0 ;
-    padding: 3rem 0;
+    padding: 2rem 0;
     background: var(--title_bg_dark);
     color: var(--title_fc_light);
     font-weight: 500;
@@ -655,6 +715,7 @@ input[type=submit].button{
 
 input[type=submit]:hover{
     color: var(--accent_p);
+    cursor: pointer;
     
 }
 
@@ -792,6 +853,7 @@ input[type=submit]:hover{
 
    .article-content-indent-list ul{
         /* padding: 0 1.0417rem; */
+        
     }
 
     .projects-project{
