@@ -59,7 +59,7 @@ export default function Projects({ uuidv4 }) {
           <article
             id={project}
             key={uuidv4()}
-            className={`projects-project ${( myProjects[project].style === 1 && 'flex_100' ) || 'flex_50'}`}
+            className={`projects-card ${( myProjects[project].style === 1 && 'flex_100' ) || 'flex_50'}`}
             // id={project.title}
             >
             {/* title */}

@@ -91,7 +91,7 @@ export default function AboutMe({ uuidv4, setLocation }) {
           </section>
         {/* SIGNATURE LINE */}
           <p className="signature">
-            - Erik Plachta - March 2022
+            - Erik Plachta - May, 2022
           </p>
         </div>
       </section>

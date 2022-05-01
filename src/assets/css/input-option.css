@@ -1,0 +1,42 @@
+/* TODO:: 05/01/22 #EP || Commented out as not used but left for future strategy. */
+
+select
+{ /* prevents a border */
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+} 
+
+option
+{ /* center option into it's container */
+    padding: 2rem;
+}
+option{
+    text-align: center;
+    font-size: 1rem;
+    align-items: center;
+    text-align-last:center; 
+    background-color: var(--body_bg);
+    border-radius: var(--br_25);
+    min-height: 3rem;
+    transition: ease-in-out 200ms;
+    border: var(--b_04);   
+}
+option:hover
+{
+    background-color: var(--section_bg);
+    border: var(--b_03);
+    font-size: 1.1;
+    outline: none;
+}
+option:focus-visible
+{
+    border: var(--b_03_focus);
+}
+option:focus,
+option:active,
+option:checked {
+    color: var(--accent_p);
+    background-color: var(--title_bg_dark) !important;
+}
