@@ -42,9 +42,7 @@ export default function Projects({ uuidv4 }) {
             First on the list is <a href='#image-manager'><b>Image Manager</b>
             ( <em>a full-stack windows app</em> )</a> and  <a href="#posnation-support">
             <b>posnation.support</b> <em>( a full-stack web app )</em></a>. Both 
-            of these Apps are live and have an active customer base. Also 
-            important to note, all work on these apps was done outside of work
-            in my own free-time.
+            of these Apps are live and have an active customer base.
           </p>
           <p>
             The remaining four are proof-of-concept Apps that I've built
