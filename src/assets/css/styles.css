@@ -491,21 +491,20 @@ ABOUT                                                                         */
     display: inline-block;
 }
 
-.about-button
+.about-link
 { /* Buttons that navigates to other pages on About */
     /* width: fit-content; */
     min-width: 10rem;
     background: var(--title_bg_dark);
     color: var(--title_fc_light);
-    padding: 1rem .5rem;
-    margin-top: 1rem;
-    float: right;
+    padding: .25rem;
+    
     border-radius: var(--br_25);
     cursor: pointer;
     transition: ease-in-out 200ms;
 }
 
-.about-button:hover
+.about-link:hover
 { /* Buttons that navigates to other pages on About */
     background: var(--title_bg_dark);
     color: var(--accent_p);

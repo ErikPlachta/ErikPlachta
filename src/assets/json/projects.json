@@ -54,6 +54,8 @@
             "img"                   : "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/bf895d9ae85684e58bc1bdffd3161555115dcb04/assets/images/calendari.gif",
             "media_description"     : "Below is a gif of the landing page. Click here to see it live!",
             "style"                 : 1
+<<<<<<< HEAD
+=======
     },
 
     "my-budget" : {
@@ -92,5 +94,6 @@
             "img"                   : "https://raw.githubusercontent.com/ErikPlachta/a_Daily_Scheduler_WebApp/main/assets/images/demo.gif",
             "media_description"     : "Below is a gif demonstrating the app in action. To see it live, click here!",
             "style"                 : 1
+>>>>>>> develop
     }
 }

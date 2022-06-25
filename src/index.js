@@ -1,9 +1,11 @@
-//-- React Specific
 import React from 'react';
-import reportWebVitals from './utils/reportWebVitals';
 import { createRoot } from 'react-dom/client';
 import App from './App';
-import { v4 as uuidv4 } from 'uuid'; //-- Being used to generate unique keys for react
+import reportWebVitals from './utils/reportWebVitals';
+import { v4 as uuidv4 } from 'uuid';
+
+//-- Service Worker
+import * as serviceWorkerRegistration from './utils/serviceWorkerRegistration';
 
 //-- My imports
 import './assets/css/styles.css';
@@ -17,10 +19,10 @@ root.render(
   </React.StrictMode>,
 );
 
-
-// if in Development
+// if in Development, report vitals and print to log for awareness
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development'){
-  console.log('dev')
-  reportWebVitals(); // Having web-vitals print for awareness.  ( SRC -> https://bit.ly/CRA-vitals )
+  console.log('dev');
+  reportWebVitals(); // ( SRC -> https://bit.ly/CRA-vitals )
 } 
-// else { console.log('prod')}// production 
+
+serviceWorkerRegistration.register(); //-- Register service worker for pwa
