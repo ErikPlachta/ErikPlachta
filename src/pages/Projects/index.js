@@ -61,30 +61,35 @@ export default function Projects({ uuidv4 }) {
           {/* ABOUT - Summary */}
             <div className="project-about article-content-indent">
               <h4 className='project-h4'>About</h4>
-              {myProjects[project].description}
+              <details>
+                <summary>Learn more...</summary>
+                {myProjects[project].description}
+              </details>
             </div>
             
             {/* FRAMEWORK / NERD NOTES */}
             <div className='nerd-notes article-content-indent-list'>
               <h4 className='project-h4'>Framework</h4>
-            
-              {/* GET ALL FRAMEWORK DETAILS  */}
-              {Object.keys(myProjects[project].nerd_notes).map((group, index) => ( 
-                <span key={uuidv4()} className="project-technology-group">
-                  <h5 key={uuidv4()}>{capitalizeFirstLetter(group)}</h5>
-                  {/* sections within nerd_notes */}
-                  {/* get values within each section within nerd_notes */}
-                  <ul key={uuidv4()} className="project-framework">  
-                    {Object.keys(myProjects[project].nerd_notes[group]).map((values, index) => ( 
-                      <li
-                        key={uuidv4()}
-                      >
-                        {myProjects[project].nerd_notes[group][values]}
-                      </li>
-                    ))}
-                  </ul>
-                </span>
-              ))}
+              <details>
+                <summary>Learn more...</summary>
+                {/* GET ALL FRAMEWORK DETAILS  */}
+                {Object.keys(myProjects[project].nerd_notes).map((group, index) => ( 
+                  <span key={uuidv4()} className="project-technology-group">
+                    <h5 key={uuidv4()}>{capitalizeFirstLetter(group)}</h5>
+                    {/* sections within nerd_notes */}
+                    {/* get values within each section within nerd_notes */}
+                    <ul key={uuidv4()} className="project-framework">  
+                      {Object.keys(myProjects[project].nerd_notes[group]).map((values, index) => ( 
+                        <li
+                          key={uuidv4()}
+                        >
+                          {myProjects[project].nerd_notes[group][values]}
+                        </li>
+                      ))}
+                    </ul>
+                  </span>
+                ))}
+              </details>
             </div>
             
 
