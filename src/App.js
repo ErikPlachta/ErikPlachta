@@ -34,7 +34,6 @@ export default function App({ uuidv4 }) {
     'about':    { name:'about',     subComponent:{About},    key:uuidv4(), jsx: <About    uuidv4={uuidv4} location={location} setLocation={setLocation} >  </About>    },
     // 'resume':   { name:'resume',    subComponent:{Resume},   key:uuidv4(), jsx: <Resume   uuidv4={uuidv4} >  </Resume>   },
     'projects': { name:'projects',  subComponent:{Projects}, key:uuidv4(), jsx: <Projects uuidv4={uuidv4} >  </Projects> },
-    'resume':   { name:'resume',    subComponent:{Resume},   key:uuidv4(), jsx: <Resume   uuidv4={uuidv4} >  </Resume>   },
     'contact':  { name:'contact',   subComponent:{Contact},  key:uuidv4(), jsx: <Contact  uuidv4={uuidv4} >  </Contact>  },
   });
   //----------------------------------------------------------------------------
