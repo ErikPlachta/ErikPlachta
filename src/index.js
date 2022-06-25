@@ -19,12 +19,10 @@ root.render(
   </React.StrictMode>,
 );
 
-
-// if in Development
+// if in Development, report vitals and print to log for awareness
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development'){
   console.log('dev');
-  reportWebVitals(); // Having web-vitals print for awareness.  ( SRC -> https://bit.ly/CRA-vitals )
+  reportWebVitals(); // ( SRC -> https://bit.ly/CRA-vitals )
 } 
 
 serviceWorkerRegistration.register(); //-- Register service worker for pwa
-

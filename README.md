@@ -39,6 +39,11 @@ This certificate badge indicates that the holder completed the UNC Charlotte Cod
 
 ## Change Log
 
+
+### June 25th, 2022 - Updating New Job and Another Simplification/Cleanup
+
+TODO:: 06/25/22 #EP || Update README with changelog details
+
 ### April 28th, 2022 - Cleanup and Simplify content overall
 
 - Cleaned up styling and updated content in About, Project and Resume.
