@@ -95,31 +95,66 @@ export default function Resume({ uuid }) {
   return (
     //-- Header section with note
     <article className='container'>
-      <section>
-        <h2 className="article-header">Professional Resume</h2>
-      </section>
-      <section className="article-content">
-        <section className="article-content-container">
-          <p className="article-content-title">
-            Are you looking for a copy of my Resume?
-          </p>
-          <p className="article-content-indent">
-              Please fill out the contact-form below with your best contact
-              email, and I'll send over a copy! Otherwise, I keep  <a 
-              href="https://www.linkedin.com/in/erikplachta/" target="_blank"
-              rel="noreferrer"> my LinkedIn Profile up to date</a>!
-          </p>
-          <p className="signature">- Erik Plachta - March 2022</p>
-        </section>
-      </section>
       
-      <section className="article-content">
-        <h3 className="article-content-title">
-          Request a Copy of Erik's Resume
-        </h3>
+      <section>
+        <h2 className="article-header">Resume</h2>
       </section>
 
-      {/*Email Form with captcha */}
+      <section className="article-content-container">    
+        <div className="article-content">
+          <h3 className="article-content-title">
+            Technical Support Director and Software Engineer
+          </h3>
+          <hr />
+          {/* Technical Support Director */}
+          <p className="article-content-indent">
+            <b>As a technical support director</b>, I define and execute strategies
+            to ensure my team stays focused on providing services our customer
+            deserve. I also build and the manage a knowledge base for my team
+            regarding technical services, software solutions, and company
+            policies / procedures.
+          </p>
+          <hr />
+          {/* Software Engineer */}
+          <p className="article-content-indent">
+            <b>As a software engineer</b>, I use my experience and knowledge to
+            build and manage software solutions that resolve IT related issues <u>
+              proactively</u>, <u>automatically</u>, and <u>remotely</u>.
+          </p>
+          < hr/>
+          <p className='article-content-indent'>
+            <b>Soft Skills:</b>
+            <br />
+            Communication, empathy, self-awareness, problem-solving, patience,
+            dedication, focus, passionate, flexible, organized, time management,
+            teachable, driven, leadership.
+          </p>
+          
+          <p className='article-content-indent'>
+            <b>Hard Skills:</b>
+            <br />
+            IT automation, IT & Networking, Customer Service, Software &
+            Hardware Support, MSP Strategy, Documentation, Project Management,
+            DevOps, Full-stack Development, Python, PowerShell, JavaScript,
+            HTML, CSS, SQL, MySQL, MongoDB, AWS, GCP, Heroku, and GitHub.
+          </p>
+
+            </div>
+      </section>
+
+        <section className="article-content">
+          {/* REQUEST RESUME SECTION */}
+          <div className="article-content">
+            <br />
+            <h3 className="article-content-title">
+              Request a Copy of My Resume
+            </h3>
+            <p className="article-content-indent">
+              
+            </p>
+          </div>
+        </section>
+    {/*Email Form with captcha */}
       <section className="article-content-container contact-form">
         <form onSubmit={onSubmit}>
           <div className='form-section'>

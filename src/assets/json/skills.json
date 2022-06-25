@@ -1,0 +1,41 @@
+{
+    "Soft Skills": [
+        "Communication",
+        "Empathy",
+        "Self-Awareness",
+        "Problem-Solving",
+        "Patience",
+        "Dedication",
+        "Focus",
+        "Passionate",
+        "Flexible",
+        "Organized",
+        "Time Management",
+        "Teachable",
+        "Driven",
+        "Leadership"
+    ],
+    "Hard Skills": [
+        "IT automation",
+        "IT & Networking",
+        "Customer Service",
+        "Software & Hardware Support",
+        "MSP Strategy",
+        "Documentation",
+        "Project Management",
+        "DevOps",
+        "Full-stack Development",
+        "Python",
+        "PowerShell",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "SQL",
+        "MySQL",
+        "MongoDB",
+        "AWS",
+        "GCP",
+        "Heroku",
+        "GitHub"
+    ]
+}

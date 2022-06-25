@@ -1,25 +1,31 @@
+//-- Layer 1: ROOT for runnning React server
+
 //-- React Specific
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+
 import App from './App';
 import reportWebVitals from './utils/reportWebVitals';
+
+//-- Being used to generate unique keys for react
 import { v4 as uuidv4 } from 'uuid';
-import * as serviceWorkerRegistration from './utils/serviceWorkerRegistration';
 
 //-- My imports
 import './assets/css/styles.css';
 import './assets/js/script.js';
 
- //-- In Development environment
-if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') console.log('dev') 
-// else { console.log('prod')}// production 
-
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container); // 
+root.render(
   <React.StrictMode key={uuidv4()}>
     <App key={uuidv4()} uuidv4={uuidv4} />
   </React.StrictMode>,
-  document.getElementById('root')
 );
 
-serviceWorkerRegistration.register(); //-- Register service worker for pwa
-reportWebVitals();
+
+// if in Development
+if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development'){
+  console.log('dev')
+  reportWebVitals(); // Having web-vitals print for awareness.  ( SRC -> https://bit.ly/CRA-vitals )
+} 
+// else { console.log('prod')}// production 
