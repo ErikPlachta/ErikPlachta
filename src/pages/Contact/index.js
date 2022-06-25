@@ -103,8 +103,8 @@ export default function Contact({ uuid }) {
       </section>
       <section className="article-content">
         <p className="article-content-title">
-          Want to get in touch? You can reach out to me on Twitter, LinkedIn, or
-          by filling out this contact form.
+          If you want to get in touch with Erik, you can reach out to him via the
+          contact form below or the social links within the footer.
         </p>
       </section>
 

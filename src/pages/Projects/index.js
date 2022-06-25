@@ -14,7 +14,7 @@ export default function Projects({ uuidv4 }) {
 
   //----------------------------------------------------------------------------
   //-- Loading Data from JSON
-  const [myProjects, setMyProjects] = useState(projectData);
+  const [myProjects,] = useState(projectData);
 
   //----------------------------------------------------------------------------
   //-- When click learn more... open modal
