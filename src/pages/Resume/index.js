@@ -103,7 +103,7 @@ export default function Resume({ uuid }) {
       <section className="article-content-container">    
         <div className="article-content">
           <h3 className="article-content-title">
-            Technical Support Director and Software Engineer
+            Technical Support Director and Full-Developer, and Software Engineer
           </h3>
           <hr />
           {/* Technical Support Director */}
@@ -117,16 +117,17 @@ export default function Resume({ uuid }) {
           <hr />
           {/* Software Engineer */}
           <p className="article-content-indent">
-            <b>As a software engineer</b>, I use my experience and knowledge to
-            build and manage software solutions that resolve IT related issues <u>
-              proactively</u>, <u>automatically</u>, and <u>remotely</u>.
+            <b>As a software engineer and full-stack developer</b>, I use my
+            experience and knowledge to build and manage software solutions that
+            resolve IT related issues <u> proactively</u>, <u>automatically</u>,
+            and <u>remotely</u>.
           </p>
           < hr/>
           <p className='article-content-indent'>
             <b>Soft Skills:</b>
             <br />
-            Communication, empathy, self-awareness, problem-solving, patience,
-            dedication, focus, passionate, flexible, organized, time management,
+            Communication, empathy, self-awareness, problem-solving, patient,
+            dedication, focus, passion, flexibility, organized, time management,
             teachable, driven, leadership.
           </p>
           
