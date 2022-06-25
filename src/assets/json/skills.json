@@ -1,22 +1,24 @@
 {
     "Soft Skills": [
         "Communication",
+        "Curious",
+        "Driven",
         "Empathy",
+        "Focus",
         "Self-Awareness",
         "Problem-Solving",
         "Patience",
         "Dedication",
-        "Focus",
         "Passionate",
         "Flexible",
         "Organized",
         "Time Management",
         "Teachable",
-        "Driven",
         "Leadership"
     ],
     "Hard Skills": [
         "IT automation",
+        "Knowledge Management",
         "IT & Networking",
         "Customer Service",
         "Software & Hardware Support",
@@ -32,10 +34,11 @@
         "CSS",
         "SQL",
         "MySQL",
-        "MongoDB",
+        "MQL",
         "AWS",
         "GCP",
         "Heroku",
+        "Git",
         "GitHub"
     ]
 }
