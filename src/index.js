@@ -10,10 +10,9 @@ import * as serviceWorkerRegistration from './utils/serviceWorkerRegistration';
 import './assets/css/styles.css';
 import './assets/js/script.js';
 
-if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') 
-{console.log('dev')}  // development
+ //-- In Development environment
+if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') console.log('dev') 
 // else { console.log('prod')}// production 
-
 
 ReactDOM.render(
   <React.StrictMode key={uuidv4()}>
@@ -22,5 +21,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-serviceWorkerRegistration.register();
+serviceWorkerRegistration.register(); //-- Register service worker for pwa
 reportWebVitals();
