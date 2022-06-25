@@ -1,14 +1,9 @@
-//-- Layer 1: ROOT for runnning React server
-
 //-- React Specific
 import React from 'react';
-import { createRoot } from 'react-dom/client';
-
-import App from './App';
 import reportWebVitals from './utils/reportWebVitals';
-
-//-- Being used to generate unique keys for react
-import { v4 as uuidv4 } from 'uuid';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import { v4 as uuidv4 } from 'uuid'; //-- Being used to generate unique keys for react
 
 //-- My imports
 import './assets/css/styles.css';
