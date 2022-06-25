@@ -16,24 +16,32 @@ export default function AboutMe({ uuidv4, setLocation }) {
     <article className='container'>
       {/* header banner */}
       <section>
-        <h2 className="article-header">Hi, I'm Erik 👋🏼</h2>
+        <h2 className="article-header">About Erik</h2>
       </section>      
       {/* content */}
       <section className="article-content-container">
         <div className="article-content">
+          <h3 className="article-content-title">
+            
+          </h3>
           <section>
             <div>
-              I'm a passionate and purpose driven software developer with a focus
-              on modular design. I enjoy building systems and workflows that are
+              Erik is a passionate and purpose driven software developer with a
+              focus on modular design. He builds systems and workflows that are
               scalable, modular, and efficient.
-              <input 
-                type="button"
-                className="about-button"
-                id="projects"
-                value='Checkout my projects...'
-                onClick={navigateButton}
-                >
-              </input>
+            </div>
+            
+            <br />
+
+            <div className='article-content-indent'>
+                To learn more about Erik's work, check out the <b
+                  className='about-link' id='projects' onClick={navigateButton}
+                >Projects</b> page. 
+            </div>
+            <br />
+            <div className='article-content-indent'>
+              To get in touch, check out the <b className='about-link' id='contact' onClick={navigateButton}>
+                Contact</b> page or follow the social links within the footer.
             </div>
           </section>
         {/* SIGNATURE LINE */}
