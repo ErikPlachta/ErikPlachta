@@ -34,27 +34,13 @@ export default function Projects({ uuidv4 }) {
       <section className="article-content-container">
         <section className="article-content">
           <h3 className="article-content-title">
-            This page is a collection of my favorite development projects
+            This page is a collection of my favorite development projects.
           </h3>
-          <br />
-          <p className="">
-          
-            First on the list is <a href='#image-manager'><b>Image Manager</b>
-            ( <em>a full-stack windows app</em> )</a> and  <a href="#posnation-support">
-            <b>posnation.support</b> <em>( a full-stack web app )</em></a>. Both 
-            of these Apps are live and have an active customer base. Also 
-            important to note, all work on these apps was done outside of work
-            in my own free-time.
-          </p>
-          <p>
-            The remaining four are proof-of-concept Apps that I've built
-            while learning new concepts or sharpening my skills. Each one
-            represents a unique aspect of my full stack web development
-            experience.
-          </p>
         </section>
       </section>
 
+      
+      {/* DYNAMICALLY BUILD CONTENT FROM JSON  */}
       <section className="article-content-container" id='projects-container'>
         {Object.keys(myProjects).map((project, index) => (
 
@@ -62,32 +48,27 @@ export default function Projects({ uuidv4 }) {
             id={project}
             key={uuidv4()}
             className={`projects-card ${( myProjects[project].style === 1 && 'flex_100' ) || 'flex_50'}`}
-            // id={project.title}
-            >
-            {/* title */}
+          >
+            {/* TITLE AND SUMMARY */}
             <div className="projects-head">
               <h3 key={uuidv4()} className='projects-title'>{myProjects[project].title}</h3>
               {myProjects[project].summary 
                 ? <div key={uuidv4()} className="projects-summary">{myProjects[project].summary}</div> 
                 : null
               }
-              {/* {myProjects[project].features 
-                ? <div key={uuidv4()} className="projects-summary">{myProjects[project].features}</div> 
-                : null
-              } */}
             </div>
-            {/* Expands Card content */}
-            <span className='project-expand'>Learn more...</span>
-            {/* About */}
+
+          {/* ABOUT - Summary */}
             <div className="project-about article-content-indent">
               <h4 className='project-h4'>About</h4>
               {myProjects[project].description}
             </div>
-            {/* Nerd Notes */}
+            
+            {/* FRAMEWORK / NERD NOTES */}
             <div className='nerd-notes article-content-indent-list'>
               <h4 className='project-h4'>Framework</h4>
-              
-              {/* itterate through sub values  */}
+            
+              {/* GET ALL FRAMEWORK DETAILS  */}
               {Object.keys(myProjects[project].nerd_notes).map((group, index) => ( 
                 <span key={uuidv4()} className="project-technology-group">
                   <h5 key={uuidv4()}>{capitalizeFirstLetter(group)}</h5>
@@ -104,16 +85,8 @@ export default function Projects({ uuidv4 }) {
                   </ul>
                 </span>
               ))}
-
-              {/* <p>
-                <b>Platform</b>: {myProjects[project].nerd_notes.platform}
-              </p>
-              <p>
-                <b>Database</b>: {
-                myProjects[project].nerd_notes.database
-                }
-              </p> */}
             </div>
+            
 
             { myProjects[project].media_description 
               ? <div className='article-content media-description'>
