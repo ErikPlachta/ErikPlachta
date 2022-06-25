@@ -54,5 +54,46 @@
             "img"                   : "https://raw.githubusercontent.com/ErikPlachta/ErikPlachta/bf895d9ae85684e58bc1bdffd3161555115dcb04/assets/images/calendari.gif",
             "media_description"     : "Below is a gif of the landing page. Click here to see it live!",
             "style"                 : 1
+<<<<<<< HEAD
+=======
+    },
+
+    "my-budget" : {
+            "title"                 : "My Budget",
+            "summary"               : "Budget Concept PWA",
+            "description"           : "A Budget concept PWA built to demonstrate a seamless user experience via a Service Worker. Hosted on Heroku, running a Node/express.js server, no SQL Database with MongoDB.\n\n If the user attempts to interact with the database and they are offline, the Service Worker will intercept the request and record it to the browsers Cached Storage. When a network connection is restored, the database post will execute.",
+            "platform"              : "RESTful API / PWA / MongoDB",
+            "database"              : ["MongoDB / MongoDB Atlas(NoSQL)"],
+            "features"              : ["Custom Built RESTful API", "PWA with Offline Functionality"],
+            "nerd_notes"            : {
+                "platform"              : ["Heroku","MongoDB","Express","Node"],
+                "technologies"          : ["Heroku","MongoDB","Express","Node", "Moment.js"]
+            },
+            "website"               : "https://erikplachta-budget-pwa.herokuapp.com",
+            "website_description"   : "Click here to checkout the website live.",
+            "github"                : "https://github.com/ErikPlachta/pwa-personal-budget",
+            "img"                   : "https://raw.githubusercontent.com/ErikPlachta/pwa-personal-budget/main/demo.gif",
+            "media_description"     : "Below is a gif demonstrating the apps functionality. If you want to see it live, check it out here!",
+            "style"                 : 1
+    },
+                    
+    "daily-scheduler" : {
+            "title"                 : "Daily Scheduler",
+            "summary"               : "An Hour-by-Hour Schedule Concept App",
+            "description"           : "A concept app built to demonstrate the power and flexibility of the Web Storage API framework. Users have full CRUD functionality, and are able to create appointments in hour increments.",
+            "platform"              : "Web App",
+            "database"              : ["Browser Local Storage"],
+            "features"              : ["Local Storage Caching", "Date-Time Awareness", "Modal Managing CRUD"],
+            "nerd_notes"            : {
+                "platform"              : ["GitHub Pages"],
+                "technologies"          : ["HTML","CSS","JS","Moment.js","Web Storage"]
+            },
+            "website"               : "https://erikplachta.github.io/a_Daily_Scheduler_WebApp/",
+            "website_description"   : "Click here to see Calendari live.",
+            "github"                : "https://github.com/ErikPlachta/a_Daily_Scheduler_WebApp",
+            "img"                   : "https://raw.githubusercontent.com/ErikPlachta/a_Daily_Scheduler_WebApp/main/assets/images/demo.gif",
+            "media_description"     : "Below is a gif demonstrating the app in action. To see it live, click here!",
+            "style"                 : 1
+>>>>>>> develop
     }
 }

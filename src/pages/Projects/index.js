@@ -34,7 +34,7 @@ export default function Projects({ uuidv4 }) {
       <section className="article-content-container">
         <section className="article-content">
           <h3 className="article-content-title">
-            This page is a collection of my favorite development projects.
+            A few of Erik's favorite projects.
           </h3>
         </section>
       </section>
