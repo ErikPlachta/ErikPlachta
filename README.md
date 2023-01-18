@@ -17,19 +17,6 @@ If you want to get in touch, feel free to reach out via [![Linkedin](https://img
 
 ---
 
-## Certificates & Continued Education
-
----
-
-### **<a href="https://www.credly.com/badges/05a09960-adf1-45b3-8af2-72743f45d856?source=linked_in_profile"><img src=".\assets/images/coding-full-stack-web-development-certificate.png" width='20px' /> Coding: Full Stack Web Development Certificate**
-
-This certificate badge indicates that the holder completed the UNC Charlotte Coding BootCamp and has the technical expertise to develop web applications requiring UI, front-end, and back-end skills.
-> Issued by UNC Charlotte School of Professional Studies on April 26th, 2022. </a>
-
----
-
----
-
 ## ❤️ Get value from my work?
 
 [![Buy Me A Coffee](https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-FF813F?style=flat&logo=buy-me-a-coffee&logoColor=ffffff&link=https://www.buymeacoffee.com/erikplachta)](https://www.buymeacoffee.com/erikplachta)
