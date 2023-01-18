@@ -1,15 +1,13 @@
 # ![Erik Plachta](https://s.gravatar.com/avatar/cde2e5381aa5e6d8d0220c46edee8f88?s=30) Erik Plachta
 
-Hello, and thanks for checking out my GitHub. I use this repo to manage development and host my website, **[erikplachta.com](https://erikplachta.com)**.
-
+Hello, and thanks for checking out my GitHub.
 ---
 
 ---
 
 ## About Me
 
-To learn more about me, head over to [ErikPlachta.com](https://erikplachta.com) or [![Linkedin](https://img.shields.io/badge/-@erikplachta-blue?style=flat&logo=Linkedin&logoColor=white&link=https://linkedin.com/in/erikplachta/)](https://www.linkedin.com/in/erikplachta/)
-
+To learn more about me, head over to [ErikPlachta.com](https://erikplachta.com).
 If you want to get in touch, feel free to reach out via [![Linkedin](https://img.shields.io/badge/-@erikplachta-blue?style=flat&logo=Linkedin&logoColor=white&link=https://linkedin.com/in/erikplachta/)](https://www.linkedin.com/in/erikplachta/), [![Twitter](https://img.shields.io/badge/-@erikplachta-1ca0f1?style=flat&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/erikplachta)](https://twitter.com/erikplachta), or the [contact form on my website](https://erikplachta.com).
 > I'm open to new opportunities, collaborative projects, freelance work, or just making connections.
 
@@ -29,6 +27,7 @@ If you want to get in touch, feel free to reach out via [![Linkedin](https://img
 <details>
 <Summary>View change-log...</summary>
 
+### Jan 18th, 2022 - Simplify. 
 
 ### June 25th, 2022 - Updating New Job and Another Simplification/Cleanup
 
