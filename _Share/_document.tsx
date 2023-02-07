@@ -63,17 +63,7 @@ export default function Document( props: any ) {
             }}
             
             BreadCrumb={{
-              // current: props?.__NEXT_DATA__?.page
-              //  && props?.__NEXT_DATA__?.page != '/' 
-              //           ? props.__NEXT_DATA__.page
-              //           : '/Home'
-              ...getPathData(),
-              // previous: ['todo'],
-              
-              Navigation: {
-                page: props.__NEXT_DATA__.page,
-                ...props
-              },
+              ...getPathData()
             }}
           />
         </body>
