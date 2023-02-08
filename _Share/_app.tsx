@@ -1,15 +1,24 @@
+import { createContext }  from 'react';
 import Head from "next/head";
 import { usePathname } from "next/navigation";
 
 import "../styles/globals.css";
+import NavItems from "@/components/context/Navigation";
 import Footer from "@/components/footer";
 
+
+export const GlobalContext = createContext({});
 
 /** Next.js Parent Wrapper around website. */
 export default function App({ 
   Component = Object(),
   pageProps = Object() 
 }){
+
+  
+  const GlobalContextValue = {
+    Navigation  : NavItems,   //TODO: Use NavItems to build head meta data
+  };
 
   //-- Extract the current page name from the pathname.
   const pathname = usePathname();
@@ -34,7 +43,7 @@ export default function App({
   const pathData = getPathData(pathname && pathname != '/' ? pathname : '/Home');
 
   return (
-    <>
+    <GlobalContext.Provider value={GlobalContextValue}>
       <Head>
         <title>Erik Plachta</title>
         <meta name="description" content="Erik Plachta's personal website." />
@@ -80,6 +89,6 @@ export default function App({
             }}
           />
         </main>
-    </>
+    </GlobalContext.Provider>
   );
 };
