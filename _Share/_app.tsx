@@ -6,16 +6,18 @@ import "../styles/globals.css";
 import NavItems from "@/components/context/Navigation";
 import Footer from "@/components/footer";
 
-
+//-- TODO: 20230208 #EP || Evaluate if this is needed or can be removed.
 export const GlobalContext = createContext({});
+
+/** pathData BreadCrumb is expecting */
+type pathData = { current: string, previous: string[] };
+
 
 /** Next.js Parent Wrapper around website. */
 export default function App({ 
   Component = Object(),
   pageProps = Object() 
 }){
-
-  
   const GlobalContextValue = {
     Navigation  : NavItems,   //TODO: Use NavItems to build head meta data
   };
@@ -23,9 +25,11 @@ export default function App({
   //-- Extract the current page name from the pathname.
   const pathname = usePathname();
 
-  //-- Builds the path data to send to the footer.
-  const getPathData = (pathname : string) => {
-    const path = pathname.split("/");
+  /** Builds the path data to send to the footer.
+   */
+  function handleGetPathData():pathData {
+    let path = (pathname && pathname != '/' ? pathname : '/Home').split("/");
+    // const path = pathname.split("/");
     const pathFormatted = path.map((item:string) => {
       let uppercase = (item && item[0].toUpperCase() + item.slice(1)) || ""
       return uppercase;
@@ -40,7 +44,7 @@ export default function App({
   
   /** Builds the BreadCrumb path data to send to the footer.BreadCrumb.
   */
-  const pathData = getPathData(pathname && pathname != '/' ? pathname : '/Home');
+  const pathData = handleGetPathData();
 
   return (
     <GlobalContext.Provider value={GlobalContextValue}>
