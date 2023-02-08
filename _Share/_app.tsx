@@ -1,10 +1,10 @@
 import { createContext }  from 'react';
 import Head from "next/head";
-import { usePathname } from "next/navigation";
+import { useRouter } from 'next/router';
 
-import "../styles/globals.css";
 import NavItems from "@/components/context/Navigation";
 import Footer from "@/components/footer";
+import "../styles/globals.css";
 
 //-- TODO: 20230208 #EP || Evaluate if this is needed or can be removed.
 export const GlobalContext = createContext({});
@@ -23,13 +23,12 @@ export default function App({
   };
 
   //-- Extract the current page name from the pathname.
-  const pathname = usePathname();
+  let { pathname } = useRouter();
 
   /** Builds the path data to send to the footer.
    */
   function handleGetPathData():pathData {
     let path = (pathname && pathname != '/' ? pathname : '/Home').split("/");
-    // const path = pathname.split("/");
     const pathFormatted = path.map((item:string) => {
       let uppercase = (item && item[0].toUpperCase() + item.slice(1)) || ""
       return uppercase;
